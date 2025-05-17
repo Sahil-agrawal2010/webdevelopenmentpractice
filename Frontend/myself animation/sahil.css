@@ -1,0 +1,59 @@
+.box{
+    display: flex;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(67, 51, 246);
+    color: white;
+    margin: 50px auto;
+    border-radius: 8px;
+    height: 150px;
+}
+.box:hover{
+    /* transition: scale(1.5) */
+    background-color: red;
+}
+@keyframes sahil{
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+.box{
+    position: relative;
+    animation: sahil 4s infinite;
+}
+.box2{
+    display: flex;
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    color: white;
+    margin: 50px auto;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.box2:hover{
+    background-color: aqua;
+}
+@keyframes code{
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(-360deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+.box2{
+    position: relative;
+    animation: code 4s infinite;
+}
