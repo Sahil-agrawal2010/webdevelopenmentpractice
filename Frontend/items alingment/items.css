@@ -1,0 +1,36 @@
+.main{
+    display: flex;
+    background: lightgray;
+    gap: 10px;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: center;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    flex-grow: 1;
+}
+.box1{
+    background: pink;
+}
+.box2{
+background: yellow;
+}
+.box3{
+ background: purple;   
+}
+.box4{
+  background:red ;  
+}
+.box5{
+    background: green;
+}
+.box6{
+    background: orange;
+}
