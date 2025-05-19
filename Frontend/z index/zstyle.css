@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    top: 100px;
+    left: 100px;
+     width: 200px;
+     height: 200px;
+     position: absolute;
+     color: white;
+     font-size: 24px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     opacity: 0.9;
+     border: 2px solid black;
+     border-radius: 8px;
+}
+.box1{
+    background-color: red;
+    z-index: 3;
+}
+.box2{
+    top: 150px;
+    left: 150px;
+    background-color: green;
+    z-index: 2;
+}
+.box3{
+    top: 200px;
+    left: 200px;
+    background-color: blue;
+    z-index: 1;
+}
+
