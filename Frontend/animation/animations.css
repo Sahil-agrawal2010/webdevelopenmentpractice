@@ -14,19 +14,31 @@
 .box:hover{
 transform: scale(1.5);
 background-color: #2ecc71;
-transition: all 2s ease;
+/* transition: all 2s ease; */
 }
 @keyframes sahil{
-    0%{
-        transform: translateX(0);
-    }
-    50%{
-        transform: translateX(100px);
-    }
-      100%{
-        transform: translateX(0);
-    }
+0%{
+    top: 0;
+    left: 0;
 }
+ 25%{
+top: 0;
+left: 200px;
+}
+50%{
+    top: 200px;
+    left: 200px;
+}
+75%{
+    top: 200px;
+    left: 0;
+}
+100%{
+    top: 0;
+    left: 0;
+}
+} 
 .box {
-    animation: sahil 2s ease-in-out infinite;
+position: relative;
+animation: sahil 5s linear infinite;
 }

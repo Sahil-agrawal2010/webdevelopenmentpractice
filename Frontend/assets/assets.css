@@ -1,0 +1,49 @@
+body{
+    margin: 0px;
+    text-align: center;
+    padding: 20px;
+}
+h1{
+    font-family: "Pacifico";
+    color: #333;
+}
+h2{
+    color: #b11f1f;
+    font-family: "Jersey 10 Charted";
+}
+h3{
+    color: #333;
+    font-family: "IM Fell DW Pica";
+}
+h4{
+    color: #333;
+    font-family: "Honk";
+}
+.h1{
+    color: #333;
+    font-family: "IBM Plex Serif";
+}
+.h2{
+    color: #333;
+    font-family: "Boldonse";
+}
+.h3{
+    color: #333;
+    font-family: "Overpass Mono";
+}
+.h4{
+    color: #333;
+    font-family: "Libre Caslon Display";
+}
+.h5{
+    color: #333;
+    font-family: "Meddon";
+}
+.h6{
+    color: #333;
+    font-family: "Train One"; 
+}
+button{
+    color: #333;
+    font-family: "honk";
+}
