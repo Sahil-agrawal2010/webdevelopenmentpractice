@@ -46,4 +46,8 @@ h4{
 button{
     color: #333;
     font-family: "honk";
+    font-size: 100px;
+}
+.fa-solid.fa-person-running{
+    font-size: 100px;
 }
