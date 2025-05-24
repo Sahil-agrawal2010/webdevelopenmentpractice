@@ -1,0 +1,29 @@
+header{
+    border-top: 10px solid rgb(80, 80, 255);
+}
+.table{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 30px 80px;
+}
+.clearfix{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iframe{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  z-index: 1;
+}
+.iframe2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    left: 50px;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
