@@ -2,7 +2,7 @@ header{
     border-top: 10px solid rgb(80, 80, 255);
 }
 .table{
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 30px 80px;
+  box-shadow: rgba(0, 0, 0, 0.24) 20px 40px 80px;
 }
 .clearfix{
     display: flex;
@@ -26,4 +26,10 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+body{
+  flex-wrap: wrap;
+}
+.grid{
+  grid-template-columns: repeat(2,1fr);
 }
