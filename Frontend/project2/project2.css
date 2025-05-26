@@ -1,0 +1,26 @@
+/* body{
+     display: flex; 
+    justify-content: center;
+    align-items: center;
+} */
+
+*{
+    padding: 02px;
+}
+.container{
+    text-align: center;
+}
+.main{
+    background-color: white;
+    margin-top: 200px;
+    /* border: 2px solid black; */
+    margin-left: 40%;
+    width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+button{
+    width: 180px;
+}
+input{
+    border-radius: 8px;
+}
