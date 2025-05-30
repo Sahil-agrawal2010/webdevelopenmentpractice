@@ -1,0 +1,1 @@
+// There are many opretors in java script such as:-Arithmetic operators, Assignment operators, Comparision operators, Logical operators, Type operators.
