@@ -16,7 +16,7 @@ console.log(diffference)
 console.log(product)
 console.log(division)
 
-// Simple Interest programme
+Simple Interest programme
 let principal=200
 let time=2
 let rate=4
