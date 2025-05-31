@@ -72,3 +72,8 @@ console.log("The mean of the given data is: " + mean
 // let h=15
 // area=(1/2)*b*h
 // console.log("The area of triangle is:-"+area)
+
+let b=20
+let h=15
+area=(1/2)*b*h
+console.log("The area of triangle is:-"+area)
