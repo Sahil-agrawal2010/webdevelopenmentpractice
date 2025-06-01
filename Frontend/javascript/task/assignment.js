@@ -30,3 +30,16 @@ console.log("5X7="+number*7)
 console.log("5X8="+number*8)
 console.log("5X9="+number*9)
 console.log("5X10="+number*10)
+
+// swap
+// let a=5
+// let b=8
+// console.log(a=b)
+// console.log(b=a)
+
+let d=5
+let e=8
+let c=10
+console.log(d=e)
+console.log(e=c)
+console.log(c=d)
