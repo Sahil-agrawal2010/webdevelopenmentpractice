@@ -1,11 +1,11 @@
 // task1
-let l=20
-let b=10
-let h=5
-square=4*l
-rectangle=2*h*(l+b)
-console.log("The perimeter of square is:-"+square)
-console.log("The perimeter of rectangle is:-"+rectangle)
+// let l=20
+// let b=10
+// let h=5
+// square=4*l
+// rectangle=2*h*(l+b)
+// console.log("The perimeter of square is:-"+square)
+// console.log("The perimeter of rectangle is:-"+rectangle)
 
 // compound Interest
 let p=200
@@ -22,13 +22,13 @@ avg=(a+b+c)/3
 console.log("The average of three number is:-"+avg)
 
 // mean
-let e = [10, 20, 30, 40, 50]
+let x = [10, 20, 30, 40, 50]
 let f = [2, 4, 8, 5, 1]
 let fx = [20, 80, 240, 200, 50]
 let efx = 590
 let n = 20
 let mean = efx / n
-console.log("The mean of the given data is: " + mean
+console.log("The mean of the given data is: " + mean)
 
     // median
 // let e = [10, 20, 30, 40, 50]

@@ -16,9 +16,9 @@ console.log(diffference)
 console.log(product)
 console.log(division)
 
-Simple Interest programme
-let principal=200
-let time=2
-let rate=4
-let simpleInterest=(principal*time*rate)/100
-console.log(simpleInterest)
+// Simple Interest programme
+// let principal=200
+// let time=2
+// let rate=4
+// let simpleInterest=(principal*time*rate)/100
+// console.log(simpleInterest)
