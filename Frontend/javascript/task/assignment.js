@@ -31,11 +31,33 @@ console.log("5X8="+number*8)
 console.log("5X9="+number*9)
 console.log("5X10="+number*10)
 
+// let number=prompt("Enter the number:-")
+// console.log(number+"X1="+number*1)
+// console.log(number+"X2="+number*2)
+// console.log(number+"X3="+number*3)
+// console.log(number+"X4="+number*4)
+// console.log(number+"X5="+number*5)
+// console.log(number+"X6="+number*6)
+// console.log(number+"X7="+number*7)
+// console.log(number+"X8="+number*8)
+// console.log(number+"X9="+number*9)
+// console.log(number+"X10="+number*10)
+
+// let num= Number(prompt("Enter the number :-"))
+// if (num>0){
+// console.log("The number is positive")
+// }
+
 // swap
 // let a=5
 // let b=8
+// c=0
+c=a
+a=b
+c=a
 // console.log(a=b)
-// console.log(b=a)
+// console.log(b=c)
+console.log()
 
 let d=5
 let e=8
