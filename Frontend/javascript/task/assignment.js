@@ -46,22 +46,61 @@ console.log("5X10="+number*10)
 // let num= Number(prompt("Enter the number :-"))
 // if (num>0){
 // console.log("The number is positive")
+// } 
+
+// let num= Number(prompt("Enter the number :-"))
+// if (0>num){
+// console.log("The number is negative")
+// }
+
+// let num= Number(prompt("Enter the number :-"))
+// if (num==0){
+// console.log("The number is exacately zero")
+// }
+
+// let num= Number(prompt("Enter the number :-"))
+// if (num%2==1){
+// console.log("The number is odd")
+// }
+// else{
+// console.log("The number is even")
+// }
+
+// let num= Number(prompt("Enter the marks :-"))
+// if (num>=80){
+// console.log("Congo!Distinction")
+// }
+// else if (num>=70){
+//     console.log("Congo!First division")
+// }
+// else if (num>=60){
+//     console.log("Coongo!Second division")
+// }
+// else if (num>=50){
+//     console.log("Congo!Third division")
+// }
+// else{
+// console.log("Congo!Fail")
 // }
 
 // swap
 // let a=5
 // let b=8
-// c=0
-c=a
-a=b
-c=a
-// console.log(a=b)
-// console.log(b=c)
-console.log()
+// let c=0
+// c=a
+// a=b
+// b=a
+// console.log(a)
+// console.log(b)
 
-let d=5
-let e=8
-let c=10
-console.log(d=e)
-console.log(e=c)
-console.log(c=d)
+// let d=5
+// let e=8
+// let c=10
+// let a=0
+// a=d
+// e=c
+// c=a
+// d=e
+// console.log(e)
+// console.log(c)
+// console.log(d)
