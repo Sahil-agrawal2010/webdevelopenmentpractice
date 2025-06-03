@@ -83,6 +83,14 @@ console.log("5X10="+number*10)
 // console.log("Congo!Fail")
 // }
 
+// let num= Number(prompt("Enter the number which you want to check to be divisible by 10 :-"))
+// if(num%10==0){
+//     console.log("The number is divisible by 10")
+// }
+// else{
+//     console.log("The number is not divisible by 10")
+// }
+
 // swap
 // let a=5
 // let b=8
