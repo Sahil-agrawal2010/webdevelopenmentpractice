@@ -83,12 +83,87 @@ console.log("5X10="+number*10)
 // console.log("Congo!Fail")
 // }
 
+// let num= Number(prompt("Enter the number which you want to check to be divisible by 7 and 13 :-"))
+// if(num%7==0 && num%13==0){
+//     console.log("The number is divisible by 7 and 13")
+// }
+// else{
+//     console.log("The number is not divisible by 7 and 13")
+// }
+
 // let num= Number(prompt("Enter the number which you want to check to be divisible by 10 :-"))
 // if(num%10==0){
 //     console.log("The number is divisible by 10")
 // }
 // else{
 //     console.log("The number is not divisible by 10")
+// }
+
+// let num=Number(prompt("Enter any number between one and seven to see their dates :-"))
+// if(num==1){
+// console.log("Today is Sunday!")
+// }
+// else if(num==2){
+//     console.log("Today is Monday!")
+// }
+// else if(num==3){
+//     console.log("Today is Tuesday!")
+// }
+// else if(num==4){
+//     console.log("Today is Wednesday!")
+// }
+// else if(num==5){
+//     console.log("Today is Thursday!")
+// }
+// else if(num==6){
+//     console.log("Today is Friday!")
+// }
+// else if(num==7){
+//     console.log("Today is Saturday!")
+// }
+// else{
+//     console.log("You are not obeying my conditions!")
+// }
+
+// let num=Number(prompt("Enter your marks :-"))
+// if (num>=90){
+//     console.log("A+")
+// }
+// else if (num>=80){
+//     console.log("A")
+// }
+// else if (num>=70){
+//     console.log("B+")
+// }
+// else if (num>=60){
+//     console.log("B")
+// }
+// else if (num>=50){
+//     console.log("C+")
+// }
+// else if (num>=40){
+//     console.log("C")
+// }
+// else{
+//     console.log("You are fail!")
+// }
+
+// let num=Number(prompt("Enter the number which you want to check :- "))
+// if(num>0){
+//     if(num%2==0){
+//         console.log("The number is positive and even")
+//     }
+//     else{
+//         console.log("The number is positive and odd")
+//     }
+//     }
+// else{
+//     if(num%2==0){
+//         console.log("The number is negative and even")
+//     }
+//     else{
+//         console.log("The number is negative and odd")
+//     }
 // }
 
 // swap
