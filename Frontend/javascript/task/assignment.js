@@ -166,6 +166,46 @@ console.log("5X10="+number*10)
 //     }
 // }
 
+// Function to calculate discount
+function calculateDiscount() {
+    // Get the amount from user
+    let amount = parseFloat(prompt("Please enter the total amount:"));
+    
+    // Check if the input is valid
+    if (isNaN(amount) || amount <= 0) {
+        alert("Please enter a valid positive number.");
+        return;
+    }
+    
+    let discountRate;
+    let discountAmount;
+    let finalAmount;
+    
+    // Determine discount rate based on amount
+    if (amount <= 10000) {
+        discountRate = 2;
+    } else if (amount <= 50000) {
+        discountRate = 10;
+    } else {
+        discountRate = 15;
+    }
+    
+    // Calculate discount and final amount
+    discountAmount = (amount * discountRate) / 100;
+    finalAmount = amount - discountAmount;
+    
+    // Display the results
+    alert(
+        `Original Amount: ₹${amount.toFixed(2)}\n` +
+        `Discount Rate: ${discountRate}%\n` +
+        `Discount Amount: ₹${discountAmount.toFixed(2)}\n` +
+        `Final Amount to Pay: ₹${finalAmount.toFixed(2)}`
+    );
+}
+
+// Call the function to start the program
+calculateDiscount();
+
 // swap
 // let a=5
 // let b=8
