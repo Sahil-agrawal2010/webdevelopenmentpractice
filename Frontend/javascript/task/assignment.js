@@ -197,6 +197,21 @@ console.log("5X10="+number*10)
 //     console.log("Your total amont after discount is "+total2)
 // }
 
+// let time=Number(prompt("Enter the  time :- "))
+// if( time!=0 && time<=12){
+//     console.log("Good Morning!")
+// }
+// else if(time>=13 && time<=18){
+//     console.log("Good Afernoon!")
+// }
+// else if(time>=19 && time<=23){
+//     console.log("Good Night!")
+// }
+// else{
+//     console.log("Please enter valid time! "+time+" is not a valid time.")
+// }
+
+
 // swap
 // let a=5
 // let b=8
