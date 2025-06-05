@@ -166,6 +166,37 @@ console.log("5X10="+number*10)
 //     }
 // }
 
+// let useramount=Number(prompt("Enrter the amount to see the discount :- "))
+// if(useramount<=10000){
+//     discount1=useramount*(2/100)
+//     console.log("Your total amount is "+useramount)
+//     console.log("Your discount amount is "+discount1)
+//     let total1=useramount-discount1
+//     console.log("Your total amont after discount is "+total1)
+// }
+// else if(useramount<=50000){
+//     discount1=10000*(2/100)
+//     remainingamount1=useramount-10000
+//     discount2=remainingamount1*(10/100)
+//     let totaldiscount1=discount1+discount2
+//      console.log("Your total amount is "+useramount)
+//     console.log("Your discount amount is "+totaldiscount1)
+//      let total1=useramount-totaldiscount1
+//     console.log("Your total amont after discount is "+total1)
+// }
+// else{
+//       discount1=10000*(2/100)
+//      discount2=50000*(10/100)
+//     let remainingamount4=60000
+//     let remaingamount8=useramount-remainingamount4
+//     discountamount4=remaingamount8*(15/100)
+//     let totaladiscount2=discount1+discount2+discountamount4
+//      console.log("Your total amount is "+useramount)
+//     console.log("Your discount amount is "+totaladiscount2)
+//      let total2=useramount-totaladiscount2
+//     console.log("Your total amont after discount is "+total2)
+// }
+
 // swap
 // let a=5
 // let b=8
