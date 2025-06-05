@@ -211,6 +211,28 @@ console.log("5X10="+number*10)
 //     console.log("Please enter valid time! "+time+" is not a valid time.")
 // }
 
+// let weigt=Number(prompt("Enter the weight :- "))
+// let height=Number(prompt("Enter your height (in meter) :- "))
+// BMI=weigt/(height*height)
+// console.log("Your BMI is : "+BMI.toFixed(5))
+// if(BMI<=18.9){
+//     console.log("You are very underweight!")
+// }
+// else if(BMI>=19 && BMI<=24.9){
+//     console.log("Your are a normal human!")
+// }
+// else if(BMI>=25 && BMI<=29.9){
+//     console.log("Your are very overweight!")
+// }
+// else if(BMI>=30 && BMI<=34.9){
+//     console.log("Your are having obesity case 1!")
+// }
+// else if(BMI>=35 && BMI<=39.9){
+//     console.log("Your are having obesity case 2!")
+// }
+// else{
+//     console.log("You will die soon byee!")
+// }
 
 // swap
 // let a=5
