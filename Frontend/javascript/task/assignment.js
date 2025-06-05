@@ -234,6 +234,13 @@ console.log("5X10="+number*10)
 //     console.log("You will die soon byee!")
 // }
 
+// let userInput = prompt("Enter any character : ")
+// if(userInput == 'a' || userInput == 'e' || userInput == 'i' || userInput == 'o' || userInput == 'u' || userInput == 'A' || userInput == 'E' || userInput == 'I' || userInput == 'O' || userInput == 'U'){
+//     console.log(userInput + " is Vowel.")
+// }else{
+//     console.log(userInput + " is Consonant.")
+// }
+
 // swap
 // let a=5
 // let b=8
