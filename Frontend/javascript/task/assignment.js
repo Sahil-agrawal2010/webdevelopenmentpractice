@@ -241,8 +241,6 @@ console.log("5X10="+number*10)
 //     console.log(userInput + " is Consonant.")
 // }
 
-let a=455678
-
 // swap
 // let a=5
 // let b=8
