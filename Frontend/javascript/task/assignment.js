@@ -241,6 +241,71 @@ console.log("5X10="+number*10)
 //     console.log(userInput + " is Consonant.")
 // }
 
+// let year=Number(prompt("Enter the year! :-"))
+// if (year%4==0){
+//     console.log("It's a leap year!")
+// }
+// else{
+//     console.log("It's not a leap year")
+// }
+
+// let a=Number(prompt("Enter the first number:- "))
+// let b=Number(prompt("Enter the second number:- "))
+// let c=prompt("Enter the operator such as(+,-,*,/):- ")
+// if(c=="+"){
+//     let ans=a+b
+//     let d=prompt("The answe is:- "+ans)
+// }
+// else if(c=="-"){
+//     let ans=a-b
+//     let d=prompt("The answe is:- "+ans)
+// }
+// else if(c=="*"){
+//     let ans=a*b
+//     let d=prompt("The answe is:- "+ans)
+// }
+// else if(c=="/"){
+//     let ans=a/b
+//     let d=prompt("The answe is:- "+ans.toFixed(2))
+// }
+// else{
+//     prompt("follow the rules!")
+// }
+
+// userChoice = prompt("Enter your choice among [Rock, Paper, Scissor : ] : ")
+// compChoice = "Rock"
+// if (userChoice == compChoice){
+//     console.log("Draw Points!")
+// }else if(userChoice == "Paper" && compChoice == "Rock"){
+//     console.log("You won!")
+// }else if(userChoice == "Scissor" && compChoice == "Rock"){
+//     console.log("Computer won!")
+// }else{
+//     console.log("Sorry! Enter valid input.")
+// }
+
+// let a=Number(prompt("Enter the first angle:- "))
+// let b=Number(prompt("Enter the second angle:- "))
+// let c=Number(prompt("Enter the third angle:- "))
+// let sum=a+b+c
+// if(sum==180){
+//     console.log("It's a perfect triangle!")
+// }
+// else{
+//     console.log("It's not a perfect triangle")
+// }
+
+// let a=Number(prompt("Enter the temperature of your place:- "))
+// if(a<=15){
+//     console.log("It's very much cold!")
+// }
+// else if(a>=16 && a<=30){
+//     console.log("It's normal!")
+// }
+// else {
+//     console.log("It's very much hot!")
+// }
+
 // swap
 // let a=5
 // let b=8
