@@ -24,3 +24,15 @@ switch (userInput){
     default:
         console.log("Enter correct number.")
 }
+userInput=(prompt("Enter any alphabet :- "))
+switch(userInput){
+case "a":
+case "e":
+case "i":
+case "u":
+case "o":
+    console.log("It is a vowel!")
+    break
+default:
+    console.log("It is a consonen!")
+}
