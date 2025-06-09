@@ -102,3 +102,18 @@ default:
 //     default:
 //         console.log("Enter correct number.")
 // }
+
+// userInput=prompt("Enter Green, Red, or Yellow to see the traffic rules : ")
+// switch (userInput){
+//     case "Red":
+//         console.log("Stop!")
+//         break
+//     case "Yellow":
+//         console.log("Redy!")
+//         break
+//     case "Green":
+//         console.log("Go!")
+//         break
+//     default:
+//         console.log("Enter correct color!")
+// }
