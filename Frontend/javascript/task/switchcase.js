@@ -60,3 +60,45 @@ default:
 //     default:
 //         console.log("Enter numbers or operator!")
 // }
+
+// userInput = Number(prompt("Enter any number between 1 to 12 see the months : "))
+// switch (userInput){
+//     case 1:
+//         console.log("Baisakh!")
+//         break
+//     case 2:
+//         console.log("Jestha!")
+//         break
+//     case 3:
+//         console.log("Asar!")
+//         break
+//     case 4:
+//         console.log("Shrawan!")
+//         break
+//     case 5:
+//         console.log("Bhadau!")
+//         break
+//     case 6:
+//         console.log("Mangsir!")
+//         break
+//     case 7:
+//         console.log("Asoj!")
+//         break
+//     case 8:
+//         console.log("Kartik!")
+//         break
+//     case 9:
+//         console.log("Poush!")
+//         break
+//     case 10:
+//         console.log("Magh!")
+//         break
+//     case 11:
+//         console.log("Falgun!")
+//         break
+//     case 12:
+//         console.log("Chaitra!")
+//         break
+//     default:
+//         console.log("Enter correct number.")
+// }
