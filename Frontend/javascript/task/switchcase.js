@@ -117,3 +117,13 @@ default:
 //     default:
 //         console.log("Enter correct color!")
 // }
+
+let a=Number(prompt("Enter any number :- "))
+switch(a){
+    case "a"%2==0:
+        console.log("The number is even")
+        break
+}
+    case "a"%2==1:
+        console.log("The number is odd")
+        break
