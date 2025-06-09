@@ -36,3 +36,27 @@ case "o":
 default:
     console.log("It is a consonen!")
 }
+
+//  a= Number(prompt("Enter the first number: "))
+//  b= Number(prompt("Enter the second number: "))
+// userInput = (prompt("Enter the operator such as(+,-,*,/): "))
+// switch (userInput){
+//     case "+":
+//         let sum=a+b
+//         console.log("The sum of two number is "+sum)
+//         break
+//         case "-":
+//        let difference=a-b
+//         console.log("The difference of two number is "+difference)
+//         break
+//         case "*":
+//        let product=a*b
+//         console.log("The product of two number is "+product)
+//         break
+//         case "/":
+//         let division=a/b
+//         console.log("The sum of two number is "+division)
+//         break
+//     default:
+//         console.log("Enter numbers or operator!")
+// }
