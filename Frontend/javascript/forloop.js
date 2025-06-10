@@ -41,3 +41,7 @@ for( i=1;i<=5;i++){
     s=s+i
 }
     console.log(s)
+
+    for(let i=1;i<=5;i++){
+    console.log(i*i*i)
+}
