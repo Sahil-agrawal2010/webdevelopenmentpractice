@@ -10,3 +10,7 @@ for(let i=1 ; i<=10 ; i=i+1){
 for(let i=1;i<=17;i++){
     console.log("Pear!")
 }
+
+for(let i=1;i<=10;i++){
+    console.log(i)
+}
