@@ -123,7 +123,9 @@ switch(a%2){
     case 0:
         console.log("The number is even")
         break
-}
     case 1:
         console.log("The number is odd")
         break
+        default:
+        console.log("Your input is wrong!")
+}
