@@ -35,3 +35,9 @@ let a=Number(prompt("Enter any number :- "))
 for(let i=1;i<=10;i=i+1){
     console.log(a +"X"+ i +" = "+a*i )
 }
+
+let s=0
+for( i=1;i<=5;i++){
+    s=s+i
+}
+    console.log(s)
