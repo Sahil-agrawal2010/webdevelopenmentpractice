@@ -53,3 +53,7 @@ for(let i=1;i<=100000;i=i*10){
 for(let i=1;i<=11111;i=i*10+1){
     console.log(i)
 }
+
+for(i=3;i<=33333;i=i*10+3){
+    console.log(i)
+}
