@@ -70,3 +70,11 @@ for(i=2;i<=6;i=i+1){
     console.log(s)
     s=s*10+i
 }
+
+for(i=1;i<=10;i++)
+if(i%2==0){
+    console.log(-i)
+}
+else{
+    console.log(i)
+}
