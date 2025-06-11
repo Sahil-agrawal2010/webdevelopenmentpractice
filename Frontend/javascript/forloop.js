@@ -45,3 +45,7 @@ for( i=1;i<=5;i++){
     for(let i=1;i<=5;i++){
     console.log(i*i*i)
 }
+
+for(let i=1;i<=100000;i=i*10){
+    console.log(i)
+}
