@@ -57,3 +57,10 @@ for(let i=1;i<=11111;i=i*10+1){
 for(i=3;i<=33333;i=i*10+3){
     console.log(i)
 }
+
+let num=720
+for(let i=6;i>=2;i=i-1){
+    console.log(num)
+    num=num/i
+}
+console.log(num)
