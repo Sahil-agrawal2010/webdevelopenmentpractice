@@ -64,3 +64,9 @@ for(let i=6;i>=2;i=i-1){
     num=num/i
 }
 console.log(num)
+
+s=1
+for(i=2;i<=6;i=i+1){
+    console.log(s)
+    s=s*10+i
+}
