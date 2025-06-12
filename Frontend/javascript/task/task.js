@@ -74,106 +74,106 @@ console.log("The mean of the given data is: " + mean)
 // console.log("The area of triangle is:-"+area)
 
 let userInput=prompt("Enter the name of place of which you want to see Currency :- ")
-if(userInput==Afghanistan){
+if(userInput=="Afghanistan"){
     console.log("Afghanistani Afghani AFN ؋")
 }
-else if(userInput==Armenia){
+else if(userInput=="Armenia"){
     console.log("Armenian Dram AMD դր")
 }
-else if(userInput==Azerbaijan){
+else if(userInput=="Azerbaijan"){
     console.log("Azerbaijani Manat AZN ₼")
 }
-else if(userInput==Georgia){
+else if(userInput=="Georgia"){
     console.log("Georgian Lari	GEL	ლ")
 }
-else if(userInput==Bahrain){
+else if(userInput=="Bahrain"){
     console.log("	Bahraini Dinar	BHD	.د.ب")
 }
-else if(userInput==Bangladesh){
+else if(userInput=="Bangladesh"){
     console.log("	Bangladeshi Taka	BDT	৳")
 }
-else if(userInput==Bhutan){
+else if(userInput=="Bhutan"){
     console.log("Bhutanese Ngultrum	BTN	Nu.")
 }
-else if(userInput==Brunei){
+else if(userInput=="Brunei"){
     console.log("	Brunei Dollar	BND	$")
 }
-else if(userInput==Cambodia){
+else if(userInput=="Cambodia"){
     console.log("	Cambodian Riel	KHR	៛")
 }
-else if(userInput==China){
+else if(userInput=="China"){
     console.log("Chinese Yuan Renminbi	CNY	¥")
 }
-else if(userInput==Cyprus){
+else if(userInput=="Cyprus"){
     console.log("Cypriot Pound CYP	£")
 }
-else if(userInput==Kyrgyzstan){
+else if(userInput=="Kyrgyzstan"){
     console.log("Kyrgyzstani Som KGS лв")
 }
-else if(userInput==	India){
+else if(userInput==	"India"){
     console.log("Indian Rupee	INR	₹")
 }
-else if(userInput==Indonesia){
+else if(userInput=="Indonesia"){
     console.log("	Indonesian Rupiah	IDR	Rp")
 }
-else if(userInput==Iran){
+else if(userInput=="Iran"){
     console.log("	Iranian Rial	IRR	﷼")
 }
-else if(userInput==Iraq){
+else if(userInput=="Iraq"){
     console.log("Iraqi Dinar	IQD	ع.د")
 }
-else if(userInput==Israel){
+else if(userInput=="Israel"){
     console.log("Israeli New Sheqel	ILS	₪")
 }
-else if(userInput==Japan){
+else if(userInput=="Japan"){
     console.log("Japanese Yen	JPY	¥")
 }
-else if(userInput==Jordan){
+else if(userInput=="Jordan"){
     console.log("Jordanian Dinar JOD د.ا")
 }
-else if(userInput==Kazakhstan){
+else if(userInput=="Kazakhstan"){
     console.log("Kazakhstani Tenge	KZT	лв")
 }
-else if(userInput==	Kuwait){
+else if(userInput=="	Kuwait"){
     console.log("Kuwaiti Dinar KWD د.ك")
 }
-else if(userInput==	Pakistan){
+else if(userInput==	"Pakistan"){
     console.log("Pakistan Rupee	PKR	₨")
 }
-else if(userInput==Laos){
+else if(userInput=="Laos"){
     console.log("Lao Kip LAK ₭")
 }
-else if(userInput==Lebanon){
+else if(userInput=="Lebanon"){
     console.log("Lebanese Pound	LBP	£")
 }
-else if(userInput==	Malaysia){
+else if(userInput==	"Malaysia"){
     console.log("Malaysian Ringgit	MYR	RM")
 }
-else if(userInput==Maldives){
+else if(userInput=="Maldives"){
     console.log("Maldives Rufiyaa	MVR	Rf")
 }
-else if(userInput==Mongolia){
+else if(userInput=="Mongolia"){
     console.log("Mongolian Tugrik	MNT	₮")
 }
-else if(userInput==Myanmar){
+else if(userInput=="Myanmar"){
     console.log("(Burma) Myanmar Kyat MMK K")
 }
-else if(userInput==Nepal){
+else if(userInput=="Nepal"){
     console.log("Nepalese Rupee	NPR	₨")
 }
-else if(userInput==NorthKorea){
+else if(userInput=="NorthKorea"){
     console.log("North Korean Won	KPW	₩")
 }
-else if(userInput==Oman){
+else if(userInput=="Oman"){
     console.log("Omani Rial OMR	﷼)")
 }
-else if(userInput==	Qatar){
+else if(userInput==	"Qatar"){
     console.log("Qatari Riyal	QAR	﷼)")
 }
-else if(userInput==Palestine){
+else if(userInput=="Palestine"){
     console.log("Jordanian Dinar JOD د.ا")
 }
-else if(userInput==	Philippines){
+else if(userInput==	"Philippines"){
     console.log("Philippine Peso	PHP	₱")
 }
 else{
