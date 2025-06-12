@@ -182,16 +182,16 @@ else if(userInput=="Georgia"){
 else if(userInput=="Russia"){
     console.log("Russian Ruble	RUB	₽")
 }
-else if(userInput=="Saudi Arabia"){
+else if(userInput=="SaudiArabia"){
     console.log("Saudi Arabian Riyal SAR ﷼")
 }
 else if(userInput=="Singapore"){
     console.log("Singapore Dollar	SGD	$")
 }
-else if(userInput=="South Korea"){
+else if(userInput=="SouthKorea"){
     console.log("Korean Won	KRW	₩")
 }
-else if(userInput=="Sri Lanka"){
+else if(userInput=="SriLanka"){
     console.log("Sri Lankan Rupee	LKR	₨")
 }
 else if(userInput=="Syria"){
@@ -214,7 +214,7 @@ else if(userInput=="Turkey"){
 else if(userInput=="Turkmenistan"){
     console.log("Turkmenistani Manat TMM T")
 }
-else if(userInput=="United Arab Emirates (UAE)"){
+else if(userInput=="UnitedArabEmirates(UAE)"){
     console.log("United Arab Emirates DirhamAED د.إ")
 }
 else if(userInput=="Uzbekistan"){
@@ -238,7 +238,7 @@ else if(userInput=="Benin"){
 else if(userInput=="Botswana"){
     console.log("Botswana Pula	BWP	P")
 }
-else if(userInput=="Burkina Faso"){
+else if(userInput=="BurkinaFaso"){
     console.log("West African CFA	XOF	CFA")
 }
 else if(userInput=="Burundi"){
@@ -250,7 +250,7 @@ else if(userInput=="Cabo Verde"){
 else if(userInput=="Cameroon"){
     console.log("Central African CFA	XAF	FCFA")
 }
-else if(userInput=="Central African Republic (CAR)"){
+else if(userInput=="CentralAfricanRepublic(CAR)"){
     console.log("Central African CFA	XAF	FCFA")
 }
 else if(userInput=="Chad"){
@@ -259,13 +259,13 @@ else if(userInput=="Chad"){
 else if(userInput=="Comoros"){
     console.log("Comorian Franc	KMF	CF")
 }
-else if(userInput=="Democratic Republic of the Congo"){
+else if(userInput=="DemocraticRepublicoftheCongo"){
     console.log("Congolese franc	CDF	FC")
 }
-else if(userInput=="Republic of the Congo"){
+else if(userInput=="RepublicoftheCongo"){
     console.log("Central African CFA	XAF	FCFA")
 }
-else if(userInput=="Cote d'Ivoire"){
+else if(userInput=="Coted'Ivoire"){
     console.log("West African CFA	XOF	CFA")
 }
 else if(userInput=="Djibouti"){
@@ -274,7 +274,7 @@ else if(userInput=="Djibouti"){
 else if(userInput=="Egypt"){
     console.log("Egyptian Pound	EGP	£")
 }
-else if(userInput=="Equatorial Guinea"){
+else if(userInput=="EquatorialGuinea"){
     console.log("Central African CFA	XAF	FCFA")
 }
 else if(userInput=="Eritrea"){
@@ -298,25 +298,395 @@ else if(userInput=="Guinea"){
 else if(userInput=="Guinea-Bissau"){
     console.log("West African CFA	XOF	CFA")
 }
-else if(userInput==""){
-    console.log("")
+else if(userInput=="Kenya"){
+    console.log("Kenyan Shilling	KES	KSh,")
 }
-else if(userInput==""){
-    console.log("")
+else if(userInput=="Lesotho"){
+    console.log("Lesotho Loti	LSL	L")
 }
-else if(userInput==""){
-    console.log("")
+else if(userInput=="Liberia"){
+    console.log("Liberian Dollar LRD $")
 }
-else if(userInput==""){
-    console.log("")
+else if(userInput=="Libya"){
+    console.log("Libyan Dinar LYD ل.د")
 }
-else if(userInput==""){
-    console.log("")
+else if(userInput=="Madagascar"){
+    console.log("Malagasy Ariary MG AAr")
 }
-else if(userInput==""){
-    console.log("")
-}else if(userInput==""){
-    console.log("")
+else if(userInput=="Malawi"){
+    console.log("Malawian Kwacha MWK MK")
+}
+else if(userInput=="Mali"){
+    console.log("West African CFA	XOF	CFA")
+}
+else if(userInput=="Mauritania"){
+    console.log("Mauritanian Ouguiya	MRO	UM")
+}
+else if(userInput=="Mauritius"){
+    console.log("Mauritian Rupee	MUR	₨")
+}
+else if(userInput=="Morocco"){
+    console.log("Moroccan Dirham	MAD	DH")
+}
+else if(userInput=="Mozambique"){
+    console.log("Mozambican Metical	MZN	MT")
+}
+else if(userInput=="Namibia"){
+    console.log("Namibian Dollar	NAD	$")
+}
+else if(userInput=="Niger"){
+    console.log("West African CFA	XOF	CFA")
+}
+else if(userInput=="Nigeria"){
+    console.log("Nigerian Naira	NGN	₦")
+}
+else if(userInput=="Rwanda"){
+    console.log("Rwandan Franc	RWF	FRw")
+}
+else if(userInput=="SaoTomeandPrincipe"){
+    console.log("Sao Tome Dobra	STD	Db")
+}
+else if(userInput=="Senegal"){
+    console.log("West African CFA	XOF	CFA")
+}
+else if(userInput=="Seychelles"){
+    console.log("Seychelles Rupee	SCR	₨")
+}
+else if(userInput=="SierraLeone"){
+    console.log("Sierra Leonean Leone	SLL	Le")
+}
+else if(userInput=="Somalia"){
+    console.log("Somali Shilling	SOS	S")
+}
+else if(userInput=="SouthAfrica"){
+    console.log("South African Rand	ZAR	R")
+}
+else if(userInput=="SouthSudan"){
+    console.log("South Sudanese pound	SSP	£")
+}
+else if(userInput=="Sudan"){
+    console.log("Sudanese pound	SDG	SD")
+}
+else if(userInput=="Swaziland"){
+    console.log("Swazi Lilangeni	SZL	E")
+}
+else if(userInput=="Tanzania"){
+    console.log("Tanzanian Shilling	TZS	TSh")
+}
+else if(userInput=="Togo"){
+    console.log("West African CFA	XOF	CFA")
+}
+else if(userInput=="Tunisia"){
+    console.log("Tunisian Dinar	TND	د.ت")
+}
+else if(userInput=="Uganda"){
+    console.log("Ugandan Shilling	UGX	USh")
+}
+else if(userInput=="Zambia"){
+    console.log("Zambian Kwacha	ZMK	ZK")
+}
+else if(userInput=="Zimbabwe"){
+    console.log("Zimbabwean Dollar	ZWD	$")
+}
+else if(userInput=="Albania"){
+    console.log("Albanian Lek	ALL	Lek")
+}
+else if(userInput=="Andorra"){
+    console.log("European Euro	EUR	€")
+}
+else if(userInput=="Armenia"){
+    console.log("Armenian Dram	AMD	դր.")
+}
+else if(userInput=="Austria"){
+    console.log("European Euro	EUR	€")
+}
+else if(userInput=="Azerbaijan"){
+    console.log("Azerbaijani Manat	AZN	₼")
+}
+else if(userInput=="Belarus"){
+    console.log("Belarusian Ruble	BYR	Br")
+}
+else if(userInput=="Belgium"){
+    console.log("European Euro	EUR	€")
+}
+else if(userInput=="BosniaandHerzegovina"){
+    console.log("Bosnia-Herzegovina Convertible Mark BAM KM")
+}
+else if(userInput=="Bulgaria"){
+    console.log("Bulgarian Lev	BGN	лв")
+}
+else if(userInput=="Croatia"){
+    console.log("Croatian Kuna	HRK	kn")
+}
+else if(userInput=="Cyprus"){
+    console.log("Cypriot Pound	CYP	£")
+}
+else if(userInput=="CzechRepublic"){
+    console.log("Czech Koruna	CZK	Kč")
+}
+else if(userInput=="Denmark"){
+    console.log("Danish Krone	DKK	kr.")
+}
+else if(userInput=="Estonia"){
+    console.log("Estonian Kroon	EEK	EEK")
+}
+else if(userInput=="Finland"){
+    console.log("European Euro	EUR	€")
+}
+else if(userInput=="France"){
+    console.log("European Euro	EUR	€")
+}
+else if(userInput=="Georgia"){
+    console.log("Georgian Lari	GEL	ლ")
+}
+else if(userInput=="Germany"){
+    console.log("European Euro	EUR	€")
+}
+else if(userInput=="Greece"){
+    console.log("European Euro	EUR	€")
+}
+else if(userInput=="Hungary"){
+    console.log("Hungarian Forint	HUF	Ft")
+}
+else if(userInput=="Iceland"){
+    console.log("European Euro	EUR	€")
+}
+else if(userInput=="Ireland"){
+    console.log("Icelandic Krona	ISK	kr")
+}
+else if(userInput=="Italy"){
+    console.log("European Euro	EUR	€")
+}
+else if(userInput=="Kazakhstan"){
+    console.log("Kazakhstani Tenge	KZT	лв")
+}
+else if(userInput=="Latvia"){
+    console.log("Latvian Lats LVL	Ls")
+}
+else if(userInput=="Kosovo"){
+    console.log("Euro	EUR	€")
+}
+else if(userInput=="Liechtenstein"){
+    console.log("Swiss Franc CHF CHF")
+}
+else if(userInput=="Lithuania"){
+    console.log("Lithuanian Litas LTL Lt")
+}
+else if(userInput=="Luxembourg"){
+    console.log("European Euro	EUR	€")
+}
+else if(userInput=="Macedonia(FYROM)"){
+    console.log("Macedonian Dena rMKD	ден")
+}
+else if(userInput=="Malta"){
+    console.log("Maltese Lira	MTL	₤")
+}
+else if(userInput=="Moldova"){
+    console.log("	Moldovan Leu	MDL	L")
+}
+else if(userInput=="Monaco"){
+    console.log("European Euro	EUR	€")
+}
+else if(userInput=="Montenegro"){
+    console.log("European Euro	EUR	€")
+}
+else if(userInput=="Nether lands"){
+    console.log("European Euro	EUR	€")
+}
+else if(userInput=="Norway"){
+    console.log("Norwegian Krone	NOK	kr")
+}
+else if(userInput=="Poland"){
+    console.log("Polish Zloty	PLN	zł")
+}
+else if(userInput=="Portugal"){
+    console.log("European Euro	EUR	€")
+}
+else if(userInput=="Romania"){
+    console.log("Romanian Leu	RON	lei")
+}
+else if(userInput=="Russia"){
+    console.log("Russian Ruble	RUB	₽")
+}
+else if(userInput=="SanMarino"){
+    console.log("European Euro	EUR	€")
+}
+else if(userInput=="Serbia"){
+    console.log("Serbian Dinar	RSD	Дин.")
+}
+else if(userInput=="Slovakia"){
+    console.log("Slovak Koruna	SKK	Sk")
+}
+else if(userInput=="Slovenia"){
+    console.log("European Euro	EUR	€")
+}
+else if(userInput=="Spain"){
+    console.log("European Euro	EUR	€")
+}
+else if(userInput=="Sweden"){
+    console.log("Swedish Krona	SEK	kr")
+}
+else if(userInput=="Switzerland"){
+    console.log("Swiss Franc CHF CHF")
+}
+else if(userInput=="Turkey"){
+    console.log("Turkish New Lira	TRY	₺")
+}
+else if(userInput=="Ukraine"){
+    console.log("Ukrainian Hryvnia	UAH	₴")
+}
+else if(userInput=="UnitedKingdom(UK)"){
+    console.log("	United Kingdom Pound Sterling	GBP	£")
+}
+else if(userInput=="VaticanCity(Holy See)"){
+    console.log("European Euro	EUR	€")
+}
+else if(userInput=="AntiguaandBarbuda	"){
+    console.log("East Caribbean Dollar	XCD	$")
+}
+else if(userInput=="Bahamas"){
+    console.log("Bahamian Dollar	BSD	$")
+}
+else if(userInput=="Barbados"){
+    console.log("Barbados Dollar	BBD	$")
+}
+else if(userInput=="Belize"){
+    console.log("Belize Dollar	BZD	BZ$")
+}
+else if(userInput=="Canada"){
+    console.log("Canadian Dolla CAD	$")
+}
+else if(userInput=="CostaRica"){
+    console.log("Costa Rican Colon	CRC	₡")
+}
+else if(userInput=="Cuba"){
+    console.log("Cuban Convertible Peso	CUC	$")
+}
+else if(userInput=="Dominica"){
+    console.log("	East Caribbean Dollar	XCD	$")
+}
+else if(userInput=="DominicanRepublic"){
+    console.log("Dominican Peso	DOP	RD$")
+}
+else if(userInput=="ElSalvador"){
+    console.log("United States Dollar	USD	$")
+}
+else if(userInput=="Grenada"){
+    console.log("East Caribbean Dollar	XCD	$")
+}
+else if(userInput=="Guatemala"){
+    console.log("Guatemalan Quetzal	GTQ	Q")
+}
+else if(userInput=="Haiti"){
+    console.log("Haitian Gourde	HTG	G")
+}
+else if(userInput=="Honduas"){
+    console.log("Honduran Lempira	HNL	L")
+}
+else if(userInput=="Jamaica"){
+    console.log("Jamaican DollarJMD	J$")
+}
+else if(userInput=="Mexico"){
+    console.log("Mexican Peso	MXN	$")
+}
+else if(userInput=="Nicaragua"){
+    console.log("Nicaraguan Córdoba	NIO	C$")
+}
+else if(userInput=="Panama"){
+    console.log("Panamanian Balboa	PAB	B/.")
+}
+else if(userInput=="SaintKittsandNevis"){
+    console.log("	East Caribbean Dollar	XCD	$")
+}
+else if(userInput=="SaintLucia"){
+    console.log("	East Caribbean Dollar	XCD	$")
+}
+else if(userInput=="SaintVincentandtheGrenadines"){
+    console.log("	East Caribbean Dollar	XCD	$")
+}
+else if(userInput=="TrinidadandTobago	"){
+    console.log("Trinidad and Tobago Dollar	TTD	TT$")
+}
+else if(userInput=="UnitedStatesofAmerica(USA)"){
+    console.log("United States Dollar	USD	$")
+}
+else if(userInput=="Argentina"){
+    console.log("Argentine Peso	ARS	$")
+}
+else if(userInput=="Bolivia"){
+    console.log("Bolivian Boliviano	BOB	$b")
+}
+else if(userInput=="Brazil"){
+    console.log("Brazilian Real	BRL	R$")
+}
+else if(userInput=="Chile"){
+    console.log("Chilean Peso	CLP	$")
+}
+else if(userInput=="Colombia"){
+    console.log("Colombian Peso	COP	$")
+}
+else if(userInput=="Ecuador"){
+    console.log("United States Dollar	USD	$")
+}
+else if(userInput=="Guyana"){
+    console.log("Guyanese Dollar	GYD	$")
+}
+else if(userInput=="Paraguay"){
+    console.log("Paraguay Guarani	PYG	Gs")
+}
+else if(userInput=="Peru"){
+    console.log("Peruvian Nuevo Sol	PEN	S/.")
+}
+else if(userInput=="Suriname"){
+    console.log("Suriname Dollar	SRD	$")
+}
+else if(userInput=="Uruguay"){
+    console.log("Uruguayan peso	UYU	$U")
+}
+else if(userInput=="Venezuela"){
+    console.log("Venezuelan Bolivar	VEF	Bs")
+}
+else if(userInput=="Australia"){
+    console.log("Australian Dollar	AUD	$")
+}
+else if(userInput=="Fiji"){
+    console.log("Fiji Dollar	FJD	$")
+}
+else if(userInput=="Kiribati"){
+    console.log("Australian Dollar	AUD	$")
+}
+else if(userInput=="MarshallIslands"){
+    console.log("	United States Dollar	USD	$")
+}
+else if(userInput=="Micronesia"){
+    console.log("United States Dollar	USD	$")
+}
+else if(userInput=="Nauru"){
+    console.log("Australian Dollar	AUD	$")
+}
+else if(userInput=="NewZealand"){
+    console.log("New Zealand Dollar	NZD	$")
+}
+else if(userInput=="Palau"){
+    console.log("	United States Dollar	USD	$")
+}
+else if(userInput=="PapuaNewGuinea"){
+    console.log("	Papua New Guinea Kina	PGK	K")
+}
+else if(userInput=="Samoa"){
+    console.log("Samoan Tala	WST	WS$")
+}
+else if(userInput=="SolomonIslands"){
+    console.log("Solomon Islands Dollar	SBD	$")
+}
+else if(userInput=="Tonga"){
+    console.log("Tongan Pa'Anga	TOP	T$")
+}
+else if(userInput=="Tuvalu"){
+    console.log("Australian Dollar	AUD	$")
+}
+else if(userInput=="Vanuatu"){
+    console.log("	Vanuatu Vatu	VUV	VT")
 }
 else{
     console.log("There is no any country like this or please enter the first letter in capital letter!")
