@@ -691,3 +691,410 @@ else if(userInput=="Vanuatu"){
 else{
     console.log("There is no any country like this or please enter the first letter in capital letter!")
 }
+
+
+let userInput=prompt("Enter the name of Country:- ")
+switch (userInput){
+    case "Afghanistan":
+    console.log("93")
+    break
+    case "Albania":
+console.log("355")
+break
+case "Algeria":
+console.log("213")
+break
+case "Andorra":
+console.log("376")
+break
+case "Angola":
+console.log("244")
+break
+case "Antigua and Barbuda":
+console.log("268")
+break
+case "Argentina":
+console.log("54")
+break
+case "Armenia":
+console.log("374")
+break
+case "Australia":
+console.log("61")
+break
+case "Austria":
+console.log("43")
+break
+case "Azerbaijan":
+console.log("994")
+break
+case "Bahamas":
+console.log("242")
+break
+case "Bahrain":
+console.log("973")
+break
+case "Bangladesh":
+console.log("880")
+break
+case "Barbados":
+console.log("246")
+break
+case "Belarus":
+console.log("375")
+break
+case "Belgium":
+console.log("32")
+break
+case "Belize":
+console.log("501")
+break
+case "Benin":
+console.log("229")
+break
+case "Bhutan":
+console.log("975")
+break
+case "Bolivia":
+console.log("591")
+break
+case "Bosnia and Herzegovina":
+console.log("387")
+break
+case "Botswana":
+console.log("267")
+break
+case "Brazil":
+console.log("55")
+break
+case "Brunei":
+console.log("673")
+break
+case "Bulgaria":
+console.log("359")
+break
+case "Burkina Faso":
+console.log("226")
+break
+case "Burundi":
+console.log("257")
+break
+case "Cabo Verde":
+console.log("238")
+break
+case "Cambodia":
+console.log("885")
+break
+case "Cameroon":
+console.log("237")
+break
+case "Canada":
+console.log("1")
+break
+case "Central African Republic":
+console.log("236")
+break
+case "Chad":
+console.log("235")
+break
+case "Chile":
+console.log("56")
+break
+case "China":
+console.log("86")
+break
+case "Colombia":
+console.log("57")
+break
+case "Comoros":
+console.log("269")
+break
+case "Congo":
+console.log("242")
+break
+case "Congo (Democratic Republic )":
+console.log("243")
+break
+case "Costa Rica":
+console.log("506")
+break
+case "Coratia":
+console.log("385")
+break
+case "Cuba":
+console.log("53")
+break
+case "Cyprus":
+console.log("357")
+break
+case "Czechai":
+console.log("420")
+break
+case "Denmark":
+console.log("45")
+break
+case "Djibouti":
+console.log("253")
+break
+case "Dominica":
+console.log("767")
+break
+case "Dominican Republic":
+console.log("809")
+break
+case "Ecuador":
+console.log("593")
+break
+case "Egypt":
+console.log("20")
+break
+case "El Salvador":
+console.log("503")
+break
+case "Equatorial Guinea":
+console.log("240")
+break
+case "Eritrea":
+console.log("291")
+break
+case "Estonia":
+console.log("372")
+break
+case "Eswatini":
+console.log("268")
+break
+case "Ethiopia":
+console.log("251")
+break
+case "Fiji":
+console.log("679")
+break
+case "Finland":
+console.log("358")
+break
+case "France":
+console.log("33")
+break
+case "Gabon":
+console.log("241")
+break
+case "Gambia":
+console.log("220")
+break
+case "Georgia":
+console.log("995")
+break
+case "Germany":
+console.log("49")
+break
+case "Ghana":
+console.log("233")
+break
+case "Greece":
+console.log("30")
+break
+case "Grenada":
+console.log("473")
+break
+case "Guatemala":
+console.log("502")
+break
+case "Guinea":
+console.log("224")
+break
+case "Guinea-Bissau":
+console.log("245")
+break
+case "Guyana":
+console.log("592")
+break
+case "Haiti":
+console.log("509")
+break
+case "Holy See (Vatican City)":
+console.log("379")
+break
+case "Honduras":
+console.log("504")
+break
+case "Hungary":
+console.log("36")
+break
+case "Iceland":
+console.log("354")
+break
+case "India":
+console.log("91")
+break
+case "Indonesia":
+console.log("62")
+break
+case "Iran":
+console.log("98")
+break
+case "Iraq":
+console.log("964")
+break
+case "Ireland":
+console.log("353")
+break
+case "Israel":
+console.log("972")
+break
+case "Italy":
+console.log("39")
+break
+case "Jamaica":
+console.log("876")
+break
+case "Japan":
+console.log("81")
+break
+case "Jordan":
+console.log("962")
+break
+case "Kazakhstan":
+console.log("7")
+break
+case "Kenya":
+console.log("254")
+break
+case "Kiribati":
+console.log("686")
+break
+case "Kosovo":
+console.log("383")
+break
+case "Kuwait":
+console.log("965")
+break
+case "Kyrgyzstan":
+console.log("996")
+break
+case "Laos":
+console.log("856")
+break
+case "Latvia":
+console.log("371")
+break
+case "Lebanon":
+console.log("961")
+break
+case "Lesotho":
+console.log("266")
+break
+case "Liberia":
+console.log("231")
+break
+case "Libya":
+console.log("218")
+break
+case "Liechtenstein":
+console.log("423")
+break
+case "Lithuania":
+console.log("370")
+break
+case "Luxembourg":
+console.log("352")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+case "":
+console.log("")
+break
+
+default:
+    console.log("There is no any country like this oor enter the country in capital letter!")
+}
