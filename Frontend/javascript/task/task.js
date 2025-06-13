@@ -693,7 +693,7 @@ else{
 }
 
 
-let userInput=prompt("Enter the name of Country:- ")
+// let userInput=prompt("Enter the name of Country:- ")
 switch (userInput){
     case "Afghanistan":
     console.log("93")
@@ -998,103 +998,285 @@ break
 case "Luxembourg":
 console.log("352")
 break
-case "":
-console.log("")
+case "Madagascar":
+console.log("261")
 break
-case "":
-console.log("")
+case "Malawi":
+console.log("265")
 break
-case "":
-console.log("")
+case "Malayasia":
+console.log("60")
 break
-case "":
-console.log("")
+case "Mali":
+console.log("223")
 break
-case "":
-console.log("")
+case "Maldives":
+console.log("960")
 break
-case "":
-console.log("")
+case "Malta":
+console.log("356")
 break
-case "":
-console.log("")
+case "Marshall Islands":
+console.log("692")
 break
-case "":
-console.log("")
+case "Mauritania":
+console.log("222")
 break
-case "":
-console.log("")
+case "Mauritius":
+console.log("230")
 break
-case "":
-console.log("")
+case "Mexico":
+console.log("52")
 break
-case "":
-console.log("")
+case "Micronesia":
+console.log("691")
 break
-case "":
-console.log("")
+case "Moldova":
+console.log("373")
 break
-case "":
-console.log("")
+case "Monaco":
+console.log("377")
 break
-case "":
-console.log("")
+case "Mongolia":
+console.log("976")
 break
-case "":
-console.log("")
+case "Montenegro":
+console.log("382")
 break
-case "":
-console.log("")
+case "Morocco":
+console.log("212")
 break
-case "":
-console.log("")
+case "Mozambique":
+console.log("258")
 break
-case "":
-console.log("")
+case "Myanmar":
+console.log("95")
 break
-case "":
-console.log("")
+case "Namibia":
+console.log("264")
 break
-case "":
-console.log("")
+case "Nauru":
+console.log("674")
 break
-case "":
-console.log("")
+case "Nepal":
+console.log("977")
 break
-case "":
-console.log("")
+case "Netherlands":
+console.log("31")
 break
-case "":
-console.log("")
+case "New Zealand":
+console.log("64")
 break
-case "":
-console.log("")
+case "Nicaragua":
+console.log("505")
 break
-case "":
-console.log("")
+case "Niger":
+console.log("234")
 break
-case "":
-console.log("")
+case "North Korea":
+console.log("850")
 break
-case "":
-console.log("")
+case "North Macedonia":
+console.log("389")
 break
-case "":
-console.log("")
+case "Norway":
+console.log("47")
 break
-case "":
-console.log("")
+case "Oman":
+console.log("968")
 break
-case "":
-console.log("")
+case "Pakistan":
+console.log("92")
 break
-case "":
-console.log("")
+case "Palau":
+console.log("680")
 break
-case "":
-console.log("")
+case "Palestine":
+console.log("970")
 break
-
+case "Panama":
+console.log("507")
+break
+case "Papua New Guinea":
+console.log("675")
+break
+case "Paraguay":
+console.log("595")
+break
+case "Peru":
+console.log("51")
+break
+case "Philippines":
+console.log("63")
+break
+case "Poland":
+console.log("48")
+break
+case "Portugal":
+console.log("351")
+break
+case "Qatar":
+console.log("974")
+break
+case "Romania":
+console.log("40")
+break
+case "Russia":
+console.log("7")
+break
+case "Rwanda":
+console.log("250")
+break
+case "Saint Kitts and Nevis":
+console.log("869")
+break
+case "Saint Lucia":
+console.log("758")
+break
+case "Saint Vincent and the Grenadines":
+console.log("784")
+break
+case "Samoa":
+console.log("685")
+break
+case "San Marino":
+console.log("378")
+break
+case "Sao Tome and Principe":
+console.log("239")
+break
+case "Saudi Arabia":
+console.log("966")
+break
+case "Senegal":
+console.log("221")
+break
+case "Serbia":
+console.log("381")
+break
+case "Seychelles":
+console.log("248")
+break
+case "Sierra Leone":
+console.log("232")
+break
+case "Singapore":
+console.log("65")
+break
+case "Slovakia":
+console.log("421")
+break
+case "Slovenia":
+console.log("386")
+break
+case "Solomon Islands":
+console.log("677")
+break
+case "Somalia":
+console.log("252")
+break
+case "South Africa":
+console.log("27")
+break
+case "South Korea":
+console.log("82")
+break
+case "South Sudan":
+console.log("211")
+break
+case "Spain":
+console.log("34")
+break
+case "Sri Lanka":
+console.log("94")
+break
+case "Sudan":
+console.log("249")
+break
+case "Suriname":
+console.log("597")
+break
+case "Sweden":
+console.log("46")
+break
+case "Switzerland":
+console.log("41")
+break
+case "Syria":
+console.log("963")
+break
+case "Tajikistan":
+console.log("992")
+break
+case "Tanzania":
+console.log("255")
+break
+case "Thailand":
+console.log("66")
+break
+case "Timor-Leste":
+console.log("670")
+break
+case "Togo":
+console.log("228")
+break
+case "Tonga":
+console.log("676")
+break
+case "Trinidad and Tobago":
+console.log("868")
+break
+case "Tunisia":
+console.log("216")
+break
+case "Turkey":
+console.log("90")
+break
+case "Turkmenistan":
+console.log("993")
+break
+case "Tuvalu":
+console.log("688")
+break
+case "Uganda":
+console.log("256")
+break
+case "Ukraine":
+console.log("380")
+break
+case "United Arab Emirates":
+console.log("971")
+break
+case "United Kingdom":
+console.log("44")
+break
+case "United States":
+console.log("1")
+break
+case "Uruguay":
+console.log("598")
+break
+case "Uzbekistan":
+console.log("998")
+break
+case "Vanuatu":
+console.log("678")
+break
+case "Venezuela":
+console.log("58")
+break
+case "Vietnam":
+console.log("84")
+break
+case "Yemen":
+console.log("967")
+break
+case "Zambia":
+console.log("260")
+break
+case "Zimbabwe":
+console.log("263")
+break
 default:
     console.log("There is no any country like this oor enter the country in capital letter!")
 }
