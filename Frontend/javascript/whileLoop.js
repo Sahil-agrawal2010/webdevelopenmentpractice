@@ -74,3 +74,14 @@
 //     data=data*2
 //     i++
 // }
+
+let i=1
+let s=1
+while(i<=7){
+    console.log(s)
+    s=s+i
+    i=i+1
+}
+
+factorial
+reverse of any number
