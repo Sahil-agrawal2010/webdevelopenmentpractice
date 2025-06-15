@@ -27,3 +27,10 @@ while(i<=10){
     console.log(i*i)
     i=i+1
 }
+
+let num=5
+let i=1
+while(i<=10){
+    console.log("5"+"X"+i+"="+num*i)
+    i=i+1
+}
