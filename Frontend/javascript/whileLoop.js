@@ -66,3 +66,11 @@ while(i<=6){
     s=s*10+i
     i=i+1
 }
+
+let i=1
+let data=1
+while(i<=7){
+    console.log(data)
+    data=data*2
+    i++
+}
