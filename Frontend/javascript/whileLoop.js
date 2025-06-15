@@ -34,3 +34,11 @@ while(i<=10){
     console.log("5"+"X"+i+"="+num*i)
     i=i+1
 }
+
+let i = 1
+let sum = 0
+while(i<=100){
+    sum = sum + i
+    i++
+}
+console.log(sum)
