@@ -1281,4 +1281,3 @@ default:
     console.log("There is no any country like this oor enter the country in capital letter!")
 }
 
-dhsfhkjfhasjdlajdhjlfjlda
