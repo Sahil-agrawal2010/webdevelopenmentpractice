@@ -50,3 +50,11 @@ while(i>=1){
     }
         i=i-1
 }
+
+let i=1
+let data = 1
+while(i<=5){
+    console.log(data)
+    data=data*10+1
+    i++
+}
