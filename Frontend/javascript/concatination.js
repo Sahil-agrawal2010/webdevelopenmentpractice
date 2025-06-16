@@ -15,3 +15,13 @@ area2=Pi*radius*radius
 console.log("The area of sqyare is:-"+area)
 console.log("The area of square is:-"+area1)
 console.log("The area of circle is:-"+area2)
+
+
+let user_input = Number(prompt("Enter any number : "))
+var remainder = 0
+while(user_input > 0){
+    let data = user_input % 10
+    remainder = remainder * 10 + data
+    user_input = (user_input / 10) >> 0
+}
+console.log(remainder)
