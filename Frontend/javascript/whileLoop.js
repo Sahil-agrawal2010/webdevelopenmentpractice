@@ -83,5 +83,13 @@ while(i<=7){
     i=i+1
 }
 
-factorial
+let userInput=Number(prompt("Enter any number to see the factorial :- "))
+let s=userInput
+let i=1
+while(i<userInput){
+    s=s*i
+    i++
+}
+  console.log(s)
+
 reverse of any number
