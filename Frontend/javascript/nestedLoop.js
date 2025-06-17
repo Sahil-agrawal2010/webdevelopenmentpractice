@@ -17,3 +17,11 @@ for(let i=1;i<=9;i++){
     }
     console.log(data)
 }
+
+for (let i=1;i<=5;i++){
+    let data=""
+    for(j=1;j<=i;j++){
+        data=data+"*"
+    }
+    console.log(data)
+}
