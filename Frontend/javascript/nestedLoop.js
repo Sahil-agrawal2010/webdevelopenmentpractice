@@ -25,3 +25,11 @@ for (let i=1;i<=5;i++){
     }
     console.log(data)
 }
+
+for(let i=5;i>=1;i=i-1){
+    let data=""
+    for(let j=1;j<=i;j=j+1){
+    data=data+"*"
+    }
+    console.log(data)
+}
