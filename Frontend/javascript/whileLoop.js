@@ -75,28 +75,37 @@
 //     i++
 // }
 
-let i=1
-let s=1
-while(i<=7){
-    console.log(s)
-    s=s+i
-    i=i+1
-}
+// let i=1
+// let s=1
+// while(i<=7){
+//     console.log(s)
+//     s=s+i
+//     i=i+1
+// }
 
-let userInput=Number(prompt("Enter any number to see the factorial :- "))
-let s=userInput
-let i=1
-while(i<userInput){
-    s=s*i
-    i++
-}
-  console.log(s)
+// let userInput=Number(prompt("Enter any number to see the factorial :- "))
+// let s=userInput
+// let i=1
+// while(i<userInput){
+//     s=s*i
+//     i++
+// }
+//   console.log(s)
 
-let u=Number(prompt("Enter any number: "))
-var r=0
-while(u>0){
-    let d=u%10
-    r=r*10+d
-    u=(u/10)>>0
-}
-console.log(r)
+// let user_input = Number(prompt("Enter any number : "))
+// var remainder = 0
+// while(user_input > 0){
+//     let data = user_input % 10
+//     remainder = remainder * 10 + data
+//     user_input = (user_input / 10) >> 0
+// }
+// console.log(remainder)
+
+// let s=Number(prompt("Enter any number: "))
+// var r=0
+// while(s>0){
+//     let d=s%10
+//     r=r*10+d
+//     s=(s/10)>>0
+// }
+// console.log(r)
