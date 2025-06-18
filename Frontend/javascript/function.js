@@ -57,31 +57,31 @@ console.log(`The division of ${a} and ${b} is ${divide(a,b)}.`)
 // console.log("The division of " +a+ " and " +b+ " is " +divide(a,b).toFixed(2)+".")
 
 function grade(a){
-    if(a>=90)
-    console.log("A+")
+    if(a>90 && a<=100){
+        console.log(`The grade you got by ${a}% is A+`)
+    }
+    else if(a>80){
+        console.log(`The grade you got by ${a}% is A`)
+    }
+        else if(a>70){
+        console.log(`The grade you got by ${a}% is B+`)
+    }
+        else if(a>60){
+        console.log(`The grade you got by ${a}% is B`)
+    }
+        else if(a>50){
+        console.log(`The grade you got by ${a}% is C+`)
+    }
+    else if(a>40){
+          console.log(`The grade you got by ${a}% is C`)
+    }
+    else{
+    console.log("You are fail.")
 }
-else if(a>=80){
-    console.log("A")
 }
-else if(a>=70){
-    console.log("B+")
-}
-else if(a>=60){
-    console.log("B")
-}
-else if(a>=50){
-    console.log("C+")
-}
-else if(a>=40){
-    console.log("C")
-}
-else{
-    console.log("Fail")
-}
-let a = Number(prompt("Enter your marks :- "))
+
+let a = Number(prompt("Enter the percentage of marks in your exam: "))
 grade(a)
-
-
 function simpleInterest(a,b,c){
     Si=(a*b*c)/100
     return Si
