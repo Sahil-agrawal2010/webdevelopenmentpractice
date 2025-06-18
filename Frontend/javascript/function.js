@@ -26,3 +26,35 @@ let a=Number(prompt("Enter any number to see square and cube :- "))
 square(a)
 // let cube_result = cube(a)
 console.log(cube(a))
+
+
+function add(a,b){
+    ad=a+b
+    return ad
+}
+function difference(a,b){
+    diff=a-b
+    return diff
+}
+function product(a,b){
+    pro=a*b
+    return pro
+}
+function divide(a,b){
+    div=a/b
+    return div
+}
+let a=Number(prompt("Enter the first number :- "))
+let b=Number(prompt("Enter the second number :- "))
+console.log()
+
+console.log(`The sum of ${a} and ${b} is ${add(a,b)}.`)
+console.log(`The difference of ${a} and ${b} is ${difference(a,b)}.`)
+console.log(`The product of ${a} and ${b} is ${product(a,b)}.`)
+console.log(`The division of ${a} and ${b} is ${divide(a,b)}.`)
+
+
+// console.log("The sum of "+a+ " and " +b+ " is " +add(a,b)+ ".")
+// console.log("The difference of " +a+ " and " +b+ " is " +difference(a,b)+ ".")
+// console.log("The product of " +a+ " and " +b+ " is " +product(a,b)+".")
+// console.log("The division of " +a+ " and " +b+ " is " +divide(a,b).toFixed(2)+".")
