@@ -109,3 +109,19 @@ function oddEvenChecker(a){
 
 let a =Number(prompt("Enter any Number :- "))
 console.log(`${oddEvenChecker(a)}`)
+
+let peri=function perimeter(a){
+    const pi=3.1415
+    let r=a/2
+    let circumference=2*pi*r
+    return circumference
+}
+let ar=function area(a){
+    const pi=3.1415
+    let r=a/2
+    let total=pi*r*r
+    return total
+}
+let a=Number(prompt("Enter the diameter :- "))
+console.log(`The circumference of the circle is ${peri(a)}`)
+    console.log(`The area of the cirle is ${ar(a)}`)
