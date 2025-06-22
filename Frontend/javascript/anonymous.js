@@ -76,23 +76,41 @@ let myFunc=function(operator,a,b){
     console.log(`It's sum is ${a+b}`)
     }
      else if(operator=="-"){
-    console.log(`It's difference is ${a+b}`)
+    console.log(`It's difference is ${a-b}`)
      }
      else if(operator=="*"){
-    console.log(`It's product is ${a+b}`)
+    console.log(`It's product is ${a*b}`)
      }
      else if(operator=="/"){
-    console.log(`It's division is ${a+b}`)
+    console.log(`It's division is ${a/b}`)
      }
     else{
        console.log(`Enter the correct operator`) 
     }
 }
 function nextFunction(value){
-    if(value>0){
+    if(a+b>0){
         console.log(`The answer is positive.`)
     }
-    else if(value<0){
+      else if(a-b>0){
+        console.log(`The answer is positive.`)
+    }
+        else if(a*b>0){
+        console.log(`The answer is positive.`)
+    }
+        else if(a/b>0){
+        console.log(`The answer is positive.`)
+    }
+    else if(a+b<0){
+        console.log(`The answer is negative.`)
+    }
+      else if(a-b<0){
+        console.log(`The answer is negative.`)
+    }
+      else if(a*b<0){
+        console.log(`The answer is negative.`)
+    }
+      else if(a/b<0){
         console.log(`The answer is negative.`)
     }
     else{
