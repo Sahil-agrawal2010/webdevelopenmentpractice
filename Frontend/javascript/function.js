@@ -126,6 +126,7 @@
 // console.log(`The circumference of the circle is ${peri(a)}`)
 //     console.log(`The area of the cirle is ${ar(a)}`)
 
+
 //    let Cheaker=function primnumberChecker(a){
 //        let counter=0
 //   for(let i=1;i<=a;i=i+1){
