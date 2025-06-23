@@ -71,54 +71,40 @@ console.log(myFunc(operator))
 nextFunction(operator,a,b)
 
 // Write an anonymous function to creat a claculator and check weahter the value is positive or negative
+
 let myFunc=function(operator,a,b){
     if(operator=="+"){
-    console.log(`It's sum is ${a+b}`)
+    return a+b
     }
      else if(operator=="-"){
-    console.log(`It's difference is ${a-b}`)
+    return a-b
      }
      else if(operator=="*"){
-    console.log(`It's product is ${a*b}`)
+    return a*b
      }
      else if(operator=="/"){
-    console.log(`It's division is ${a/b}`)
+   return a/b
      }
     else{
-       console.log(`Enter the correct operator`) 
+      return (`Enter the correct operator`) 
     }
 }
 function nextFunction(value){
-    if(a+b>0){
+    console.log("The answer is : "+value)
+    if(value>0){
         console.log(`The answer is positive.`)
     }
-      else if(a-b>0){
-        console.log(`The answer is positive.`)
-    }
-        else if(a*b>0){
-        console.log(`The answer is positive.`)
-    }
-        else if(a/b>0){
-        console.log(`The answer is positive.`)
-    }
-    else if(a+b<0){
+    else if(value<0){
         console.log(`The answer is negative.`)
     }
-      else if(a-b<0){
-        console.log(`The answer is negative.`)
-    }
-      else if(a*b<0){
-        console.log(`The answer is negative.`)
-    }
-      else if(a/b<0){
-        console.log(`The answer is negative.`)
-    }
-    else{
+    else if (value==0){
         console.log(`The answer is equal to zero.`)
     }
+    else{
+        console.log(value)
+    }
 }
-let operator=prompt("Enter the operator :- ")
 let a=Number(prompt("Enter the first number :- "))
 let b=Number(prompt("Enter the second number :- "))
-// console.log(myFunc(operator,a,b))
-console.log(nextFunction(myFunc(operator,a,b)))
+let operator=prompt("Enter the operator :- ")
+nextFunction(myFunc(operator,a,b))
