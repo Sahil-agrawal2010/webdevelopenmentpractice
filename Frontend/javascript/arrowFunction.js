@@ -116,3 +116,17 @@ let arrow=(a) => {
 }
 let a=Number(prompt(`Enter any number to check weather it is even or odd :- `))
 arrow(a)
+
+let arrow = a =>{
+    if (a>0){
+        console.log(`The number is positive!`)
+    }
+       else if (a<0){
+        console.log(`The number is negative!`)
+    }
+        if (a==0){
+        console.log(`The number is zero!`)
+    }
+}
+let a = Number(prompt(`Enter any number to check weather the number is positive negative or zero :- `))
+arrow(a)
