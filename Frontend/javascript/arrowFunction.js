@@ -105,3 +105,14 @@ let arrow = f =>{
 let f=Number(prompt(`Enter the fahrenheit which you wnat to convert in to celsius [in degree] :-`))
 arrow(f)
 console.log(`${f} degree fahrenheit when converted in to celcius is ${c}.`)
+
+let arrow=(a) => {
+    if (a%2==0){
+        console.log(`${a} is a even number!`)
+    }
+    else if (a%2==1){
+        console.log(`${a} is a odd number!`)
+    }
+}
+let a=Number(prompt(`Enter any number to check weather it is even or odd :- `))
+arrow(a)
