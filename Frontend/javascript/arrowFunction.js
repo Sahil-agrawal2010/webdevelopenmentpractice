@@ -130,3 +130,20 @@ let arrow = a =>{
 }
 let a = Number(prompt(`Enter any number to check weather the number is positive negative or zero :- `))
 arrow(a)
+
+let arrow=(a) =>{
+    counter=0
+    for(let i=1;i<=a;i++){
+        if(a%i==0){
+            counter++
+    }
+    }
+    if(counter==2){
+        console.log(`It is a prime number.`)
+    }
+    else{
+        console.log("It's not a prime number")
+    }
+}
+let a = Number(prompt(`Enter any number to check weatheer the given number is prime or not :- `))
+arrow(a)
