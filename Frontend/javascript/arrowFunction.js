@@ -147,3 +147,11 @@ let arrow=(a) =>{
 }
 let a = Number(prompt(`Enter any number to check weatheer the given number is prime or not :- `))
 arrow(a)
+
+Fibonacy like 0,1,1,2,3,5,8,13,21,34
+If user input any number check if the number is prime or not till 100 and ask if you want to continue or not
+write a program to display marks of 5 subject and print total percentage
+write a programme to reverse a number
+write a programme if the number is between 50-500 print else dont print
+write a programme to conver from hour in to minute
+write a programme to diplay the last and second last didit of a number
