@@ -55,7 +55,11 @@ arrow(a)
 
 let arrow=(u,t,a) =>{
     return s=u*t+(1/2)*a*t*t
+}
+let arrow2=(s,t) =>{
     return sp=s/t
+}
+    let arrow3=(sp) => {
     if(sp<30){
         console.log(`The speed is less than 30!`)
     }
@@ -69,7 +73,9 @@ let t=prompt("Enter the time to calculate distance :- ")
 let a=prompt("Enter the acceleration to calculate distance :- ")
 arrow(u,t,a)
 console.log(`The distance travelled is ${s}m.`)
-console.log(`The speed is ${sp}m/s.`)
+arrow2(s,t)
+console.log(`The speed is ${sp} m/s.`)
+arrow3(sp)
 
 // write a programme to calcualte volume of a cuboid
 
