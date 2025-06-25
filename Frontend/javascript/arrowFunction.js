@@ -187,8 +187,11 @@ while(a>100){
         let a = Number(prompt(`Enter any number to check weather it is a prime number or not till 100 :- `))
         arrow(a)
     }
-    else{
+    else if(c==N){
         console.log(`Thanks for your Visit!Bye Bye!`)
+    }
+    else{
+        console.log(`Enter hte valid alphabet!`)
     }
 
 write a program to display marks of 5 subject and print total percentage
