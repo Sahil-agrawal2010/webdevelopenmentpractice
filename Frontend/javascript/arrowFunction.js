@@ -132,7 +132,7 @@ let a = Number(prompt(`Enter any number to check weather the number is positive 
 arrow(a)
 
 let arrow=(a) =>{
-    counter=0
+    let counter=0
     for(let i=1;i<=a;i++){
         if(a%i==0){
             counter++
@@ -149,9 +149,97 @@ let a = Number(prompt(`Enter any number to check weatheer the given number is pr
 arrow(a)
 
 Fibonacy like 0,1,1,2,3,5,8,13,21,34
-If user input any number check if the number is prime or not till 100 and ask if you want to continue or not
+
+let func = (a,s)=>{
+for(i=1;i<=s;i=i+1){
+    a=a+i
+    console.log(a)
+}
+}
+let s = Number(prompt("Enter a number to know finonacci upto there: "))
+let a = 0
+func(a,s)
+
+If user input any number check if the number is prime or not till 100 and ask if you want to continue or not\
+
+let arrow = a =>{
+    if(a<2 || a>100){
+        console.log(`Wrong input !`)
+    }
+        let counter=0
+    for(i=1;i<=a;i++){
+        if(a%i==0){
+            counter++
+        }
+          }
+        if(counter==2){
+            console.log(`It is a prime number!`)
+        }
+        else{
+            console.log(`It is not a prime number!`)
+        }
+}
+let a = Number(prompt(`Enter any number to check weather it is a prime number or not till 100 :- `))
+arrow(a)
+while(a>100){
+    let c=prompt(`Do you want to continue [Enter answer in Y or N] :- `)
+    if(c==Y){
+        let a = Number(prompt(`Enter any number to check weather it is a prime number or not till 100 :- `))
+        arrow(a)
+    }
+    else{
+        console.log(`Thanks for your Visit!Bye Bye!`)
+    }
+
 write a program to display marks of 5 subject and print total percentage
+
+let arrow=(a,b,c,d,e) => {
+    return percent=(a+b+c+d+e)/5
+}
+let a = Number(prompt(`Enter the marks of first subject [Till 100] :- `))
+let b = Number(prompt(`Enter the marks of second subject [Till 100] :- `))
+let c = Number(prompt(`Enter the marks of third subject [Till 100] :- `))
+let d = Number(prompt(`Enter the marks of fourth subject [Till 100] :- `))
+let e = Number(prompt(`Enter the marks of fifith subject [Till 100] :- `))
+arrow(a,b,c,d,e)
+console.log(`The percentage you have got is ${percent} %`)
+
 write a programme to reverse a number
+
+let remainder=0
+let arrow = a =>{
+    while(a>0){
+       let s = a%10
+       remainder = remainder*10 + s
+       s=(s/10) >> 0
+       return remainder
+    }
+}
+let a = Number(prompt(`Enter any number take out its reversed value :- `))
+arrow(a)
+console.log(remainder)
+
 write a programme if the number is between 50-500 print else dont print
-write a programme to conver from hour in to minute
+
+let arrow=(a) => {
+    if(a>50 && a<500){
+        console.log(`The number is between 50-500!`)
+    }
+    else{
+        console.log(`The number is not between 50-500!`)
+    }
+}
+let a = Number(prompt(`Enter any number between 50 to 500 :- `))
+arrow(a)
+
+write a programme to convert from hour in to minute
+
+let arrow=(a) => {
+    return mins=a*60
+}
+let a = Number(prompt(`Enter the hour which you want to convert in to minutes :- `))
+arrow(a)
+console.log(`${a} hour in to minute is ${mins} minutes!`)
+
 write a programme to diplay the last and second last didit of a number
+write a programme to swap 3 numbers
