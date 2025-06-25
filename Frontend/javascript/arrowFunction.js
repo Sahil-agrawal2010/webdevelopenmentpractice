@@ -193,6 +193,7 @@ while(a>100){
     else{
         console.log(`Enter hte valid alphabet!`)
     }
+}
 
 write a program to display marks of 5 subject and print total percentage
 
