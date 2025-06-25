@@ -210,14 +210,13 @@ let remainder=0
 let arrow = a =>{
     while(a>0){
        let s = a%10
-       remainder = remainder*10 + s
-       s=(s/10) >> 0
-       return remainder
+       remainder=remainder*10+s 
+       a=(a/10) >> 0
     }
+      return remainder
 }
 let a = Number(prompt(`Enter any number take out its reversed value :- `))
-arrow(a)
-console.log(remainder)
+console.log(arrow(a))
 
 write a programme if the number is between 50-500 print else dont print
 
@@ -241,5 +240,31 @@ let a = Number(prompt(`Enter the hour which you want to convert in to minutes :-
 arrow(a)
 console.log(`${a} hour in to minute is ${mins} minutes!`)
 
-write a programme to diplay the last and second last didit of a number
+write a programme to diplay the last didit of a number
+
+let remainder=0
+let arrow = a =>{
+    while(a>0){
+       let s = a%10
+       remainder = remainder*10 + s
+       s=(s/10) >> 0
+       return remainder
+    }
+}
+let a = Number(prompt(`Enter any number take out its reversed value :- `))
+arrow(a)
+console.log(remainder)
+
 write a programme to swap 3 numbers
+
+let d=0
+let arrow=(a,b,c,d) =>{
+      d=a
+     console.log(a=b)
+    console.log(b=c)
+    console.log(c=d)
+}
+let a = Number(prompt(`Enter the first number :- `))
+let b = Number(prompt(`Enter the second number :- `))
+let c = Number(prompt(`Enter the third number :- `))
+console.log(arrow(a,b,c,d))
