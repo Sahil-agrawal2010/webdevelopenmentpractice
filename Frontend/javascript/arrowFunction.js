@@ -150,16 +150,20 @@ arrow(a)
 
 Fibonacy like 0,1,1,2,3,5,8,13,21,34
 
-let func = (a,s)=>{
-for(i=1;i<=s;i=i+1){
-    a=a+i
+let arrow=(a,b) =>{
+    a=0
+    b=1
     console.log(a)
+    console.log(b)
+    for (let i=1;i<=num;i++){
+        let sum=a+b
+        a=b
+        b=sum
+        console.log(sum)
+    }
 }
-}
-let s = Number(prompt("Enter a number to know finonacci upto there: "))
-let a = 0
-func(a,s)
-
+let num=Number(prompt(`Enter nay numbet to see fibonnaci upto there :- `))
+arrow(num)
 If user input any number check if the number is prime or not till 100 and ask if you want to continue or not\
 
 let arrow = a =>{
@@ -183,11 +187,11 @@ let a = Number(prompt(`Enter any number to check weather it is a prime number or
 arrow(a)
 while(a>100){
     let c=prompt(`Do you want to continue [Enter answer in Y or N] :- `)
-    if(c==Y){
+    if(c==`Y`){
         let a = Number(prompt(`Enter any number to check weather it is a prime number or not till 100 :- `))
         arrow(a)
     }
-    else if(c==N){
+    else if(c==`N`){
         console.log(`Thanks for your Visit!Bye Bye!`)
     }
     else{
