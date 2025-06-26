@@ -272,3 +272,28 @@ let a = Number(prompt(`Enter the first number :- `))
 let b = Number(prompt(`Enter the second number :- `))
 let c = Number(prompt(`Enter the third number :- `))
 arrow(a,b,c,d)
+
+let arrow=a =>{
+    let remainder=0
+    let sum=0
+    for(let i=1;a==0;i++){
+    let b=a%10
+    remainder=remainder*10+b
+    a=a/10>>0
+    }
+    sum=sum+remainder
+    if(sum%a==0){
+    console.log("It is a harshad number!")
+}
+else{
+    console.log("It is not a harshad number!")
+}
+}
+
+let a=Number(prompt(`Enter the Number to see if it is a harshad number :- `))
+arrow(a)
+
+
+write a programme to find palandrum number
+write a programme to find sum of all number of userinput
+write a programme to find biggest number and smallest number
