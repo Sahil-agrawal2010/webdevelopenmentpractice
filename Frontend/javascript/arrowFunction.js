@@ -248,16 +248,12 @@ write a programme to diplay the last didit of a number
 
 let remainder=0
 let arrow = a =>{
-    while(a>0){
-       let s = a%10
-       remainder = remainder*10 + s
-       s=(s/10) >> 0
-       return remainder
-    }
+      console.log( s = a%10)
+       remainder = a%100
+      console.log(s=(remainder/10) >> 0)
 }
 let a = Number(prompt(`Enter any number take out its reversed value :- `))
 arrow(a)
-console.log(remainder)
 
 write a programme to swap 3 numbers
 
