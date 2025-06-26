@@ -155,7 +155,7 @@ let arrow=(a,b) =>{
     b=1
     console.log(a)
     console.log(b)
-    for (let i=1;i<=num;i++){
+    for (let i=1;i<=num-2;i++){
         let sum=a+b
         a=b
         b=sum
