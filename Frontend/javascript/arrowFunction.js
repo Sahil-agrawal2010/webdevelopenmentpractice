@@ -314,18 +314,47 @@ else{
 
 write a programme to find sum of all number of userinput
 
-let arrow=a =>{
-    let remainder=0
+let arrow= (a) =>{
+    console.log(a)
     let sum=0
-    for(let i=1;a==0;i++){
-    let b=a%10
-    remainder=remainder*10+b
-    a=a/10>>0
+    for(let i=1;a!=0;i++){
+        let b=a%10
+        sum=(sum+b) | 0
+        a=(a/10) 
     }
-    sum=sum+remainder
-    console.log(sum)
+    console.log(sum) 
 }
 let a = Number ( prompt ( ` Enter any number to see its sum :- ` ) )
 arrow(a)
 
 write a programme to find biggest number and smallest number
+
+
+let smallest= (a) =>{
+    let small = 10
+    for(let i=1;a!=0;i++){
+        let b=a%10
+        if(b<=small){
+            small = b >>0
+        }
+        a=(a/10) >> 0
+    }
+    console.log(small)
+}
+let a = Number ( prompt ( `Enter any number to see its sum :- ` ) )
+smallest(a)
+
+
+let greatest= (a) =>{
+    let great = 0
+    for(let i=1;a!=0;i++){
+        let b=a%10
+        if(b>=great){
+            great = b >>0
+        }
+        a=(a/10) 
+    }
+    console.log(great) 
+}
+let a = Number ( prompt ( ` Enter any number to see its sum :- ` ) )
+greatest(a)
