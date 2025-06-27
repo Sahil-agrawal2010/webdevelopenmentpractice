@@ -358,3 +358,31 @@ let greatest= (a) =>{
 }
 let a = Number ( prompt ( ` Enter any number to see its sum :- ` ) )
 greatest(a)
+
+let arrow = (a,b,c) => {
+    if(a>b && a>c){
+        console.log(`${a} is greatest number!`)
+    }
+     else if(b>c && b>a){
+        console.log(`${b} is greatest number!`)
+    }
+         else if(c>a && c>b){
+        console.log(`${c} is greatest number!`)
+    }
+}
+let arrow2 = (a,b,c) =>{
+        if(a<b && a<c){
+        console.log(`${a} is smallest number!`)
+    }
+     else if(b<c && b<a){
+        console.log(`${b} is smallest number!`)
+    }
+         else if(c<a && c<b){
+        console.log(`${c} is smallest number!`)
+    }
+}
+let a = Number ( prompt ( ` Enter a number to see its smallest and greatest :-  ` ) )
+let b = Number ( prompt ( ` Enter a number to see its smallest and greatest :-  ` ) )
+let c = Number ( prompt ( ` Enter a number to see its smallest and greatest :-  ` ) )
+arrow(a,b,c)
+arrow2(a,b,c)
