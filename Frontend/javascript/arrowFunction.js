@@ -295,5 +295,37 @@ arrow(a)
 
 
 write a programme to find palandrum number
+let reaminder=0
+let arrow = a => {
+    while(a>0){
+        let b=a%10
+        reaminder=reaminder*10+b
+        a=(a/10)>>0
+    }
+}
+let a = Number (prompt ( `Enter any number to check weather it is a paladrum number or not :- ` ))
+arrow(a)
+if(a==reaminder){
+    console.log( `The number is a paladrum number!` )
+}
+else{
+    console.log( `The number is not a paladrum number` )
+}
+
 write a programme to find sum of all number of userinput
+
+let arrow=a =>{
+    let remainder=0
+    let sum=0
+    for(let i=1;a==0;i++){
+    let b=a%10
+    remainder=remainder*10+b
+    a=a/10>>0
+    }
+    sum=sum+remainder
+    console.log(sum)
+}
+let a = Number ( prompt ( ` Enter any number to see its sum :- ` ) )
+arrow(a)
+
 write a programme to find biggest number and smallest number
