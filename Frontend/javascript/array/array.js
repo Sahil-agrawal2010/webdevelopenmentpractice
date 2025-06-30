@@ -53,3 +53,14 @@ for(let i=0;i<=4;i++){
 for(let j=4;j>=0;j--){
     console.log(name[j])
 }
+
+let number=[]
+for (let i=0;i<=9;i++){
+    let userInput=Number( prompt( ` Enter any number to see :-  ` ) )
+    number[i]=userInput
+}
+for (let j=0;j<=9;j++){
+    if(number[j]>=50){
+        console.log(number[j])
+    }
+}
