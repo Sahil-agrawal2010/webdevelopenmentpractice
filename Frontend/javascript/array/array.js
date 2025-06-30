@@ -54,6 +54,7 @@ for(let j=4;j>=0;j--){
     console.log(name[j])
 }
 
+
 let number=[]
 for (let i=0;i<=9;i++){
     let userInput=Number( prompt( ` Enter any number to see :-  ` ) )
@@ -65,6 +66,7 @@ for (let j=0;j<=9;j++){
     }
 }
 
+
 let number=[]
 for (let i=0;i<=9;i++){
     let userInput=Number(prompt(`Enter any number to see :- `))
@@ -75,3 +77,55 @@ for (let j=0;j<=9;j++){
     sum=number[j]+sum
 }
 console.log(`The sum of number is ${sum}`)
+
+back sum of numbers 
+
+let number=[]
+let number2=[]
+for (let i=0;i<=5;i++){
+    let userInput=Number(prompt(`Enter the numbers you want to add :- `))
+    let userInput2=Number(prompt(`Enter the number which you want to add :- `))
+    number[i]=userInput
+    number2[i]=userInput2
+    console.log()
+}
+for (let j=5;j>=0;j--){
+    console.log(`The sum of ${number[j]} and ${number2[j]} is ${number[j]+number2[j]}.`)
+}
+
+
+back greates of numbers
+
+let number=[]
+let number2=[]
+for (let i=0;i<=5;i++){
+    let userInput=Number(prompt(`Enter the numbers you want to see weather it is higher or not :- `))
+    let userInput2=Number(prompt(`Enter the number which you want to see weather it is greater or not :- `))
+    number[i]=userInput
+    number2[i]=userInput2
+    console.log()
+}
+for (let j=5;j>=0;j--){
+    if(number[j]>number2[j]){
+        console.log(`${number[j]} is higher!`)
+    }
+      else if(number2[j]>number[j]){
+        console.log(`${number2[j]} is higher!`)
+    }
+    else{
+        console.log(`All are equal!`)
+    }
+}
+
+
+find greatest among 6 numbers 
+
+let number=[]
+for (let i=0;i<=5;i++){
+    userInput=Number(prompt(`Enter any number which want to see weather it is higher or not :- `))
+    number[i]=userInput
+}
+for (let j=0;j<=5;j++){
+    
+}
+find smallest among 6 numbers 
