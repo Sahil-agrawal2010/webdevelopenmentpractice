@@ -64,3 +64,14 @@ for (let j=0;j<=9;j++){
         console.log(number[j])
     }
 }
+
+let number=[]
+for (let i=0;i<=9;i++){
+    let userInput=Number(prompt(`Enter any number to see :- `))
+    number[i]=userInput
+}
+let sum=0
+for (let j=0;j<=9;j++){
+    sum=number[j]+sum
+}
+console.log(`The sum of number is ${sum}`)
