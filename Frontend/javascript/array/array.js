@@ -44,3 +44,12 @@ for(let i = 0; i<=4; i++){
 for(let j = 0; j<=4; j++){
     console.log(`The sum of ${odd[j]} and ${even[j]} is ${odd[j]+even[j]}.`)
 }
+
+let name=[]
+for(let i=0;i<=4;i++){
+    let userInput=prompt(`Enter the names of students :- `)
+    name[i]=userInput
+}
+for(let j=4;j>=0;j--){
+    console.log(name[j])
+}
