@@ -191,3 +191,16 @@ for (let j=0;j<=9;j++){
 }
 console.log(`The number of even numbers in a array is ${evenChecker}`)
 console.log(`The number of odd numbers in a array is ${oddChecker}`)
+
+let number=[]
+  let sum = 0
+  let average = 0
+for (let i=0;i<=9;i++){
+    userInput=Number(prompt(`Enter any number to see :- `))
+    number[i]=userInput
+}
+for (let j=0;j<=9;j++){
+    sum = sum + number[j]
+    average = sum / 10
+}
+console.log(`The average of the numbers is ${average}`)
