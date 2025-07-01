@@ -170,3 +170,24 @@ for (let j=1;j<=9;j=j+2){
                 console.log(number[j])
 
 }
+
+let number=[]
+let evenChecker=0
+let oddChecker=0
+for (let i=0;i<=9;i++){
+    userInput=Number(prompt(`Enter any number to see :- `))
+    number[i]=userInput
+}
+for (let j=0;j<=9;j++){
+    if(number[j]%2==0){
+        evenChecker++
+    }
+    else if(number[j]%2==1){
+        oddChecker++
+    }
+    else{
+        console.log(`All are equal numbers!`)
+    }
+}
+console.log(`The number of even numbers in a array is ${evenChecker}`)
+console.log(`The number of odd numbers in a array is ${oddChecker}`)
