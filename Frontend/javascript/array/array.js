@@ -206,5 +206,46 @@ for (let j=0;j<=9;j++){
 console.log(`The average of the numbers is ${average}`)
 
 Write a programme to show median
+
+let x=[]
+for (let i=0;i<=9;i++){
+    userInput=Number(prompt(`Enter the x of the table :- `))
+    x[i]=userInput
+}
+let f=[]
+let sum=0
+for (let j=0;j<=9;j++){
+    userInput2=Number(prompt(`Enter the frequency of the table :- `))
+    f[j]=userInput2
+    sum = sum + f[j]
+}
+let median=(sum+1)/2 >>0
+console.log(`The median of the following data is ${x[median]}`)
+
+
 Write a programme to show weather the number is divisible by 2 and 3 or not
+
+let number = []
+for (let i=0;i<=9;i++){
+    userInput=Number(prompt(`Enter any number to check weather it is divisible by 2 and 3 or not :- `))
+    number[i]=userInput
+}
+for (let j=0;j<=9;j++){
+    if(number[j]%2==0 && number[j]%3==0){
+        console.log(number[j])
+    }
+}
+
 Write a programme to show only negative numbers
+
+
+let nuumber=[]
+for (let i=0;i<=9;i++){
+    userInput=Number(prompt(`Enter the number which you want to see if it is negative :- `))
+    nuumber[i]=userInput
+}
+for (let j=0;j<=9;j++){
+    if(nuumber[j]<0){
+        console.log(`The negative numbers oyu have entered is ${nuumber[j]}`)
+    }
+}
