@@ -160,3 +160,13 @@ for (let j=0;j<=9;j=j+2){
                 console.log(number[j])
 
 }
+
+let number=[]
+for (let i=0;i<=9;i++){
+    userInput=Number(prompt(`Enter any number to see :- `))
+    number[i]=userInput
+}
+for (let j=11;j<=9;j=j+2){
+                console.log(number[j])
+
+}
