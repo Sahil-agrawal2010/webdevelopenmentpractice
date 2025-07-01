@@ -137,3 +137,16 @@ for (let j=0;j<=5;j++){
 }
 console.log(greatest)
 console.log(smallest)
+
+let number=[]
+let Counter=0
+for (let i=0;i<=5;i++){
+    let userInput=Number(prompt(`Enter any number to see :- `))
+    number[i]=userInput
+}
+for (let j=0;j<=5;j++){
+    if(number[j]>0){
+        Counter++
+    }
+}
+console.log(Counter)
