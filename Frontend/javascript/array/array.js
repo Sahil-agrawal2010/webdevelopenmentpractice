@@ -204,3 +204,7 @@ for (let j=0;j<=9;j++){
     average = sum / 10
 }
 console.log(`The average of the numbers is ${average}`)
+
+Write a programme to show median
+Write a programme to show weather the number is divisible by 2 and 3 or not
+Write a programme to show only negative numbers
