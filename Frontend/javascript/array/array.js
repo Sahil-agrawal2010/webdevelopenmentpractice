@@ -118,14 +118,22 @@ for (let j=5;j>=0;j--){
 }
 
 
-find greatest among 6 numbers 
+find greatest and smallest among 6 numbers 
 
 let number=[]
 for (let i=0;i<=5;i++){
-    userInput=Number(prompt(`Enter any number which want to see weather it is higher or not :- `))
+    userInput=Number(prompt(`Enter any number which want to see greatest and smallest :- `))
     number[i]=userInput
 }
+let greatest=0
+let smallest=100
 for (let j=0;j<=5;j++){
-    
+    if(number[j]>greatest){
+       greatest = number[j]
+    }
+    if(number[j]<smallest){
+       smallest = number[j]
+    }
 }
-find smallest among 6 numbers 
+console.log(greatest)
+console.log(smallest)
