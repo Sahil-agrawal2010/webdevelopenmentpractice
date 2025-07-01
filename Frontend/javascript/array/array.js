@@ -166,7 +166,7 @@ for (let i=0;i<=9;i++){
     userInput=Number(prompt(`Enter any number to see :- `))
     number[i]=userInput
 }
-for (let j=11;j<=9;j=j+2){
+for (let j=1;j<=9;j=j+2){
                 console.log(number[j])
 
 }
