@@ -240,12 +240,31 @@ Write a programme to show only negative numbers
 
 
 let nuumber=[]
+let oddNum = []
 for (let i=0;i<=9;i++){
-    userInput=Number(prompt(`Enter the number which you want to see if it is negative :- `))
+    userInput=parseInt(prompt(`Enter the number which you want to see if it is negative :- `))
     nuumber[i]=userInput
 }
 for (let j=0;j<=9;j++){
     if(nuumber[j]<0){
-        console.log(`The negative numbers oyu have entered is ${nuumber[j]}`)
+        oddNum.push(nuumber[j])
     }
 }
+console.log(oddNum)
+
+
+let number=[]
+let a=0
+let b=0
+for (let i=0;i<=6;i++){
+    userInput=Number(prompt(`Enter any number to see :- `))
+    number[i]=userInput
+}
+console.log(number)
+for (let j=0;j<=6;j++){
+   a=number[6]
+    b=number[0]
+    number[0]=a
+    number[6]=b
+}
+console.log(number)
