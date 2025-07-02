@@ -295,3 +295,14 @@ for (let j=0;j<=9;j++){
     }
 }
 console.log(`There are ${counter} zero in the value which you have entered!`)
+
+
+
+
+
+
+Write a programme to dispaly the sum of only odd number by taking 6 numbers form the user
+Write a programme to display largest and smalllest value difference by taking 6 number
+Write a programme to dispaly every negative number with zero and dispaly array by taking 6 numbers
+Write a programme to display if the last and first value is same print same else different by taking 6 numbers
+Write a programme to dispaly to count and display how amny number are greater than zero
