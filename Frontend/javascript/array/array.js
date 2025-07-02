@@ -282,3 +282,16 @@ for (let j=0;j<=5;j++){
     }
 }
 console.log(`Totalnumber which is divisible by five (5) are ${counter}`)
+
+
+let number=[],counter=0
+for (let i=0;i<=9;i++){
+    userInput=Number(prompt(`Enter any number to see :- `))
+    number[i]=userInput
+}
+for (let j=0;j<=9;j++){
+    if(number[j]==0){
+        counter++
+    }
+}
+console.log(`There are ${counter} zero in the value which you have entered!`)
