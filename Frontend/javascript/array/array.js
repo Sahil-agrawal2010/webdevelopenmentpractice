@@ -302,7 +302,74 @@ console.log(`There are ${counter} zero in the value which you have entered!`)
 
 
 Write a programme to dispaly the sum of only odd number by taking 6 numbers form the user
+let number=[],sum=0
+for (let i=0;i<=5;i++){
+    userInput=Number(prompt(`Enter any number to see :- `))
+    number[i]=userInput
+}
+for (let j=0;j<=5;j++){
+    if(number[j]%2==1){
+        sum = number[j] + sum
+    }
+}
+console.log(`The sum of odd numbers are ${sum}`)
+
 Write a programme to display largest and smalllest value difference by taking 6 number
+let number=[]
+letgreatest=0
+let smallest=999999999999999999
+for(let i=0;i<=5;i++){
+    userInput=Number(prompt(`Enter any number to see :- `))
+    number[i]=userInput
+}
+for(let j=0;j<=5;j++){
+    if(userInput[j]>greatest){
+        greatest=userInput[j]
+    }
+    else if(userInput[j]<smallest){
+        smallest=userInput[j]
+    }
+}
+console.log(greatest)
+  console.log(smallest)
+
 Write a programme to dispaly every negative number with zero and dispaly array by taking 6 numbers
+let number=[]
+for (let i=0;i<=5;i++){
+    userInput=Number(prompt(`Enter any number to see :- `))
+    number[i]=userInput
+}
+console.log(number)
+for (let j=0;j<=5;j++){
+    if(number[j]<0){
+        number[j]=0
+    }
+}
+console.log(number)
+
 Write a programme to display if the last and first value is same print same else different by taking 6 numbers
+let number=[]
+for (let i=0;i<=5;i++){
+    userInput=Number(prompt(`Enter any number to see :- `))
+    number[i]=userInput
+}
+    if(number[0]==number[5]){
+        console.log(`The first and last number you have entered is same!`)
+    }
+    else if(number[0]!=number[5]){
+        console.log(`The first and last number you have entered is not same!`)
+    }
+    else{
+        console.log(`Enter the correct value!`)
+    }
+
 Write a programme to dispaly to count and display how amny number are greater than zero
+let number=[],counter=0
+for(let i=0;i<=5;i++){
+    userInput=Number(prompt(`Enter the number to see :- `))
+    number[i]=userInput
+    if(number[i]>0){
+    counter++
+}
+}
+console.log(`The total number of number greater than zero is ${counter}`)
