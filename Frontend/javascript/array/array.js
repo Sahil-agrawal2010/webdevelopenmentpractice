@@ -268,3 +268,17 @@ for (let j=0;j<=6;j++){
     number[6]=b
 }
 console.log(number)
+
+
+let number=[]
+let counter=0
+for (let i=0;i<=5;i++){
+    userInput=Number(prompt(`Enter nay number to see :-`))
+    number[i]=userInput
+}
+for (let j=0;j<=5;j++){
+    if(number[j]%5==0){
+        counter++
+    }
+}
+console.log(`Totalnumber which is divisible by five (5) are ${counter}`)
