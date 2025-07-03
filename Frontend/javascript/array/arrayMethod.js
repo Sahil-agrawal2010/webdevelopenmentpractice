@@ -89,3 +89,10 @@ let vegetable=["Cabbage","Cauliflower","Potato","Tamoto","Lady Finger"]
 
 let plant=fruit.concat(vegetable)
 console.log(plant)
+
+let fruit=["Apple","Mango","Banana","Grapes","Watermelon"]
+let vegetable=["Cabbage","Cauliflower","Potato","Tamoto","Lady Finger"]
+let array=[1,2,3,4,5]
+let array2=[6,7,8,9,10]
+let plant=fruit.concat(vegetable,array,array2)
+console.log(plant)
