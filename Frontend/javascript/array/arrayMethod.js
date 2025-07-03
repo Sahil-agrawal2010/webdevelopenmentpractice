@@ -96,3 +96,9 @@ let array=[1,2,3,4,5]
 let array2=[6,7,8,9,10]
 let plant=fruit.concat(vegetable,array,array2)
 console.log(plant)
+
+let fruit=["Apple","Mango","Banana","Grapes","Watermelon"]
+let second=fruit.concat("Pineapple","Guawa")
+fruit.push("Pineapple","Guawa")
+console.log(second)
+console.log(fruit)
