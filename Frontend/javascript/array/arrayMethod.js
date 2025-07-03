@@ -81,3 +81,11 @@ Delet Method
 let fruit=["Apple","Mango","Banana","Grapes","Watermelon"]
 delete fruit[2]
 console.log(fruit)
+
+
+Concination
+let fruit=["Apple","Mango","Banana","Grapes","Watermelon"]
+let vegetable=["Cabbage","Cauliflower","Potato","Tamoto","Lady Finger"]
+
+let plant=fruit.concat(vegetable)
+console.log(plant)
