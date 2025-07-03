@@ -102,3 +102,5 @@ let second=fruit.concat("Pineapple","Guawa")
 fruit.push("Pineapple","Guawa")
 console.log(second)
 console.log(fruit)
+
+Note:-The difference between concat and push is concat gives output by making another array whereas push works on the same arrray and give us the output on same array 
