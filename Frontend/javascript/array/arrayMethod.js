@@ -153,3 +153,31 @@ console.log(array)
 let number=["Apple","Bannana","Cherries","Date","Eggplant"]
 let array=number.slice(1,3)
 console.log(array)
+
+Array Scarching
+let number=["Apple","Bannana","Cherries","Date","Eggplant"]
+let position=number.indexOf("Cherries")
+console.log(position)
+
+
+let number=["Apple","Bannana","Cherries","Date","Eggplant","Guawa","Cherries"]
+let position=number.lastIndexOf("Cherries")
+console.log(position)
+
+
+let number=["Apple","Bannana","Cherries","Date","Eggplant","Guawa","Cherries","Hackberry","Cherries"]
+let position=number.lastIndexOf("Cherries",4)
+console.log(position)
+
+includes Method
+let number=["Apple","Bannana","Cherries","Date","Eggplant","Guawa","Cherries","Hackberry","Cherries"]
+let position=number.includes("Cherries")
+console.log(position)
+
+Find Method
+let number=[23, 45, 12, 56, 99, 100]
+let fruits = ["Apple", "Mango", "Banana", "Watermelon", "Berries"]
+let result=fruits.find(function(x){
+    return x.startsWith("Z")
+})
+console.log(result)
