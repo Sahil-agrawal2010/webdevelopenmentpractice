@@ -132,3 +132,9 @@ console.log(number2)
 let number=["Apple","Bannana"]
 let number2=number.flatMap(s=> [ s + " is a fruit!"])
 console.log(number2)
+
+
+splice Method
+let number=["Apple","Bannana","Cherries","Date","Eggplant"]
+number.splice(0,1)
+console.log(number)
