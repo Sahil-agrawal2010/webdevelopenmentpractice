@@ -104,3 +104,15 @@ console.log(second)
 console.log(fruit)
 
 Note:-The difference between concat and push is concat gives output by making another array whereas push works on the same arrray and give us the output on same array 
+
+copyWithin Method
+let fruit=["Apple","Mango","Banana","Grapes","Watermelon"]
+console.log(fruit)
+fruit.copyWithin(0,2)
+console.log(fruit)
+
+
+let fruit=["Apple","Mango","Banana","Grapes","Watermelon","Pineapple","Guawa"]
+console.log(fruit)
+fruit.copyWithin(2,0,2)
+console.log(fruit)
