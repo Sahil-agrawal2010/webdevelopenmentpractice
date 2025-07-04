@@ -116,3 +116,19 @@ let fruit=["Apple","Mango","Banana","Grapes","Watermelon","Pineapple","Guawa"]
 console.log(fruit)
 fruit.copyWithin(2,0,2)
 console.log(fruit)
+
+
+Falt Method
+let nums=[[1,2],[3,4],[5,6]]
+let num2=nums.flat()
+console.log(num2)
+
+flatMap Mehod
+let number=[1,2,3,4,5,6,7,8,9,10]
+let number2=number.flatMap(s=> [s, s*3])
+console.log(number2)
+
+
+let number=["Apple","Bannana"]
+let number2=number.flatMap(s=> [ s + " is a fruit!"])
+console.log(number2)
