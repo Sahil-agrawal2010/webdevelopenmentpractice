@@ -138,3 +138,18 @@ splice Method
 let number=["Apple","Bannana","Cherries","Date","Eggplant"]
 number.splice(0,1)
 console.log(number)
+
+
+let number=["Apple","Bannana","Cherries","Date","Eggplant"]
+number.splice(3,0,"Figs")
+console.log(number)
+
+slice Method
+let number=["Apple","Bannana","Cherries","Date","Eggplant"]
+let array=number.slice(3)
+console.log(array)
+
+
+let number=["Apple","Bannana","Cherries","Date","Eggplant"]
+let array=number.slice(1,3)
+console.log(array)
