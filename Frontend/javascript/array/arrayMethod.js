@@ -181,3 +181,62 @@ let result=fruits.find(function(x){
     return x.startsWith("Z")
 })
 console.log(result)
+
+Tasks Starts from here ok
+let array=["Lambo","Ferrari","Macklerane","Rolls Royals","Buggati"]
+let length=array.length
+console.log(length)
+
+
+let array=["Lambo","Ferrari","Macklerane","Rolls Royals","Buggati"]
+let variable=array.at(2)
+console.log(variable)
+
+
+let array=["Lambo","Ferrari","Macklerane","Rolls Royals","Buggati"]
+let variable=array.join(" ")
+console.log(variable)
+
+
+let array=["Lambo","Ferrari","Macklerane","Rolls Royals","Buggati"]
+array.pop()
+console.log(array)
+
+let array=["Lambo","Ferrari","Macklerane","Rolls Royals","Buggati"]
+array.push("Nissan GTR")
+console.log(array)
+
+let array=["Lambo","Ferrari","Macklerane","Rolls Royals","Buggati"]
+let variable=array.shift()
+console.log(array)
+
+
+let array=["Lambo","Ferrari","Macklerane","Rolls Royals","Buggati"]
+let variable=array.unshift("Nissan GTR")
+console.log(array)
+
+let array2=["Lambo","Ferrari","Macklerane","Rolls Royals","Buggati"]
+delete array2[2]
+console.log(array2)
+
+
+let array=["Lambo","Ferrari","Macklerane","Rolls Royals","Buggati"]
+let number=[100,101,102,103,104,105]
+let shose=["Nike","Addidas","Jordan","New Balance","Peak"]
+let total=array.concat(number,shose)
+console.log(total)
+
+
+let array=["Lambo","Ferrari","Macklerane","Rolls Royals","Buggati"]
+array.copyWithin(2,0)
+console.log(array)
+
+
+let array=[["Lambo","Ferrari"],["Macklerane","Rolls Royals"],"Buggati"]
+let variable=array.flat()
+console.log(variable)
+
+
+let array=["Lambo","Ferrari","Macklerane","Rolls Royals","Buggati"]
+let variable=array.flatMap(s=> [s,s+" Is a Fantastic Car!"])
+console.log(variable)
