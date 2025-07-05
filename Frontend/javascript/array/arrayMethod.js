@@ -240,3 +240,35 @@ console.log(variable)
 let array=["Lambo","Ferrari","Macklerane","Rolls Royals","Buggati"]
 let variable=array.flatMap(s=> [s,s+" Is a Fantastic Car!"])
 console.log(variable)
+
+
+let array=["Lambo","Ferrari","Macklerane","Rolls Royals","Buggati"]
+array.splice(0,2,"Nissan GTR")
+console.log(array)
+
+
+let array=["Lambo","Ferrari","Macklerane","Rolls Royals","Buggati"]
+let array2=array.slice(1,3)
+console.log(array2)
+
+
+let array=["Lambo","Ferrari","Macklerane","Rolls Royals","Buggati"]
+let variable=array.indexOf("Buggati")
+console.log(variable)
+
+
+let array=["Lambo","Ferrari","Macklerane","Rolls Royals","Buggati","Ferrari"]
+let variable=array.lastIndexOf("Ferrari",6)
+console.log(variable)
+
+
+let array=["Lambo","Ferrari","Macklerane","Rolls Royals","Buggati","Ferrari"]
+let variable=array.includes("Rolls Royals")
+console.log(variable)
+
+
+let array=["Lambo","Ferrari","Macklerane","Rolls Royals","Buggati","Ferrari"]
+let variable=array.find(function(x){
+    return x.startsWith("M")
+})
+console.log(variable)
