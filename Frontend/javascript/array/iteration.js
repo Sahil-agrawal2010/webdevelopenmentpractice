@@ -67,3 +67,11 @@ number.forEach(a =>{
     let num=a/10 >>0
     console.log(num+rem)
 })
+
+let number=[88,44,82,90,11,99,89]
+let sum=0
+number.forEach(a =>{
+    let p=a%10
+    sum=sum+p
+})
+    console.log(sum)
