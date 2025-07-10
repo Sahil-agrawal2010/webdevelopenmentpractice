@@ -45,3 +45,8 @@ number.forEach(a =>{
     }
 })
 console.log(counter)
+
+let number=["Apple","Bannana","Cherries","Date","Eggplant","Guawa","Avacado"]
+number.forEach(a =>{
+    console.log(a[1])
+})
