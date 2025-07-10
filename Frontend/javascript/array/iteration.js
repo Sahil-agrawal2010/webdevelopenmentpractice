@@ -50,3 +50,12 @@ let number=["Apple","Bannana","Cherries","Date","Eggplant","Guawa","Avacado"]
 number.forEach(a =>{
     console.log(a[1])
 })
+
+let number=[1,2,3,4,5,60,70,80,90,100]
+counter=0
+number.forEach(a =>{
+    if(a%10==0){
+        counter++
+    }
+})
+console.log(counter)
