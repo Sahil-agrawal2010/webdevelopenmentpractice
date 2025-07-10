@@ -36,3 +36,12 @@ number.forEach(a =>{
 })
 console.log(counter)
 console.log(counter2)
+
+let number=["Apple","Bannana","Cherries","Date","Eggplant","Guawa","Avacado"]
+counter=0
+number.forEach(a =>{
+    if(a[0]=='A'){
+        counter++
+    }
+})
+console.log(counter)
