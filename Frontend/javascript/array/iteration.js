@@ -75,3 +75,10 @@ number.forEach(a =>{
     sum=sum+p
 })
     console.log(sum)
+
+    Write a programme to print number where first digit is greater than second digit.
+    Write a programme to creat an array of words if the first and second letter is same than print it else don't print it.
+    Write a programme to print sum if the sum is odd number.
+    Write a programme to print if the first and second digit is even and odd respectively.
+    Write a programme to print if the first and second digit match.
+    Write a programme to print from three(3) digit number print those where middle digit is greater than both first and last digit.
