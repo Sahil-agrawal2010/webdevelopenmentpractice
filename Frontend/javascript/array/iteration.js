@@ -59,3 +59,11 @@ number.forEach(a =>{
     }
 })
 console.log(counter)
+
+let number=[60,70,80,90,10,99]
+let rem=0
+number.forEach(a =>{
+    let rem=a%10 
+    let num=a/10 >>0
+    console.log(num+rem)
+})
