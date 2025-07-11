@@ -158,3 +158,18 @@ let num=number.map(a =>{
 })
 
 console.log(num)
+
+
+let number=[2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011]
+let num=number.map(a =>{
+    return 2025-a
+})
+console.log(num)
+
+
+let number=["Apple","Bannana","Cherries","Date","Eggplant","Guawa","Avacado"]
+let num=number.map(a =>{
+    return [0]
+})
+console.log(num)
+
