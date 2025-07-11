@@ -184,3 +184,13 @@ let num=number.map(a =>{
     }
 })
 console.log(num)
+
+Write a programme to repalce every number with even and odd with odd
+Write a programme to convert Gender symbols to Full formas
+Write a programme from a two (2) letter string array return match if both letter are same,no if not same
+Write a programme to display true to thumb sign and if false to lose sign
+Write a programme to display array with its index
+Write a programme to return reverced string from two letter array
+Write a programme return second character from two (2) character string array
+Write a programme to display if the number ends with zero (0) print yes else no
+Write a programme to display evalutation
