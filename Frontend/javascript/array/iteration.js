@@ -131,11 +131,30 @@ if(rem==num){
 })
 
     Write a programme to print from three(3) digit number print those where middle digit is greater than both first and last digit.
-       let number=[446,751,887,994,184,113,159,142]
+     let number=[456,751,887,994,184,113,159,142]
 number.forEach(a =>{
     rem=a%10
     let num=a/10 >>0
-    let num2=num/10>>0
-    let num3=num2/10 >>0
-    console.log(num3)
+    let num2=num%10
+    let num3=num/10 >>0
+ if(num2>rem && num2>num3){
+     console.log (a)
+ }
 })
+
+
+Map
+let number=[2,4,6,8]
+let num=number.map(a =>{
+    return a*2
+})
+console.log(num)
+
+
+let number=[1,2,3,4,5,6,7,8,9,10]
+console.log(number)
+let num=number.map(a =>{
+    return a+""
+})
+
+console.log(num)
