@@ -77,8 +77,65 @@ number.forEach(a =>{
     console.log(sum)
 
     Write a programme to print number where first digit is greater than second digit.
+
+    let number=[45,75,89,90,18,99]
+number.forEach(a =>{
+    let rem=a%10 
+    let num=a/10 >>0
+if(num>rem){
+    console.log(a)
+}
+})
+
     Write a programme to creat an array of words if the first and second letter is same than print it else don't print it.
+
+    let number=["AAple","Bannana","Cherries","Date","Eggplant","Guawa","Avacado"]
+number.forEach(a =>{
+    if(a[0]==a[1]){
+        console.log(a)
+    }
+})
+
     Write a programme to print sum if the sum is odd number.
+
+       let number=[45,75,89,90,18,99]
+number.forEach(a =>{
+    let rem=a%10 
+    let num=a/10 >>0
+if(rem%2==1 && num%2==0){
+    console.log(a)
+}
+})
+
     Write a programme to print if the first and second digit is even and odd respectively.
+
+       let number=[45,75,89,90,18,99]
+number.forEach(a =>{
+    let rem=a%10 
+    let num=a/10 >>0
+    sum=rem+num
+if(sum%2==1){
+    console.log(a)
+}
+})
+
     Write a programme to print if the first and second digit match.
+
+       let number=[44,75,88,99,18,11,15,14]
+number.forEach(a =>{
+    let rem=a%10 
+    let num=a/10 >>0
+if(rem==num){
+    console.log(a)
+}
+})
+
     Write a programme to print from three(3) digit number print those where middle digit is greater than both first and last digit.
+       let number=[446,751,887,994,184,113,159,142]
+number.forEach(a =>{
+    rem=a%10
+    let num=a/10 >>0
+    let num2=num/10>>0
+    let num3=num2/10 >>0
+    console.log(num3)
+})
