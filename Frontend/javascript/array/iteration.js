@@ -186,11 +186,95 @@ let num=number.map(a =>{
 console.log(num)
 
 Write a programme to repalce every number with even and odd with odd
-Write a programme to convert Gender symbols to Full formas
+
+let number=[1,2,3,4,5,6,7,8,9,10]
+let num=number.map(a =>{
+    if(a%2==0){
+        return "Even!"
+    }
+    else{
+        return "Odd!"
+    }
+})
+console.log(num)
+
+Write a programme to display gender symbol to full forms
+
+let number=["M","F","O"]
+let num=number.map(a =>{
+    if(a=="M"){
+    return "Male!"
+    }
+    else if(a=="F"){
+        return "Female!"
+    }
+    else{
+        return "Other!"
+    }
+})
+console.log(num)
+
 Write a programme from a two (2) letter string array return match if both letter are same,no if not same
+
+let number=["sa","hi","ll","db","bd","aa","tg","yy","jk","pp"]
+let num=number.map(a =>{
+    if(a[1]==a[0]){
+        return "Same!"
+    }
+    else{
+        return "Not Same!"
+    }
+})
+console.log(num)
+
 Write a programme to display true to thumb sign and if false to lose sign
+
+let number=[true,false,true,false,true,false,false,true,false,true]
+let num=number.map(a =>{
+    if(a==true){
+        return "👍"
+    }
+    else{
+        return "👎"
+    }
+})
+console.log(num)
+
 Write a programme to display array with its index
+
+let number=["Apple","Bannana","Cherries","Date","Eggplant","Guawa","Avacado"]
+let num=number.map((a,b) =>{
+    return a,b
+})
+console.log(num)
+
 Write a programme to return reverced string from two letter array
+
+let number=["sa","hi","ll","db","bd","aa","tg","yy","jk","pp"]
+let num=number.map(a =>{
+    return a[1]+a[0]
+})
+console.log(num)
+
 Write a programme return second character from two (2) character string array
+
+let number=["sa","hi","ll","db","bd","aa","tg","yy","jk","pp"]
+let num=number.map(a =>{
+    return a[1]
+})
+console.log(num)
+
 Write a programme to display if the number ends with zero (0) print yes else no
+
+let number=[20,45,54,40,50,82,28,80]
+let num=number.map(a =>{
+    let s=a%10
+    if(s==0){
+        console.log("Yes!")
+    }
+    else{
+        console.log("No!")
+    }
+})
+
 Write a programme to display evalutation
