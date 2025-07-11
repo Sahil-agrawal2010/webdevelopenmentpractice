@@ -173,3 +173,14 @@ let num=number.map(a =>{
 })
 console.log(num)
 
+
+let number=["True","False","True","False","True","False","True","False","True","False","True","False"]
+let num=number.map(a =>{
+    if(a=="True"){
+        return "Yes"
+    }
+    else{
+        return "No"
+    }
+})
+console.log(num)
