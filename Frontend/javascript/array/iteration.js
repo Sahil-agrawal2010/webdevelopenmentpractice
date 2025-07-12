@@ -278,3 +278,13 @@ let num=number.map(a =>{
 })
 
 Write a programme to display evalutation
+let number=[45,22,82,12]
+let numb=["Sahil","Dhairya","Nayan","Rama"]
+let num=number.map(a =>{
+    if(a>=40){
+        console.log(`${numb} is pass by ${a} marks.`)
+    }
+    else{
+        console.log(`${numb} is fail by ${a} marks.`)
+    }
+})
