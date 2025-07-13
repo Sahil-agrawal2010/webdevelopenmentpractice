@@ -296,3 +296,15 @@ let numb=number.reduce((a,b) =>{
     return a+b
 })
 console.log(numb)
+
+
+let number=[10,110,30,40,50,60,70,80,90,100]
+let numb=number.reduce((a,b) =>{
+    if(a>b){
+        return a
+    }
+    else{
+        return b
+    }
+})
+console.log(numb)
