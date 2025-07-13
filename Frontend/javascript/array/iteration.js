@@ -330,3 +330,31 @@ let numb=number.some(a =>{
     return a%2==0
 })
 console.log(numb)
+
+
+From
+
+
+let number=[2,4,8,16]
+let numb=Array.from(number,a =>{
+    return a*2
+})
+console.log(numb)
+
+
+let string="Apple"
+let a=Array.from(string)
+    console.log(a)
+
+    
+    let string="Apple"
+let a=Array.from(string)
+console.log(a)
+
+
+let final = ""
+a.forEach(b=>{
+    final+=b
+    return final
+})
+console.log(final)
