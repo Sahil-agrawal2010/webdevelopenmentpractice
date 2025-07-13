@@ -244,7 +244,7 @@ Write a programme to display array with its index
 
 let number=["Apple","Bannana","Cherries","Date","Eggplant","Guawa","Avacado"]
 let num=number.map((a,b) =>{
-    return a,b
+    return `${a} - ${b}`
 })
 console.log(num)
 
@@ -288,3 +288,11 @@ let num=number.map(a =>{
         console.log(`${numb} is fail by ${a} marks.`)
     }
 })
+
+Reduce
+
+let number=[10,20,30]
+let numb=number.reduce((a,b) =>{
+    return a+b
+})
+console.log(numb)
