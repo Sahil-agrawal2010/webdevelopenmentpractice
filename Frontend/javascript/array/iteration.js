@@ -308,3 +308,11 @@ let numb=number.reduce((a,b) =>{
     }
 })
 console.log(numb)
+
+Every
+
+let number=[2,4,6,8,10]
+let numb=number.every(a =>{
+    return a%2==0
+})
+console.log(numb)
