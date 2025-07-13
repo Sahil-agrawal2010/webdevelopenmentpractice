@@ -368,3 +368,12 @@ let keys=number.keys()
 for(key of keys){
     console.log(key)
 }
+
+
+with
+
+
+let number=["Apple","Bannana","Cherries","Date","Eggplant","Guawa","Avacado"]
+let numb=number.with(2,"Papaya")
+console.log(number)
+console.log(numb)
