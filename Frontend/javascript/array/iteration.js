@@ -346,7 +346,7 @@ let string="Apple"
 let a=Array.from(string)
     console.log(a)
 
-    
+
     let string="Apple"
 let a=Array.from(string)
 console.log(a)
@@ -358,3 +358,13 @@ a.forEach(b=>{
     return final
 })
 console.log(final)
+
+
+Key
+
+
+let number=[2,4,8,10]
+let keys=number.keys()
+for(key of keys){
+    console.log(key)
+}
