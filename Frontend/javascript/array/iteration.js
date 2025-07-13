@@ -316,3 +316,9 @@ let numb=number.every(a =>{
     return a%2==0
 })
 console.log(numb)
+
+let number=[28,48,22,42]
+let numb=number.every(a =>{
+    return a>40
+})
+console.log(numb)
