@@ -322,3 +322,11 @@ let numb=number.every(a =>{
     return a>40
 })
 console.log(numb)
+
+Some
+
+let number=[2,4,8,5]
+let numb=number.some(a =>{
+    return a%2==0
+})
+console.log(numb)
