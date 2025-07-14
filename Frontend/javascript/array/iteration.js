@@ -377,3 +377,8 @@ let number=["Apple","Bannana","Cherries","Date","Eggplant","Guawa","Avacado"]
 let numb=number.with(2,"Papaya")
 console.log(number)
 console.log(numb)
+
+let a=5
+let b=5
+let sum=a+b
+console.log(sum)
