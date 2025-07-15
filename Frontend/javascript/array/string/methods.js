@@ -22,3 +22,9 @@ console.log(secondName.toLowerCase())
 let name2="     Sahil   "
 console.log(name2)
 console.log(name2.trim())
+let text="5"
+let ps=text.padStart(4,"O")
+let pe=text.padEnd(4,"X")
+console.log(text)
+console.log(ps)
+console.log(pe)
