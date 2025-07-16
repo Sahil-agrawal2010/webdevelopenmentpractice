@@ -27,4 +27,9 @@ let ps=text.padStart(4,"O")
 let pe=text.padEnd(4,"X")
 console.log(text)
 console.log(ps)
-console.log(pe)
+console.log(pe)  
+
+let a=1
+let b=4
+let subtraction=b-a
+console.log(subtraction)
