@@ -29,3 +29,6 @@ console.log(variable)
 let text="Hi I am Sahil"
 let variable=text.split("")
 console.log(variable)
+let text="Hi I am Sahil"
+let variable=text.startsWith("H")
+console.log(variable)
