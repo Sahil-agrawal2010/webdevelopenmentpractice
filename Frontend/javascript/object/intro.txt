@@ -1,0 +1,3 @@
+In real life object are things like houses car people animals or any other subjects.
+A real life objects ahve multiple properties and multiple methods.For example a car is an object it has properties like name,model,weight,colour.
+A real life car has methods like start,stop,drive,break etc.
