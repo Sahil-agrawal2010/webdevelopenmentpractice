@@ -86,3 +86,19 @@ const speakerDetails={
     isSold:true,
     cc:450
 }
+
+
+const airconditionerDetails={
+    airconditionerDetails:"Life's Good",
+    colour:"Blue",
+    price:200000,
+    isSold:true,
+    cc:"Pure Air"
+}
+airconditionerDetails.weight=1
+console.log(airconditionerDetails.weight)
+delete airconditionerDetails.cc
+console.log(airconditionerDetails.cc)
+let userInput=Number(prompt("Enter any digit between 1 to 10 :- "))
+airconditionerDetails.discount=(userInput/100)*airconditionerDetails.price
+console.log(`You got the discount of RS.${airconditionerDetails.discount}`)
