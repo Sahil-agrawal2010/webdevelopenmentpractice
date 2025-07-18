@@ -102,3 +102,22 @@ console.log(airconditionerDetails.cc)
 let userInput=Number(prompt("Enter any digit between 1 to 10 :- "))
 airconditionerDetails.discount=(userInput/100)*airconditionerDetails.price
 console.log(`You got the discount of RS.${airconditionerDetails.discount}`)
+
+
+let object=prompt("Enter the name of object:- ")
+let objectProperty=prompt("Enter the model of your object:- ")
+let objectProperty2=prompt("Enter the colour of your object:- ")
+let objectProperty3=prompt("Enter the price of your object:- ")
+let objectProperty4=prompt("Enter the power of your object:- ")
+const objectDetails={
+}
+objectDetails.Name=object
+objectDetails.Model=objectProperty
+objectDetails.Colour=objectProperty2
+objectDetails.Price=objectProperty3
+objectDetails.Power=objectProperty4
+console.log(`The name of your object is ${objectDetails.Name}`)
+console.log(`The model of your object is ${objectDetails.Model}`)
+console.log(`The colour of your object is ${objectDetails.Colour}`)
+console.log(`The price of your object is ${objectDetails.Price}`)
+console.log(`The power of your object is ${objectDetails.Power}`)
