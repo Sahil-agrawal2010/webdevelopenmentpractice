@@ -121,3 +121,12 @@ console.log(`The model of your object is ${objectDetails.Model}`)
 console.log(`The colour of your object is ${objectDetails.Colour}`)
 console.log(`The price of your object is ${objectDetails.Price}`)
 console.log(`The power of your object is ${objectDetails.Power}`)
+
+
+const personDetails={
+    personDetailsName:"Bhindi"
+    personDetailsFavouriteColour:"Lavender"
+    personDetailsToyPrice:"Unlimeted"
+    personDetailsIsSold:true
+    personDetailsFavouritePerson:"Sahil"
+}
