@@ -130,3 +130,17 @@ const personDetails={
     personDetailsIsSold:true
     personDetailsFavouritePerson:"Sahil"
 }
+
+
+const person ={
+    firstName : prompt("Enter your first name : "),
+    
+    lastName : "Pathak",
+    id: 233199,
+    user : prompt("Enter any thing please : "),
+    fullName : function (){
+        return `User has entered this : ${this.user}`
+    }
+}
+
+console.log(person.fullName())
