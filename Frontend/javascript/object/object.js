@@ -174,3 +174,60 @@ personDetails.name = function (){
     return `${this.firstName} ${this.secondName}`.toUpperCase()
 }
 console.log(personDetails.name())
+
+
+Write a programme to see if he it eligible to vote or not
+const vote={
+    voteFor:Number(prompt("Enter your age in digits :- "))
+}
+vote.checker=function (){
+    if(vote.voteFor>=18){
+        return `You are eligible to vote!`
+    }
+    else{
+        return `You are not eligible to vote!`
+    }
+}
+console.log(vote.checker())
+
+
+Write a programme to ask user marks of five (5) subjects and see if he is pass or fail
+const marks={
+    marks1:Number(prompt("Enter the marks of Computer :- ")),
+        marks2:Number(prompt("Enter the marks of English :- ")),
+                marks:Number(prompt("Enter the marks of Maths :- ")),
+                marks4:Number(prompt("Enter the marks of Science :- ")),
+                    marks5:Number(prompt("Enter the marks of Social :-"))
+}
+marks.total=function (){
+    totals=marks.marks1+marks.marks2+marks.marks3+marks.marks4+marks.marks5/5
+    if(totals>=40){
+        return `You are pass in all the subjects!`
+    }
+    else{
+        return `Youu are fail in all the subjects!`
+    }
+}
+console.log(marks.total())
+
+
+Write a programme to check if the number is prime number or not
+const checker={
+    prim:Number(prompt("Enter the number to see weather it is prime number or not :- "))
+}
+checker.counter=function (){
+    let counter=0
+    for(let i=1;i<=checker.prim;i++){
+    if(checker.prim%i==0){
+        counter++
+    }
+    if(counter==2){
+        return `The number is a prim number!`
+    }
+    else{
+        return `The number is not a prim number!`
+    }
+    }
+}
+console.log(checker.counter())
+Write a programme to display fibonaccy series
