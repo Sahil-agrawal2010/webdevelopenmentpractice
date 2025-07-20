@@ -144,3 +144,19 @@ const person ={
 }
 
 console.log(person.fullName())
+
+
+const personDetails={
+    firstName:prompt("Enter your first name here :- "),
+    secondName:prompt("Enter your second name here :- "),
+    favouriteColour:prompt("Enter your favourite colour here :- "),
+    favouritePerson:prompt("Enter your favourite person here :- "),
+    favouriteNumber:prompt("Enter your favourite number here :- "),
+    favouriteToys:prompt("Enter your favourite toy here :- "),
+    favouriteGame:prompt("Enter your favourite game here :- "),
+    personPrice:prompt("Enter your price here :- "),
+    totaloutput: function (){
+        return `The first name of user is ${this.firstName}.The second name of user is ${this.secondName}.The favourite colour of user is ${this.favouriteColour}.The favourite person of user is ${this.favouritePerson}.The favourite number of user is ${this.favouriteNumber}.The favourite toy of user is ${this.favouriteToys}.The favourite game of user is ${this.favouriteGame}.The price of user is ${this.personPrice}.`
+    }
+}
+console.log(personDetails.totaloutput())
