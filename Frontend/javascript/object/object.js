@@ -160,3 +160,17 @@ const personDetails={
     }
 }
 console.log(personDetails.totaloutput())
+
+
+const personDetails={
+    firstName:prompt("Enter your first name here :- "),
+    secondName:prompt("Enter your second name here :- ")
+}
+
+personDetails.age = 22
+console.log(personDetails.age)
+
+personDetails.name = function (){
+    return `${this.firstName} ${this.secondName}`.toUpperCase()
+}
+console.log(personDetails.name())
