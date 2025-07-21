@@ -194,18 +194,17 @@ console.log(vote.checker())
 Write a programme to ask user marks of five (5) subjects and see if he is pass or fail
 const marks={
     marks1:Number(prompt("Enter the marks of Computer :- ")),
-        marks2:Number(prompt("Enter the marks of English :- ")),
-                marks:Number(prompt("Enter the marks of Maths :- ")),
-                marks4:Number(prompt("Enter the marks of Science :- ")),
-                    marks5:Number(prompt("Enter the marks of Social :-"))
+    marks2:Number(prompt("Enter the marks of English :- ")),
+    marks3:Number(prompt("Enter the marks of Maths :- ")),
+    marks4:Number(prompt("Enter the marks of Science :- ")),
+    marks5:Number(prompt("Enter the marks of Social :-"))
 }
 marks.total=function (){
-    totals=marks.marks1+marks.marks2+marks.marks3+marks.marks4+marks.marks5/5
-    if(totals>=40){
-        return `You are pass in all the subjects!`
+    if(marks.marks1+marks.marks2+marks.marks3+marks.marks4+marks.marks5>=40){
+        return `You are pass Congo!`
     }
     else{
-        return `Youu are fail in all the subjects!`
+        return `Youu are fail Congo!`
     }
 }
 console.log(marks.total())
@@ -231,3 +230,17 @@ checker.counter=function (){
 }
 console.log(checker.counter())
 Write a programme to display fibonaccy series
+
+const fibonacci = {
+    number : parseInt(prompt("Enter how many fibonacci series do you want to generate ? : ")),
+    result : function (){
+        let a = 0, b=1, sum=0;
+        for(let i = 1; i<=(this.number); i++){
+            sum = a+b
+            a = b
+            b = sum
+            console.log(sum)
+        }
+    }
+}
+fibonacci.result()
