@@ -41,3 +41,35 @@ for(let Keys in student){
 console.log(c)
 let totalProperties = Object.keys(student).length;
 console.log(totalProperties);
+
+
+Write a programme to add 1000 in salary of all the people in object
+const salary={
+    Ram:4000,
+    Shyam:5000,
+    Hari:6000,
+    Krishna:7000,
+    Lakxam:8000,
+    Shiv:9000,
+    Ganesh:10000,
+    Hanuman:11000,
+}
+        for(let Keys in salary){
+            console.log(salary[Keys]+1000)
+}
+
+
+Write a programme to print only  the object with string values
+const student={
+    name:"Sahil Agrawal",
+    classss:10,
+    section:"A",
+    stop:"Onestop",
+    grade:"A+",
+    eyeColour:"Blue",
+    hairColour:"Black",
+    school:"Green Field World School"
+}
+for(let Keys of student){
+    
+}
