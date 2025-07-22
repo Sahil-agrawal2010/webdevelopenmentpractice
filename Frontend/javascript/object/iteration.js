@@ -75,3 +75,20 @@ for(let Keys in student){
         console.log(student[Keys])
     }
 }
+
+
+const checker={
+    isMarried:false,
+    isSold:true,
+    isGood:false,
+    isBad:true,
+    isFantastic:false,
+    isAmazing:true
+}
+let counter = 0
+for(let keys in checker){
+    if(typeof(checker[keys] == 'boolean')){
+        counter ++
+    }
+}
+    console.log(counter)
