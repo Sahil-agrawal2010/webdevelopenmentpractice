@@ -139,3 +139,20 @@ for (let keys in student){
         console.log(student[keys])
     }
 }
+
+
+const student={
+    name:"Sahil Agrawal",
+    classss:10,
+    section:"A",
+    stop:"Onestop",
+    grade:"A+",
+    eyeColour:"Blue",
+    hairColour:"Black",
+    school:"Green Field World School"
+}
+for(let keys in student){
+    if(typeof(student[keys])=="string" && student[keys].length>4){
+        console.log(`${keys} : ${student[keys]}`)
+    }
+}
