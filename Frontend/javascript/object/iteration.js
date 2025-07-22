@@ -93,7 +93,7 @@ for(let keys in checker){
 }
     console.log(counter)
 
-    
+
     const checker={
     isMarried:false,
     isSold:true,
@@ -104,4 +104,21 @@ for(let keys in checker){
 }
 for(let keys in checker){
     console.log(`${keys.toUpperCase()} : ${checker[keys]}`)
+}
+
+
+const student={
+    name:"Sahil Agrawal",
+    classss:10,
+    section:"A",
+    stop:"Onestop",
+    grade:"A+",
+    eyeColour:"Blue",
+    hairColour:"Black",
+    school:"Green Field World School"
+}
+for (let keys in student){
+    if(typeof(student[keys])=="number"){
+        console.log(student[keys])
+    }
 }
