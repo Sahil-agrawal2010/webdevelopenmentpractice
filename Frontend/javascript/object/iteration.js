@@ -156,3 +156,100 @@ for(let keys in student){
         console.log(`${keys} : ${student[keys]}`)
     }
 }
+
+
+Write a programme to find the number which has the highest numeric value
+const salary={
+    Ram:4000,
+    Shyam:5000,
+    greatest: function () {
+        if(salary.Ram>salary.Shyam){
+            return salary.Ram
+        }
+        else{
+            return salary.Shyam
+        }
+    }
+}
+console.log(salary.greatest())
+
+
+Write a programme to count how many values are exactly true
+    const checker={
+    isMarried:false,
+    isSold:true,
+    isGood:false,
+    isBad:true,
+    isFantastic:false,
+    isAmazing:true
+}
+let t=0
+for (let keys in checker){
+    if(checker[keys]==true){
+        t=t+1
+    }
+}
+console.log(t)
+
+
+Write a programme to add the sum of all numeric values only
+const salary={
+    Ram:4000,
+    Shyam:5000,
+    Hari:6000,
+    Krishna:7000,
+    total:function (){
+        sum=this.Ram+this.Shyam+this.Hari+this.Krishna
+        return sum
+    }
+}
+console.log(salary.total())
+
+
+Write a programme to print only string whose value starts with s
+const student={
+    name:"Sahil Agrawal",
+    section:"A",
+    stop:"SOnestop",
+    grade:"A+",
+    eyeColour:"Blue",
+    hairColour:"Black",
+    school:"Green Field World School"
+}
+for(let keys in student){
+    if(student[keys].startsWith("S")){
+        console.log(student[keys])
+    }
+}
+
+
+Write a programme to creat a copy of all keys and values in to another object
+const student={
+    name:"Sahil Agrawal",
+    classss:10,
+    section:"A",
+    stop:"Onestop",
+    grade:"A+",
+    eyeColour:"Blue",
+    hairColour:"Black",
+    school:"Green Field World School"
+}
+
+
+Write a programme to print only string values to your name
+const student={
+    name:"Sahil Agrawal",
+    classss:10,
+    section:"A",
+    stop:"Onestop",
+    grade:"A+",
+    eyeColour:"Blue",
+    hairColour:"Black",
+    school:"Green Field World School"
+}
+for(keys in student){
+    if(typeof(student[keys])=="string"){
+        student[keys]=="Sahil agrawal"
+        console.log(student[keys])
+    }
+}
