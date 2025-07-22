@@ -92,3 +92,16 @@ for(let keys in checker){
     }
 }
     console.log(counter)
+
+    
+    const checker={
+    isMarried:false,
+    isSold:true,
+    isGood:false,
+    isBad:true,
+    isFantastic:false,
+    isAmazing:true
+}
+for(let keys in checker){
+    console.log(`${keys.toUpperCase()} : ${checker[keys]}`)
+}
