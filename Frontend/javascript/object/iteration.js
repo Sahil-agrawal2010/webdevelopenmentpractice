@@ -70,6 +70,8 @@ const student={
     hairColour:"Black",
     school:"Green Field World School"
 }
-for(let Keys of student){
-    
+for(let Keys in student){
+    if(typeof(student[Keys])=="string"){
+        console.log(student[Keys])
+    }
 }
