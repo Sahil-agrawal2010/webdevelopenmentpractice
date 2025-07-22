@@ -122,3 +122,20 @@ for (let keys in student){
         console.log(student[keys])
     }
 }
+
+
+const student={
+    name:null,
+    classss:10,
+    section:undefined,
+    stop:null,
+    grade:undefined,
+    eyeColour:null,
+    hairColour:undefined,
+    school:null
+}
+for (let keys in student){
+    if(student[keys]==null||student[keys]==undefined){
+        console.log(student[keys])
+    }
+}
