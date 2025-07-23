@@ -281,3 +281,22 @@ for(let keys in student){
 }
 
 console.log("There are "+counter+ " keys with vowel on the beginning.")
+
+
+const student = {
+    name: "Sahil Agrawal",
+    age: 10,
+    section: "A",
+    stop: "Onestop",
+    grade: "A+",
+    eyeColour: "Blue",
+    hairColour: "Black",
+    school: "Green Field World School"
+}
+let counter = 0
+for (let key in student) {
+    if (typeof(student[key]) === "string") {
+        counter++
+    }
+}
+console.log(`There are ${counter} values with string and ${(Object.keys(student).length)} keys .`)
