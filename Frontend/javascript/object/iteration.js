@@ -300,3 +300,22 @@ for (let key in student) {
     }
 }
 console.log(`There are ${counter} values with string and ${(Object.keys(student).length)} keys .`)
+
+
+const salary={
+    Ram:4000,
+    Shyam:5000,
+    name:"Sahil agrawal",
+    addresses:"Onestop",
+    Ganesh:10000,
+    Hanuman:11000,
+}
+salary2={
+    
+}
+for(let key in salary){
+    if(typeof(salary[key])=="number"){
+    salary2[key]=salary[key]
+    }
+}
+console.log(salary2)
