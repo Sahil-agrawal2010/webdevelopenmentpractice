@@ -234,7 +234,13 @@ const student={
     hairColour:"Black",
     school:"Green Field World School"
 }
-
+const student2={
+    
+}
+for(let keys in student){
+    student2[keys]=student[keys]
+}
+alert(student2)
 
 Write a programme to print only string values to your name
 const student={
@@ -247,9 +253,9 @@ const student={
     hairColour:"Black",
     school:"Green Field World School"
 }
-for(keys in student){
-    if(typeof(student[keys])=="string"){
-        student[keys]=="Sahil agrawal"
-        console.log(student[keys])
+for(let keys in student){
+    if(typeof(student[keys])==="string"){
+        student[keys] = "Sahil agrawal"
     }
 }
+console.log(student)
