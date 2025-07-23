@@ -259,3 +259,25 @@ for(let keys in student){
     }
 }
 console.log(student)
+
+
+const student={
+    name:"Sahil Agrawal",
+    age:10,
+    section:"A",
+    stop:"Onestop",
+    grade:"A+",
+    eyeColour:"Blue",
+    hairColour:"Black",
+    school:"Green Field World School"
+}
+    let counter = 0
+for(let keys in student){
+    if(keys.startsWith("a") || keys.startsWith("A") || keys.startsWith("E") || keys.startsWith("I") || keys.startsWith("O") || keys.startsWith("U")
+    ){
+    console.log(keys)
+    counter++
+    }
+}
+
+console.log("There are "+counter+ " keys with vowel on the beginning.")
