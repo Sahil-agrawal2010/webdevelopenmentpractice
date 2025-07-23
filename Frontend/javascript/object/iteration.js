@@ -319,3 +319,26 @@ for(let key in salary){
     }
 }
 console.log(salary2)
+
+
+const student = {
+    name: "Sahil Agrawal",
+    age: 10,
+    section: "A",
+    stop: "Onestop",
+    grade: "A+",
+    school: "Green Field World School",
+    isGood:false,
+    isBad:true,
+    isFantastic:false,
+    isAmazing:true,
+    eyeColour:null,
+    hairColour:undefined
+}
+student2={
+    
+}
+for(let key in student){
+    student2[key] = typeof(student[key])
+}
+alert(student2)
