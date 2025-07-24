@@ -408,3 +408,23 @@ for(let key in student){
         console.log(key)
     }
 }
+
+
+const student = {
+    Name: "Sahil Agrawal",
+    age: 10,
+    section: "A",
+    stop: "Onestop",
+    grade: "A+",
+    school: "Green Field World School",
+}
+for(let key in student){
+    if(typeof(student[key])==="string"){
+        let original = student[key]
+        let rev = ""
+    for(let i=original.length-1;i>=0;i--){
+        rev +=original[i]
+    }
+    console.log(rev)
+}
+}
