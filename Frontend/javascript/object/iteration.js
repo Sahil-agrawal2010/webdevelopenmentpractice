@@ -387,3 +387,24 @@ for(key in salary){
     }
 }
 console.log(sum)
+
+
+const student = {
+    Name: "Sahil Agrawal",
+    age: 10,
+    section: "A",
+    stop: "Onestop",
+    grade: "A+",
+    school: "Green Field World School",
+    isGood:false,
+    isBad:true,
+    isFantastic:false,
+    isAmazing:true,
+    EyeColour:null,
+    hairColour:undefined
+}
+for(let key in student){
+    if(key.length>4){
+        console.log(key)
+    }
+}
