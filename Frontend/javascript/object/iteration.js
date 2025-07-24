@@ -342,3 +342,48 @@ for(let key in student){
     student2[key] = typeof(student[key])
 }
 alert(student2)
+
+
+Write a programme to count how many keys starts with capital letter
+
+const student = {
+    Name: "Sahil Agrawal",
+    age: 10,
+    section: "A",
+    stop: "Onestop",
+    grade: "A+",
+    school: "Green Field World School",
+    isGood:false,
+    isBad:true,
+    isFantastic:false,
+    isAmazing:true,
+    EyeColour:null,
+    hairColour:undefined
+}
+let c = 0
+for(let key in student){
+    if(key.charCodeAt(0)>=65 && key.charCodeAt(0)<=90){
+        c = c+ 1
+    }
+}
+alert("The total number of keys with capital letter are : "+c)
+
+
+Write a programme to add only even number values from the object
+const salary={
+    Ram:4000,
+    Shyam:5000,
+    Hari:6000,
+    Krishna:7000,
+    Lakxam:8000,
+    Shiv:9000,
+    Ganesh:10009,
+    Hanuman:11000
+}
+let sum=0
+for(key in salary){
+    if(salary[key]%2==0){
+        sum=sum+salary[key]
+    }
+}
+console.log(sum)
