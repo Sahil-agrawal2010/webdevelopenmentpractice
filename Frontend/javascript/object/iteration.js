@@ -428,3 +428,23 @@ for(let key in student){
     console.log(rev)
 }
 }
+
+
+const student = {
+    Name: "Sahil Agrawal",
+    age: 10,
+    section: "A",
+    stop: "Onestop",
+    grade: "A+",
+    school: "Green Field World School",
+}
+const student2 = {
+}
+
+person[name] : "Nayan"
+
+
+for(let key in student){
+    student2[student[key]] = key
+}
+alert(student2)
