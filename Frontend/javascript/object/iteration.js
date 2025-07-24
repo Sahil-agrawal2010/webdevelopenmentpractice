@@ -448,3 +448,19 @@ for(let key in student){
     student2[student[key]] = key
 }
 alert(student2)
+
+Write a programme to find key with longest value string
+const student = {
+    Name: "Sahil Agrawal",
+    age: 10,
+    section: "A",
+    stop: "Onestop",
+    grade: "A+",
+    school: "Green Field World School"
+}
+let highest=0
+for(let key in student){
+    if(key.length>highest){
+        console.log(key.length)
+    }
+}
