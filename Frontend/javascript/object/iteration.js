@@ -458,9 +458,19 @@ const student = {
     grade: "A+",
     school: "Green Field World School"
 }
-let highest=0
+
+let longestkey = ""
+let maxlength = 0
+
 for(let key in student){
-    if(key.length>highest){
-        console.log(key.length)
+    let len = 0
+    for(let i in student[key]){
+        len++
+    }
+    if(len > maxlength){
+        maxlength = len
+        longestkey = key
     }
 }
+
+console.log("The key with longest value is : "+longestkey+  " and it's length is : "+maxlength)
