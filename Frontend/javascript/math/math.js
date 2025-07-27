@@ -115,26 +115,25 @@ anwer2=prompt("Do you want to see your BMI :- ")
         bmI=weight/(height*height)
         bmi=Math.round(bmI)
          if(bmi>0  && bmi<18.5){
-    console.log(`You are Under Weighted `)
+       return `You are Under Weighted `
 }
 if(bmi>=18.5 && bmi<25){
-    console.log(`You are Healthy Weighted`)
+   return `You are Healthy Weighted`
 }
 if(bmi>=25 && bmi<30){
-    console.log(`You are Over Weighted`)
+     return `You are Over Weighted`
 }
 if(bmi>=30 && bmi<35){
-    console.log(`You are having Obesity Class I`)
+    return `You are having Obesity Class I`
 }
 if(bmi>=35 && bmi<40){
-    console.log(`You are Obesity Class II`)
+    return `You are Obesity Class II`
 }
 if(bmi>=40){
-    console.log(`You are having Obesity Class III`)
-    console.log("You will die fix")
+    return `You are having Obesity Class III`
 }
     }
-}
+},
 aged:function(){
     if(counter.age>=0 && counter.age<=12){
     return "You are in your Childhood."
@@ -154,6 +153,15 @@ else if(counter.age>=61){
 else{
    return "Error"
 }
+},
+countdowner:function (){
+    answer3=prompt("Do you want to know how many days are left for new year :- ")
+    if(answer3=="y"){
+        return new Date(2026-01-01)-new Date()
+    }
+    else{
+        return "Thank you for your visit in our programme!"
+    }
 }
 }
 console.log(counter.alerter())
@@ -171,4 +179,6 @@ console.log("")
 console.log(counter.BMI())
 console.log("")
 console.log(counter.aged())
+console.log("")
+console.log(counter.countdowner())
 console.log("")
