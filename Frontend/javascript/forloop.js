@@ -145,5 +145,28 @@ if(sentence[i]==="z"){
 console.log(sentence[i])
 }
 
+
 Write a programme by forming a array printing only positive number and stop if the number is greater is than 100
+let number=[10,-120,30,-40,150,-60,70,-180,90,-100]
+for(let i=0;i<=number.length-1;i++){
+    if(number[i]<0){
+        continue
+    }
+    if(number[i]>100){
+        break
+}
+console.log(number[i])
+}
+
+
 Write a programme to make a array of 1 and 50 skip odd number and if the array is divisible by 4 and 6 stop it
+let number=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49,50]
+for(let i=0;i<=number.length-1;i=i+1){
+    if(number[i]%2!=0){
+        continue
+    }
+    if(number[i]%4===0 && number[i]%6===0){
+        break
+    }
+    console.log(number[i])
+}
