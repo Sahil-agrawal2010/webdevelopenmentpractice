@@ -109,3 +109,15 @@ for(let i=1;i<=20;i=i+1){
     }
     console.log(i)
 }
+
+
+let counter=0
+for(let i=1;i<=30;i=i+1){
+    if(i%5===0){
+        counter=counter+1
+    console.log(i)
+    }
+    if(counter>=3){
+        break
+    }
+}
