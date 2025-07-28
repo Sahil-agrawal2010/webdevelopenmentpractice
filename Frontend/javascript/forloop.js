@@ -132,3 +132,15 @@ for(let i=10;i>=1;i--){
     }
         console.log(i)
 }
+
+
+let sentence="My name is Sahil Agrawal!"
+for(let i=0;i<=sentence.length-1;i++){
+if(sentence[i]==="a" || sentence[i]==="e" || sentence[i]==="i" || sentence[i]==="o" || sentence[i]==="u") {
+    continue
+}
+if(sentence[i]==="z"){
+    break
+}
+console.log(sentence[i])
+}
