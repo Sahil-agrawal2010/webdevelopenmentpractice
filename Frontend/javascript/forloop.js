@@ -144,3 +144,6 @@ if(sentence[i]==="z"){
 }
 console.log(sentence[i])
 }
+
+Write a programme by forming a array printing only positive number and stop if the number is greater is than 100
+Write a programme to make a array of 1 and 50 skip odd number and if the array is divisible by 4 and 6 stop it
