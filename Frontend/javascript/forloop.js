@@ -93,3 +93,19 @@ for(let i = 1; i<11; i++){
 // break  - loop bata bahira niskinxa tyo condition satisfy vayo vane
 
 // continue - tyo particular iteration lai skip gar - aru chai chala. 
+
+
+for(let i=1;i<=20;i=i+1){
+    if(i%7===0){
+        break
+    }
+    console.log(i)
+}
+
+
+for(let i=1;i<=20;i=i+1){
+    if(i%2===0){
+        continue
+    }
+    console.log(i)
+}
