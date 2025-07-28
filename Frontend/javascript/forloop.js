@@ -78,3 +78,18 @@ if(i%2==0){
 else{
     console.log(i)
 }
+
+
+for(let i = 1; i<11; i++){
+    if(i===4){
+        continue
+    }
+    if(i===9){
+        break
+    }
+    console.log(i)
+}
+
+// break  - loop bata bahira niskinxa tyo condition satisfy vayo vane
+
+// continue - tyo particular iteration lai skip gar - aru chai chala. 
