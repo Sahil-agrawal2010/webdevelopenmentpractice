@@ -121,3 +121,14 @@ for(let i=1;i<=30;i=i+1){
         break
     }
 }
+
+
+for(let i=10;i>=1;i--){
+    if(i%2===0){
+        continue
+    }
+    if(i==1){
+        break
+    }
+        console.log(i)
+}
