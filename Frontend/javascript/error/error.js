@@ -19,3 +19,23 @@ try{
 }finally{
     console.log("ekjgneijvnqeijvnerqjoiv")
 }
+
+try{
+    let userInput = Number(prompt("Enter any number : "))
+    // if(userInput === "" || typeof(userInput)==='string'){
+    //     userInput.toFixed()
+    // }
+    // let real = Number(userInput)
+    // if(isnan(real)){
+    //     real.toFixed()
+    // }
+    if(typeof(userInput)=="number"){
+        userInput.toFixed()
+    }
+    if(!isNan(userInput)){
+        userInput.toFixed()
+    }
+    console.log("You have entered this number : "+userInput)
+}catch(error){
+    alert("Please enter a real number")
+}
