@@ -9,3 +9,13 @@ Try:-This is the block where we try to run some Code.
 Catch:- This is the block where errors are caught.
 Finally:- This is the optional block which runs whatever happens.
 Throw:- This is the block where we creat our manual errors and throw it.
+
+
+userInput = 10
+try{
+    let result = userInpu / 0
+}catch(error){
+    console.log("userInpu is not defined, please define it or use userInput variable")
+}finally{
+    console.log("ekjgneijvnqeijvnerqjoiv")
+}
