@@ -426,3 +426,19 @@
 //      cheaker(a)
 //     arrow(a)
 //     myFunction(a)
+
+
+// let number=Number(prompt("Enter any number to see if it is a armstrom number :- "))
+// let no=a =>{
+//     let m=number%10
+//     let p=number/10 >>0
+//     let o=p%10
+//     let l=number/100 >>0
+//     if((m*m*m)+(o*o*o)+(l*l*l)==number){
+//         return `The number is a armstrom number`
+//     }
+//     else{
+//         return `The number is not a arm strom number`
+//     }
+// }
+// console.log(no())
