@@ -54,3 +54,31 @@ try{
 }catch(error){
     alert("You are not registered!")
 }
+
+
+let database = ["Nayan", "Sita", "Gita", "Roshan", "Rahul"]
+let name = prompt("Enter your user name : ")
+
+try{
+    if(!database.includes(name)){
+        throw "Sorry you are not registered."
+    }
+    else{
+        console.log("You are registered.")
+    }
+}catch(error){
+    alert(error)
+}
+
+
+age = parseInt(prompt("Enter your age : "))
+try{
+    if(age<18){
+        throw "Sorry! You are too small to vote."
+    }
+    else{
+        console.log("You can vote.")
+    }
+}catch(err){
+    console.log(err)
+}
