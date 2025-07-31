@@ -39,3 +39,18 @@ try{
 }catch(error){
     alert("Please enter a real number")
 }
+
+
+let database = ["Nayan", "Sita", "Gita", "Roshan", "Rahul"]
+let name = prompt("Enter your user name : ")
+
+try{
+    if(!database.includes(name)){
+        name.toFixed()
+    }
+    else{
+        console.log("You are registered.")
+    }
+}catch(error){
+    alert("You are not registered!")
+}
