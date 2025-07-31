@@ -126,3 +126,23 @@ let arrow= (numb1,numb2) =>{
     }
 }
 console.log(arrow(numb1,numb2))
+
+
+const userInput={
+    name:prompt("Enter your name :- "),
+    email:prompt("Enter your email :- "),
+    age:Number(prompt("Enter your age :- "))
+}
+try{
+    if(userInput.name===""){
+        throw "Your name is empty please fill it."
+    }
+    else if(userInput.email===""){
+        throw "Your email is empty please fill it."
+    }
+    else if(userInput.age<=18){
+        throw "You cant register as your age is less than eighteen!"
+    }
+}catch(error){
+    console.log(error)
+}
