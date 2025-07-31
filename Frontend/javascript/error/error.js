@@ -82,3 +82,13 @@ try{
 }catch(err){
     console.log(err)
 }
+
+
+let input=prompt("Enter your name here :- ")
+try{
+    if(input===""){
+        throw "Please enter your name here!"
+    }
+}catch(error){
+    console.log(error)
+}
