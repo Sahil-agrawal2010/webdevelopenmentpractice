@@ -92,3 +92,18 @@ try{
 }catch(error){
     console.log(error)
 }
+
+
+let input=[1,2,3,4,"sahil",5,6,7]
+for(let i=0;i<=input.length-1;i++){
+try{
+    if(isNaN(input[i])){
+        throw "Here is a string value!"
+    }
+    else{
+        console.log(input[i])
+    }
+}catch(error){
+    console.log(error)
+}
+}
