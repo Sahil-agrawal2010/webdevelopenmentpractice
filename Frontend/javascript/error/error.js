@@ -107,3 +107,22 @@ try{
     console.log(error)
 }
 }
+
+    let numb1=Number(prompt("Enter the first number :- "))
+    let numb2=Number(prompt("Enter the second number :- "))
+let arrow= (numb1,numb2) =>{
+    try{
+        if(isNaN(numb1) || isNaN(numb2)){
+            throw "Enter the number not a string! "
+        }
+        else if(numb2===0){
+            throw "Enter second number more than zero."
+        }
+        else{
+            return numb1/numb2
+        }
+    }catch(error){
+        return error
+    }
+}
+console.log(arrow(numb1,numb2))
