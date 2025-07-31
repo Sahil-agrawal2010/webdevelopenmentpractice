@@ -146,3 +146,39 @@ try{
 }catch(error){
     console.log(error)
 }
+
+Make a calculator and check all the things
+let firstNumber=Number(prompt("Enter the first number :- "))
+let secondNumber=Number(prompt("Enter the second number :- "))
+let operator=prompt("Enter the operator waht do you want to do :- ")
+let arrow=(firstNumber,secondNumber,operator) => {
+    try{
+    if(isNaN(firstNumber)){
+        throw "Please enter the number not a string."
+    }
+    else if(isNaN(secondNumber)){
+        throw "Please enter the number not a string."
+    }
+    else if(operator=="+"){
+        return firstNumber+secondNumber
+    }
+    else if(operator==="-"){
+        return firstNumber-secondNumber
+    }
+    else if(operator==="*"){
+        return firstNumber*secondNumber
+    }
+    else if(secondNumber===0 && operator==="/"){
+        throw "Please don't enter second number as zero in oder to divide it."
+    }
+    else if(operator==="/"){
+        return firstNumber/secondNumber
+    }
+    else{
+        return "Bye Bye!"
+    }
+    }catch(error){
+        return error
+    }
+}
+console.log(arrow(firstNumber,secondNumber,operator))
