@@ -182,3 +182,14 @@ let arrow=(firstNumber,secondNumber,operator) => {
     }
 }
 console.log(arrow(firstNumber,secondNumber,operator))
+
+
+let word=["sahil","nayan","dhairya","world","earth"]
+let arrow=word =>{
+    for(key in word){
+    for(let i=0;i<=word[key].length-1;i++){
+       return word[key][i]
+    }
+}
+}
+console.log(arrow(word[key]))
