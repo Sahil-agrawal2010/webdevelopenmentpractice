@@ -60,3 +60,23 @@ class student{
 const obj1=new student("Sahil Agrawal",40)
 obj1.totalmarks(70)
 obj1.showPercentage()
+
+
+class login{
+    constructor(name,password){
+        this.name=name
+        this.password=password
+    }
+    checker(userName,inputPassword){
+        if(userName==this.name && inputPassword==this.password){
+            console.log("Login Successfully")
+        }
+        else{
+            console.log("Sorry!Something is invalid!")
+        }
+    }
+}
+let obj1=new login("Dhairya",1234)
+obj1.checker("Dhairya",1234)
+let obj2=new login("Hari",14)
+obj2.checker("Ram",14)
