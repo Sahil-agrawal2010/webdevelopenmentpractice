@@ -37,3 +37,26 @@ const obj1=new student("Sahil Agrawal",40)
 obj1.totalmarks()
 const obj2=new student("Ram Agrawal",22)
 obj2.totalmarks()
+
+
+class student{
+    constructor(name,marks){
+        this.name=name
+        this.marks=marks
+    }
+    totalmarks(sci){
+        if(this.marks>=40){
+            console.log(`${this.name} is passed! And his science marks is ${sci}`) 
+        }
+        else{
+            console.log(`${this.name} is failed!  And his science marks is ${sci}`)
+        }
+    }
+    
+    showPercentage(){
+        console.log("Your percentage is : "+this.marks + " and his science marks is : "+sci)
+    }
+}
+const obj1=new student("Sahil Agrawal",40)
+obj1.totalmarks(70)
+obj1.showPercentage()
