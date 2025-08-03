@@ -17,3 +17,23 @@ obj2.displayProperties()
 obj3.displayProperties()
     let obj4=new bike("Ktm","Dhairya","Price","569")
 obj4.displayProperties()
+
+
+class student{
+    constructor(name,marks){
+        this.name=name
+        this.marks=marks
+    }
+    totalmarks(){
+        if(this.marks>=40){
+            console.log(`${this.name} is passed!`) 
+        }
+        else{
+            console.log(`${this.name} is failed!`)
+        }
+    }
+}
+const obj1=new student("Sahil Agrawal",40)
+obj1.totalmarks()
+const obj2=new student("Ram Agrawal",22)
+obj2.totalmarks()
