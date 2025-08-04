@@ -84,22 +84,23 @@ obj2.checker("Ram",14)
 
 Write a programme to creat a fan class with status property on or off.To add methods turn on,turn off and get status
 class fan{
-    constructor(fan1){
-        this.fan1=fan1
+    constructor(){
+        this.state="OFF"
     }
-    checker(){
-        if(this.fan1=="ON"){
-            console.log("The fan is ON!")
-        }
-        else{
-            console.log("The fan is OFF!")
-        }
+    turnOn(){
+        this.state="ON"
+        console.log("Now the fan is ON")
+    }
+        turnOff(){
+        this.state="OFF"
+        console.log("Now the fan is OFF")
+    }
+        getStatus(){
+            console.log(`Now the fan is ${this.state}`)
     }
 }
-let obj1=new fan("ON")
-obj1.checker()
-let obj2=new fan("OFF")
-obj2.checker()
+const obj1=new fan()
+obj1.getStatus()
 
 
 Write a programme to creat a product class with name and price.Adda method apply ten (10) percentade discount if the price is aboue than ten (10) thousand.
