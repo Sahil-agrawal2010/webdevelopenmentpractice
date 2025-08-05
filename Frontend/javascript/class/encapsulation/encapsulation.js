@@ -80,3 +80,27 @@ let obj1 = new person("Sahil",15)
 console.log(obj1.age)
 obj1.age  = "Nayan"
 console.log(obj1.age)
+
+
+class book{
+    constructor(title,author,rate){
+        this.title=title
+        this.author=author
+        this._rating=rate
+    }
+    get ratee(){
+        return `The title of the book is ${this.title} author is ${this.author} and rating is ${this._rating}.`
+    }
+    set ratee(value){
+        if(value<=5 && value>=0){
+            this._rating=value
+    }
+    else{
+        console.log("You are putting invalid rating!")
+    }
+}
+}
+const obj1=new book("The Alchemist","Dhairya Agrawal",2)
+console.log(obj1.ratee)
+obj1.ratee = -2
+console.log(obj1.ratee)
