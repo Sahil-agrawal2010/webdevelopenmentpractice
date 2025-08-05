@@ -62,3 +62,21 @@ console.log(obj1.age)
 
 obj1.age = 20
 console.log(obj1.age)
+
+
+class person{
+    constructor(name,age){
+        this.name=name
+        this._age=age
+    }
+    get age(){  // getter returns any values
+        return this.name
+    }
+set age(naam){
+    this.name = naam
+    }
+}
+let obj1 = new person("Sahil",15)
+console.log(obj1.age)
+obj1.age  = "Nayan"
+console.log(obj1.age)
