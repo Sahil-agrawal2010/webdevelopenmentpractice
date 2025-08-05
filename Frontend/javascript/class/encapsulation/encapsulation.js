@@ -31,10 +31,34 @@ console.log(obj1.age)
 obj1.display()
 
 
-// in order to take method as a variable then getter is used
+in order to take method as a variable then getter is used
 
-// varaibles - attributes, properties, fields
-// methods - functions
+varaibles - attributes, properties, fields
+methods - functions
 
 
-// class ko object jun baninxa, teslai class ko instance vanincha
+class ko object jun baninxa, teslai class ko instance vanincha
+
+
+class person{
+    constructor(name,age){
+        this.name=name
+        this._age=age
+    }
+    get age(){  // getter returns any values
+        return this._age
+    }
+    
+    set age(value){
+        if(value>0){
+            this._age = value
+        }else{
+            return "Age is not greater than 0"
+        }
+    }
+}
+let obj1=new person("Sahil",15)
+console.log(obj1.age)
+
+obj1.age = 20
+console.log(obj1.age)
