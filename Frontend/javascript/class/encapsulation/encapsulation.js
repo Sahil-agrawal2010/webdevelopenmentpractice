@@ -115,13 +115,12 @@ class temp{
         return ((9/5)*this.celcious)+32
     }
     set converter(value){
-        this.value=(value-32)*5/9
+       console.log((value-32)*5/9)
     }
 }
 let obj1=new temp(100)
 console.log(obj1.converter)
-obj1.value=212
-console.log(obj1.celcious)
+obj1.converter=212
 
 
 Write a programme to creat a user class with name and age. The setter should not allow age less than zero and more than hundered and getter should return user information
