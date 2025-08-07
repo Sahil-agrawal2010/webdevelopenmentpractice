@@ -29,9 +29,9 @@ Haha.getTotal()
 Write a programme 1.Static method to validate phone number length
 Rule: If phone number length is not 10, return "Invalid"
 class number{
-    static totalNumber(_numberr){
-        if(_numberr.length=="10"){
-            return _numberr
+    static totalNumber(numberr){
+        if(numberr.length===10){
+            return "okkk good job"
         }
         else{
             return "Either your number is less than ten(10) or more than ten(10)!"
@@ -47,22 +47,22 @@ Task:
 Create a class with a static method that takes username and password and returns success/fail.
 class idddd{
     static user(userName,pass){
-        if(pass.length>="12" && pass.length<="6"){
-            return `Login fail!`
+        if(userName==="admin" && pass===1234){
+            return `Login sucessful!`
         }
         else{
-            return `Login Successful!`
+            return `Login fail!`
         }
     }
 }
 console.log(idddd.user("Sahil","sahilag"))
-console.log(idddd.user("Sahil","sahil"))
+console.log(idddd.user("admin",1234))
 
 
 3. Static method to capitalize the first letter of a string
 class student{
     static user(name){
-        return name.toUpperCase()
+        return name[0].toUpperCase()+name.slice(1)
     }
 }
 console.log(student.user("sahil"))
