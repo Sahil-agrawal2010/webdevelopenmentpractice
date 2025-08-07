@@ -92,3 +92,53 @@ console.log("The entered value is incorrect!")
   }
 }
 user.total("agrawal")
+
+
+const userInput=prompt("Enter to play okk :- ")
+const chooser=("rock","paper","scissor")
+const l=(Math.floor(Math.random()*4))
+let arrow= l=>{
+if(l===1){
+    console.log("Computer:rock")
+}
+else if(l===2){
+    console.log("Computer:paper")
+}
+else{
+    console.log("Computer:scissor")
+}
+}
+arrow(l)
+let arrow2= (userInput,l)=>{
+    if(userInput==="paper" && l==="paper"){
+        console.log("Draw!")
+    }
+    else if(userInput==="paper" && l==="rock"){
+        console.log("User won!")
+    }
+        else if(userInput==="paper" && l==="scissor"){
+        console.log("Computer won!")
+    }
+        else if(userInput==="rock" && l==="rock"){
+        console.log("Draw!")
+    }
+        else if(userInput==="rock" && l==="paper"){
+        console.log("Computer Won!")
+    }
+        else if(userInput==="rock" && l==="scissor"){
+        console.log("User won!")
+    }
+        else if(userInput==="scissor" && l==="scissor"){
+        console.log("Draw!")
+    }
+        else if(userInput==="scissor" && l==="rock"){
+        console.log("Computer won!")
+    }
+        else if(userInput==="scissor" && l==="paper"){
+        console.log("User won!")
+    }
+    else{
+        console.log("Unexpected error!")
+    }
+}
+arrow2(userInput,l)
