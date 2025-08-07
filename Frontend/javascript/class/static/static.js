@@ -70,8 +70,25 @@ console.log(student.user("sahil"))
 
 4. Generate Random 6-digit OTP using static 
 class otp{
-    static otps(number){
+    static otps(){
         return Math.floor(Math.random()*1000000)
     }
 }
 console.log(otp.otps())
+
+
+class user{
+  static total(userr){
+   switch(userr){
+case "sahil":
+console.log("PAssword guessed!")
+break
+case "agrawal":
+console.log("PAssword guessed!")
+break
+default:
+console.log("The entered value is incorrect!")
+}
+  }
+}
+user.total("agrawal")
