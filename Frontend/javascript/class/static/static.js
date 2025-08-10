@@ -143,12 +143,12 @@ let arrow2= (userInput,l)=>{
 }
 arrow2(userInput,l)
 
+let c=0
+let y=0
 let arrow2= ()=>{
 const userInput=prompt("Enter to play okk :- ")
 const chooser=("rock","paper","scissor")
 const l=(Math.floor(Math.random()*3))
-let c=0
-let y=0
 if(l===1){
     console.log("Computer:rock")
 }
@@ -165,6 +165,7 @@ if(userInput==="paper" && l===1){
         console.log("User won!")
         c++
             console.log(`The score of user is ${c} and the score of computer is ${y}!`)
+
     }
 if(userInput==="paper" && l===0){
         console.log("Computer won!")
