@@ -217,3 +217,84 @@ let final=()=>{
     playAgain()
 }
 final()
+
+
+class toPlay{
+    static user(){
+let c=0
+let y=0
+let arrow2= ()=>{
+const userInput=prompt("Enter to play okk :- ")
+const chooser=("rock","paper","scissor")
+const l=(Math.floor(Math.random()*3))
+if(l===1){
+    console.log("Computer:rock")
+}
+if(l===2){
+    console.log("Computer:paper")
+}
+if(l===0){
+    console.log("Computer:scissor")
+}
+if(userInput===l){
+        console.log("Draw!")
+    }
+if(userInput==="paper" && l===1){
+        console.log("User won!")
+        c++
+            console.log(`The score of user is ${c} and the score of computer is ${y}!`)
+
+    }
+if(userInput==="paper" && l===0){
+        console.log("Computer won!")
+        y++
+            console.log(`The score of user is ${c} and the score of computer is ${y}!`)
+    }
+if(userInput==="rock" && l===2){
+        console.log("Computer Won!")
+        y++
+            console.log(`The score of user is ${c} and the score of computer is ${y}!`)
+    }
+if(userInput==="rock" && l===0){
+        console.log("User won!")
+        c++
+            console.log(`The score of user is ${c} and the score of computer is ${y}!`)
+    }
+if(userInput==="scissor" && l===1){
+        console.log("Computer won!")
+        y++
+            console.log(`The score of user is ${c} and the score of computer is ${y}!`)
+    }
+if(userInput==="scissor" && l===2){
+        console.log("User won!")
+        c++
+            console.log(`The score of user is ${c} and the score of computer is ${y}!`)
+    }
+if(userInput==="" && l===""){
+        console.log("Unexpected error!")
+    }
+}
+let playAgain=()=>{
+ let   full=true
+    while(full){
+        console.log("")
+           let userInput2=prompt("Enter y if you want to play agin and no if you don't want to play again:- ")
+            if(userInput2==="y"){
+                console.log("")
+                arrow2()
+                console.log("")
+            }
+            if(userInput2==="no"){
+                console.log("Thank you! visit again!")
+                full=false
+            }
+    }
+}
+let final=()=>{
+    arrow2()
+    playAgain()
+}
+final()
+}
+}
+toPlay.user()
