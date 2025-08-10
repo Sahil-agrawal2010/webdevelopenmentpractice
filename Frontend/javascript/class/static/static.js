@@ -143,12 +143,12 @@ let arrow2= (userInput,l)=>{
 }
 arrow2(userInput,l)
 
+let arrow2= ()=>{
 const userInput=prompt("Enter to play okk :- ")
 const chooser=("rock","paper","scissor")
 const l=(Math.floor(Math.random()*3))
 let c=0
 let y=0
-let arrow2= (userInput,l)=>{
 if(l===1){
     console.log("Computer:rock")
 }
@@ -164,44 +164,55 @@ if(userInput===l){
 if(userInput==="paper" && l===1){
         console.log("User won!")
         c++
+            console.log(`The score of user is ${c} and the score of computer is ${y}!`)
     }
 if(userInput==="paper" && l===0){
         console.log("Computer won!")
         y++
+            console.log(`The score of user is ${c} and the score of computer is ${y}!`)
     }
 if(userInput==="rock" && l===2){
         console.log("Computer Won!")
         y++
+            console.log(`The score of user is ${c} and the score of computer is ${y}!`)
     }
 if(userInput==="rock" && l===0){
         console.log("User won!")
         c++
+            console.log(`The score of user is ${c} and the score of computer is ${y}!`)
     }
 if(userInput==="scissor" && l===1){
         console.log("Computer won!")
         y++
+            console.log(`The score of user is ${c} and the score of computer is ${y}!`)
     }
 if(userInput==="scissor" && l===2){
         console.log("User won!")
         c++
+            console.log(`The score of user is ${c} and the score of computer is ${y}!`)
     }
 if(userInput==="" && l===""){
         console.log("Unexpected error!")
     }
 }
+let playAgain=()=>{
+    full=true
+    while(full){
+        console.log("")
+            userInput2=prompt("Enter y if you want to play agin and no if you don't want to play again:- ")
+            if(userInput2==="y"){
+                console.log("")
+                arrow2()
+                console.log("")
+            }
+            if(userInput2==="no"){
+                console.log("Thank you! visit again!")
+                full=false
+            }
+    }
 }
-arrow2(userInput,l)
-let a=prompt("Enteer yes if you want to play again and no to not play :- ")
-if(a==="yes")
-// console.log(`The score of user is ${c} and the score of computer is ${y}`)
-// arrow3=chooser=>{
-//   let a=prompt("Enteer yes if you want to play again and no to not play :- ")
-//     if(a==="yes"){
-//         console.log(arrow2(userInput,l))
-//     }
-//     else{
-//         console.log("Ok Thanks for visiting our website!")
-//     }
-// }
-
-// arrow3(chooser)
+let final=()=>{
+    arrow2()
+    playAgain()
+}
+final()
