@@ -366,9 +366,17 @@ let answers = [
     "2",
     "Yen"
     ]
-    
-    
-// let answ = prompt(questions[0] + " : ")
-// if(answ === answers[0]){
-//     console.log("Hurray! You got the answer.")
-// }
+    let p=1
+    userInput=Number(prompt("Enter any number between 0 to 19 to play a quiz game (minimum:5 and maximum:19) :- "))
+    for(let i=0;i<=userInput;i++){
+        let ask=questions[i]
+        let askk=prompt(ask +" :- ")
+        console.log(askk)
+            if(askk===answers[i]){
+                console.log(`You got the correct answer and your point is ${p++}`)
+                console.log()
+            }
+            else{
+                console.log("Sorry!You wrote the wrong answer!")
+            }
+    }
