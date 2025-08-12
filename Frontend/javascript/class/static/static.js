@@ -320,3 +320,55 @@ toPlay.user()\
       }
   }
   arrow()
+
+  
+  let questions = [
+    "1. What is the capital city of Nepal?",
+    "2. Who is the first programmer of the world?",
+    "3. What is the capital of France?",
+    "4.  Who wrote the play Romeo and Juliet?",
+    "5. What is the chemical symbol for water?",
+    "6. How many continents are there on Earth?",
+    "7. What planet is known as the Red Planet?",
+    "8. Who was the first President of the United States?",
+    "9. Who was the first President of the Nepal?",
+    "10. What is the hardest natural substance on Earth?",
+    "11. Who painted the Mona Lisa?",
+    "12.  What is the largest ocean in the world?",
+    "13. In what year did World War II end?",
+    "14. Which animal is known as the King of the Jungle",
+    "15. What is the boiling point of water at sea level in Celsius?",
+    "16. What is the longest river in the world?",
+    "17. Who invented the light bulb?",
+    "18.  What is the largest planet in our solar system?",
+    "19. What is the smallest prime number?",
+    "20. What is the currency of Japan?"
+    ]
+let answers = [
+    "Kathmandu",
+    "Ada Lovelace",
+    "Paris",
+    "William Shakespeare",
+    " H2O",
+    "7",
+    "Mars",
+    "George Washington",
+    "Ram baran yadav",
+    "Diamond",
+    "Leonardo da vintchie",
+    "Pacaffic ocean",
+    "1945",
+    "Lion",
+    "100",
+    "Nile river",
+    "Thomas elva edition",
+    "Jupiter",
+    "2",
+    "Yen"
+    ]
+    
+    
+// let answ = prompt(questions[0] + " : ")
+// if(answ === answers[0]){
+//     console.log("Hurray! You got the answer.")
+// }
