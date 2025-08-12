@@ -300,5 +300,23 @@ final()
 toPlay.user()\
 
 
-
-goog
+  
+  arrow = () => {
+      let numb = true
+      let randomm = Math.floor(Math.random() * 100)
+      console.log(randomm)
+      while (numb){
+      let userInput = prompt("Enter any number my computer has also choosen one number :- ")
+      if(userInput == randomm){
+              console.log("Wow!You gussed the number correct!")
+              numb=false
+          }
+          if (userInput > randomm) {
+              console.log("Guess a bit low!")
+          }
+          if (userInput < randomm) {
+              console.log("Guess a bit high!")
+          }
+      }
+  }
+  arrow()
