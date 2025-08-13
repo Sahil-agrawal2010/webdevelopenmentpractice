@@ -323,60 +323,60 @@ toPlay.user()\
 
   
   let questions = [
-    "1. What is the capital city of Nepal?",
-    "2. Who is the first programmer of the world?",
-    "3. What is the capital of France?",
-    "4.  Who wrote the play Romeo and Juliet?",
-    "5. What is the chemical symbol for water?",
-    "6. How many continents are there on Earth?",
-    "7. What planet is known as the Red Planet?",
-    "8. Who was the first President of the United States?",
-    "9. Who was the first President of the Nepal?",
-    "10. What is the hardest natural substance on Earth?",
-    "11. Who painted the Mona Lisa?",
-    "12.  What is the largest ocean in the world?",
-    "13. In what year did World War II end?",
-    "14. Which animal is known as the King of the Jungle",
-    "15. What is the boiling point of water at sea level in Celsius?",
-    "16. What is the longest river in the world?",
-    "17. Who invented the light bulb?",
-    "18.  What is the largest planet in our solar system?",
-    "19. What is the smallest prime number?",
-    "20. What is the currency of Japan?"
-    ]
-let answers = [
-    "Kathmandu",
-    "Ada Lovelace",
-    "Paris",
-    "William Shakespeare",
-    " H2O",
-    "7",
-    "Mars",
-    "George Washington",
-    "Ram baran yadav",
-    "Diamond",
-    "Leonardo da vintchie",
-    "Pacaffic ocean",
-    "1945",
-    "Lion",
-    "100",
-    "Nile river",
-    "Thomas elva edition",
-    "Jupiter",
-    "2",
-    "Yen"
-    ]
-    let p=1
-    userInput=Number(prompt("Enter any number between 0 to 19 to play a quiz game (minimum:5 and maximum:19) :- "))
-    for(let i=0;i<=userInput;i++){
-        let ask=questions[i]
-        let askk=prompt(ask +" :- ")
-        console.log(askk)
-            if(askk===answers[i]){
-                console.log(`You got the correct answer and your point is ${p++}`)
-                console.log()
-            }
-            else{
-                console.log("Sorry!You wrote the wrong answer!")
-            }
-    }
+      "•What is the capital city of Nepal?",
+      "•Who is the first programmer of the world?",
+      "•What is the capital of France?",
+      "•Who wrote the play Romeo and Juliet?",
+      "•What is the chemical symbol for water?",
+      "•How many continents are there on Earth?",
+      "•What planet is known as the Red Planet?",
+      "•Who was the first President of the United States?",
+      "•Who was the first President of the Nepal?",
+      "•What is the hardest natural substance on Earth?",
+      "•Who painted the Mona Lisa?",
+      "•What is the largest ocean in the world?",
+      "•In what year did World War II end?",
+      "•Which animal is known as the King of the Jungle",
+      "•What is the boiling point of water at sea level in Celsius?",
+      "•What is the longest river in the world?",
+      "•Who invented the light bulb?",
+      "•What is the largest planet in our solar system?",
+      "•What is the smallest prime number?",
+      "•What is the currency of Japan?"
+  ]
+  let answers = [
+      "Kathmandu",
+      "Ada Lovelace",
+      "Paris",
+      "William Shakespeare",
+      " H2O",
+      "7",
+      "Mars",
+      "George Washington",
+      "Ram baran yadav",
+      "Diamond",
+      "Leonardo da vintchie",
+      "Pacaffic ocean",
+      "1945",
+      "Lion",
+      "100",
+      "Nile river",
+      "Thomas elva edition",
+      "Jupiter",
+      "2",
+      "Yen"
+  ]
+  let p = 1
+  userInput = Number(prompt("Enter any number between 0 to 19 to play a quiz game (minimum:5 and maximum:19) :- "))
+  for (let i = 0; i <= userInput; i++) {
+      randomm = Math.floor(Math.random() * 20)
+      let ask = questions[randomm]
+      let askk = prompt(ask + " :- ")
+      console.log(askk)
+      if (askk === answers[randomm]) {
+          console.log(`You got the correct answer and your point is ${p++}`)
+          console.log()
+      } else {
+          console.log("Sorry!You wrote the wrong answer!")
+      }
+  }
