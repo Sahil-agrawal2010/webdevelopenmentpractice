@@ -380,3 +380,47 @@ toPlay.user()\
           console.log("Sorry!You wrote the wrong answer!")
       }
   }
+
+  console.log("Hellow User!Welcome to our new bank")
+let money=0
+let arrow=()=>{
+    console.log("")
+let userInput=prompt("What do you want to do in our bank deposite money if yes then type (deposite),withdraw money if yes then type(withdraw) or do you want to check your balance if yes then type (balance) :- ")
+if(userInput=="deposite"){
+   let ask=Number(prompt("Enter the amount of money which you want to deposite:- "))
+   money=money+ask
+   console.log(`Your bank balance is ${money}`)
+}
+if(userInput=="withdraw"){
+    let ask2=Number(prompt("Enter the amount of money which you want to withdaw :- "))
+    if(ask2>=money){
+    console.log("Sorry user you have insufficient amount in your account!")
+}
+    if(money>ask2){
+    money=money-ask2
+    console.log(`Your bank balance is ${money}`)
+    }
+} 
+if(userInput=="balance"){
+    console.log(money)
+}
+}
+let arrow2=()=>{
+    let desire=true
+        while(desite){
+    let userInput2=prompt("Do you want to again continue the process press Y to continue and press N to end :- ")
+    if(userInput2==="Y"){
+        userInput2=true
+    }
+    if(userInput2==="N"){
+        userInput2=false
+    }
+        console.log("")
+        arrow()
+    }
+}
+let arrow3=()=>{
+arrow()
+arrow2()
+}
+arrow3()
