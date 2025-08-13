@@ -381,6 +381,7 @@ toPlay.user()\
       }
   }
 
+  
   console.log("Hellow User!Welcome to our new bank")
 let money=0
 let arrow=()=>{
@@ -407,16 +408,15 @@ if(userInput=="balance"){
 }
 let arrow2=()=>{
     let desire=true
-        while(desite){
+        while(desire){
     let userInput2=prompt("Do you want to again continue the process press Y to continue and press N to end :- ")
     if(userInput2==="Y"){
-        userInput2=true
+  console.log("")
+        arrow()
     }
     if(userInput2==="N"){
-        userInput2=false
+        desire=false
     }
-        console.log("")
-        arrow()
     }
 }
 let arrow3=()=>{
