@@ -437,3 +437,9 @@ let array2=["F", "G", "H", "I", "J", "K", "L", "M", "N", "O",
   "+", "[", "]", "{", "}", "|", ";", ":",",", ".", "<", ">", "/", "?", "A", "B", "C", "D", "E"]
   console.log(array1.length)
   console.log(array2.length)
+
+  Write a programme to creat Mood predictor user will input mood and give output of its mood through emoji
+  Write a programme to creat a Food oder simulator to ask user what do you want to eat before it display the menu and ask him how much meal do you want to eat and ask user if he wants to eat more than ask him else print bill
+  Write a programme to make an compactiblietiy programme of name and print emoji accordingly to its percentage
+  Write a programme to creat a password cracker to ask user password and print if you craked it
+  Write a programme to creat a library simulator to display its liburary book and ask him if he wants to buy more else see its bill
