@@ -426,23 +426,44 @@ arrow2()
 arrow3()
 
 
-let array1=["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z","a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z","!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[", "]", "{", "}", "|", ";", ":", ",", ".", "<", ">", "/", "?"]
-let userInput=prompt("Enter the text to make it encrupt :- ")
-let array2=["F", "G", "H", "I", "J", "K", "L", "M", "N", "O", 
-  "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", 
-  "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", 
-  "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", 
-  "t", "u", "v", "w", "x", "y", "z", "!", "@", "#", 
-  "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", 
-  "+", "[", "]", "{", "}", "|", ";", ":",",", ".", "<", ">", "/", "?", "A", "B", "C", "D", "E"]
-  console.log(array1.length)
-  console.log(array2.length)
+let userInput = prompt("Enter the text to make it encrupt :- ")
+let array1 = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[", "]", "{", "}", "|", ";", ":", ",", ".", "<", ">", "/", "?"]
+let array2 = ["F", "G", "H", "I", "J", "K", "L", "M", "N", "O",
+    "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y",
+    "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i",
+    "j", "k", "l", "m", "n", "o", "p", "q", "r", "s",
+    "t", "u", "v", "w", "x", "y", "z", "!", "@", "#",
+    "$", "%", "^", "&", "*", "(", ")", "-", "_", "=",
+    "+", "[", "]", "{", "}", "|", ";", ":", ",", ".", "<", ">", "/", "?", "A", "B", "C", "D", "E"
+]
+let enc = ""
+for (let i = 0; i < userInput.length; i++) {
+    let index = array1.indexOf(userInput[i])
+    if (index !== -1) {
+        enc = enc + array2[index]
+    } else {
+        enc = enc + index[index]
+    }
+}
+let dec = ""
+for (let i = 0; i < enc.length; i++) {
+    let index2 = array2.indexOf(enc[i])
+        if (enc !== -1) {
+            dec = dec + array1[index2]
+        } else {
+            dec = dec + index2[i]
+        }
+    }
+console.log(enc)
+console.log(dec)
 
   Write a programme to creat Mood predictor user will input mood and give output of its mood through emoji
 
   let array=["😀","😢","😠","😱","😍","😎","😴","😕","😬","🤒"]
 let array2=["Happy","Sad","Angry","Scared","In Love","Confident","Tired","Confused","Awkward","Sick"]
 userInput=prompt("Enter your mood currently :- ")
+
+
 for(let i=0;i<=10;i++){
     if(userInput==array2[i]){
         console.log(array[i])
