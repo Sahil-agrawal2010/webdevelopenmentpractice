@@ -439,7 +439,110 @@ let array2=["F", "G", "H", "I", "J", "K", "L", "M", "N", "O",
   console.log(array2.length)
 
   Write a programme to creat Mood predictor user will input mood and give output of its mood through emoji
+
+  let array=["😀","😢","😠","😱","😍","😎","😴","😕","😬","🤒"]
+let array2=["Happy","Sad","Angry","Scared","In Love","Confident","Tired","Confused","Awkward","Sick"]
+userInput=prompt("Enter your mood currently :- ")
+for(let i=0;i<=10;i++){
+    if(userInput==array2[i]){
+        console.log(array[i])
+    }
+}
+
   Write a programme to creat a Food oder simulator to ask user what do you want to eat before it display the menu and ask him how much meal do you want to eat and ask user if he wants to eat more than ask him else print bill
+
+  let array=["Pizza - $8.99"  ,
+"Burger - $6.49"  ,
+"French Fries - $2.99" , 
+"Caesar Salad - $5.99"  ,
+"Spaghetti Bolognese - $9.49",  
+"Sushi - $12.99"  ,
+"Sandwich - $4.99"  ,
+"Tacos - $7.25"  ,
+"Chicken Curry - $10.50"  ,
+"Pancakes - $5.49"  ,
+"Donut - $1.50"  ,
+"Ice Cream - $3.25" , 
+"Apple - $0.99"  ,
+"Grapes - $2.49"  ,
+"Mocktail - $4.75"
+]
+console.log(`Menu :- ${array}`)
+let array2=["Pizza" , 
+"Burger"  ,
+"French Fries"  ,
+"Caesar Salad"  ,
+"Spaghetti Bolognese"  ,
+"Sushi"  ,
+"Sandwich"  ,
+"Tacos"  ,
+"Chicken Curry" , 
+"Pancakes" , 
+"Donut"  ,
+"Ice Cream" , 
+"Apple"  ,
+"Grapes"  ,
+"Mocktail"]
+let userInput=prompt("Enter the name of the food which you want to eat :- ")
+for(let i=0;i<=15;i++)
+if(userInput==array2[i]){
+    let need=true
+    while(need){
+        ask=prompt("Do you want to eat more ? :- ")
+        if(ask=="Yes"){
+            console.log(prompt(userInput))
+        }
+        if(ask=="No"){
+            desire=false
+            console.log("Your total bill is ")
+        }
+    }
+}
+
   Write a programme to make an compactiblietiy programme of name and print emoji accordingly to its percentage
+
+  let userInput=prompt("Enter your name :- ")
+let userInput2=prompt("Enter the name of which you want to compact with :- ")
+let random=Math.floor(Math.random()*101)
+console.log(random)
+if(random>=90){
+    console.log("Perfect Match")
+}
+else if(random>=80){
+    console.log("Match")
+}
+else if(random>=70){
+    console.log("Match")
+}
+else if(random>=60){
+    console.log("Match")
+}
+else if(random>=50){
+    console.log("Match")
+}
+else if(random>=40){
+    console.log("Match")
+}
+else if(random>=30){
+    console.log("Match")
+}
+else if(random>=20){
+    console.log("No Match")
+}
+else if(random>=10){
+    console.log("Disaster")
+}
+else{
+    console.log("Break up")
+    
   Write a programme to creat a password cracker to ask user password and print if you craked it
-  Write a programme to creat a library simulator to display its liburary book and ask him if he wants to buy more else see its bill
+
+  
+
+
+
+
+
+
+
+
