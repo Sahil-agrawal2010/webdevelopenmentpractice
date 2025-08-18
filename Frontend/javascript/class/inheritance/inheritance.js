@@ -251,3 +251,21 @@ class C extends B{
 }
 obj1=new C("Dhairya","Pit bull")
 obj1.displayinfo()
+
+
+class A{
+    display(){
+        console.log("Hahahahahahah")
+    }
+}
+
+class B extends A{
+    display1(){
+        super.display()
+        console.log("Hhehehehehe")
+    }
+}
+
+
+const obj = new B()
+obj.display1()
