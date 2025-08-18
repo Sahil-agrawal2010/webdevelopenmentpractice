@@ -198,3 +198,28 @@ const obj = new C()
 obj.displayA()
 obj.displayB()
 obj.displayC()
+
+
+Super - this is a keyword in javascript which is used to access the constructor of the super class/parent class.
+
+
+class Animal{
+    constructor(name){
+        this.name = name
+    }
+    displayInformation(){
+        console.log("The name of the animal is : "+this.name)
+    }
+}
+
+class Dog extends Animal{
+    constructor(name, breed){
+        super(name)
+        this.name = name
+        this.breed = breed
+    }
+    
+    display(){
+        console.log("The name of the animal is  : "+this.name + " and its breed is : "+this.breed)
+    } 
+}
