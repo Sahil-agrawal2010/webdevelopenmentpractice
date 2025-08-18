@@ -223,3 +223,31 @@ class Dog extends Animal{
         console.log("The name of the animal is  : "+this.name + " and its breed is : "+this.breed)
     } 
 }
+
+class A{
+    displayinfo(){
+        console.log("The name of animal is :- "+this.name)
+    }
+}
+class B extends A{
+    constructor(name,breed){
+        super()
+        this.name=name
+        this.breed=breed
+    }
+    display(){
+        console.log(`The name is ${this.name} and breed is ${this.breed}`)
+    }
+}
+class C extends B{
+    constructor(name,breed){
+        super()
+        this.name=name
+        this.breed=breed
+    }
+    display1(){
+        console.log(`The name is ${this.name} and breed is ${this.breed}`)
+    }
+}
+obj1=new C("Dhairya","Pit bull")
+obj1.displayinfo()
