@@ -269,3 +269,64 @@ class B extends A{
 
 const obj = new B()
 obj.display1()
+
+
+class Bank{
+    constructor(){
+    this.balance = 1000
+    }
+    
+    deposit(amt){
+        this.balance+=amt
+    }
+    
+    withdraw(amt){
+        this.balance-=amt
+    }
+    
+    total(){
+        console.log("The total amount is : "+this.balance)
+    }
+}
+
+
+const obj = new Bank()
+obj.total()
+obj.deposit(2000)
+obj.total()
+obj.withdraw(500)
+obj.total()
+console.log(obj.balance)
+
+private 
+console.log("Private procedure")
+
+class Bank{
+    #balance = 1000
+    
+    
+    deposit(amt){
+        this.#balance+=amt
+    }
+    
+    withdraw(amt){
+        this.#balance-=amt
+    }
+    
+    total(){
+        console.log("The total amount is : "+this.#balance)
+    }
+    
+    #show(){
+        console.log("I am private and unaccessible.")
+    }
+}
+
+const obj = new Bank()
+obj.total()
+obj.deposit(2000)
+obj.total()
+obj.withdraw(500)
+obj.total()
+console.log(obj.balance)
+obj.show()
