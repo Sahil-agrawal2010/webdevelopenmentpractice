@@ -143,3 +143,58 @@ obj1=new square()
 obj1.area1()
 obj2=new rectangle()
 obj2.area2()
+
+
+
+class Cat extends Animal{
+    constructor(name, breed){
+        super(name)
+        this.name = name
+        this.breed = breed
+    }
+    
+    display(){
+        console.log("The name of the animal is  : "+this.name + " and its breed is : "+this.breed)
+    } 
+}
+
+const obj1 = new Dog("Django", "Husky")
+obj1.displayInformation()
+obj1.display()
+
+
+const obj2 = new Cat("Kitty", "Xyz")
+obj2.displayInformation()
+obj2.display()
+
+
+
+
+class A{
+    displayA(){
+        console.log("I am inside class A")
+    }
+}
+
+
+class B extends A{
+    displayB(){
+        console.log("I am inside class B")
+    }
+}
+
+class C extends A{
+    displayC(){
+        console.log("I am inside class C")
+    }
+}
+
+// const objB = new B()
+// objB.displayA()
+// objB.displayB()
+
+
+const obj = new C()
+obj.displayA()
+obj.displayB()
+obj.displayC()
