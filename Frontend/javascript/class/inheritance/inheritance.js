@@ -400,30 +400,31 @@ Create Circle and Rectangle classes extending it.
 Override area() method in each child.
 
 class shape{
+class shape{
     area(){
-        console.log(`The area of the shape is ${this.area}`)
+        console.log(`The area is unknown.`)
     }
 }
 class circle extends shape{
-    constructor(pie,radious,area){
+    constructor(radious){
         super()
         this.pie=3.1415
         this.radious=radious
-        this.area= this.pie *(this.radious*this.radious)
     }
     area(){
+        let area= this.pie *(this.radious*this.radious)
         console.log(`The area of cicle is ${this.area}.`)
     }
 }
 class rectangle extends shape{
-    constructor(l,b,area){
+    constructor(l,b){
         super()
         this.l=l
         this.b=b
-        this.area=this.l*this.b
     }
     area(){
-        console.log(`The area of rectangle is ${this.area}.`)
+        let area=this.l*this.b
+        console.log(`The area of rectangle is ${area}.`)
     }
 }
 let obj1=new rectangle(7,6)
