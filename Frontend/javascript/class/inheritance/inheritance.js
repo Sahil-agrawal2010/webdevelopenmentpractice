@@ -330,3 +330,101 @@ obj.withdraw(500)
 obj.total()
 console.log(obj.balance)
 obj.show()
+
+
+1. Vehicle Inheritance
+Create a base class Vehicle with properties brand and year.
+Make two child classes Car and Bike that extend Vehicle.
+class vehicle{
+    display(){
+    console.log(`The name of vehicle is ${this.brand} and it was formed in ${this.year}.`)
+    }
+}
+class car extends vehicle{
+    constructor(brand,year){
+        super()
+        this.brand=brand
+        this.year=year
+    }
+}
+class bike extends vehicle{
+    constructor(brand,year){
+        super()
+        this.brand=brand
+        this.year=year
+    }
+}
+obj1=new car("Buggati",2000)
+obj1.display()
+obj2=new bike("Duggati",2000)
+obj2.display()
+Add a method in each child to display its type.
+
+2. Employee Hierarchy
+Create a class Employee with name and salary.
+Extend it into Manager that adds department.
+Extend again into SeniorManager that adds bonus.
+Write a method to calculate total salary (salary + bonus).
+
+class employ{
+    display(){
+        console.log(`The name of employ is ${this.name} and his salary is ${this.salary}.`)
+    }
+    manage(){
+        console.log(`The department of the employ is ${this.department}.`)
+    }
+        seniourManage(){
+            console.log(`The bonous of the employ is ${this.bonus}.`)
+        }
+}
+class final extends employ{
+    constructor(name,salary,department,bonus,total){
+        super()
+        this.name=name
+        this.salary=salary
+        this.department=department
+        this.bonus=bonus
+        this.total=this.salary+this.bonus
+    }
+    totalSalary(){
+        console.log(`The total salary after bonus is ${this.total}`)
+    }
+}
+let obj1=new final("Sahil",12000,"Manager",12000)
+obj1.seniourManage()
+
+
+3. Shape Area (Polymorphism)
+Create a base class Shape with a method area().
+Create Circle and Rectangle classes extending it.
+Override area() method in each child.
+
+class shape{
+    area(){
+        console.log(`The area of the shape is ${this.area}`)
+    }
+}
+class circle extends shape{
+    constructor(pie,radious,area){
+        super()
+        this.pie=3.1415
+        this.radious=radious
+        this.area= this.pie *(this.radious*this.radious)
+    }
+    area(){
+        console.log(`The area of cicle is ${this.area}.`)
+    }
+}
+class rectangle extends shape{
+    constructor(l,b,area){
+        super()
+        this.l=l
+        this.b=b
+        this.area=this.l*this.b
+    }
+    area(){
+        console.log(`The area of rectangle is ${this.area}.`)
+    }
+}
+let obj1=new rectangle(7,6)
+obj1.area()

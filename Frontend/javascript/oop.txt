@@ -1,0 +1,2 @@
+Thre are four pillers of oop they are encaplaution,inheritence,polymer fission,abstraction
+In oder to be success in oop this four should be learned
