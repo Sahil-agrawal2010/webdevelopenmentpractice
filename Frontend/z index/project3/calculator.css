@@ -1,57 +1,177 @@
 /* #ff7629 */
 
-body{
-    width: 40%;
+/* body{
+    width: 35%;
+} */
+.mainheading{
+  display: flex;
+  justify-content: center;
+  border-top: 40px;
+    color: white;
+    margin: 10px;
+    gap: 10px;
+    font-family: sans-serif;  
+    font-size: 20px;
 }
-
+.coloured{
+  color: #ff7629;
+}
+.emptyspace{
+  border: 200px solid black;
+}
 .mainContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 300px solid black;
-    margin: 100px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+    border: 200px solid black;
+    border-width: 200px;
+    border-top: 200px;
+    width: 25%;
+    border-bottom: 200px;
+    margin: 50px;
     border-left: 100px;
-    border-right: 100px;
+     border-right: 100px;
     background-color: black;
     flex-wrap: wrap;
     border-radius: 20px;
 }
 .e,.new,.sin,.deg{
     display: flex;
-    justify-content: center;
+    float: left;
     align-items: center;
+    justify-content: space-around;
     margin: 10px;
     gap: 20px;
-    border: 30px solid rgb(64, 59, 59);
+    border: 30px solid #303136;
     border-radius: 30px;
-    border-top: 20px;
-    border-bottom: 20px;
-    background-color: rgb(64, 59, 59);
-    color: orange;
-    font-size: 50px;
+    padding: 10px;
+    border-top: 10px;
+    border-bottom: 10px;
+    background-color:#303136;
+    color: #ff7629;
+    font-size: 25px;
+    font-family: sans-serif;
 }
 .ac,.eraser{
     display: flex;
-    justify-content: center;
+    float: left;
     align-items: center;
-      margin: 10px;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 10px;
     gap: 20px;
-    border: 50px solid rgb(128, 128, 128);
-    border-radius: 50px;
-    background-color: rgb(128, 128, 128);
+    border: 20px solid rgb(98, 94, 94);
+    border-radius: 28px;
+    background-color: rgb(98, 94, 94);
     color: rgb(255, 255, 255);
     font-size: 50px;
+    font-family: sans-serif;
 }
-.slas,.multiply{
+.eraser{
+  padding: 6px;
+}
+.slas,.multiply,.minus{
       display: flex;
+      float: left;
+      align-items: center;
     justify-content: center;
-    align-items: center;
-      margin: 10px;
+    margin: 10px;
     gap: 20px;
-    border: 50px solid #ff7629;
-    border-radius: 50px;
+    padding: 20px;
+    border: 20px solid #ff7629;
+    border-radius: 20px;
+    background-color: #ff7629;
+    color: rgb(0, 0, 0);
+    border-bottom: 20px;
+    font-size: 50px;
+}
+.minus{
+          display: flex;
+        float: left;
+        align-items: center;
+    justify-content: center;
+      margin: 15px;
+    gap: 40px;
+    padding: 20px;
+    border: 20px solid #ff7629;
+    border-radius: 20px;
+    background-color:#ff7629;
+    color:  rgb(0, 0, 0);
+    font-size: 50px;
+    font-family: sans-serif;
+}
+.seven,.eight,.nine,.four,.five,.six{
+        display: flex;
+        float: left;
+        align-items: center;
+    justify-content: center;
+      margin: 10px;
+    gap: 40px;
+    padding: 20px;
+    border: 20px solid #303136;
+    border-radius: 20px;
+    background-color:#303136;
+    color:  #ff7629;
+    font-size: 50px;
+    font-family: sans-serif;
+}
+.plus{
+      display: flex;
+      float: left;
+      align-items: center;
+    justify-content: center;
+      margin: 5px;
+    gap: 20px;
+    border: 40px solid #ff7629;
+    border-right: 1px;
+    border-left: 1px;
+    padding: 40px;
+    border-radius: 20px;
     background-color: #ff7629;
     color: rgb(0, 0, 0);
     font-size: 50px;
 }
+.one,.two,.three,.point,.equalsto{
+    float: left;
+      margin: 10px;
+      border-right: 10px;
+    gap: 20px;
+    padding: 20px;
+    border: 20px solid #303136;
+    /* border-bottom: 10px; */
+    border-radius: 20px;
+    background-color:#303136;
+    color:  #ff7629;
+    font-size: 50px;
+    font-family: sans-serif;
+}
+.zero{
+    float: left;
+      margin: 10px;
+    gap: 20px;
+    padding: 20px;
+    border: 100px solid #303136;
+    border-bottom: 10px;
+    border-top: 10px;
+    border-radius: 20px;
+    background-color:#303136;
+    color:  #ff7629;
+    font-size: 50px;
+    font-family: sans-serif;
+}
+.equalsto{
+        display: flex;
+      float: left;
+      align-items: center;
+    justify-content: center;
+      margin: 5px;
+    gap: 20px;
+    border: 40px solid white;
+    border-right: 1px;
+    border-left: 1px;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
 }
