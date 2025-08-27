@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        border: 1px solid black;
+        height: 200px;
+        color: white;
+        background-color: #3232fe;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+    }
+    .main{
+        margin: 45px;
+        gap: 20px;
+    }
+    .main2{
+        border: 1px solid #9fa4ab;
+    }
+    .first{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #9fa4ab;
+        margin: 10px;
+        gap: 360px;
+    }
+    .done{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        background-color: #58ff58;
+        height: 30px;
+        width: 80px;
+    }
+    .second{
+                display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #9fa4ab;
+        margin: 10px;
+        gap: 370px;
+    }
+    .third{
+                      display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #9fa4ab;
+        margin: 10px;
+        gap: 360px;
+    }
+</style>
+<body>
+    <h1>Task Scheduler</h1>
+    <div class="main">
+    <input type="text" placeholder="Enter task....">
+    <select>
+        <option value="">Top priority</option>
+        <option value="">Priority</option>
+    </select>
+    <input type="date">
+    <button>Add Task</button>
+    </div>
+    <div class="main2">
+        <div class="first">
+            <p>DSA Practice</p>
+            <p>Priority: top</p>
+            <p>Deadline: 2023-08-24</p>
+            <div class="done"><p>Mark Done</p></div>
+        </div>
+        <div class="second">
+            <p>Js Practice</p>
+            <p>Priority: top</p>
+            <p>Deadline: 2023-09-01</p>
+            <div class="done"><p>Mark Done</p></div>
+        </div>
+        <div class="third">
+            <p>Maths Practice</p>
+            <p>Priority: top</p>
+            <p>Deadline: 2023-08-31</p>
+                  <div class="done"><p>Mark Done</p></div>
+        </div>
+    </div>
+</body>
+</html>
