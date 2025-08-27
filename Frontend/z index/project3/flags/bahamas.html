@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+        border: 1px solid black;
+        height: 00px;
+        width: 800px;
+}
+    .triangle{
+        height: 0px;
+        width: 0px;
+        border-left: 225px solid transparent;
+        border-right: 225px solid transparent;
+        border-bottom: 450px solid black;
+        rotate: 90deg;
+        position: relative;
+        /* top: 450px;  */
+        /* bottom: 400px; */
+        z-index: 2;
+    }
+    .box1{
+           /* border: 1px soild black; */
+        height: 150px;
+        background-color: #00778b;
+        position: relative;
+        bottom: 450px;
+
+    }
+    .box2{
+        /* border: 1px soild black; */
+        height: 150px;
+        background-color: #ffc72c;
+              position: relative;
+        bottom: 450px;
+    }
+    .box3{
+              /* border: 1px soild rgb(181, 9, 9); */
+        height: 150px;
+        background-color: #00778b;
+                    position: relative;
+        bottom: 450px;
+    }
+</style>
+<body>
+    <div class="triangle"></div>
+        <div class="main">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    </div>
+</body>
+</html>
