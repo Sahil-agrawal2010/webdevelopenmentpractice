@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2f2fea;
+    font-family: sans-serif;
+    position: relative;
+    bottom: 200px;
+    left: 280px;
+    }
+    .main{
+        /* border: 1px solid black; */
+        display: flex;
+        height: 500px;
+        width: 700px;
+        justify-content: center;
+        align-items: center;
+        background-color: White;
+        position: relative;
+        left: 400px;
+        top: 100px;
+    }
+    body{
+        background-color: #eef1f2;
+    }
+    .secondline{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        bottom: 130px;
+        left: 150px;
+        margin: 15px;
+        gap: 20px;
+    }
+    .task{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: White;
+        border: 1px solid black;
+        background-color: #2f2fea;
+        height: 40px;
+        width: 100px;
+        border-radius: 20px;
+    }
+    .taska>p{
+        display: flex;
+        float: left;
+        justify-content: center;
+        align-items: center;
+        margin: 15px;
+        gap: 150px;
+    }
+    .tik{
+        font-size: 20px;
+        position: relative;
+        right: 400px;
+    }
+    .del{
+        font-size: 20px;
+        color: rgba(112, 112, 118,0.5);
+          position: relative;
+        right: 200px;
+        bottom: 45px;
+    }
+    .remove{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        height: 30px;
+        width: 100px;
+        color: white;
+        background-color: red;
+             position: relative;
+        bottom: 70px;
+    }
+        .tikb{
+        font-size: 20px;
+        position: relative;
+        right: 500px;
+        top: 80px;
+    }
+       .delb{
+        font-size: 20px;
+        color: rgba(112, 112, 118,0.5);
+          position: relative;
+        right: 300px;
+        top: 30px;
+    }
+        .removeb{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        height: 30px;
+        width: 100px;
+        color: white;
+        background-color: red;
+             position: relative;
+        right: 100px;
+        bottom: 20px;
+    }
+    .tikc{
+ font-size: 20px;
+        position: relative;
+        right: 600px;
+        top: 140px;
+    }
+    .delc{
+        font-size: 20px;
+        color: rgba(112, 112, 118,0.5);
+          position: relative;
+        right: 400px;
+        top: 80px;
+    }
+    .removec{
+           display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        height: 30px;
+        width: 100px;
+        color: white;
+        background-color: red;
+             position: relative;
+        right: 200px;
+        top: 60px;
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="heading"><h1>Task Manager</h1></div>
+    <div class="secondline">
+<input type="text" placeholder="What needs to be done?">
+    <div class="task"><p>Add Task</p></div>
+    </div>
+    <div class="taska">
+        <div class="tik"><p>✅</p></div>
+        <div class="del"> <del>Task A</del></div>
+        <div class="remove"><p>Remove</p></div>
+    </div>
+    <div class="taskb">
+        <div class="tikb"><p>✅</p></div>
+        <div class="delb"><p>Task B</p></div>
+        <div class="removeb"><p>Remove</p></div>
+    </div>
+    <div class="taskc">
+        <div class="tikc"> <p>✅</p></div> 
+        <div class="delc"><del>Task C</del></div>
+        <div class="removec"><p>Remove</p></div>
+    </div>
+    </div>
+</body>
+</html>
