@@ -8,7 +8,7 @@
 <style>
     .main{
         border: 1px solid black;
-        height: 600px;
+        height: 680px;
         width: 600px;
     }
     .first{
@@ -71,6 +71,15 @@
         color: #f10b5e;
     }
     .nav2{
+         height: 80px;
+        width: 480px;
+        border-radius: 8px;
+        position: relative;
+        bottom: 70px;
+        left: 40px;
+        background-color: #eff4f8;
+    }
+    .nav2>p{
              float: left;
         justify-content: center;
         text-align: center;
@@ -79,7 +88,102 @@
         font-size: 30px;
         position: relative;
         left: 80px;
+        bottom: 110px;
+    }
+    .heading{
+        display: flex;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          position: relative;
+          display: inline;
+          right: 390px;     
+          bottom: 60px;
+    }
+.home2,.notify,.doot{
+        font-size: 40px;
+    }
+    .home2{
+        position: relative;
+        right: 400px;
+        top: 20px;
+        top: 10px;
+    }
+    .notify{
+position: relative;
+bottom: 165px;
+left: 110px;
+color: #f10b5e;
+font-size: 35px;
+    }
+    .doot{
+        position: relative;
+        bottom: 110px;
+        left: 120px;
+        color: #f10b5e;
+    }
+    .person{
+        position: relative;
+        bottom: 250px;
+        left: 430px;
+        font-size: 35px;
+    }
+    .text1{
+        display: flex;
+        margin: 10px;
+        gap: 50px;
+        position: relative;
+        right: 140px;
+        bottom: 120px;
+    }
+    .special{
+        color: #f10b5e;
+    }
+    .topp{
+            display: flex;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          position: relative;
+          bottom: 110px;
+          right: 160px;
+    }
+    .nav3{
+             height: 80px;
+        width: 480px;
+        border-radius: 8px;
+        position: relative;
         bottom: 150px;
+        left: 40px;
+        background-color: #eff4f8;
+    }
+    .nav3>p{
+             float: left;
+        justify-content: center;
+        text-align: center;
+        margin: 40px;
+        gap: 200px;
+        font-size: 30px;
+        position: relative;
+        left: 180px;
+        bottom: 180px;
+    }
+    .home3{
+        font-size: 40px;
+        position: relative;
+        left: 40px;
+        top: 10px;
+        color: #f10b5e;
+    }
+    .search3{
+           font-size: 30px;
+        position: relative;
+        left: 125px;
+        bottom: 70px;
+    }
+    .text2{
+         display: flex;
+        margin: 10px;
+        gap: 50px; 
+        position: relative;
+        left: 60px;
+        bottom: 200px;
     }
 </style>
 <body>
@@ -95,20 +199,36 @@
             <p>🕭</p>
             <p>👤</p>
         </div>
+        <div class="heading"><p>Dot Indicator</p></div>
         <div class="nav2">
-            <p>Dot Indicator</p>
-            <p>⌂</p>
+        <div class="home2"><p>⌂</p></div>
             <p>🔍︎</p>
+            <p>♡</p>
+            <div class="doot"><p>.</p></div>
+        <div class="notify"> <p>🕭</p> </div>
+        <div class="person"> <p>👤</p></div>
+                </div>
+            <div class="text1">
+            <p>Home</p>
+            <p>Search</p>
+            <p>Likes</p>
+            <div class="special"><p>Notifications</p></div>
+            <p>Profile</p>
+        </div>
+        <div class="topp"><p>Border Selection</p></div>
+        <div class="nav3">
+            <div class="home3"><p>⌂</p></div>
+           <div class="search3"><p>🔍︎</p></div>
             <p>♡</p>
             <p>🕭</p>
             <p>👤</p>
-            <div class="text">
-            <p>Home</p>
+        </div>
+                   <div class="text2">
+         <div class="special"> <p>Home</p></div>
             <p>Search</p>
             <p>Likes</p>
             <p>Notifications</p>
             <p>Profile</p>
         </div>
-    </div>
 </body>
 </html>
