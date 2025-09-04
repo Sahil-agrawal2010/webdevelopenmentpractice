@@ -50,6 +50,7 @@ header{
     display: flex;
     align-items: center;
     min-width: 400px;
+    border: 0px solid transparent;
 }
 .search_icon{
     height: 20px;
