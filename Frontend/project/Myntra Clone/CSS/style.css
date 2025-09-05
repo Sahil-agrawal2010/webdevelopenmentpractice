@@ -50,7 +50,6 @@ header{
     display: flex;
     align-items: center;
     min-width: 400px;
-    border: 0px solid transparent;
 }
 .search_icon{
     height: 20px;
@@ -66,6 +65,7 @@ header{
         color: #696e79;
         border-radius: 0 5px 5px 0;
             flex-grow: 1;
+                border: 1px solid transparent;
 }
 .action_bar{
     display: flex;
