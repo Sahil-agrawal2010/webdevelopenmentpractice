@@ -78,3 +78,39 @@ header{
     flex-direction: column;
     align-items: center;
 }
+.banner_container{
+    margin: 40px 0;
+}
+.banner_image{
+    width: 100%;
+}
+.catagory_heading{
+    font-weight: 700;
+    color: #3e4152;
+    letter-spacing: 0.15em;
+    font-size: 1.8em;
+    max-height: 4em;
+}
+.catagory_items{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.sale_item{
+    width: 250px;
+}
+.catagori_heading{
+      font-weight: 700;
+    color: #3e4152;
+    letter-spacing: 0.15em;
+    font-size: 1.8em;
+    max-height: 4em;
+}
+.catagori_items{
+      display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.sale_item1{
+    width: 300px;
+}
