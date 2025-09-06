@@ -9,12 +9,13 @@
     .triangle1{
             height: 0px;
         width: 0px;
-        border-left: 200px solid transparent;
+        border-left: 250px solid transparent;
         border-right: 0px solid transparent;
-        border-bottom: 400px solid red;
+        border-bottom: 500px solid red;
         rotate: 90deg;
          position: relative;
         left: 250px;
+        z-index: 1;
     }
     .triangle2{
         height: 0px;
@@ -24,12 +25,28 @@
         border-bottom: 500px solid red;
         rotate: 90deg;
          position: relative; 
-        left: 280px;
-        bottom: 250px;
+        left: 250px;
+        bottom: 350px;
+    }
+    .border_triangle{
+        height: 0px;
+        width: 0px;
+        border-left: 280px solid transparent;
+        border-right: 0px solid transparent;
+        border-bottom: 560px solid #003893;
+        rotate: 90deg;
+        position: relative;
+        bottom: 1045px;
+        left: 250px;
+        z-index: 2;
     }
 </style>
 <body>
+    <div class="triangles">
     <div class="triangle1"></div>
     <div class="triangle2"></div>
+    <div class="border_triangle"></div>
+    <div class="border_triangle2"></div>
+    </div>
 </body>
 </html>
