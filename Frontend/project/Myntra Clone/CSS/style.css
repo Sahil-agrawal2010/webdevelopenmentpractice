@@ -139,3 +139,51 @@ font-size: 14px;
     font-weight: 700;
     font-family: sans-serif;
 }
+.main_font{
+    font-weight: 700;
+    font-size: 12px;
+    position: relative;
+    bottom: 40px;
+    left: 100px;
+}
+.touch{
+    display: flex;
+    position: relative;
+    /* right: 220px; */
+    font-size: 20px;
+    margin: 20px;
+    gap: 15px;
+    color: grey;
+}
+.og_image{
+    height: 72px;
+    width: 80px;
+    position: relative;
+    left: 110px;
+}
+.gareente span{
+    font-weight: 700;
+    position: relative;
+    color: black;
+}
+.gareente p{
+     position: relative;
+    bottom: 50px;
+    left: 220px;
+    color: grey;
+}
+.four_image{
+      height: 72px;
+    width: 80px;
+    position: relative;
+    top: 100px;
+    right: 300px;
+}
+.timeline span{
+    font-weight: 700;
+}
+.timeline p{
+    position: relative;
+        top: 38px;
+    right: 200px;
+}
