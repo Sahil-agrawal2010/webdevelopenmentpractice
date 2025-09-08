@@ -181,6 +181,7 @@ font-size: 14px;
 }
 .timeline span{
     font-weight: 700;
+    font-style: italic;
 }
 .timeline p{
     position: relative;
