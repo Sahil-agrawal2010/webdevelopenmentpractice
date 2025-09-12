@@ -1,0 +1,89 @@
+<!-- https://dribbble.com/shots/25894878-Flight-Booking-Website -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ <style>
+    .image{
+        filter: blur(2px);
+    }
+    .main_company{
+        position: relative;
+        bottom: 500px;
+        left: 40px;
+        font-size: 20px;
+        color: white;
+        font-family: Montserrat;
+    }
+    nav a{
+        position: relative;
+        left: 850px;
+        bottom: 540px;
+        margin: 40px;
+          font-size: 15px;
+        color: white;
+           font-family: Montserrat;
+           cursor: pointer;
+    }
+    .nav2{
+         display: flex;
+        height: 80px;
+        width: 600px;
+        margin: 20px;
+        gap: 40px;
+        position: relative;
+        bottom: 440px;
+        left: 440px;
+        background-color: white;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+    }
+    .nav2 p{
+        position: relative;
+        left: 40px;
+        top: 10px;
+        color: grey;
+        font-family: sans-serif;
+        font-size: 14px;
+    }
+    .nav2 p:hover{
+        color: navy;
+        text-decoration: underline;
+        text-underline-offset: -38px;
+    }
+    .svgg{
+        position: relative;
+        top: 3px;
+    }
+ </style>
+ <body>
+    <div class="main_container">
+        <nav>
+            <div class="image"> 
+                <img src="../Airr.avif" alt="Air image" height="500px" width="100%">
+            </div>
+        <div class="main_company">
+            <p>≡ Flight Booking</p>
+        </div>
+        <a>Customer Support</a>
+        <a>Explore</a>
+        <a>Sign In</a>
+        <a>Sign Up</a>
+        </nav>
+        <div class="nav2">
+            <p>✈︎ Book a flight</p>
+            <p>🌏︎ Visa</p>
+            <p>⾕ Hotels</p>
+            <p class="text"><svg class="svgg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+  <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"/>
+  <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
+</svg>  Holiday Package</p>
+        </div>
+    </div>
+ </body>
+ </html>
