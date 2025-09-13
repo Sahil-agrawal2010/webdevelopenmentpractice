@@ -104,3 +104,18 @@ first_function(function(numb,numb2,o){
     if(o==="/"){
         console.log(`The division is ${numb/numb2}`)
     }},numb,numb2,o)
+
+    
+    let first_function=function(age){
+    age(a)
+}
+let second_function=function(a){
+    if(a>=18){
+        console.log("You are eligible to vote.")
+    }
+    else{
+        console.log("You are not eligible to vote.")
+    }
+}
+let a=Number(prompt("Enter your age :- "))
+first_function(second_function)
