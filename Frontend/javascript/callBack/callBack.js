@@ -129,3 +129,19 @@ console.log(a.length)
 }
 let a=prompt("Enter your anything :- ")
 first_function(a,second_function)
+
+
+let first_function=function(a,callback){
+    callback(a)
+}
+let second_Function=function(a){
+    if(a[0] === a[0].toUpperCase()){
+        console.log("Capital.")
+    }
+    else{
+        console.log("Not capital")
+    }
+}
+let a=prompt("Enter any letter:- ")
+first_function(a,second_Function)
+Write a programme to concatinate different words fiven by the user using the exact same number of callback function as the user input
