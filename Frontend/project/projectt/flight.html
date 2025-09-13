@@ -35,6 +35,7 @@
          display: flex;
         height: 80px;
         width: 600px;
+        border-radius: 12px;
         margin: 20px;
         gap: 40px;
         position: relative;
@@ -42,10 +43,11 @@
         left: 440px;
         background-color: white;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+        z-index: 1;
     }
     .nav2 p{
         position: relative;
-        left: 40px;
+        left: 65px;
         top: 10px;
         color: grey;
         font-family: sans-serif;
@@ -54,11 +56,54 @@
     .nav2 p:hover{
         color: navy;
         text-decoration: underline;
-        text-underline-offset: -38px;
+        text-underline-offset: -40px;
+        text-decoration-thickness: 2px;
     }
     .svgg{
         position: relative;
         top: 3px;
+    }
+    .underline{
+        display: flex;
+        float: left;
+        border: 1px solid grey;
+        height: 20px;
+        width: 0px;
+        background-color: grey;
+        margin: 100px;
+        margin-left: 80px;
+        margin-right: 0px;
+        margin-top: 0px;
+        position: relative;
+        bottom: 515px;
+        left: 560px;
+        z-index: 2;
+    }
+    .underline1{
+  display: flex;
+        float: left;
+        border: 1px solid grey;
+        height: 20px;
+        width: 0px;
+        background-color: grey;
+        margin: 100px;
+        margin-left: 100px;
+        margin-right: 0px;
+        margin-top: 0px;
+        position: relative;
+        bottom: 515px;
+        left: 560px;
+        z-index: 2;
+    }
+    .nav3{
+        /* border: 1px solid black; */
+        height: 200px;
+        width: 80%;
+        position: relative;
+        left: 170px;
+        bottom: 500px;
+        background-color: white;
+        border-radius: 12px;
     }
  </style>
  <body>
@@ -83,7 +128,17 @@
   <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"/>
   <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
 </svg>  Holiday Package</p>
-        </div>
+</div>
+<div class="underline"></div>
+<div class="underline"></div>
+<div class="underline1"></div>
+<div class="nav3">
+<p>From</p>
+<p>To</p>
+<p>Departure Date</p>
+<p>Return Date</p>
+<p>Room & Traveler</p>
+</div>
     </div>
  </body>
  </html>
