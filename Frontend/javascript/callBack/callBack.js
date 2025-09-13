@@ -144,4 +144,16 @@ let second_Function=function(a){
 }
 let a=prompt("Enter any letter:- ")
 first_function(a,second_Function)
-Write a programme to concatinate different words fiven by the user using the exact same number of callback function as the user input
+
+Write a programme to concatinate different words given by the user using the exact same number of callback function as the user input
+let first_function=function(user1,a,b,c,d){
+    user1(a,b,c,d)
+}
+let second_function=function(a,b,c,d){
+    console.log(a.concat(b,c,d))
+}
+let a = prompt("Enter your first input :-")
+let b = prompt("Enter your second input :-")
+let c = prompt("Enter your third input :-")
+let d = prompt("Enter your fourth input :-")
+first_function(second_function,a,b,c,d)
