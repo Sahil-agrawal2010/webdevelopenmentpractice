@@ -119,3 +119,13 @@ let second_function=function(a){
 }
 let a=Number(prompt("Enter your age :- "))
 first_function(second_function)
+
+
+let first_function=function(a,age){
+    age(a)
+}
+let second_function=function(a){
+console.log(a.length)
+}
+let a=prompt("Enter your anything :- ")
+first_function(a,second_function)
