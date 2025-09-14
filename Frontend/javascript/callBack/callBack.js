@@ -157,3 +157,16 @@ let b = prompt("Enter your second input :-")
 let c = prompt("Enter your third input :-")
 let d = prompt("Enter your fourth input :-")
 first_function(second_function,a,b,c,d)
+
+
+let first_function=function(arrayy,callBack){
+    console.log(arrayy)
+    callBack(arrayy)
+}
+let second_function=function(array){
+    for(let i=0;i<arrayy.length;i++){
+        console.log(arrayy[i]*2)
+    }
+}
+let arrayy=[2,4,6,8,10]
+first_function(arrayy,second_function)
