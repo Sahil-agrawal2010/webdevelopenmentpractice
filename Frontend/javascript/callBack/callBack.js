@@ -189,3 +189,13 @@ let second_function=function(x,y,value){
     }
 }
 first_function(10,5,second_function)
+
+
+let first_function=function(value,bring){
+    bring(value)
+}
+let second_function=function(value){
+    console.log(value.toUpperCase())
+    console.log(value.reverse())
+}
+first_function("callback",second_function)
