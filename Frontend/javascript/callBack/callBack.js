@@ -170,3 +170,22 @@ let second_function=function(array){
 }
 let arrayy=[2,4,6,8,10]
 first_function(arrayy,second_function)
+
+
+let first_function=function(numb1,numb2,callback){
+        if(numb1>numb2){
+    callback(numb1,numb2,"multiply")
+    }
+    else{
+       callback(numb1,numb2,"add")
+    }
+}
+let second_function=function(x,y,value){
+    if(value==="multiply"){
+        console.log(`The product is ${x*y}`)
+    }
+    else{
+         console.log(`The sum is ${x+y}`)
+    }
+}
+first_function(10,5,second_function)
