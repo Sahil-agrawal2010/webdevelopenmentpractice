@@ -150,7 +150,7 @@ let first_function=function(user1,a,b,c,d){
     user1(a,b,c,d)
 }
 let second_function=function(a,b,c,d){
-    console.log(a.concat(b,c,d))
+    console.log(a.concat(" ", b," ",c," ",d))
 }
 let a = prompt("Enter your first input :-")
 let b = prompt("Enter your second input :-")
