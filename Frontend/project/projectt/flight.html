@@ -54,7 +54,7 @@
         font-size: 14px;
     }
     .nav2 p:hover{
-        color: navy;
+        color: #191e37;
         text-decoration: underline;
         text-underline-offset: -40px;
         text-decoration-thickness: 2px;
@@ -96,15 +96,68 @@
         z-index: 2;
     }
     .nav3{
+                display: flex;
+
         /* border: 1px solid black; */
         height: 200px;
         width: 80%;
         position: relative;
-        left: 170px;
+        right: 60px;
         bottom: 500px;
         background-color: white;
         border-radius: 12px;
+        gap: 10px;
     }
+    .nav3 p{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 20px;
+        bottom: 10px;
+        font-family: sans-serif;
+        color: #191e37;
+        }
+        .from{
+            border: 1px solid black;
+            height: 50px;
+            width: 150px;
+            position: relative;
+            top: 100px;
+            right: 20px;
+        }
+        .to{
+            border: 1px solid black;
+            height: 50px;
+            width: 150px;
+            position: relative;
+            top: 100px;
+        }
+        .date{
+            border: 1px solid black;
+            height: 50px;
+            width: 150px;
+            position: relative;
+            top: 100px;
+            right: 90px;
+        }
+        .rdate{
+            border: 1px solid black;
+            height: 50px;
+            width: 150px;
+            position: relative;
+            top: 100px;
+                right: 70px;
+        }
+        .room{
+            border: 1px solid black;
+            height: 50px;
+            width: 150px;
+            position: relative;
+            top: 100px;
+                right: 90px;
+        }
  </style>
  <body>
     <div class="main_container">
@@ -134,10 +187,15 @@
 <div class="underline1"></div>
 <div class="nav3">
 <p>From</p>
+<div class="from"></div>
 <p>To</p>
+<div class="to"></div>
 <p>Departure Date</p>
+<div class="date"></div>
 <p>Return Date</p>
+<div class="rdate"></div>
 <p>Room & Traveler</p>
+<div class="room"></div>
 </div>
     </div>
  </body>
