@@ -200,3 +200,16 @@ let second_function=function(value){
     console.log(value.replace("back","front"))
 }
 first_function("callback",second_function)
+
+
+let first_function=function(value,bring){
+    console.log(bring(value))
+}
+let second_function=function(value){
+    let result=value.map(function(value){
+        return value*value*value
+        
+    })
+    return result
+}
+first_function([1,2,3,4,5],second_function)
