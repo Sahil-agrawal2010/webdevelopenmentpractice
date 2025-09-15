@@ -235,3 +235,26 @@ let second_function=function(num){
     })
 }
 first_function([10,13,15,17,21],second_function)
+
+
+Write a programme to reverse four number        
+
+let first_number=function(numb,callback){
+    callback(numb)
+}
+let second_function=function(numb){
+  numb.map(function(numb){
+        let e=""
+let first=Math.floor(numb/1000)
+let b=Math.floor(numb/100)
+let second=b%10
+let c=Math.floor(numb%100)
+let third=Math.floor(c/10)
+let d=Math.floor(numb%100)
+let fourth=d%10
+e=`${fourth}${third}${second}${first}`
+console.log(e)
+    })
+}
+// let numb=Number(prompt("Enter any four digit number to see it's opposite :- "))
+first_number([1234],second_function)
