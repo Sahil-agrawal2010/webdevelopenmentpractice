@@ -196,6 +196,7 @@ let first_function=function(value,bring){
 }
 let second_function=function(value){
     console.log(value.toUpperCase())
-    console.log(value.reverse())
+    console.log(value.split("").reverse().join(""))
+    console.log(value.replace("back","joint"))
 }
 first_function("callback",second_function)
