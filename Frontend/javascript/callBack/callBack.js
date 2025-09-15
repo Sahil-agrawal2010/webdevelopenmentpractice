@@ -213,3 +213,25 @@ let second_function=function(value){
     return result
 }
 first_function([1,2,3,4,5],second_function)
+
+
+let first_function=function(arra,callback){
+    callback(arra)
+}
+let second_function=function(num){
+    num.map(function(a){
+        let counter=0
+        for(let i=0;i<=a;i++){
+            if(a%i===0){
+                counter++
+            }
+        }
+            if(counter==2){
+                console.log(`${a} is a prime number.`)
+            }
+            else{
+                 console.log(`${a} is not a prime number.`)
+            }
+    })
+}
+first_function([10,13,15,17,21],second_function)
