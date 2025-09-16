@@ -18,3 +18,23 @@ let interval = setInterval(()=>{
         clearInterval(interval)
     }
 },5000)
+
+
+let first_function=function(age,callback){
+    callback(age)
+    counter=0
+   let interval = setInterval(()=>{
+       console.log(counter)
+       counter++
+       if(counter==(age+1)){
+           console.log("The countation till your age is done!")
+           clearInterval(interval)
+       }
+   },1000)
+}
+let second_function=function(age){
+    setTimeout(()=>{
+        console.log(`Your age is ${age}!`)
+    },15000)
+}
+first_function(12,second_function)
