@@ -8,3 +8,13 @@ console.log("I am just fast")
 setTimeout(()=>{
     console.log("I am slow!")
 },5000)
+
+
+let counter=0
+let interval = setInterval(()=>{
+    console.log(counter)
+    counter++
+    if(counter===5){
+        clearInterval(interval)
+    }
+},5000)
