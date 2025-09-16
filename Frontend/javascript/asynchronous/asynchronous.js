@@ -38,3 +38,23 @@ let second_function=function(age){
     },15000)
 }
 first_function(12,second_function)
+
+
+   
+    let date=new Date()
+date.getHours()
+let minute=date.getMinutes()
+let second=date.getSeconds()
+
+let mins=setInterval(()=>{
+    minute++
+    console.log(minute)
+},60000)
+let seco=setInterval(()=>{
+    second++
+    console.log(second)
+    if(second==60){
+        second==0
+    }
+},1000)
+console.log(`${mins}:${seco}`)
