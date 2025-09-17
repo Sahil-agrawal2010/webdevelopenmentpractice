@@ -95,3 +95,17 @@ setTimeout(()=>{
 },11000)
 }
 timer()
+
+
+function onof(){
+       let onof1=true
+   let interval= setInterval(()=>{
+        console.log(onof1?"ON":"OFF")
+        onof1=!onof1
+    },1000)
+    setTimeout(()=>{
+        console.log("Stopped Blinking!")
+        clearInterval(interval)
+    },10000)
+}
+onof()
