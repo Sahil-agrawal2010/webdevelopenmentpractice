@@ -48,3 +48,15 @@ setInterval(()=>{
     let second=date.getSeconds()
 console.log(`${hour}:${minute}:${second}`)
 },1000)
+
+
+let userInput=Number(prompt("Enter any number :- "))
+    let counter=0
+let interval = setInterval(()=>{
+    counter++
+    console.log(counter)
+    if(counter==userInput){
+        clearInterval(interval)
+        console.log("Boom.")
+    }
+},1000)
