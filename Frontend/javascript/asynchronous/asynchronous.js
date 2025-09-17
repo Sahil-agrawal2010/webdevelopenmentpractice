@@ -72,3 +72,14 @@ let interval = setInterval(()=>{
         console.log("Boom.")
     }
 },1000)
+
+
+let counter=0
+let interval=setInterval(()=>{
+    counter++
+    console.log("Still Waiting.")
+    if(counter==10){
+        clearInterval(interval)
+        console.log("Task Completed.")
+    }
+},1000)
