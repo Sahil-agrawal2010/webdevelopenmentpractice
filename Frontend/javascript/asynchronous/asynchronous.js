@@ -60,3 +60,15 @@ let interval = setInterval(()=>{
         console.log("Boom.")
     }
 },1000)
+
+
+let userInput=Number(prompt("Enter any number :- "))
+    let counter=userInput
+let interval = setInterval(()=>{
+    counter--
+    console.log(counter)
+    if(counter==1){
+        clearInterval(interval)
+        console.log("Boom.")
+    }
+},1000)
