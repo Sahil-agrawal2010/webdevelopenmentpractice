@@ -83,3 +83,15 @@ let interval=setInterval(()=>{
         console.log("Task Completed.")
     }
 },1000)
+
+
+function timer(){
+let interval=setInterval(()=>{
+    console.log("Still Waiting.")
+},1000)
+setTimeout(()=>{
+    console.log("Task Completed")
+    clearInterval(interval)
+},11000)
+}
+timer()
