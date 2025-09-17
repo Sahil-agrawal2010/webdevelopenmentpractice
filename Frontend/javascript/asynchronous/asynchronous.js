@@ -41,20 +41,10 @@ first_function(12,second_function)
 
 
    
+setInterval(()=>{
     let date=new Date()
-date.getHours()
-let minute=date.getMinutes()
-let second=date.getSeconds()
-
-let mins=setInterval(()=>{
-    minute++
-    console.log(minute)
-},60000)
-let seco=setInterval(()=>{
-    second++
-    console.log(second)
-    if(second==60){
-        second==0
-    }
+    let hour=date.getHours()
+    let minute=date.getMinutes()
+    let second=date.getSeconds()
+console.log(`${hour}:${minute}:${second}`)
 },1000)
-console.log(`${mins}:${seco}`)
