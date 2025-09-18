@@ -109,3 +109,25 @@ function onof(){
     },10000)
 }
 onof()
+
+
+function cleanUtensils(func, callback) {
+    setTimeout(() => {
+        console.log("Hi I am cleaning the Utensils.")
+    }, 2000)
+    callback(func)
+}
+
+function takeTheTrashOut(call) {
+    setTimeout(() => {
+        console.log("Hi I am taking the trash our.")
+    }, 4000)
+    call()
+}
+
+function goToTheShop() {
+    setTimeout(() => {
+        console.log("Hi I am goint to the Shop.")
+    }, 8000)
+}
+cleanUtensils(goToTheShop, takeTheTrashOut)
