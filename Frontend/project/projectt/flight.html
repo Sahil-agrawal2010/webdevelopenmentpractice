@@ -107,7 +107,8 @@
         bottom: 500px;
         background-color: white;
         border-radius: 12px;
-        gap: 10px;
+        /* gap: 8px; */
+        color: navy;
     }
     .nav3 p{
         display: flex;
@@ -118,47 +119,104 @@
         left: 20px;
         bottom: 10px;
         font-family: sans-serif;
-        color: #191e37;
         }
         .from{
-            border: 1px solid black;
+            /* border: 1px solid black; */
             height: 50px;
             width: 150px;
             position: relative;
             top: 100px;
-            right: 20px;
+            right: 18px;
+              background-color: #f7f9f8;
+              border-radius: 8px;
         }
         .to{
-            border: 1px solid black;
+            /* border: 1px solid black; */
             height: 50px;
             width: 150px;
             position: relative;
             top: 100px;
+            right: 45px;
+              background-color: #f7f9f8;
+              border-radius: 8px;
         }
         .date{
-            border: 1px solid black;
+            /* border: 1px solid black; */
             height: 50px;
-            width: 150px;
+            width: 160px;
             position: relative;
             top: 100px;
             right: 90px;
+            background-color: #f7f9f8;
+            border-radius: 8px;
         }
         .rdate{
-            border: 1px solid black;
+            /* border: 1px solid black; */
             height: 50px;
-            width: 150px;
+            width: 160px;
             position: relative;
             top: 100px;
-                right: 70px;
+            right: 70px;
+            background-color: #f7f9f8;
+            border-radius: 8px;
         }
         .room{
-            border: 1px solid black;
+            /* border: 1px solid black; */
             height: 50px;
             width: 150px;
             position: relative;
             top: 100px;
-                right: 90px;
+                right: 98px;
+                            background-color: #f7f9f8;
+            border-radius: 8px;
         }
+    .Departureletter{
+        display: flex;
+position: relative;
+margin-left: 0px;  
+}
+.image1{
+    position: relative;
+    right: 16px;
+    bottom: 19px;
+    background-color: white;
+}
+.Date{
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    top: 10px;
+    left: 5px;
+    background-color: #f7f9f8;
+    border: 1px solid transparent;
+    }
+    #main-destinations{
+        width: 120px;
+        position: relative;
+        top: 15px;
+        left: 28px;
+           font-size: 14px;
+            border: 1px solid transparent;
+              background-color: #f7f9f8;
+    }
+     #main-destination{
+        width: 120px;
+        position: relative;
+        top: 15px;
+        left: 4px;
+           font-size: 14px;
+            border: 1px solid transparent;
+              background-color: #f7f9f8;
+    }
+    #people{
+        width: 100px;
+        position: relative;
+        right: 10px;
+        top: 4px;
+    font-size: 18px;
+    background-color: #f7f9f8;
+    border: 1px solid transparent;
+    }
  </style>
  <body>
     <div class="main_container">
@@ -188,18 +246,133 @@
 <div class="underline1"></div>
 <div class="nav3">
 <p>From</p>
-<div class="from"></div>
-<p>To</p>
-<div class="to"></div>
-<p>Departure Date</p>
-<div class="date"></div>
-<p>Return Date</p>
-<div class="rdate"></div>
-<p>Room & Traveler</p>
-<div class="room"></div>
+<div class="from">
+    <select id="main-destination" name="destination">
+  <optgroup label="North America">
+    <option value="new-york">New York, USA</option>
+    <option value="los-angeles">Los Angeles, USA</option>
+    <option value="toronto">Toronto, Canada</option>
+    <option value="mexico-city">Mexico City, Mexico</option>
+  </optgroup>
+
+  <optgroup label="South America">
+    <option value="sao-paulo">São Paulo, Brazil</option>
+    <option value="buenos-aires">Buenos Aires, Argentina</option>
+    <option value="lima">Lima, Peru</option>
+  </optgroup>
+
+  <optgroup label="Europe">
+    <option value="london">London, UK</option>
+    <option value="paris">Paris, France</option>
+    <option value="rome">Rome, Italy</option>
+    <option value="berlin">Berlin, Germany</option>
+    <option value="madrid">Madrid, Spain</option>
+    <option value="amsterdam">Amsterdam, Netherlands</option>
+  </optgroup>
+
+  <optgroup label="Asia">
+    <option value="tokyo">Tokyo, Japan</option>
+    <option value="beijing">Beijing, China</option>
+    <option value="bangkok">Bangkok, Thailand</option>
+    <option value="dubai">Dubai, UAE</option>
+    <option value="delhi">Delhi, India</option>
+    <option value="singapore">Singapore</option>
+  </optgroup>
+
+  <optgroup label="Africa">
+    <option value="cairo">Cairo, Egypt</option>
+    <option value="lagos">Lagos, Nigeria</option>
+    <option value="johannesburg">Johannesburg, South Africa</option>
+    <option value="nairobi">Nairobi, Kenya</option>
+  </optgroup>
+
+  <optgroup label="Oceania">
+    <option value="sydney">Sydney, Australia</option>
+    <option value="auckland">Auckland, New Zealand</option>
+  </optgroup>
+
+  <optgroup label="Popular Islands">
+    <option value="maldives">Malé, Maldives</option>
+    <option value="bali">Bali, Indonesia</option>
+    <option value="honolulu">Honolulu, Hawaii</option>
+  </optgroup>
+</select>
 </div>
-<div class="nothing"></div>
-<div class="nothing2"></div>
+<p class="to1">To</p>
+<div class="to">
+    <select id="main-destinations" name="destination">
+        <optgroup label="North America">
+            <option value="new-york">New York, USA</option>
+            <option value="los-angeles">Los Angeles, USA</option>
+            <option value="toronto">Toronto, Canada</option>
+            <option value="mexico-city">Mexico City, Mexico</option>
+        </optgroup>
+        
+        <optgroup label="South America">
+            <option value="sao-paulo">São Paulo, Brazil</option>
+            <option value="buenos-aires">Buenos Aires, Argentina</option>
+            <option value="lima">Lima, Peru</option>
+        </optgroup>
+        
+        <optgroup label="Europe">
+            <option value="london">London, UK</option>
+            <option value="paris">Paris, France</option>
+            <option value="rome">Rome, Italy</option>
+            <option value="berlin">Berlin, Germany</option>
+            <option value="madrid">Madrid, Spain</option>
+            <option value="amsterdam">Amsterdam, Netherlands</option>
+        </optgroup>
+        
+        <optgroup label="Asia">
+            <option value="tokyo">Tokyo, Japan</option>
+            <option value="beijing">Beijing, China</option>
+            <option value="bangkok">Bangkok, Thailand</option>
+            <option value="dubai">Dubai, UAE</option>
+            <option value="delhi">Delhi, India</option>
+            <option value="singapore">Singapore</option>
+        </optgroup>
+        
+        <optgroup label="Africa">
+            <option value="cairo">Cairo, Egypt</option>
+            <option value="lagos">Lagos, Nigeria</option>
+            <option value="johannesburg">Johannesburg, South Africa</option>
+            <option value="nairobi">Nairobi, Kenya</option>
+        </optgroup>
+        
+        <optgroup label="Oceania">
+            <option value="sydney">Sydney, Australia</option>
+            <option value="auckland">Auckland, New Zealand</option>
+        </optgroup>
+        
+        <optgroup label="Popular Islands">
+            <option value="maldives">Malé, Maldives</option>
+            <option value="bali">Bali, Indonesia</option>
+            <option value="honolulu">Honolulu, Hawaii</option>
+        </optgroup>
+    </select>
+    <img class="image1" src="../right-and-left.png" alt="left right arrow image" height="50px" width="45px">
+
+</div>
+<p class="Departureletter">Departure Date</p>
+<div class="date">
+    <input class="Date" type="date">
+</div>
+<p>Return Date</p>
+<div class="rdate">
+    <input class="Date" type="date">
+</div>
+<p>Room & Traveler</p>
+<div class="room">
+    <p class="total">  <select id="people" name="people">
+    <option value="">-Select</option>
+    <option value="1">1 - Single Room</option>
+    <option value="2">2 - Double Room</option>
+    <option value="3">3 - Family Room</option>
+    <option value="4">4 - Family Room</option>
+    <option value="5">5 - Group Suite</option></p>
+     </select>
+</div>
+</div>
     </div>
  </body>
  </html>
