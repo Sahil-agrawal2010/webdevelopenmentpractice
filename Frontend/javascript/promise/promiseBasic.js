@@ -29,3 +29,7 @@ promisee.then((value)=>{
 }).catch((error)=>{
     console.log(error)
 })
+
+
+
+.catch
