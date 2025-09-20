@@ -32,4 +32,11 @@ promisee.then((value)=>{
 
 
 
-.catch
+
+
+
+
+
+
+
+console.log("I am a good boy.")
