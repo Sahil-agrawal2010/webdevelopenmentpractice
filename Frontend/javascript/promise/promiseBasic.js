@@ -120,3 +120,24 @@ let promise=new Promise((resolve)=>{
 })
 
 Write a programme to creat a promise that resolves with 10. First .than should return a new promise that doubles the number after two second. Second .than should triple the number after four second . Third .than should find the square , cube and square root of the that number.
+let promise=new Promise((resolve)=>{
+    userInput=10
+    resolve(userInput)
+})
+.then((value)=>{
+    setTimeout(()=>{
+    console.log(userInput*2)
+    },2000)
+    return value
+})
+.then((value)=>{
+    setTimeout(()=>{
+        console.log(userInput*3)
+    },4000)
+    return value
+})
+.then((value)=>{
+    console.log(userInput*userInput)
+        console.log(userInput*userInput*userInput)
+        console.log(Math.sqrt(userInput))
+})
