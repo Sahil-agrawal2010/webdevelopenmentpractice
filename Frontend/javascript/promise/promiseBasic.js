@@ -31,12 +31,19 @@ promisee.then((value)=>{
 })
 
 
-
-
-
-
-
-
-
-
-console.log("I am a good boy.")
+let promise=new Promise((resolve)=>{
+let userInput=prompt("Enter your name :- ")
+let userInput2=Number(prompt("Enter your age:- "))
+resolve({userName : userInput, userAge : userInput2})
+})
+.then((object)=>{
+    console.log(object.userName)
+    return object
+})
+.then((object)=>{
+    console.log(`Hi!Good Afternoon ${object.userName}.`)
+    return object
+})
+.then((object)=>{
+        console.log(`Hi!Good Afternoon ${object.userName}.Your age is ${object.userAge}.`)
+})
