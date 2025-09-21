@@ -99,4 +99,24 @@ let promise=new Promise((resolve)=>{
 })
 
 Write a progemme to creat a promise that resolves with 100,throw an error if the number is exaactly onehundred catch it , return 50 ,than in the next .than,add 25 and lock the result
-Write a programme to creat a promise that resolves with 10. First .than should return a new promise that doubles the number after one second or two second. Second .than should triple the number after four second . Third .than should find the square , cube and square root of the that number.
+
+let promise=new Promise((resolve)=>{
+    let userInput=Number(prompt("Enter any number my computer has chosen one number if you enter the number than see the magic:- "))
+    resolve(userInput)
+    if(userInput!=100){
+        throw("You haven't gussed the number")
+    }
+})
+.then((value)=>{
+    if(value===100){
+        console.log("Wow!You gussed the correct number")
+        let number=value-50
+        console.log(number)
+        console.log(number+25)
+    }
+})
+.catch((value)=>{
+    console.log(value)
+})
+
+Write a programme to creat a promise that resolves with 10. First .than should return a new promise that doubles the number after two second. Second .than should triple the number after four second . Third .than should find the square , cube and square root of the that number.
