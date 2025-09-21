@@ -61,3 +61,20 @@ let promise=new Promise((resolve)=>{
 .then((object)=>{
     console.log(object.userAge)
 })
+
+
+let promise=new Promise((resolve)=>{
+    let userInput=Number(prompt("Enter any number:- "))
+    if(userInput%2===0){
+        resolve("Good You have chosen a very good and a positive number.")
+    }
+    else{
+        throw("Not good You have chosen a ver bad and a negative number.")
+    }
+})
+.then((value)=>{
+    console.log(value)
+})
+.catch((value)=>{
+    console.log(value)
+})
