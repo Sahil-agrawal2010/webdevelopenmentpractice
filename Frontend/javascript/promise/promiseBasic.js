@@ -47,3 +47,17 @@ resolve({userName : userInput, userAge : userInput2})
 .then((object)=>{
         console.log(`Hi!Good Afternoon ${object.userName}.Your age is ${object.userAge}.`)
 })
+
+
+let promise=new Promise((resolve)=>{
+    let userInput="Sita"
+    let userInput2="20"
+    resolve({userName : userInput,userAge:userInput2})
+})
+.then((object)=>{
+    console.log(object.userName)
+    return object
+})
+.then((object)=>{
+    console.log(object.userAge)
+})
