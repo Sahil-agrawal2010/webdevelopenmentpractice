@@ -78,3 +78,25 @@ let promise=new Promise((resolve)=>{
 .catch((value)=>{
     console.log(value)
 })
+
+
+let promise=new Promise((resolve)=>{
+    let userInput=prompt("Enter your name :- ")
+    let userInput2=Number(prompt("Enter your age :- "))
+    resolve({userName:userInput,userAge:userInput2})
+})
+.then((object)=>{
+        object.isAdult= object.userAge>=18
+    return object
+})
+.then((object)=>{
+    if((object.isAdult===true)){
+        console.log(`${object.userName} is a adult.`)
+    }
+    else{
+        console.log(`${object.userName} is a minor.`)
+    }
+})
+
+Write a progemme to creat a promise that resolves with 100,throw an error if the number is exaactly onehundred catch it , return 50 ,than in the next .than,add 25 and lock the result
+Write a programme to creat a promise that resolves with 10. First .than should return a new promise that doubles the number after one second or two second. Second .than should triple the number after four second . Third .than should find the square , cube and square root of the that number.
