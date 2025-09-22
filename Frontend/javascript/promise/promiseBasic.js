@@ -194,3 +194,71 @@ let promise=new Promise((resolve)=>{
 .then(value=>{
     console.log(value)
 })
+
+
+// Start with a Promise that resolves with 2.
+// First .then() multiply by 2.
+// Second .then() add 5 after 0.5 sec (use another Promise).
+// If result > 8, throw error "Too big!".
+// Catch error, return 1.
+// Multiply by 10 in final .then() and log result.
+
+let promise=new Promise((resolve)=>{
+    resolve(4)
+})
+.then(value=>{
+    console.log(value*2)
+    return value
+})
+.then(value=>{
+    setTimeout(()=>{
+        let promisee=Promise.resolve(value+5)
+    console.log(promisee)
+    },500)
+})
+    .then(value=>{
+        if(value>8){
+        throw("Too big!")
+    }
+})
+.catch(erro=>{
+    console.log(erro.message)
+})
+
+
+// // Create a Promise that resolves with "javascript".
+// First .then() → convert to uppercase.
+// Second .then() → take first 4 letters.
+// Third .then() → add " is fun".
+// Log the final string.
+Promise.resolve("javascript")
+.then(value=>{
+   let value1 = value.toUpperCase()
+    return value1
+})
+.then(value1=>{
+    let value2 = value1.slice(0,4)
+    return value2
+})
+.then(value2=>{
+    console.log(value2+" is fun.")
+})
+
+
+// Create a Promise that resolves with { name: "Aarav", score: 35 }.
+// If score < 40, throw "Failed".
+// Catch it and set score to 50.
+// Add status: "Pass" and log the object.
+
+
+Promise.resolve({ name: "Aarav", score: 35 })
+.then(value=>{
+    if(value.score<40){
+        throw value
+    }
+    return value
+})
+.catch(value=>{
+     value.score=50
+    console.log(value.score?"Pass":"Fail")
+})
