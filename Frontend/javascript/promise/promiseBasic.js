@@ -179,3 +179,18 @@ let promise=new Promise((resolve)=>{
 .then(value=>{
     console.log(value.userName + " has " + value.isPass + "ed.")
 })
+
+
+let promise=new Promise((resolve)=>{
+    resolve("Start")
+})
+.then(value=>{
+    throw("Stop")
+})
+.catch(value=>{
+    console.log(value)
+    return "Recovered"
+})
+.then(value=>{
+    console.log(value)
+})
