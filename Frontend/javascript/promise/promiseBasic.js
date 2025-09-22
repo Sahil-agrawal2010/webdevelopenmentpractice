@@ -116,6 +116,17 @@ let promise=new Promise((resolve)=>{
     console.log(value)
 })
 
+Promise.resolve(100).then(val=>{
+    if(val === 100){
+        throw new Error ("The number is exactly 100!")
+    }
+}).catch(err=>{
+    console.log(err.message)
+    return 50
+}).then(a=>{
+    console.log(a+25)
+})
+
 Write a programme to creat a promise that resolves with 10. First .than should return a new promise that doubles the number after two second. Second .than should triple the number after four second . Third .than should find the square , cube and square root of the that number.
 let promise=new Promise((resolve)=>{
     userInput=10
