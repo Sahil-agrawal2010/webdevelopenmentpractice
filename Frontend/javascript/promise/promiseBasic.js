@@ -101,19 +101,16 @@ let promise=new Promise((resolve)=>{
 Write a progemme to creat a promise that resolves with 100,throw an error if the number is exaactly onehundred catch it , return 50 ,than in the next .than,add 25 and lock the result
 
 let promise=new Promise((resolve)=>{
-    let userInput=Number(prompt("Enter any number my computer has chosen one number if you enter the number than see the magic:- "))
-    resolve(userInput)
-    if(userInput!=100){
-        throw("You haven't gussed the number")
-    }
+    resolve(100)
 })
 .then((value)=>{
     if(value===100){
-        console.log("Wow!You gussed the correct number")
         let number=value-50
         console.log(number)
         console.log(number+25)
+        throw("You have choosen number 100!")
     }
+    return value
 })
 .catch((value)=>{
     console.log(value)
