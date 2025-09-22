@@ -149,3 +149,14 @@ let promise=new Promise((resolve)=>{
         console.log(userInput*userInput*userInput)
         console.log(Math.floor(Math.sqrt(userInput)))
 })
+
+
+let promise=new Promise((resolve)=>{
+    resolve("a")
+})
+.then(value=>{
+return Promise.resolve(value+"b")
+})
+.then(value2=>{
+    console.log(value2+"c")
+})
