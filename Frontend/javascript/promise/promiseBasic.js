@@ -160,3 +160,22 @@ return Promise.resolve(value+"b")
 .then(value2=>{
     console.log(value2+"c")
 })
+
+
+let promise=new Promise((resolve)=>{
+    let userInput=prompt("Hi user!Pleaase Enter Your Name :- ")
+    let userInput2=Number(prompt("Enter your marks :- "))
+    resolve({
+        userName:userInput,
+        userMarks:userInput2
+    })
+})
+.then(value=>{
+    // value.isPass=value.userMarks>=40
+    // return value
+    value.isPass = value.userMarks>=40? "Pass": "Fail"
+    return value
+})
+.then(value=>{
+    console.log(value.userName + " has " + value.isPass + "ed.")
+})
