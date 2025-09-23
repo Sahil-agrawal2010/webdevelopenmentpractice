@@ -281,3 +281,60 @@ Promise.resolve([1,2,3,4,5])
         })
         return num
     }).then(obj => console.log(obj))
+
+
+    "
+
+
+
+
+// Q14. Reverse + Join Chain
+// Create a Promise that resolves with "hello world".
+// First .then() → split into array of words.
+// Second .then() → reverse the array.
+// Third .then() → join with " - ".
+// Log the result.
+
+// ["hello","world"]      
+// ["world","hello"]     
+// "world - hello"
+
+
+Promise.resolve("hello,world")
+.then(value=> {
+ let value1 = value.split(",")
+ console.log(value1)
+    return value1
+}).then(value1=>{
+    let value2=value1.reverse().join(" , ")
+    console.log(value2)
+    return value1
+}).then(value1=>{
+    let value3=value1.reverse().join(" - ")
+    console.log(value3)
+})
+
+// Q15. Async Array Chain (with setTimeout)
+// Create a Promise that resolves with [2, 4, 6].
+// First .then() → return new Promise that adds 1 to each element after 1 second.
+// Second .then() → log the new array.
+// Output : [3, 5, 7]
+
+
+Promise.resolve([2,4,6])
+.then(value=>{
+    return new Promise((resolve)=>{
+    setTimeout(()=>{
+        let total=value.map(a=>{
+            resolve(a+1)
+        })
+    },1000)
+    })
+    // return total
+})
+.then(value=>{
+    console.log(value)
+})
+
+
+
