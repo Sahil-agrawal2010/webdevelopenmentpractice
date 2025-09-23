@@ -265,3 +265,19 @@ Promise.resolve({name : "Arav", Score:35}).then((obj)=>{
     obj.status = obj.Score>=40? "Pass":"Failed"
     console.log(obj)
 })
+
+
+
+Promise.resolve([1,2,3,4,5])
+.then((obj)=>{
+        let num = obj.map((o)=>{
+            return o*2
+        })
+    return num
+    })
+    .then((obj)=>{
+        let num=obj.filter(o=> {
+           return o>5
+        })
+        return num
+    }).then(obj => console.log(obj))
