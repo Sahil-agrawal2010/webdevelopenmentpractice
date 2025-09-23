@@ -202,19 +202,19 @@ let promise=new Promise((resolve)=>{
 // If result > 8, throw error "Too big!".
 // Catch error, return 1.
 // Multiply by 10 in final .then() and log result.
-
 let promise=new Promise((resolve)=>{
-    resolve(4)
+    resolve(2)
 })
 .then(value=>{
-    console.log(value*2)
-    return value
+    let value1=value*2
+    return value1
 })
-.then(value=>{
+.then(value1=>{
+return new Promise((resolve)=>{
     setTimeout(()=>{
-        let promisee=Promise.resolve(value+5)
-    console.log(promisee)
+        resolve(value1+5)
     },500)
+})
 })
     .then(value=>{
         if(value>8){
@@ -222,7 +222,11 @@ let promise=new Promise((resolve)=>{
     }
 })
 .catch(erro=>{
-    console.log(erro.message)
+    console.log(erro)
+    return 1
+})
+.then(value=>{
+    console.log(value*10)
 })
 
 
