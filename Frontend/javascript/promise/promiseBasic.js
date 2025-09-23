@@ -255,14 +255,13 @@ Promise.resolve("javascript")
 // Add status: "Pass" and log the object.
 
 
-Promise.resolve({ name: "Aarav", score: 35 })
-.then(value=>{
-    if(value.score<40){
-        throw value
-    }
-    return value
-})
-.catch(value=>{
-     value.score=50
-    console.log(value.score?"Pass":"Fail")
+Promise.resolve({name : "Arav", Score:35}).then((obj)=>{
+    if (obj.Score<40) throw ("Failed")
+    return obj
+}).catch((err, obj)=> {
+    console.log(err)
+    return ({name: "Arav", Score: 50})
+}).then((obj)=>{
+    obj.status = obj.Score>=40? "Pass":"Failed"
+    console.log(obj)
 })
