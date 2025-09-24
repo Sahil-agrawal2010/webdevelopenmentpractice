@@ -355,3 +355,23 @@ Promise.resolve(["Ram","Sita","Hari","Rita"])
 .then(value=>{
     console.log(value)
 })
+
+
+Promise.resolve({city:"Kathamndu",population:800000})
+.then(value=>{
+    if(value.population<1000000){
+        throw ("Too Small!")
+    }
+    return value
+})
+.catch(value=>{
+    console.log(value)
+    return {city:"Pokhara",population:500000}
+})
+.then(value=>{
+    value.country = "Nepal"
+    return value
+})
+.then(value=>{
+    console.log(value)
+})
