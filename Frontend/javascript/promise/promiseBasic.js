@@ -390,3 +390,73 @@ Promise.resolve("madam")
 .then(value=>{
     console.log(value)
 })
+
+
+// Q24. Error if Array Empty
+// Create a Promise that resolves with [].
+// First .then() → if array is empty, throw "No data!".
+// Catch error → return [1, 2, 3].
+// Next .then() → double each number.
+// Log the result.
+
+Promise.resolve([""])
+.then(value =>{
+    if(value=[""]){
+        throw("No Data!")
+    }
+    return value
+})
+.catch(error=>{
+    console.log(error)
+    return [1,2,3]
+})
+.then(value =>{
+  console.log(value.map(a=> a*2))
+})
+
+// Q25. Word Count Chain
+// Create a Promise that resolves with "I love learning JavaScript".
+// First .then() → split into words.
+// Second .then() → count number of words.
+// Third .then() → log "Total words: X".
+
+Promise.resolve("I love learning Javascript.")
+.then(value=>{
+  let value2 = value.split()
+    return value2
+})
+.then(value2=>{
+})
+
+// Q1. User Grades Evaluation
+// Write a promise that resolves with a student’s scores:
+// { name: "Sita", scores: [80, 60, 90, 100] }
+// In the first .then, calculate the average score.
+// In the second .then, decide the grade (A, B, C) based on the average.
+// In the third .then, return a message "Sita has scored Grade A with avg 82.5".
+// Add a .catch if the scores array is empty.
+
+
+Promise.resolve({ name: "Sita", scores: [80, 60, 90, 100] })
+.then(value=>{
+    let total=0
+    for(let i=0;i<value.scores.length;i++){
+      total=value.scores[i]+total
+    }
+return {value,total}
+})
+.then(total=>{
+    if(total.total>=300){
+        return "A"
+    }
+    else if(total.total>=200){
+        return "B"
+    }
+    else{
+        return "C"
+    }
+    return {total,value}
+})
+.then(value=>{
+    console.log(`${value.name} has scored Grade ${value.value} with avg ${value.total}.`)
+})
