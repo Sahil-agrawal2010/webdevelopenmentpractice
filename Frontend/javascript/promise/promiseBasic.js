@@ -333,4 +333,25 @@ Promise.resolve([2,4,6])
 })
 
 
+Promise.resolve({num : 7 , word:'banana'})
+.then(value=>{
+    value.num = value.num * value.num
+    return value
+}).then(value=>{
+  return value.num+"-"+value.word
+}).then(value=>{
+    console.log(value.length)
+})
 
+
+Promise.resolve(["Ram","Sita","Hari","Rita"])
+.then(value=>{
+    let value1=value.filter(a=> a.startsWith("R"))
+    return value1
+})
+.then(value1=>{
+    return(value1.map(a=> a.toUpperCase()))
+})
+.then(value=>{
+    console.log(value)
+})
