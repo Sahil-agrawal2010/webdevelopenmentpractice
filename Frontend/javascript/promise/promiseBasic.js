@@ -306,12 +306,10 @@ Promise.resolve("hello,world")
  console.log(value1)
     return value1
 }).then(value1=>{
-    let value2=value1.reverse().join(" , ")
-    console.log(value2)
+    console.log(value1.reverse())
     return value1
-}).then(value1=>{
-    let value3=value1.reverse().join(" - ")
-    console.log(value3)
+}).then(value2=>{
+    console.log(value2.join(" - "))
 })
 
 // Q15. Async Array Chain (with setTimeout)
@@ -324,14 +322,12 @@ Promise.resolve("hello,world")
 Promise.resolve([2,4,6])
 .then(value=>{
     return new Promise((resolve)=>{
+        console.log(value)
     setTimeout(()=>{
-        let total=value.map(a=>{
-            resolve(a+1)
-        })
-    },1000)
+            resolve(value = value.map(n=> n+1))
+        }, 3000)
     })
-    // return total
-})
+    })
 .then(value=>{
     console.log(value)
 })
