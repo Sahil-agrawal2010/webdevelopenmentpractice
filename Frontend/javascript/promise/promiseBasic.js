@@ -375,3 +375,18 @@ Promise.resolve({city:"Kathamndu",population:800000})
 .then(value=>{
     console.log(value)
 })
+
+
+
+Promise.resolve("madam")
+.then(value=>{
+    let value2=value.split().reverse().join()
+    return {value,value2}
+})
+.then((value)=>{
+    console.log(value)
+    return value.value===value.value2 ? "It's palamdrome.":"It is not a palamdrome."
+})
+.then(value=>{
+    console.log(value)
+})
