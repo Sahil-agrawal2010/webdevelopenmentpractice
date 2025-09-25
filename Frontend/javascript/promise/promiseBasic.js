@@ -399,9 +399,9 @@ Promise.resolve("madam")
 // Next .then() → double each number.
 // Log the result.
 
-Promise.resolve([""])
+Promise.resolve([])
 .then(value =>{
-    if(value=[""]){
+    if(value.length==0){
         throw("No Data!")
     }
     return value
@@ -414,6 +414,7 @@ Promise.resolve([""])
   console.log(value.map(a=> a*2))
 })
 
+
 // Q25. Word Count Chain
 // Create a Promise that resolves with "I love learning JavaScript".
 // First .then() → split into words.
@@ -422,10 +423,14 @@ Promise.resolve([""])
 
 Promise.resolve("I love learning Javascript.")
 .then(value=>{
-  let value2 = value.split()
+  let value2 = value.split(" ")
     return value2
 })
 .then(value2=>{
+    return value2.length
+})
+.then(value=>{
+    console.log(`Total words : ${value}.`)
 })
 
 // Q1. User Grades Evaluation
@@ -443,20 +448,21 @@ Promise.resolve({ name: "Sita", scores: [80, 60, 90, 100] })
     for(let i=0;i<value.scores.length;i++){
       total=value.scores[i]+total
     }
-return {value,total}
-})
-.then(total=>{
-    if(total.total>=300){
-        return "A"
-    }
-    else if(total.total>=200){
-        return "B"
-    }
-    else{
-        return "C"
-    }
-    return {total,value}
+    value.avg = total/4
+    return value
 })
 .then(value=>{
-    console.log(`${value.name} has scored Grade ${value.value} with avg ${value.total}.`)
+    if(value.avg>=80){
+        value.grade  = "A"
+    }
+    else if(value.avg>=50){
+        value.grade  = "B"
+    }
+    else{
+       value.grade  = "C"
+    }
+    return value
+})
+.then(value=>{
+    console.log(`${value.name} has scored Grade ${value.grade} with avg ${value.avg}.`)
 })
