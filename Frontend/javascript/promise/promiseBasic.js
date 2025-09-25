@@ -442,27 +442,37 @@ Promise.resolve("I love learning Javascript.")
 // Add a .catch if the scores array is empty.
 
 
-Promise.resolve({ name: "Sita", scores: [80, 60, 90, 100] })
-.then(value=>{
-    let total=0
-    for(let i=0;i<value.scores.length;i++){
-      total=value.scores[i]+total
-    }
-    value.avg = total/4
-    return value
+let promisee=new Promise((resolve,reject)=>{
+    let object={name: "Sita", scores: [95,96,88]}
+    if (object.scores.length  === 0) reject("The score is empty.")
+    else resolve(object)
 })
 .then(value=>{
-    if(value.avg>=80){
-        value.grade  = "A"
-    }
-    else if(value.avg>=50){
-        value.grade  = "B"
+    let total=0
+      if((value.scores).length===0){
+        return "The score is empty."
     }
     else{
-       value.grade  = "C"
+        total=value.scores.reduce((a,b)=>{
+           return a+b
+        })
+    value.avg = total/value.scores.length
+    return value    
     }
+})
+.then(value=>{
+      if((value.scores).length===0){
+        return "The score is empty."
+    }
+    else{
+        value.avg>=80?value.grade="A":value.avg>=50?value.grade="B":value.grade="C"
     return value
+    }
 })
 .then(value=>{
     console.log(`${value.name} has scored Grade ${value.grade} with avg ${value.avg}.`)
+    return value
+})
+.catch(value=>{
+    console.log(value)
 })
