@@ -483,3 +483,13 @@ Promise.resolve(["Elephant","Dog","Cat","Giraffe","Lion"])
 .then(value=>  value.map(data => data.toLowerCase()))
 .then(value=>  value.sort())
 .then(value=> console.log(value.join(",")))
+
+
+let promisee=new Promise((resolve)=>{
+    let random = Math.floor(Math.random()*40+10)
+    console.log(random)
+    resolve(random)
+})
+.then(value=> value*value)
+.then(value=> Math.sqrt(value))
+.then(value=> console.log(value.toString().includes("2") ? "Lucky Number" : 'Try again!'))
