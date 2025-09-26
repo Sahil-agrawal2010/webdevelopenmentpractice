@@ -476,3 +476,10 @@ let promisee=new Promise((resolve,reject)=>{
 .catch(value=>{
     console.log(value)
 })
+
+
+Promise.resolve(["Elephant","Dog","Cat","Giraffe","Lion"])
+.then(value => value.filter(a=> a.length>3))
+.then(value=>  value.map(data => data.toLowerCase()))
+.then(value=>  value.sort())
+.then(value=> console.log(value.join(",")))
