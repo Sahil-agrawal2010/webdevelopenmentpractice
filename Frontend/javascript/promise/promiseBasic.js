@@ -511,6 +511,9 @@ Promise.resolve(
  { name: "Gopal", marks: 92 },
  { name: "Maya", marks: 70 }
  ])
+ .then(value=>{
+     console.log(value.sort())
+ })
 
 // Q4. Async Delay Puzzle
 // A promise resolves with "Start".
@@ -520,18 +523,51 @@ Promise.resolve(
 // Final result should print with delays:
 // Start → Step1 → Step2 → Step3.
 
+Promise.resolve("Start")
+.then(value=>{
+    console.log(value)
+    setTimeout(()=>{
+       console.log ("→  Step1")
+    },1000)
+})
+.then(value=>{
+    setTimeout(()=>{
+        console.log("→  Step2")
+    },2000)
+})
+.then(value=>{
+    console.log(value)
+    setTimeout(()=>{
+         console.log("→  Step3")
+    },3000)
+})
+.then(value=>{
+    console.log(value)
+})
 
 // Q5. Shopping Discount Challenge
 // A promise resolves with:
-// [{ name: "Shoes", price: 2000 },
-//  { name: "Shirt", price: 1200 },
-//  { name: "Cap", price: 500 }]
+    // [{ name: "Shoes", price: 2000 },
+    //  { name: "Shirt", price: 1200 },
+    //  { name: "Cap", price: 500 }]
 // 1st .then: Add property discountPrice (20% off each item).
 // 2nd .then: Filter items with discountPrice > 1000.
 // 3rd .then: Extract only names.
 // 4th .then: If no item left, throw error "No expensive items!".
 // .catch: Handle the error.
 
+Promise.resolve([{ name: "Shoes", price: 2000 },
+ { name: "Shirt", price: 1200 },
+ { name: "Cap", price: 500 }])
+ .then(value=>{
+     return value.price.map(a=> a.price-(0.2*a.price))
+ })
+ .then(value=>{
+    return value.filter(a=> a.price>1000)
+ })
+ .then(value=>{
+     console.log(value.name)
+ })
 
 // Q6. Hidden Message Game
 // A promise resolves with the string "PROGRAMMING".
@@ -541,4 +577,12 @@ Promise.resolve(
 // 4th .then: Sort alphabetically.
 // 5th .then: Join into a hidden message string.
 
-
+Promise.resolve("Programming")
+.then(value=>{
+    return value.toLowerCase()
+})
+.then(value=>{
+    return value.split("")
+})
+.then(value=>{
+})
