@@ -525,7 +525,6 @@ Promise.resolve(
 
 Promise.resolve("Start")
 .then(value=>{
-    console.log(value)
     setTimeout(()=>{
        console.log ("→  Step1")
     },1000)
@@ -536,14 +535,11 @@ Promise.resolve("Start")
     },2000)
 })
 .then(value=>{
-    console.log(value)
     setTimeout(()=>{
          console.log("→  Step3")
     },3000)
 })
-.then(value=>{
-    console.log(value)
-})
+
 
 // Q5. Shopping Discount Challenge
 // A promise resolves with:
@@ -556,20 +552,41 @@ Promise.resolve("Start")
 // 4th .then: If no item left, throw error "No expensive items!".
 // .catch: Handle the error.
 
-Promise.resolve([{ name: "Shoes", price: 2000 },
- { name: "Shirt", price: 1200 },
- { name: "Cap", price: 500 }])
- .then(value=>{
-    let value1=value.map(a=> a.price-(0.2*a.price))
-    return value1
- })
- .then(value=>{
-let value1= value.filter(a => a>1000)
-return value1
- })
-.then(value=>{
-    console.log(value.name)
-})
+Promise.resolve([{
+            name: "Shoes",
+            price: 2000
+        },
+        {
+            name: "Shirt",
+            price: 1200
+        },
+        {
+            name: "Cap",
+            price: 500
+        },
+          {
+            name: "Guitar",
+            price: 15000
+        }
+    ])
+    .then(value => {
+        let value1 = value.map(a => {
+            a.discount = a.price - (a.price * 0.2)
+            return a
+        })
+        return value
+    })
+    .then(value => {
+        let newObject = value.filter(a => {
+            return a.discount > 1000
+        })
+        return newObject
+    })
+    .then(value => {
+        value.map(a=> console.log(a.name))
+    })
+
+
 // Q6. Hidden Message Game
 // A promise resolves with the string "PROGRAMMING".
 // 1st .then: Convert to lowercase.
@@ -586,8 +603,22 @@ Promise.resolve("Programming")
     return value.split("")
 })
 .then(value=>{
-   return new Set(value)
+   return [...new Set(value)]
 })
 .then(value=>{
-    console.log(value.sort())
+    return value.sort()
 })
+.then(value=>{
+    console.log(value.join(""))
+})
+
+
+
+let value=[55,43,22,78,99,32,12,33]
+    let sum=0
+for(let i=0;i<value.length;i++){
+    if(value[i]>sum){
+        sum=value[i]
+    }
+    console.log(sum)
+    }
