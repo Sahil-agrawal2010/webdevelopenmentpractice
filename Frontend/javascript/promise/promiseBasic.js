@@ -560,15 +560,16 @@ Promise.resolve([{ name: "Shoes", price: 2000 },
  { name: "Shirt", price: 1200 },
  { name: "Cap", price: 500 }])
  .then(value=>{
-     return value.price.map(a=> a.price-(0.2*a.price))
+    let value1=value.map(a=> a.price-(0.2*a.price))
+    return value1
  })
  .then(value=>{
-    return value.filter(a=> a.price>1000)
+let value1= value.filter(a => a>1000)
+return value1
  })
- .then(value=>{
-     console.log(value.name)
- })
-
+.then(value=>{
+    console.log(value.name)
+})
 // Q6. Hidden Message Game
 // A promise resolves with the string "PROGRAMMING".
 // 1st .then: Convert to lowercase.
@@ -585,4 +586,8 @@ Promise.resolve("Programming")
     return value.split("")
 })
 .then(value=>{
+   return new Set(value)
+})
+.then(value=>{
+    console.log(value.sort())
 })
