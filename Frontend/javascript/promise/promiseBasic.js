@@ -622,3 +622,5 @@ for(let i=0;i<value.length;i++){
     }
     console.log(sum)
     }
+
+    console.log("I am a good boy and i havea to do some task and also some projects")
