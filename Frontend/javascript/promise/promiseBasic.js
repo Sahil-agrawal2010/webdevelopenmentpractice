@@ -512,7 +512,10 @@ Promise.resolve(
  { name: "Maya", marks: 70 }
  ])
  .then(value=>{
-     console.log(value.sort())
+    return value.sort((a,b)=>b.marks-a.marks)
+ })
+ .then(value=>{
+     console.log(value)
  })
 
 // Q4. Async Delay Puzzle
