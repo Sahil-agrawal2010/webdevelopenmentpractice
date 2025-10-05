@@ -630,3 +630,9 @@ for(let i=0;i<value.length;i++){
     console.log("Nothing done today also will continue from day after tommorow i am out somewhwere so.")
     cons0ole.log("Cant do any thong today also oout somewhere in nepal only.")
     console.log("Same")
+
+    Promise.resolve(5)
+    .then(value=>{
+        console.log(value+1)
+    })
+
