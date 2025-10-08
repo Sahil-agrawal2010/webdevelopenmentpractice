@@ -48,3 +48,39 @@ let secondData = JSON.parse(data1)
 console.log(typeof(secondData))
 console.log(secondData)
 console.log(secondData[3].name)
+
+
+
+
+let Json=`[{
+    "name":"Sahil",
+    "lastName":"Agrwal",
+    "grade":10,
+    "favouriteNumber":[10,14,18,22],
+    "address":{
+        "country":"Nepal",
+        "city":"Birtamode"
+    }
+    },
+   {
+   "name": "Nayan Pathak",
+   "address" : "Birtamode"
+   },
+    {
+    "name": "Dhiarya Agrawal",
+    "address" : "India"
+    },
+    {
+    "name": "SahiL Agrawal",
+    "address" : "Illam"
+    },
+    {
+    "name": "Sita Thapa",
+    "address" : "Kathmandu"
+    }]`
+console.log(typeof(Json))
+let newJson=JSON.parse(Json)
+console.log(typeof(newJson))
+console.log(newJson)
+console.log(newJson[0].address)
+console.log(newJson[2].name)
