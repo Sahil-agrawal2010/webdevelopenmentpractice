@@ -84,3 +84,5 @@ console.log(typeof(newJson))
 console.log(newJson)
 console.log(newJson[0].address)
 console.log(newJson[2].name)
+
+console.log("Nothing done today injured")
