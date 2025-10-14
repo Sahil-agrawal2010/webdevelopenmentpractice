@@ -52,6 +52,6 @@ fetch("https://www.apicountries.com/countries")
         console.log("It's languages iso639_1 is "+dataa[156].languages[0].iso639_1+" It's languages iso639_2 is "+dataa[156].languages[0].iso639_2+" It's languages name is "+dataa[156].languages[0].name+"It's languages nativeName is"+dataa[156].languages[0].nativeName)
         console.log("It's translations is "+dataa[156].translations.br+" It's translations is "+dataa[156].translations.pt+" It's translations is "+dataa[156].translations.nl+"It's translations is"+dataa[156].translations.hr+"It's translations is "+dataa[156].translations.fa+"It's translations is "+dataa[156].translations.de+"It's translations is "+dataa[156].translations.es+"It's translations is "+dataa[156].translations.fr+"It's translations is "+dataa[156].translations.ja+"It's translations is "+dataa[156].translations.it+"It's translations is "+dataa[156].translations.hu)
         console.log("It's regionalBlocs is "+dataa[156].regionalBlocs[0].acronym+" It's regionalBlocs is "+dataa[156].regionalBlocs[0].name)
-
+        console.log("It's cioc is "+dataa[156].cioc+"It's a "+dataa[156].independent?"a independent country!":"not a independent country!")
 
 })
