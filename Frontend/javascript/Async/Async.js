@@ -85,6 +85,7 @@
 // .then(data=>{
 //     console.log(data)
 // })
+const prompt  = require("prompt-sync")()
 let userInput=Number(prompt("Enter any number to display the infomation:- "))
 fetch("https://68ef93b8b06cc802829df66c.mockapi.io/employee")
 .then(resp =>{
