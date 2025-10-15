@@ -1,8 +1,8 @@
-fetch("https://www.apicountries.com/countries")
-.then(res=>{
-    return res.json()
-}
-)
+// fetch("https://www.apicountries.com/countries")
+// .then(res=>{
+//     return res.json()
+// }
+// )
 // .then(
 //     data => {
 //         console.log(data[0])
@@ -29,29 +29,67 @@ fetch("https://www.apicountries.com/countries")
 //         console.log("It's cioc is "+data[0].cioc+" It is "+data[0].independent?" a independent country!":" not a independent country!")
 //     }
 // )
-.then(dataa=>{
-    console.log(dataa[156])
-    console.log("The name of the country is "+dataa[156].name)
-    console.log("It's top level domin is "+dataa[156].topLevelDomain)
-        console.log("It's alpha2Code is "+dataa[156].alpha2Code)
-        console.log("It's alpha3Code is "+dataa[156].alpha3Code)
-        console.log("It's callingCodes is "+dataa[156].callingCodes)
-        console.log("It's capital is "+dataa[156].capital)
-        console.log("It's altSpellings is "+dataa[156].altSpellings)
-        console.log("It's subregion is "+dataa[156].subregion)
-        console.log("It's region is "+dataa[156].region)
-        console.log("It's population is "+dataa[156].population)
-        console.log("It's latitude is "+dataa[156].latlng[0]+" and It's longitude "+dataa[156].latlng[1])
-        console.log("It's demonym is "+dataa[156].demonym)
-        console.log("It's area is "+dataa[156].area)
-        console.log("It's gini is "+dataa[156].gini)
-        console.log("It's timezones is "+dataa[156].timezones)
-        console.log("It's borders is "+dataa[156].borders)
-        console.log("It's nativeName is "+dataa[156].nativeName)
-        console.log("It's currencies code is "+dataa[156].currencies[0].code+" It's currencies name is "+dataa[156].currencies[0].name+" It's currencies symbol is "+dataa[156].currencies[0].symbol)
-        console.log("It's languages iso639_1 is "+dataa[156].languages[0].iso639_1+" It's languages iso639_2 is "+dataa[156].languages[0].iso639_2+" It's languages name is "+dataa[156].languages[0].name+"It's languages nativeName is"+dataa[156].languages[0].nativeName)
-        console.log("It's translations is "+dataa[156].translations.br+" It's translations is "+dataa[156].translations.pt+" It's translations is "+dataa[156].translations.nl+"It's translations is"+dataa[156].translations.hr+"It's translations is "+dataa[156].translations.fa+"It's translations is "+dataa[156].translations.de+"It's translations is "+dataa[156].translations.es+"It's translations is "+dataa[156].translations.fr+"It's translations is "+dataa[156].translations.ja+"It's translations is "+dataa[156].translations.it+"It's translations is "+dataa[156].translations.hu)
-        console.log("It's regionalBlocs is "+dataa[156].regionalBlocs[0].acronym+" It's regionalBlocs is "+dataa[156].regionalBlocs[0].name)
-        console.log("It's cioc is "+dataa[156].cioc+"It's a "+dataa[156].independent?"a independent country!":"not a independent country!")
+// .then(dataa=>{
+//     console.log(dataa[156])
+//     console.log("The name of the country is "+dataa[156].name)
+//     console.log("It's top level domin is "+dataa[156].topLevelDomain)
+//         console.log("It's alpha2Code is "+dataa[156].alpha2Code)
+//         console.log("It's alpha3Code is "+dataa[156].alpha3Code)
+//         console.log("It's callingCodes is "+dataa[156].callingCodes)
+//         console.log("It's capital is "+dataa[156].capital)
+//         console.log("It's altSpellings is "+dataa[156].altSpellings)
+//         console.log("It's subregion is "+dataa[156].subregion)
+//         console.log("It's region is "+dataa[156].region)
+//         console.log("It's population is "+dataa[156].population)
+//         console.log("It's latitude is "+dataa[156].latlng[0]+" and It's longitude "+dataa[156].latlng[1])
+//         console.log("It's demonym is "+dataa[156].demonym)
+//         console.log("It's area is "+dataa[156].area)
+//         console.log("It's gini is "+dataa[156].gini)
+//         console.log("It's timezones is "+dataa[156].timezones)
+//         console.log("It's borders is "+dataa[156].borders)
+//         console.log("It's nativeName is "+dataa[156].nativeName)
+//         console.log("It's currencies code is "+dataa[156].currencies[0].code+" It's currencies name is "+dataa[156].currencies[0].name+" It's currencies symbol is "+dataa[156].currencies[0].symbol)
+//         console.log("It's languages iso639_1 is "+dataa[156].languages[0].iso639_1+" It's languages iso639_2 is "+dataa[156].languages[0].iso639_2+" It's languages name is "+dataa[156].languages[0].name+"It's languages nativeName is"+dataa[156].languages[0].nativeName)
+//         console.log("It's translations is "+dataa[156].translations.br+" It's translations is "+dataa[156].translations.pt+" It's translations is "+dataa[156].translations.nl+"It's translations is"+dataa[156].translations.hr+"It's translations is "+dataa[156].translations.fa+"It's translations is "+dataa[156].translations.de+"It's translations is "+dataa[156].translations.es+"It's translations is "+dataa[156].translations.fr+"It's translations is "+dataa[156].translations.ja+"It's translations is "+dataa[156].translations.it+"It's translations is "+dataa[156].translations.hu)
+//         console.log("It's regionalBlocs is "+dataa[156].regionalBlocs[0].acronym+" It's regionalBlocs is "+dataa[156].regionalBlocs[0].name)
+//         console.log("It's cioc is "+dataa[156].cioc+"It's a "+dataa[156].independent?"a independent country!":"not a independent country!")
 
+// })
+
+// fetch("https://68ef93b8b06cc802829df66c.mockapi.io/employee")
+// .then(res=>{
+//     return res.json()
+// })
+// .then(data=>{
+//     console.log(data)
+// })
+
+
+// fetch("https://68ef93b8b06cc802829df66c.mockapi.io/employee",{
+//     method: 'POST',
+//     headers: {'content-type':'application/json'},
+//     body: JSON.stringify({
+//         createdAt: '2082-06-29-Wednesday',
+//         name:'Mayank Bindal',
+//         number:'9800000098',
+//         id:'11'
+//     })
+// })
+// .then(res=>{
+//      res.json()
+//      return fetch("https://68ef93b8b06cc802829df66c.mockapi.io/employee")
+// })
+// .then(a=>{
+//    return a.json()
+// })
+// .then(data=>{
+//     console.log(data)
+// })
+let userInput=Number(prompt("Enter any number to display the infomation:- "))
+fetch("https://68ef93b8b06cc802829df66c.mockapi.io/employee")
+.then(resp =>{
+    return resp.json()
+})
+.then(data =>{
+    console.log(data)
 })
