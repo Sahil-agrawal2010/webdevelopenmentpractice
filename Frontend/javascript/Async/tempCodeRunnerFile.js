@@ -1,0 +1,12 @@
+const prompt = require("prompt-sync")()
+console.log("Valid languages : eng, cze, ces, ger, ben, esp, rus, por, fin, ukr, urd, ita, zho, kor")
+let lang = prompt("Enter the language : ")
+let count = Number(prompt("Enter hwo many facts do you want ? : "))
+fetch("https://meowfacts.herokuapp.com/?lang=" + lang + "&&count=" + count)
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+        let id = Number(prompt("Enter the id of the facts you want to know : "))
+        return fetch("https://meowfacts.herokuapp.com/?lang=" + lang + "&&id=" + id)
+    }).then(sec => sec.json())
+    .then(data => console.log(data))

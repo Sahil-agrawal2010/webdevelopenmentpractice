@@ -123,4 +123,30 @@
 // })
 
 
-fetch('https://meowfacts.herokuapp.com/').then(res => res.json()).then(data => console.log(data))
+// fetch('https://meowfacts.herokuapp.com/').then(res => res.json()).then(data => console.log(data))
+
+
+
+// const prompt  = require("prompt-sync")()
+// let language=prompt("Enter the language:- ")
+// let counts=prompt("Enter houmany data you want:- ")
+// fetch(`https://meowfacts.herokuapp.com/?lang=${language}&&count=${counts}`)
+// .then(data=>{
+// return data.json()
+// })
+// .then(final=>{
+// console.log(final)
+// })
+
+
+const prompt  = require("prompt-sync")()
+let language=prompt("Enter the language:- ")
+let ids=prompt("Enter which id data you want:- ")
+fetch(`https://meowfacts.herokuapp.com/?lang=${language}&&id=${ids}`)
+.then(data=>{
+return data.json()
+})
+.then(final=>{
+console.log(final)
+})
+
