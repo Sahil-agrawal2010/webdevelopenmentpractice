@@ -150,3 +150,26 @@ return data.json()
 console.log(final)
 })
 
+Rough
+let a=0
+let b=1
+for(let i=0;i<=10;i++){
+    let sum=a+b
+    a=b
+    b=sum
+    console.log(sum)
+}
+
+let number=Number(prompt("Enter any number:- "))
+let counter=0
+for(let i=0;i<=number;i++){
+    if(number%i==0){
+        counter++
+    }
+}
+if(counter==2){
+    console.log("The entered digit is a prime number.")
+}
+else{
+    console.log("The entered digit is not a prime number")
+}
