@@ -176,7 +176,7 @@ else{
 
 
 let array=[1,2,3,4,5]
-for(let i=5;i>=0;i--){
+for(let i=(array.length-1);i>=0;i--){
     console.log(array[i])
 }
 
