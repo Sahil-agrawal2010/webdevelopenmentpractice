@@ -176,9 +176,11 @@ else{
 
 
 let array=[1,2,3,4,5]
+let array1=[]
 for(let i=(array.length-1);i>=0;i--){
-    console.log(array[i])
+   array1.push(array[i])
 }
+    console.log(array1)
 
 
 let userInput=Number(prompt("Enter any Number :- "))
