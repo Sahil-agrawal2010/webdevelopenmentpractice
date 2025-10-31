@@ -88,6 +88,109 @@
       .nav y{
          gap: 4px;
       }
+      .main_border{
+         border: 1px solid transparent;
+         height: 540px;
+         width: 25%;
+         position: relative;
+         left: 900px;
+         bottom: 600px;
+         background-color: white;
+         border-radius: 8px;
+      }
+      .city{
+         border: 1px solid #afaeae;
+         height: 120px;
+         width: 90%;
+         position: relative;
+         top: 20px;
+         left: 16px;
+         background-color: #f2f4f4;
+         border-radius: 8px;
+      }
+      .line1{
+         width: 90%;
+         position: relative;
+         top: 50px;
+         background-color: #dde0e1;
+         height: 1px;
+      }
+      .from{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 30px;
+         position: relative;
+         bottom: 16px;
+         right: 60px;
+         color: #616e72;
+         font-family: sans-serif;
+         font-size: 17px;
+         cursor: pointer;
+      }
+      .to{
+                  display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 50px;
+         position: relative;
+         bottom: 16px;
+         right: 60px;
+         color: #616e72;
+         font-family: sans-serif;
+         font-size: 17px;
+         cursor: pointer;
+      }
+      .way{
+         border: 1px solid #616e72;
+         width: 100%;
+         height: 40px;
+         position: relative;
+         top: 10px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 100px;
+         border-radius: 8px;
+         cursor: pointer;
+         font-family: sans-serif;
+      }
+      .way p{
+         color: #505252;
+      }
+      .line2{
+         rotate: calc(90deg);
+         width: 10%;
+         position: relative;
+         bottom: 18px;
+      }
+      .outt{
+         border: 1px solid #949595;
+         width: 90%;
+         height: 60px;
+         position: relative;
+         top: 98px;
+         left: 14px;
+         border-radius: 8px;
+         background-color: #f2f4f4;
+         display: flex;
+         justify-content: center;
+         align-items: center; 
+         gap: 140px;
+         font-size: 20px;
+         font-family: sans-serif;
+         color: #616e72;
+         cursor: pointer;
+      }
+      .date{
+         border: 1px solid transparent;
+         background-color: #f2f4f4;
+         font-size: large;
+         color: #616e72;
+         position: relative;
+         right: 70px;
+         cursor: pointer;
+      }
     </style>
  </head>
  <body>
@@ -116,7 +219,26 @@
 </svg></y>
 </div>
 <div class="main_border">
-   
+   <div class="city">
+      <hr class="line1">
+      <div class="from">
+         <p>From</p>
+         <p>City or station</p>
+      </div>
+      <div class="to">
+           <p>To</p>
+         <p>City or station</p>
+      </div>
+      <div class="way">
+         <p>One-way</p>
+         <p>Return</p>
+      </div>
+      <hr class="line2">
+   </div>
+   <div class="outt">
+      <p>Out</p>
+      <input class="date" type="date">
+   </div>
 </div>
     </div>
  </body>
