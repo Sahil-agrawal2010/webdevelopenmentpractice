@@ -128,8 +128,11 @@
          font-size: 17px;
          cursor: pointer;
       }
+      .city:hover{
+         background-color: #ebebeb;
+      }
       .to{
-                  display: flex;
+         display: flex;
          justify-content: center;
          align-items: center;
          gap: 50px;
@@ -155,6 +158,10 @@
          cursor: pointer;
          font-family: sans-serif;
       }
+      .way:hover{
+         background-color: #ebebeb;
+         border: 2px solid #2332c4;
+      }
       .way p{
          color: #505252;
       }
@@ -163,6 +170,10 @@
          width: 10%;
          position: relative;
          bottom: 18px;
+      }
+      .line2:hover{
+         background-color: #ebebeb;
+         border: 1px solid #2332c4;
       }
       .outt{
          border: 1px solid #949595;
@@ -182,6 +193,9 @@
          color: #616e72;
          cursor: pointer;
       }
+      .outt:hover{
+         background-color: #ebebeb;
+      }
       .date{
          border: 1px solid transparent;
          background-color: #f2f4f4;
@@ -190,6 +204,9 @@
          position: relative;
          right: 70px;
          cursor: pointer;
+      }
+      .date:hover{
+         background-color: #ebebeb;
       }
       .total_people{
          border: 1px solid #949595;
@@ -207,6 +224,9 @@
          cursor: pointer;
          color: #505252;
       }
+      .total_people:hover{
+         background-color: #ebebeb;
+      }
       .add{
          position: relative;
          right: 140px;
@@ -214,14 +234,56 @@
          font-family: sans-serif;
       }
       .vouter{
+         border: 1px solid transparent;
+         border-radius: 8px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 50%;
          position: relative;
          top: 120px;
-         left: 25px;
+         left: 20px;
          font-size: 16px;
          font-family: sans-serif;
          color: #2332c4;
          font-weight: 600;
          cursor: pointer;
+      }
+      .vouter:hover{
+         background-color: #ebebeb;
+      }
+      .off{
+         position: relative;
+         top: 110px;
+         left: 20px;
+         display: flex;
+         gap: 10px;
+         font-family: sans-serif;
+         font-size: 15px;
+         color: #525151;
+      }
+      .check{
+         height: 25px;
+         width: 25px;
+         position: relative;
+         top: 18px;
+      }
+      .booking{
+         border: 1px solid black;
+         width: 30%;
+         height: 30px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         position: relative;
+         top: 60px;
+         left: 240px;
+         border-radius: 10px;
+         background-color: #f2f4f4;
+      }
+      .booking a{
+         text-decoration: none;
+         color: black;
       }
     </style>
  </head>
@@ -279,6 +341,13 @@
    </div>
    <div class="vouter">
       <p>+ Add a voucher code</p>
+   </div>
+   <div class="off">
+      <input class="check" type="checkbox">
+      <p>Get up to 20% off stays <br> with Genius</p>
+   </div>
+   <div class="booking">
+      <a href="https://www.booking.com/" target="_blank">Booking.com</a>
    </div>
 </div>
     </div>
