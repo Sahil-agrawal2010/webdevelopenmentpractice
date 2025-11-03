@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><button class="first">Increase</button></div>
+    <div><button class="answer">0</button></div>
+    <div><button class="second">Decrease</button></div>
+</body>
+<script>
+    let initialvalue=0
+    document.querySelector('.first').onclick= () => {
+        initialvalue++
+        document.querySelector('.answer').innerText = initialvalue
+    }
+    document.querySelector('.second').onclick=()=>{
+        initialvalue--
+        document.querySelector('.answer').innerText = initialvalue
+    }
+    if(initialvalue<0){
+        console.log("Sorry")
+    }
+</script>
+</html>
