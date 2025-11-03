@@ -4,24 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            display: flex;
+        }
+    </style>
 </head>
 <body>
-    <div><button class="first">Increase</button></div>
-    <div><button class="answer">0</button></div>
-    <div><button class="second">Decrease</button></div>
+   <button class="first">Increase</button>
+   <button class="answer">0</button>
+   <button class="second">Decrease</button>
 </body>
 <script>
     let initialvalue=0
     document.querySelector('.first').onclick= () => {
         initialvalue++
+        if(initialvalue>10 || initialvalue<0){
+            document.querySelector('answer').innerText="Sorry"
+        }
+        else{
         document.querySelector('.answer').innerText = initialvalue
+        }
     }
     document.querySelector('.second').onclick=()=>{
         initialvalue--
+        if(initialvalue<0 || initialvalue>10){
+            document.querySelector('answer').innerText = "Sorry"
+        }
+        else{
         document.querySelector('.answer').innerText = initialvalue
-    }
-    if(initialvalue<0){
-        console.log("Sorry")
+        }
     }
 </script>
 </html>
