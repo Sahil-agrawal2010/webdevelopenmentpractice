@@ -269,7 +269,7 @@
          top: 18px;
       }
       .booking{
-         border: 1px solid black;
+         border: 1px solid #949595;
          width: 30%;
          height: 30px;
          display: flex;
@@ -278,12 +278,40 @@
          position: relative;
          top: 60px;
          left: 240px;
-         border-radius: 10px;
+         border-radius: 2px;
          background-color: #f2f4f4;
+         font-family: sans-serif;
+         font-size: 14px;
       }
       .booking a{
          text-decoration: none;
          color: black;
+      }
+      .ticket button{
+         border: 1px solid transparent;
+         color: white;
+         background-color: #00a88f;
+         width: 90%;
+         height: 50px;
+         position: relative;
+         top: 80px;
+         left: 20px;
+         font-family: sans-serif;
+         font-size: 20px;
+         border-radius: 4px;
+         font-weight: 600;
+      }
+      .ticket button:hover{
+         background-color: #2e7c70;
+      }
+      .treni{
+            color: white;
+            font-family: sans-serif;
+            font-size: 50px;
+            position: relative;
+            right: 700px;
+            bottom: 160px;
+            font-weight: 600;
       }
     </style>
  </head>
@@ -349,6 +377,10 @@
    <div class="booking">
       <a href="https://www.booking.com/" target="_blank">Booking.com</a>
    </div>
+   <div class="ticket">
+      <button>Get cheapest tickets</button>
+   </div>
+   <div class="treni"><p>Trenitalia</p></div>
 </div>
     </div>
  </body>
