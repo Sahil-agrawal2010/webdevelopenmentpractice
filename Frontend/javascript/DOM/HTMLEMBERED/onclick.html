@@ -19,20 +19,18 @@
     let initialvalue=0
     document.querySelector('.first').onclick= () => {
         initialvalue++
-        if(initialvalue>10 || initialvalue<0){
-            document.querySelector('answer').innerText="Sorry"
-        }
-        else{
         document.querySelector('.answer').innerText = initialvalue
+        if(initialvalue>10 || initialvalue<0){
+            document.querySelector('.answer').innerText="Sorry"
+            return 
         }
     }
     document.querySelector('.second').onclick=()=>{
         initialvalue--
-        if(initialvalue<0 || initialvalue>10){
-            document.querySelector('answer').innerText = "Sorry"
-        }
-        else{
         document.querySelector('.answer').innerText = initialvalue
+        if(initialvalue<0 || initialvalue>10){
+            document.querySelector('.answer').innerText = "Sorry"
+            return 
         }
     }
 </script>
