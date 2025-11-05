@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="first_number">Enter the first number:- </label>
+    <input type="text" id="first_number" />
+    <br /><br />
+    <label for="second_number">Enter the second number:- </label>
+    <input type="text" id="second_number" />
+    <br /><br />
+    <button class="result">Submit</button>
+    <br /><br />
+    The sum is:- <button class="output">Output</button>
+    <br /><br />
+    The difference is:- <button class="output2">Output</button>
+    <br /><br />
+    The product is:- <button class="output3">Output</button>
+    <br /><br />
+    The division is:- <button class="output4">Output</button>
+</body>
+<script>
+    document.querySelector(".result").onclick = () => {
+        let firstNumber = Number(document.querySelector("#first_number").value);
+        let secondNumber = Number(document.querySelector("#second_number").value);
+        
+        document.querySelector('.output').innerText = firstNumber + secondNumber
+        
+        document.querySelector('.output2').innerText = firstNumber - secondNumber
+
+        document.querySelector('.output3').innerText = firstNumber * secondNumber
+
+        document.querySelector('.output4').innerText = firstNumber / secondNumber
+    };
+</script>
+
+</html>
