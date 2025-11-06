@@ -91,7 +91,7 @@
             gap: 10px;
             position: relative;
             top: 150px;
-            left: 80px;
+            left: 40px;
         }
         .sixth_line button{
             height: 80px;
@@ -146,6 +146,9 @@
         <div class="sixth_line">
         <button class="zero">0</button>
         <button class="dot">.</button>
+        <button class="erase"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eraser" viewBox="0 0 16 16">
+  <path d="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828zm2.121.707a1 1 0 0 0-1.414 0L4.16 7.547l5.293 5.293 4.633-4.633a1 1 0 0 0 0-1.414zM8.746 13.547 3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293z"/>
+</svg></button>
     </div>
     </div>
     <script>
@@ -154,7 +157,7 @@
             currentvalue = currentvalue + 7
             document.querySelector('#output_box').value=currentvalue
         }
-           document.querySelector('.eight').onclick=()=>{
+        document.querySelector('.eight').onclick=()=>{
             currentvalue = currentvalue + 8
             document.querySelector('#output_box').value=currentvalue
         }   
@@ -170,7 +173,7 @@
             currentvalue = currentvalue + 2
             document.querySelector('#output_box').value=currentvalue
         } 
-         document.querySelector('.three').onclick=()=>{
+        document.querySelector('.three').onclick=()=>{
             currentvalue = currentvalue + 3
             document.querySelector('#output_box').value=currentvalue
         }   
@@ -178,7 +181,7 @@
             currentvalue = currentvalue + 4
             document.querySelector('#output_box').value=currentvalue
         }  
-         document.querySelector('.five').onclick=()=>{
+        document.querySelector('.five').onclick=()=>{
             currentvalue = currentvalue + 5
             document.querySelector('#output_box').value=currentvalue
         }   
@@ -190,19 +193,19 @@
             currentvalue = currentvalue + '+'
             document.querySelector('#output_box').value=currentvalue
         }
-            document.querySelector('.minus').onclick=()=>{
+        document.querySelector('.minus').onclick=()=>{
             currentvalue = currentvalue + '-'
             document.querySelector('#output_box').value=currentvalue
         }
-            document.querySelector('.product').onclick=()=>{
+        document.querySelector('.product').onclick=()=>{
             currentvalue = currentvalue + '*'
             document.querySelector('#output_box').value=currentvalue
         }
-            document.querySelector('.divide').onclick=()=>{
+        document.querySelector('.divide').onclick=()=>{
             currentvalue = currentvalue + '/'
             document.querySelector('#output_box').value=currentvalue
         }
-            document.querySelector('.equalsto').onclick=()=>{
+        document.querySelector('.equalsto').onclick=()=>{
             let result = eval(currentvalue)
             currentvalue = result
             document.querySelector('#output_box').value=currentvalue
@@ -220,6 +223,9 @@
             currentvalue = ""
             document.querySelector('#output_box').value=currentvalue
         }
-    </script>
+        document.querySelector('.erase').onclick=()=>{
+            document.querySelector('#output_box').value=currentvalue.slice(0,-1)
+        }
+        </script>
 </body>
 </html>
