@@ -7,13 +7,13 @@
     <style>
         .main{
             border: 1px solid black;
-            width: 25%;
-            height: 650px;
+            width: 350px;
+            height: 700px;
         }
         .first_line{
             display: flex;
             font-size: 20px;
-            gap: 25px;
+            gap: 10px;
             position: relative;
             top: 100px;
             left: 40px;
@@ -25,10 +25,10 @@
             border: 2px solid black;
             font-size: 20px;
         }
-              .second_line{
+        .second_line{
             display: flex;
             font-size: 20px;
-            gap: 25px;
+            gap: 10px;
             position: relative;
             top: 110px;
             left: 40px;
@@ -40,10 +40,10 @@
             border: 2px solid black;
             font-size: 20px;
         }
-                  .third_line{
+        .third_line{
             display: flex;
             font-size: 20px;
-            gap: 25px;
+            gap: 10px;
             position: relative;
             top: 120px;
             left: 40px;
@@ -55,10 +55,10 @@
             border: 2px solid black;
             font-size: 20px;
         }
-                         .fourth_line{
+        .fourth_line{
             display: flex;
             font-size: 20px;
-            gap: 25px;
+            gap: 10px;
             position: relative;
             top: 130px;
             left: 40px;
@@ -70,10 +70,10 @@
             border: 2px solid black;
             font-size: 20px;
         }
-                                 .fifth_line{
+        .fifth_line{
             display: flex;
             font-size: 20px;
-            gap: 25px;
+            gap: 10px;
             position: relative;
             top: 140px;
             left: 40px;
@@ -85,13 +85,13 @@
             border: 2px solid black;
             font-size: 20px;
         }
-                                   .sixth_line{
+        .sixth_line{
             display: flex;
             font-size: 20px;
-            gap: 25px;
+            gap: 10px;
             position: relative;
             top: 150px;
-            left: 100px;
+            left: 80px;
         }
         .sixth_line button{
             height: 80px;
@@ -100,39 +100,126 @@
             border: 2px solid black;
             font-size: 20px;
         }
+        #output_box{
+            position: relative;
+            top: 60px;
+            left: 20px;
+            height: 40px;
+            width: 300px;
+            font-size: 20px;
+            text-align: right;
+            font-family: sans-serif;
+        }
+        #output_box:hover{
+        border: 2px solid orange;
+        }
     </style>
 </head>
 <body>
     <div class="main">
+        <input type="text" id="output_box" /readonly>
     <div class="first_line">
-        <button>C</button>
-        <button>1</button>
-        <button>2</button>
+        <button class="clear">C</button>
+        <button class="one">1</button>
+        <button class="two">2</button>
     </div>
       <div class="second_line">
-        <button>+</button>
-        <button>3</button>
-        <button>4</button>
+        <button class="plus">+</button>
+        <button class="three">3</button>
+        <button class="four">4</button>
     </div>
          <div class="third_line">
-        <button>-</button>
-        <button>5</button>
-        <button>6</button>
+        <button class="minus">-</button>
+        <button class="five">5</button>
+        <button class="six">6</button>
     </div>
         <div class="fourth_line">
-        <button>*</button>
-        <button>7</button>
-        <button>8</button>
+        <button class="product">*</button>
+        <button class="seven">7</button>
+        <button class="eight">8</button>
     </div>
         <div class="fifth_line">
-        <button>/</button>
-        <button>=</button>
-        <button>9</button>
+        <button class="divide">/</button>
+        <button class="equalsto">=</button>
+        <button class="nine">9</button>
     </div>
-            <div class="sixth_line">
-        <button>0</button>
-        <button>.</button>
+        <div class="sixth_line">
+        <button class="zero">0</button>
+        <button class="dot">.</button>
     </div>
     </div>
+    <script>
+        let currentvalue = ""
+        document.querySelector('.seven').onclick=()=>{
+            currentvalue = currentvalue + 7
+            document.querySelector('#output_box').value=currentvalue
+        }
+           document.querySelector('.eight').onclick=()=>{
+            currentvalue = currentvalue + 8
+            document.querySelector('#output_box').value=currentvalue
+        }   
+        document.querySelector('.nine').onclick=()=>{
+            currentvalue = currentvalue + 9
+            document.querySelector('#output_box').value=currentvalue
+        }   
+        document.querySelector('.one').onclick=()=>{
+            currentvalue = currentvalue + 1
+            document.querySelector('#output_box').value=currentvalue
+        }  
+         document.querySelector('.two').onclick=()=>{
+            currentvalue = currentvalue + 2
+            document.querySelector('#output_box').value=currentvalue
+        } 
+         document.querySelector('.three').onclick=()=>{
+            currentvalue = currentvalue + 3
+            document.querySelector('#output_box').value=currentvalue
+        }   
+        document.querySelector('.four').onclick=()=>{
+            currentvalue = currentvalue + 4
+            document.querySelector('#output_box').value=currentvalue
+        }  
+         document.querySelector('.five').onclick=()=>{
+            currentvalue = currentvalue + 5
+            document.querySelector('#output_box').value=currentvalue
+        }   
+        document.querySelector('.six').onclick=()=>{
+            currentvalue = currentvalue + 6
+            document.querySelector('#output_box').value=currentvalue
+        }
+        document.querySelector('.plus').onclick=()=>{
+            currentvalue = currentvalue + '+'
+            document.querySelector('#output_box').value=currentvalue
+        }
+            document.querySelector('.minus').onclick=()=>{
+            currentvalue = currentvalue + '-'
+            document.querySelector('#output_box').value=currentvalue
+        }
+            document.querySelector('.product').onclick=()=>{
+            currentvalue = currentvalue + '*'
+            document.querySelector('#output_box').value=currentvalue
+        }
+            document.querySelector('.divide').onclick=()=>{
+            currentvalue = currentvalue + '/'
+            document.querySelector('#output_box').value=currentvalue
+        }
+            document.querySelector('.equalsto').onclick=()=>{
+            let result = eval(currentvalue)
+            currentvalue = result
+            document.querySelector('#output_box').value=currentvalue
+            currentvalue = ""
+        }
+        document.querySelector('.zero').onclick=()=>{
+            currentvalue = currentvalue + 0
+            document.querySelector('#output_box').value=currentvalue
+        }
+        document.querySelector('.dot').onclick=()=>{
+            currentvalue = currentvalue + '.'
+            document.querySelector('#output_box').value=currentvalue
+        }
+        document.querySelector('.clear').onclick=()=>{
+            currentvalue = ""
+            document.querySelector('#output_box').value=currentvalue
+        }
+    </script>
 </body>
 </html>
