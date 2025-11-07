@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter any number :- <input type="text" id="input_box">
+    <br><br>
+    <button class="output_generator">Find</button>
+    <br><br>
+    <input type="text" class="output_box">
+    <script>
+        document.querySelector('.output_generator').onclick=()=>{
+            let data = Number(document.querySelector('#input_box').value)
+            let a = Math.floor(data%10)
+            let b = Math.floor(data/100)
+            let empty = Math.floor(data/10)
+            let c = Math.floor(empty%10)
+            let total = b+''+c+''+a
+            if(data==total){document.querySelector('.output_box').value="Yes!"}
+            else{document.querySelector('.output_box').value="No!"}
+        }
+    </script>
+</body>
+</html>
