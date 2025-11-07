@@ -224,7 +224,9 @@
             document.querySelector('#output_box').value=currentvalue
         }
         document.querySelector('.erase').onclick=()=>{
-            document.querySelector('#output_box').value=currentvalue.slice(0,-1)
+            let data = currentvalue.slice(0,-1)
+            document.querySelector('#output_box').value = data
+            currentvalue = data
         }
         </script>
 </body>

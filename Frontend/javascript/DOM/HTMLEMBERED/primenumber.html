@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter a number : <input type="text" class="input_tag">
+    <br><br>
+    <button class="checker">Find </button>
+    <br><br>
+    <input type="text" class="result" readonly>
+    <script>
+        document.querySelector('.checker').onclick= () => {
+            let data = Number(document.querySelector('.input_tag').value)
+            let counter=0
+            for(let i = 1; i<=data; i++){
+                if(data%i==0){
+                    counter++
+                }
+                if(counter > 2) {
+                    document.querySelector('.result').value = 'No! '
+                }
+                else {
+                    document.querySelector('.result').value = 'Yes!'
+                }
+            }
+        };
+    </script>
+</body>
+</html>
