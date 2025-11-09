@@ -26,9 +26,8 @@
             let element2=Number(document.querySelector('#width').value)
             let element3=document.querySelector('#color').value
             let element4=Number(document.querySelector('#total_box').value)
-            let element5=500
-            for(let i=0;i<=element4;i++){
-            document.querySelector('.box').innerHTML= `<div  style="height: ${element}px; width: ${element2}px; background-color: ${element3}; padding: 50px; margin: 100px+${element5}px"></div>`}
+            for(let i=0;i<element4;i++){
+            document.querySelector('.box').innerHTML= `<div  style="height: ${element}px; width: ${element2}px; background-color: ${element3}; padding: 50px; margin: 100px"></div>`}
         }
     </script>
 </body>
