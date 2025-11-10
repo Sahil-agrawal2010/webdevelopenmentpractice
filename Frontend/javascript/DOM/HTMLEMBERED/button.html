@@ -15,7 +15,7 @@
     <label for="color">Enter the color of container:- </label>
     <input type="text" id="color">
     <br><br>
-    <label for="total_box">Enter the number of box you want</label>
+    <label for="total_box">Enter the number of box you want:- </label>
     <input type="text" id="total_box">
     <br><br>
     <button class="click">Click Here!</button>
@@ -27,7 +27,7 @@
             let element3=document.querySelector('#color').value
             let element4=Number(document.querySelector('#total_box').value)
             for(let i=0;i<element4;i++){
-            document.querySelector('.box').innerHTML= `<div  style="height: ${element}px; width: ${element2}px; background-color: ${element3}; padding: 50px; margin: 100px"></div>`}
+            document.querySelector('.box').innerHTML+= `<div  style=" display:flex; height: ${element}px; width: ${element2}px; background-color: ${element3}; padding: 50px; margin: 100px"></div>`}
         }
     </script>
 </body>
