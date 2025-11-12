@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .box{
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
 <body>
+    <div class="main_contaoner">
     <label for="height">Enter the height of container:- </label>
     <input type="text"id="height">
     <br><br>
@@ -26,9 +35,14 @@
             let element2=Number(document.querySelector('#width').value)
             let element3=document.querySelector('#color').value
             let element4=Number(document.querySelector('#total_box').value)
+            if(element4<=10){
             for(let i=0;i<element4;i++){
-            document.querySelector('.box').innerHTML+= `<div  style=" display:flex; height: ${element}px; width: ${element2}px; background-color: ${element3}; padding: 50px; margin: 100px"></div>`}
+            document.querySelector('.box').innerHTML+= `<div  style=" display:flex; height: ${element}px; width: ${element2}px; background-color: ${element3}; padding: 50px; margin: 100px"></div>`}}
+            else{
+                document.querySelector('.click').innerText="Sorry the maximum number has been reached!"
+            }
         }
     </script>
+    </div>
 </body>
 </html>
