@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .first_button , .second_button {
+        width: 500px;
+        height: 40px;
+        font-size: 20px;
+        font-family: sans-serif;
+        border-radius: 12px;
+        background-color: #3e6180;
+        color: aliceblue;
+        margin-top: 100px;
+        margin-left: 160px;
+        box-shadow: rgba(0, 0, 0, 0.28) 0px 3px 10px;
+        border: 1px solid transparent;
+        cursor: pointer;
+    }
+    .first_button:hover,.second_button:hover{
+        background-color: aliceblue;
+        color: #3e6180;
+    }
+    .button_container{
+        display: flex;
+    }
+</style>
+<body>
+    <div class="button_container">
+ <button class="first_button">Add Data</button>
+ <button class="second_button">See data</button>
+    </div>
+    <div class="addData_container">
+    </div>
+    <script>
+        document.querySelector('.first_button').onclick=()=>{
+            console.log("testin the button")
+            document.querySelector('.addData_container').innerHTML=`
+            <div style="box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 10px; height: 600px; width: 500px; background-color : aliceblue; margin-left : 160px; margin-top : 20px" >
+    <input class="userInput_created" style="width: 280px; height: 40px; justify-content: center; align-items: center; font-size: 15px; font-family: sans-serif; border-radius: 10px; text-align: center; background-color: aliceblue; margin-top : 40px; margin-left : 100px;" type="text" placeholder="Enter the created at of data!">
+      <input class="userInput_name" style="width: 280px; height: 40px; justify-content: center; align-items: center; font-size: 15px; font-family: sans-serif; border-radius: 10px; text-align: center; background-color: aliceblue; margin-top : 40px; margin-left : 100px;" type="text" placeholder="Enter the name of data!">
+        <input class="userInput_number" style="width: 280px; height: 40px; justify-content: center; align-items: center; font-size: 15px; font-family: sans-serif; border-radius: 10px; text-align: center; background-color: aliceblue; margin-top : 40px; margin-left : 100px;" type="text" placeholder="Enter the number of data!">
+          <input class="userInput_id" style="width: 280px; height: 40px; justify-content: center; align-items: center; font-size: 15px; font-family: sans-serif; border-radius: 10px; text-align: center; background-color: aliceblue; margin-top : 40px; margin-left : 100px;" type="text" placeholder="Enter the id of data!">
+              <button class="submit_button" style="background-color: aliceblue; font-size: 15px; width: 200px; height: 40px; border-radius: 10px; margin-top :40px; margin-left:140px; cursor : pointer;">Submit</button>
+                </div>
+            `
+        }
+        // fetch("https://6915cfbd465a9144626dae3c.mockapi.io/Test")
+
+    </script>
+</body>
+</html>
