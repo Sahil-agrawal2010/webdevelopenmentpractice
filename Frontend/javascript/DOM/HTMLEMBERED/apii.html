@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 </head>
 <style>
-    .first_button , .second_button {
+    .first_button,
+    .second_button {
         width: 500px;
         height: 40px;
         font-size: 20px;
@@ -20,50 +22,81 @@
         border: 1px solid transparent;
         cursor: pointer;
     }
-    .first_button:hover,.second_button:hover{
+
+    .first_button:hover,
+    .second_button:hover {
         background-color: aliceblue;
         color: #3e6180;
     }
-    .button_container{
+
+    .button_container {
         display: flex;
     }
+
+    .addData_container {
+        width: 510px;
+    }
+
+    .seeData_container {
+        width: 510px;
+    }
 </style>
+
 <body>
     <div class="button_container">
- <button class="first_button">Add Data</button>
- <button class="second_button">See data</button>
+        <button class="first_button">Add Data</button>
+        <button class="second_button">See data</button>
     </div>
-    <div class="addData_container">
-    </div>
-    <div class="seeData_container">
-    </div>
+    <div class="addData_container"></div>
+    <div class="seeData_container"></div>
     <script>
-        document.querySelector('.first_button').onclick=()=>{
-            document.querySelector('.addData_container').innerHTML=`
+        document.querySelector(".first_button").onclick = () => {
+            document.querySelector(".addData_container").innerHTML = `
             <div style="box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 10px; height: 500px; width: 500px; background-color : aliceblue; margin-left : 160px; margin-top : 20px" >
     <input class="userInput_created" style="width: 280px; height: 40px; justify-content: center; align-items: center; font-size: 15px; font-family: sans-serif; border-radius: 10px; text-align: center; background-color: aliceblue; margin-top : 40px; margin-left : 100px;" type="text" placeholder="Enter the created at of data!">
       <input class="userInput_name" style="width: 280px; height: 40px; justify-content: center; align-items: center; font-size: 15px; font-family: sans-serif; border-radius: 10px; text-align: center; background-color: aliceblue; margin-top : 40px; margin-left : 100px;" type="text" placeholder="Enter the name of data!">
         <input class="userInput_number" style="width: 280px; height: 40px; justify-content: center; align-items: center; font-size: 15px; font-family: sans-serif; border-radius: 10px; text-align: center; background-color: aliceblue; margin-top : 40px; margin-left : 100px;" type="text" placeholder="Enter the number of data!">
           <input class="userInput_id" style="width: 280px; height: 40px; justify-content: center; align-items: center; font-size: 15px; font-family: sans-serif; border-radius: 10px; text-align: center; background-color: aliceblue; margin-top : 40px; margin-left : 100px;" type="text" placeholder="Enter the id of data!">
               <button class="submit_button" style="background-color: aliceblue; font-size: 15px; width: 200px; height: 40px; border-radius: 10px; margin-top :40px; margin-left:140px; cursor : pointer;">Submit</button>
+               <h1 style="border: 1px solid transparent; background-color: aliceblue; margin-left : 40px; font-size : 20px; margin-top : 40px; color : black; font-size: 15px; font-family: sans-serif" type="text" class="output1"></h1>
                 </div>
-            `
-        }
-        document.querySelector('.second_button').onclick=()=>{
-  document.querySelector('.seeData_container').innerHTML=`
+            `;
+            document.querySelector(".seeData_container").innerHTML = ''
+            document.querySelector(".submit_button").onclick = () => {
+            let element1 = document.querySelector(".userInput_created").value;
+            let element2 = document.querySelector(".userInput_name").value;
+            let element3 = document.querySelector(".userInput_number").value;
+            let element4 = document.querySelector(".userInput_id").value;
+        fetch("https://6915cfbd465a9144626dae3c.mockapi.io/Test",{
+        method: 'POST',
+        headers: {'content-type':'application/json'},
+         body:JSON.stringify({
+        'createdAt':element1,
+        'name': element2,
+        'number': element3,
+        'id': element4
+    })
+})
+if(element1=="" || element2=="" || element3=="" || element4==""){
+    document.querySelector('.output1').textContent="Sorry Data not added!"
+}
+else{
+    document.querySelector('.output1').textContent="Data added!"
+}
+            }
+
+        };
+        document.querySelector(".second_button").onclick = () => {
+            document.querySelector(".seeData_container").innerHTML = `
       <div style="box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 10px; height: 400px; width: 500px; background-color : aliceblue; margin-left : 820px; margin-top : 20px" >
            <input class="userInput_idSee" style="width: 280px; height: 40px; justify-content: center; align-items: center; font-size: 15px; font-family: sans-serif; border-radius: 10px; text-align: center; background-color: aliceblue; margin-top : 140px; margin-left : 100px;" type="text" placeholder="Enter the id of data!">
-                   <button class="submit_buttonSee" style="background-color: aliceblue; font-size: 15px; width: 200px; height: 40px; border-radius: 10px; margin-top :40px; margin-left:140px; cursor : pointer;">Submit</button>
+                   <button class="see_button" style="background-color: aliceblue; font-size: 15px; width: 200px; height: 40px; border-radius: 10px; margin-top :40px; margin-left:140px; cursor : pointer;">Submit</button>
 
          </div>
-  `
- document.querySelector('.submit_button').onclick=()=>{
-    let element1=document.querySelector('.userInput_created').textContent=""
-    // console.log(element1)
-  }
+  `;
+            document.querySelector(".addData_container").innerHTML = ''
         }
-        // fetch("https://6915cfbd465a9144626dae3c.mockapi.io/Test")
-
     </script>
 </body>
+
 </html>
