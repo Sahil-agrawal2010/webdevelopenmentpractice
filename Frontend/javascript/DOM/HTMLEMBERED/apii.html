@@ -35,11 +35,12 @@
     </div>
     <div class="addData_container">
     </div>
+    <div class="seeData_container">
+    </div>
     <script>
         document.querySelector('.first_button').onclick=()=>{
-            console.log("testin the button")
             document.querySelector('.addData_container').innerHTML=`
-            <div style="box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 10px; height: 600px; width: 500px; background-color : aliceblue; margin-left : 160px; margin-top : 20px" >
+            <div style="box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 10px; height: 500px; width: 500px; background-color : aliceblue; margin-left : 160px; margin-top : 20px" >
     <input class="userInput_created" style="width: 280px; height: 40px; justify-content: center; align-items: center; font-size: 15px; font-family: sans-serif; border-radius: 10px; text-align: center; background-color: aliceblue; margin-top : 40px; margin-left : 100px;" type="text" placeholder="Enter the created at of data!">
       <input class="userInput_name" style="width: 280px; height: 40px; justify-content: center; align-items: center; font-size: 15px; font-family: sans-serif; border-radius: 10px; text-align: center; background-color: aliceblue; margin-top : 40px; margin-left : 100px;" type="text" placeholder="Enter the name of data!">
         <input class="userInput_number" style="width: 280px; height: 40px; justify-content: center; align-items: center; font-size: 15px; font-family: sans-serif; border-radius: 10px; text-align: center; background-color: aliceblue; margin-top : 40px; margin-left : 100px;" type="text" placeholder="Enter the number of data!">
@@ -47,6 +48,19 @@
               <button class="submit_button" style="background-color: aliceblue; font-size: 15px; width: 200px; height: 40px; border-radius: 10px; margin-top :40px; margin-left:140px; cursor : pointer;">Submit</button>
                 </div>
             `
+        }
+        document.querySelector('.second_button').onclick=()=>{
+  document.querySelector('.seeData_container').innerHTML=`
+      <div style="box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 10px; height: 400px; width: 500px; background-color : aliceblue; margin-left : 820px; margin-top : 20px" >
+           <input class="userInput_idSee" style="width: 280px; height: 40px; justify-content: center; align-items: center; font-size: 15px; font-family: sans-serif; border-radius: 10px; text-align: center; background-color: aliceblue; margin-top : 140px; margin-left : 100px;" type="text" placeholder="Enter the id of data!">
+                   <button class="submit_buttonSee" style="background-color: aliceblue; font-size: 15px; width: 200px; height: 40px; border-radius: 10px; margin-top :40px; margin-left:140px; cursor : pointer;">Submit</button>
+
+         </div>
+  `
+ document.querySelector('.submit_button').onclick=()=>{
+    let element1=document.querySelector('.userInput_created').textContent=""
+    // console.log(element1)
+  }
         }
         // fetch("https://6915cfbd465a9144626dae3c.mockapi.io/Test")
 
