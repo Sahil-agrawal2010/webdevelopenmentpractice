@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main_conatainer{
+        border: 1px solid transparent;
+        height: 400px;
+        width: 400px; 
+        position: relative;
+        top: 180px;
+        left: 500px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    .main_heading{
+        position: relative;
+        top: 45px;
+        left: 120px;
+        font-size: 28px;
+        font-family: sans-serif;
+        font-weight: 600;
+        color: #667EEA;
+    }
+    .second_heading{
+        position: relative;
+        top: 50px;
+        left: 180px;
+        font-size: 15px;
+        font-family: sans-serif;
+        color: #667EEA;
+    }
+    .ask p{
+        font-size: 15px;
+        font-family: sans-serif;
+        position: relative;
+        left: 70px;
+        top: 60px;
+    }
+    .bat,.ball,.stump{
+        cursor: pointer;
+        border: 1px solid transparent;
+        height: 40px;
+        width: 80px;
+        background-color: #667EEA;
+        color: white;
+        border-radius: 8px;
+        position: relative;
+        margin-left: 40px;
+        top: 60px;
+        gap: 20px;
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    }
+    .bat:hover,.ball:hover,.stump:hover{
+        border: 2px solid black;
+        background-color: #3752cb;
+    }
+    .output{
+        border: 1px solid transparent;
+        width: 350px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 100px;
+        left: 20px;
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: #667EEA;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+    .score_User,.score_Computer{
+        position: relative;
+        top: 140px;
+        left: 55px;
+        color: black;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+<body>
+    <div class="main_conatainer">
+        <div class="main_heading">Cricket Game</div>
+        <div class="second_heading">With Ai</div>
+        <div class="ask"><p>Choose any of the one option to play:- </p></div>
+        <div class="userInput">
+            <button class="bat">Bat</button>
+            <button class="ball">Ball</button>
+            <button class="stump">Stump</button>
+        </div>
+        <div class="output">The Result!</div>
+        <div class="score_User"></div>
+        <div class="score_Computer"></div>
+    </div>
+    <script>
+let score_user=0
+let score_computer=0
+document.querySelector('.bat').onclick=()=>{
+        let element=Math.floor(Math.random()*3)
+if(element==0){element="bat"}
+else if(element==1){element="ball"}
+else if(element==2){element="stump"}
+else{element="sorry!wrong output!"}
+    if(element==="stump"){
+        document.querySelector('.output').textContent="AI choosed Stump so You lost!"
+        score_computer++
+    }
+    else if(element==="ball"){
+        document.querySelector('.output').textContent="AI choosed Ball so You won!"
+        score_user++
+    }
+    else{document.querySelector('.output').textContent="AI also choosed Bat so Draw!"}
+    document.querySelector('.score_User').textContent=`The score of User is ${score_user}.`
+document.querySelector('.score_Computer').textContent=`The score of Computer is ${score_computer}.`
+}
+document.querySelector('.ball').onclick=()=>{
+        let element=Math.floor(Math.random()*3)
+if(element==0){element="bat"}
+else if(element==1){element="ball"}
+else if(element==2){element="stump"}
+else{element="sorry!wrong output!"}
+    document.querySelector('.output').textContent=""
+    if(element==="stump"){
+        document.querySelector('.output').textContent="AI choosed Stump so You Won!"
+        score_user++
+    }
+    else if(element==="bat"){
+        document.querySelector('.output').textContent="AI choosed Bat so You lost!"
+        score_computer++
+    }
+    else{document.querySelector('.output').textContent="AI also choosed Ball so Draw!"}
+    document.querySelector('.score_User').textContent=`The score of User is ${score_user}.`
+document.querySelector('.score_Computer').textContent=`The score of Computer is ${score_computer}.`
+}
+document.querySelector('.stump').onclick=()=>{
+        let element=Math.floor(Math.random()*3)
+if(element==0){element="bat"}
+else if(element==1){element="ball"}
+else if(element==2){element="stump"}
+else{element="sorry!wrong output!"}
+    document.querySelector('.output').textContent=""
+    if(element==="bat"){
+        document.querySelector('.output').textContent="AI choosed Bat so You Won!"
+        score_user++
+    }
+    else if(element==="ball"){
+        document.querySelector('.output').textContent="AI choosed Ball so You Lost!"
+         score_computer++
+}
+    else{document.querySelector('.output').textContent="AI also choosed Stump so Draw!"}
+    document.querySelector('.score_User').textContent=`The score of User is ${score_user}.`
+document.querySelector('.score_Computer').textContent=`The score of Computer is ${score_computer}.`
+}
+    </script>
+</body>
+</html>
