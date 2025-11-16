@@ -1,0 +1,46 @@
+<!-- https://restcountries.com/v3.1/name/nepal?fields=currencies,languages,capital -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .main_container {
+      border: 1px solid black;
+      height: 500px;
+      width: 500px;
+    }
+    .main {
+      width: 400px;
+      height: 40px;
+    }
+  </style>
+  <body>
+    <div class="main_container">
+      <input
+        type="text"
+        placeholder="Enter the name of city of which you want the information: "
+        class="main"
+      />
+      <button class="output_button">Submit</button>
+      <button class="main_language">Language</button>
+      <button class="main_capitalcity">Capital City</button>
+      <button class="main_currency">Currency</button>
+      <div class="output_display"></div>
+    </div>
+    <script>
+      document.querySelector(".output_button").onclick = () => {
+        let element = document.querySelector(".main").value;
+        fetch("https://restcountries.com/v3.1/name/" + element)
+          .then((a) => {
+            return a.json();
+          })
+          .then((b) => {
+            console.log(b[0]['region'])
+          });
+      };
+    </script>
+  </body>
+</html>
