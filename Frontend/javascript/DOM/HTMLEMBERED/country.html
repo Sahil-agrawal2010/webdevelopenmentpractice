@@ -29,6 +29,13 @@
       <button class="main_capitalcity">Capital City</button>
       <button class="main_currency">Currency</button>
       <div class="output_display"></div>
+      <div class="output_display1"></div>
+      <div class="output_display2"></div>
+      <div class="output_display3"></div>
+      <div class="output_display4"></div>
+      <div class="output_display5"></div>
+      <div class="output_language"></div>
+
     </div>
     <script>
       document.querySelector(".output_button").onclick = () => {
@@ -38,9 +45,24 @@
             return a.json();
           })
           .then((b) => {
-            console.log(b[0]['region'])
-          });
-      };
+            document.querySelector('.output_display').innerText=b[0]['region']
+            document.querySelector('.output_display1').innerText=b[0]['subregion']
+            document.querySelector('.output_display2').innerText=b[0]['area']
+            document.querySelector('.output_display3').innerText=b[0]['landlocked']
+            document.querySelector('.output_display4').innerText=b[0]['borders']
+            document.querySelector('.output_display5').innerText=b[0]['latlng']
+          })
+      }
+      document.querySelector('.main_language').onclick = () =>{
+        let element = document.querySelector(".main").value;
+           fetch("https://restcountries.com/v3.1/name/" + element)
+          .then((a) => {
+            return a.json();
+          })
+          .then((b) => {
+            document.querySelector('.output_language').innerText=b[0]['languages[0]']
+          })
+      }
     </script>
   </body>
 </html>
