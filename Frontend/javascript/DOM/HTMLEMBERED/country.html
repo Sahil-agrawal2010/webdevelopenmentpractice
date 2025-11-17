@@ -34,7 +34,6 @@
       <div class="output_display3"></div>
       <div class="output_display4"></div>
       <div class="output_display5"></div>
-      <div class="output_language"></div>
 
     </div>
     <script>
@@ -45,23 +44,58 @@
             return a.json();
           })
           .then((b) => {
-            document.querySelector('.output_display').innerText=b[0]['region']
-            document.querySelector('.output_display1').innerText=b[0]['subregion']
-            document.querySelector('.output_display2').innerText=b[0]['area']
-            document.querySelector('.output_display3').innerText=b[0]['landlocked']
-            document.querySelector('.output_display4').innerText=b[0]['borders']
-            document.querySelector('.output_display5').innerText=b[0]['latlng']
+            document.querySelector('.output_display').innerText=`The region of the given country is ${b[0]['region']}`
+            document.querySelector('.output_display1').innerText=`The sub-region of the given country is ${b[0]['subregion']}`
+            document.querySelector('.output_display2').innerText=`The area of teh given country is ${b[0]['area']} km^2`
+            document.querySelector('.output_display3').innerText=b[0]['landlocked']?"The country is a landlocked country!":"The country is notr a Landlocked country!";
+            document.querySelector('.output_display4').innerText=`The country border lies in ${b[0]['borders']}`
+            document.querySelector('.output_display5').innerText=`The latitude of the country is ${b[0]['latlng[0]']} and the longitude of the country is ${b[0]['latlng[1]']}.`
           })
       }
       document.querySelector('.main_language').onclick = () =>{
         let element = document.querySelector(".main").value;
            fetch("https://restcountries.com/v3.1/name/" + element)
-          .then((a) => {
-            return a.json();
+          .then((l) => {
+            return l.json();
           })
-          .then((b) => {
-            document.querySelector('.output_language').innerText=b[0]['languages[0]']
+          .then((m) => {
+            document.querySelector('.output_display').innerText=`The language spoken in this country is ${m[0]['languages']}!`
+            document.querySelector('.output_display1').innerText=""
+            document.querySelector('.output_display2').innerText=""
+            document.querySelector('.output_display3').innerText=""
+            document.querySelector('.output_display4').innerText=""
+            document.querySelector('.output_display5').innerText=""
           })
+      }
+            document.querySelector('.main_capitalcity').onclick = () =>{
+        let element = document.querySelector(".main").value;
+           fetch("https://restcountries.com/v3.1/name/" + element)
+          .then((f) => {
+            return f.json();
+          })
+          .then((g) => {
+            document.querySelector('.output_display').innerText=`The capital city of this country is ${g[0]['capital']}!`
+            document.querySelector('.output_display1').innerText=""
+            document.querySelector('.output_display2').innerText=""
+            document.querySelector('.output_display3').innerText=""
+            document.querySelector('.output_display4').innerText=""
+            document.querySelector('.output_display5').innerText=""
+          })
+   document.querySelector(".main_currency").onclick = () => {
+        let element = document.querySelector(".main").value;
+        fetch("https://restcountries.com/v3.1/name/" + element)
+          .then((r) => {
+            return r.json();
+          })
+          .then((p) => {
+            document.querySelector('.output_display').innerText=`The currency of this country is ${p[0]['currencies']}!`
+            document.querySelector('.output_display1').innerText=""
+            document.querySelector('.output_display2').innerText=""
+            document.querySelector('.output_display3').innerText=""
+            document.querySelector('.output_display4').innerText=""
+            document.querySelector('.output_display5').innerText=""
+          })
+      }
       }
     </script>
   </body>
