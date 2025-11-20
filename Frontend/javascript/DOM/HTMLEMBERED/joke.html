@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="jokes" placeholder="Enter any number betewwn 0 to 9:- ">
+    <button class="submit_button">Submit</button>
+    <div class="output"></div>
+</body>
+<script>
+    let jokes = [
+        "Why don’t scientists trust atoms? Because they make up everything!",
+        "Why did the scarecrow win an award? Because he was outstanding in his field!",
+        "Why don’t eggs tell jokes? They’d crack each other up!",
+        "What do you call fake spaghetti? An impasta!",
+        "Why did the math book look sad? Because it had too many problems.",
+        "What do you call cheese that isn’t yours? Nacho cheese!",
+        "Why couldn’t the bicycle stand up by itself? It was two-tired.",
+        "What do you get when you cross a snowman and a vampire? Frostbite!",
+        "Why did the computer go to the doctor? Because it had a virus!",
+        "Why was the broom late? It swept in!"
+    ];
+    document.querySelector('.submit_button').onclick=()=>{
+    let element=document.querySelector('.jokes').value
+for(let i=0;i<element;i++){
+    document.querySelector('.output').innerText+=jokes[i]
+}
+}
+</script>
+</html>
