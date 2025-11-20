@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main_container">
+      <input
+        type="text"
+        class="search_bar"
+        placeholder="Enter any number between 0 to 10 :- "
+      />
+      <div class="question_display"></div>
+      <input type="radio" name="Option" id="option_1" />
+      <label for="opt1" id="label_1"></label>
+      <input type="radio" name="Option" id="option_2" />
+      <label for="opt2" id="label_2"></label>
+      <input type="radio" name="Option" id="option_3" />
+      <label for="opt3" id="label_3"></label>
+      <input type="radio" name="Option" id="option_4" />
+      <label for="opt4" id="label_4"></label>
+      <button>Submit</button>
+    </div>
+    <script>
+      let array = [
+        " • What is the largest planet in our solar system?",
+        " • Who wrote the play Romeo and Juliet?",
+        " • Which element has the chemical symbol O?",
+        " • What is the capital city of Australia?",
+        " • How many continents are there on Earth?",
+        " • In which year did the Titanic sink?",
+        " • Which animal is known as the “King of the Jungle”?",
+        " • What is the fastest land animal in the world?",
+        " • Who painted the Mona Lisa?",
+        " • What is the hardest natural substance on Earth?",
+      ];
+      let array_options = [
+        [
+          (document.querySelector("#label_1").value = "Jupiter"),
+          (document.querySelector("#label_2").value = "Pluto"),
+          (document.querySelector("#label_3").value = "Neptune"),
+          (document.querySelector("#label_4").value = "Earth"),
+        ],
+        [
+          (document.querySelector("#label_1").value = "Dhairya Agrawal"),
+          (document.querySelector("#label_2").value = "William Shakespeare"),
+          (document.querySelector("#label_3").value = "Mayank Bindal"),
+          (document.querySelector("#label_4").value = "Rohan Bajaj"),
+        ],
+        [
+          (document.querySelector("#label_1").value = "N"),
+          (document.querySelector("#label_2").value = "I"),
+          (document.querySelector("#label_3").value = "O"),
+          (document.querySelector("#label_4").value = "Y"),
+        ],
+        [
+          (document.querySelector("#label_1").value = "Sydney"),
+          (document.querySelector("#label_2").value = "Colombia"),
+          (document.querySelector("#label_3").value = "Nepal"),
+          (document.querySelector("#label_4").value = "Canbera"),
+        ],
+        [
+          (document.querySelector("#label_1").value = "7"),
+          (document.querySelector("#label_2").value = "2"),
+          (document.querySelector("#label_3").value = "8"),
+          (document.querySelector("#label_4").value = "10"),
+        ],
+        [
+          (document.querySelector("#label_1").value = "1999"),
+          (document.querySelector("#label_2").value = "1912"),
+          (document.querySelector("#label_3").value = "4985"),
+          (document.querySelector("#label_4").value = "200 B.C."),
+        ],
+        [
+          (document.querySelector("#label_1").value = "Zebra"),
+          (document.querySelector("#label_2").value = "Rat"),
+          (document.querySelector("#label_3").value = "Lion"),
+          (document.querySelector("#label_4").value = "Tiger"),
+        ],
+        [
+          (document.querySelector("#label_1").value = "Ostrich"),
+          (document.querySelector("#label_2").value = "Dhairya agrawal"),
+          (document.querySelector("#label_3").value = "Sparrow"),
+          (document.querySelector("#label_4").value = "Chetta"),
+        ],
+        [
+          (document.querySelector("#label_1").value = "Leo Nardo Da Vinchi"),
+          (document.querySelector("#label_2").value = "Pikashow"),
+          (document.querySelector("#label_3").value = "Eric Agrawal"),
+          (document.querySelector("#label_4").value = "Roman Rings"),
+        ],
+        [
+          (document.querySelector("#label_1").value = "Stone"),
+          (document.querySelector("#label_2").value = "Diamond"),
+          (document.querySelector("#label_3").value = "Silver"),
+          (document.querySelector("#label_4").value = "Pipe"),
+        ],
+      ];
+    </script>
+  </body>
+</html>
