@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="userInput">
+    <button name="submit" class="userInputGet">Submit</button>
+    <div class="output_display"></div>
+</body>
+<script>
+    document.querySelector('.userInputGet').onclick=()=>{
+    let element=document.querySelector('.userInput').value
+    let element2=element.split()
+    let finalElement=element2[0].length
+    document.querySelector('.output_display').textContent=finalElement
+    }
+</script>
+</html>
