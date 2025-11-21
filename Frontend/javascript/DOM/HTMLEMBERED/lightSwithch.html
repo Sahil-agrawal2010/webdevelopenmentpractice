@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="userInput">
+    <button class="submit">Submit</button>
+    <div class="main_container">
+    </div>
+    <script>
+        document.querySelector('.submit').onclick=()=>{
+       let element = document.querySelector('.userInput').value
+document.querySelector('.main_container').innerHTML=`<div style="background-color: ${element};"></div>`
+        }
+    </script>
+</body>
+</html>

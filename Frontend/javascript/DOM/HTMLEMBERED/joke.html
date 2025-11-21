@@ -26,7 +26,11 @@
     document.querySelector('.submit_button').onclick=()=>{
     let element=document.querySelector('.jokes').value
 for(let i=0;i<element;i++){
-    document.querySelector('.output').innerText+=jokes[i]
+    document.querySelector('.output').innerHTML += `
+    <br>
+    <h4>${jokes[i]}</h4>
+    <br>
+    `
 }
 }
 </script>
