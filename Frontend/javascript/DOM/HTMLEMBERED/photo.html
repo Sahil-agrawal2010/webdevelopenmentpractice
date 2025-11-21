@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .first_box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        font-size: 20px;
+        border: 1px solid black;
+        height: 100px;
+        width: 100px;
+        border-radius: 10px;
+        position: relative;
+        left: 200px;
+        top: 100px;
+    }
+    .second_box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        font-size: 20px;
+        border: 1px solid black;
+        height: 100px;
+        width: 100px;
+        border-radius: 10px;
+        position: relative;
+        left: 400px;
+    }
+    .third_box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        font-size: 20px;
+        border: 1px solid black;
+        height: 100px;
+        width: 100px;
+        border-radius: 10px;
+        position: relative;
+        left: 600px;
+        bottom: 100px;
+    }
+    .fourth_box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        font-size: 20px;
+        border: 1px solid black;
+        height: 100px;
+        width: 100px;
+        border-radius: 10px;
+        position: relative;
+        left: 800px;
+        bottom: 200px;
+    }
+    .fifith_box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        font-size: 20px;
+        border: 1px solid black;
+        height: 100px;
+        width: 100px;
+        border-radius: 10px;
+        position: relative;
+        left: 1000px;
+        bottom: 300px;
+    }
+    .output_1{
+        position: relative;
+        left: 200px;
+        bottom: 200px;
+    }
+       .output_2{
+        position: relative;
+        left: 400px;
+        bottom: 180px;
+    }
+       .output_3{
+        position: relative;
+        left: 600px;
+        bottom: 200px;
+    }
+       .output_4{
+        position: relative;
+        left: 800px;
+        bottom: 220px;
+    }
+       .output_5{
+        position: relative;
+        left: 1000px;
+        bottom: 220px;
+    }
+</style>
+<body>
+    <div class="main_conatainer">
+        <div class="first_box">1</div>
+        <div class="second_box">2</div>
+        <div class="third_box">3</div>
+        <div class="fourth_box">4</div>
+        <div class="fifith_box">5</div>
+        <div class="output_1"></div>
+        <div class="output_2"></div>
+        <div class="output_3"></div>
+        <div class="output_4"></div>
+        <div class="output_5"></div>
+    </div>
+    <script>
+        document.querySelector('.first_box').onclick = () => {
+            document.querySelector('.output_1').innerHTML = `
+            <img src="https://render.fineartamerica.com/images/rendered/medium/print/6/8/break/images-medium-5/awesome-solitude-bess-hamiti.jpg" alt="Nature" height="300" width="300">
+            `;
+            document.querySelector('.output_2').innerText=""
+            document.querySelector('.output_3').innerText=""
+            document.querySelector('.output_4').innerText=""
+            document.querySelector('.output_5').innerText=""
+        }
+               document.querySelector('.second_box').onclick = () => {
+            document.querySelector('.output_2').innerHTML = `
+            <img src="https://posterjack.ca/cdn/shop/articles/landscape_photography_tips_featured_image.jpg?v=1563408049&width=1500" alt="Nature" height="300" width="300">
+            `;
+             document.querySelector('.output_1').innerText=""
+            document.querySelector('.output_3').innerText=""
+            document.querySelector('.output_4').innerText=""
+            document.querySelector('.output_5').innerText=""
+        }
+               document.querySelector('.third_box').onclick = () => {
+            document.querySelector('.output_3').innerHTML = `
+            <img src="https://images.pexels.com/photos/2893685/pexels-photo-2893685.jpeg?cs=srgb&dl=pexels-ozgomz-2893685.jpg&fm=jpg" alt="Nature" height="300" width="300">
+            `;
+             document.querySelector('.output_2').innerText=""
+            document.querySelector('.output_1').innerText=""
+            document.querySelector('.output_4').innerText=""
+            document.querySelector('.output_5').innerText=""
+        }
+               document.querySelector('.fourth_box').onclick = () => {
+            document.querySelector('.output_4').innerHTML = `
+            <img src="https://images.ctfassets.net/bht415zek091/54oJ9alUromyK9Fu9a40kX/62502559eeca530edc372180e062d4a8/IMG_8492-copy-web.jpg" alt="Nature" height="300" width="300">
+            `;
+             document.querySelector('.output_2').innerText=""
+            document.querySelector('.output_3').innerText=""
+            document.querySelector('.output_1').innerText=""
+            document.querySelector('.output_5').innerText=""
+        }
+               document.querySelector('.fifith_box').onclick = () => {
+            document.querySelector('.output_5').innerHTML = `
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvFBa3G11OUBYADP7ouSBgwiiRzSYorF4dfg&s" alt="Nature" height="300" width="300">
+            `;
+             document.querySelector('.output_2').innerText=""
+            document.querySelector('.output_3').innerText=""
+            document.querySelector('.output_4').innerText=""
+            document.querySelector('.output_1').innerText=""
+        }
+    </script>
+</body>
+</html>
