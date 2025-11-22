@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="userInput" placeholder="Enter any number between one 1 to 10 :- ">
+    <button name="submit" class="getUserInput">Submit</button>
+    <div class="output_container"></div>
+    <script>
+        document.querySelector('.getUserInput').onclick=()=>{
+                  let element=parseInt(document.querySelector('.userInput').value)
+        let element2=Math.floor(Math.random()*10)
+        console.log(element2)
+        if(element2>element){
+            document.querySelector('.output_container').textContent="Low number!"
+        }
+        if(element>element2){
+            document.querySelector('.output_container').textContent="High Number"
+        }
+        if(element2==element){
+            document.querySelector('.output_container').textContent="Wow!You gussed teh correct number guessed by computer!"
+        }
+        }
+    </script>
+</body>
+</html>
