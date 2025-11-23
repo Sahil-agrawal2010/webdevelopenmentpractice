@@ -5,32 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .main_container{
+        border: 1px solid transparent;
+        height: 600px;
+        width: 600px;
+        position: relative;
+        left: 420px;
+        top: 100px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+    .jokes{
+        width: 400px;
+        height: 40px;
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 16px;
+        border-radius: 8px;
+        position: relative;
+        left: 100px;
+        top: 50px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+    .submit_button{
+        width: 80px;
+        height: 25px;
+        text-align: center;
+        font-family: sans-serif;
+        position: relative;
+        top: 100px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+    .output{
+        position: relative;
+        top: 100px;
+        left: 20px;
+        font-family: sans-serif;
+    }
+</style>
 <body>
-    <input type="text" class="jokes" placeholder="Enter any number betewwn 0 to 9:- ">
+    <div class="main_container">
+    <input type="text" class="jokes" placeholder="Enter any number between 0 to 9:- ">
     <button class="submit_button">Submit</button>
     <div class="output"></div>
+    </div>
 </body>
 <script>
     let jokes = [
-        "Why don’t scientists trust atoms? Because they make up everything!",
-        "Why did the scarecrow win an award? Because he was outstanding in his field!",
-        "Why don’t eggs tell jokes? They’d crack each other up!",
-        "What do you call fake spaghetti? An impasta!",
-        "Why did the math book look sad? Because it had too many problems.",
-        "What do you call cheese that isn’t yours? Nacho cheese!",
-        "Why couldn’t the bicycle stand up by itself? It was two-tired.",
-        "What do you get when you cross a snowman and a vampire? Frostbite!",
-        "Why did the computer go to the doctor? Because it had a virus!",
-        "Why was the broom late? It swept in!"
+        " • Why don’t scientists trust atoms? Because they make up everything!",
+        " • Why did the scarecrow win an award? Because he was outstanding in his field!",
+        " • Why don’t eggs tell jokes? They’d crack each other up!",
+        " • What do you call fake spaghetti? An impasta!",
+        " • Why did the math book look sad? Because it had too many problems.",
+        " • What do you call cheese that isn’t yours? Nacho cheese!",
+        " • Why couldn’t the bicycle stand up by itself? It was two-tired.",
+        " • What do you get when you cross a snowman and a vampire? Frostbite!",
+        " • Why did the computer go to the doctor? Because it had a virus!",
+        " • Why was the broom late? It swept in!"
     ];
     document.querySelector('.submit_button').onclick=()=>{
     let element=document.querySelector('.jokes').value
 for(let i=0;i<element;i++){
     document.querySelector('.output').innerHTML += `
-    <br>
     <h4>${jokes[i]}</h4>
-    <br>
     `
+}
+document.querySelector('.jokes').onclick=()=>{
+    document.querySelector('.output').textContent=""
 }
 }
 </script>

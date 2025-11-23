@@ -5,10 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+       .main_container{
+        border: 1px solid transparent;
+        height: 200px;
+        width: 600px;
+        position: relative;
+        left: 420px;
+        top: 100px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+       .userInput{
+        border: 1px solid transparent;
+        width: 400px;
+        height: 40px;
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 16px;
+        border-radius: 8px;
+        position: relative;
+        left: 100px;
+        top: 50px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+        .userInputGet{
+        width: 80px;
+        height: 25px;
+        text-align: center;
+        font-family: sans-serif;
+        position: relative;
+        top: 100px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+       .output_display{
+        position: relative;
+        left: 500px;
+        top: 100px;
+        left: 20px;
+        font-family: sans-serif;
+    }
+</style>
 <body>
-    <input type="text" class="userInput">
+    <div class="main_container">
+    <input type="text" class="userInput" placeholder="Enter anything here!">
     <button name="submit" class="userInputGet">Submit</button>
     <div class="output_display"></div>
+    </div>
 </body>
 <script>
     document.querySelector('.userInputGet').onclick=()=>{

@@ -5,10 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .main_container{
+             border: 1px solid transparent;
+        height: 200px;
+        width: 600px;
+        position: relative;
+        left: 420px;
+        top: 100px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+           .userInput{
+        border: 1px solid transparent;
+        width: 400px;
+        height: 40px;
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 16px;
+        border-radius: 8px;
+        position: relative;
+        left: 100px;
+        top: 50px;
+       box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    }
+            .getUserInput{
+        width: 80px;
+        height: 25px;
+        text-align: center;
+        font-family: sans-serif;
+        position: relative;
+        top: 100px;
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    }
+           .output_container{
+        position: relative;
+        left: 500px;
+        top: 100px;
+        left: 20px;
+        font-family: sans-serif;
+    }
+</style>
 <body>
+    <div class="main_container">
     <input type="text" class="userInput" placeholder="Enter any number between one 1 to 10 :- ">
     <button name="submit" class="getUserInput">Submit</button>
     <div class="output_container"></div>
+    </div>
     <script>
         document.querySelector('.getUserInput').onclick=()=>{
                   let element=parseInt(document.querySelector('.userInput').value)
@@ -18,7 +60,7 @@
             document.querySelector('.output_container').textContent="Low number!"
         }
         if(element>element2){
-            document.querySelector('.output_container').textContent="High Number"
+            document.querySelector('.output_container').textContent="High Number!"
         }
         if(element2==element){
             document.querySelector('.output_container').textContent="Wow!You gussed teh correct number guessed by computer!"
