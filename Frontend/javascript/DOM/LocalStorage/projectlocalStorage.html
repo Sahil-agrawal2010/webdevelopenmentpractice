@@ -5,21 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .main_container{
+        border: 1px solid transparent;
+        height: 600px;
+        width: 600px;
+        position: relative;
+        left: 400px;
+        top: 100px;
+        font-family: sans-serif;
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+    .userInput_name,.userInput_age,.userInput_gender,.userInput_phoneNumber{
+        position: relative;
+        top: 40px;
+        left: 150px;
+    }.userInput_age{
+        width: 174px;
+    }.userInput_gender{
+        width: 150px;
+    }.userInput_phoneNumber{
+        position: relative;
+        left: 100px;
+        width: 150px;
+    }.getUserInput{
+        position: relative;
+        left: 350px;
+        top: 50px;
+        width: 140px;
+        height: 30px;
+        font-family: sans-serif;
+    }
+    .save_message{
+        position: relative;
+        left: 350px;
+        top: 40px;
+    }
+    .ask_userInput{
+        position: relative;
+        top: 100px;
+        left: 200px;
+    }
+    .yes_userInput,.no_userInput{
+        position: relative;
+        top: 120px;
+        left: 250px;
+        font-family: sans-serif;
+    }
+    .message_reset{
+        position: relative;
+        top: 120px;
+        left: 240px;
+    }
+</style>
 <body>
     <div class="main_container">
-    <label for="userInput_name">Enter your Name:- </label><input type="text" class="userInput_name" required>
+    <label class="userInput_name" for="userInput_name">Enter your Name:- </label><input type="text" class="userInput_name" required>
     <br><br>
-    <label for="userInput_age">Enter your Age:- </label><input type="text" class="userInput_age" required>
+    <label class="userInput_age" for="userInput_age">Enter your Age:- </label><input type="text" class="userInput_age" required>
     <br><br>
-    <label for="userInput_gender">Enter your Gender:- </label><input type="text" class="userInput_gender" required>
+    <label class="userInput_gender" for="userInput_gender">Enter your Gender:- </label><input type="text" class="userInput_gender" required>
     <br><br>
-    <label for="userInput_phoneNumber">Enter your Phone Number:- </label><input type="text" class="userInput_phoneNumber" required>
+    <label class="userInput_phoneNumber" for="userInput_phoneNumber">Enter your Phone Number:- </label><input type="text" class="userInput_phoneNumber" required>
     <br><br>
     <button type="submit" class="getUserInput">Submit Data</button>
     <br><br>
     <div class="save_message"></div>
     <br><br>
-    <label>Do You Wnat To Reset Data :- </label>
+    <label class="ask_userInput">Do You Wnat To Reset Data :- </label>
     <br>
     <button class="yes_userInput">Yes</button><button  class="no_userInput">No</button>
     <br><br>
@@ -31,6 +84,9 @@
             let second=document.querySelector('.userInput_age').value
             let third=document.querySelector('.userInput_gender').value
             let fourth=document.querySelector('.userInput_phoneNumber').value
+            if(first==="" && second==="" && third==="" && fourth===""){
+          document.querySelector('.save_message').innerText="Please Enter the value!"
+            }
             localStorage.setItem("User_name",first)
             localStorage.setItem("User_age",second)
             localStorage.setItem("User_gender",third)
