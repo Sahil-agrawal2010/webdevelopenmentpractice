@@ -16,6 +16,15 @@
         localStorage.setItem("userData",JSON.stringify(object1))
         let newObject=JSON.parse(localStorage.getItem("userData")) 
         console.log(typeof newObject)
+        let object2={
+            "Name":"Rohan Bajaj",
+            "Age":15,
+            "Class":10,
+            "isStuding":true
+        }
+        localStorage.setItem("userData2",JSON.stringify(object2))
+        localStorage.removeItem("userData")
+        localStorage.clear()
     </script>
 </body>
 </html>
