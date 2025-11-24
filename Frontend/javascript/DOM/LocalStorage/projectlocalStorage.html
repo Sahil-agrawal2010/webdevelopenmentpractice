@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main_container">
+    <label for="userInput_name">Enter your Name:- </label><input type="text" class="userInput_name" required>
+    <br><br>
+    <label for="userInput_age">Enter your Age:- </label><input type="text" class="userInput_age" required>
+    <br><br>
+    <label for="userInput_gender">Enter your Gender:- </label><input type="text" class="userInput_gender" required>
+    <br><br>
+    <label for="userInput_phoneNumber">Enter your Phone Number:- </label><input type="text" class="userInput_phoneNumber" required>
+    <br><br>
+    <button type="submit" class="getUserInput">Submit Data</button>
+    <br><br>
+    <div class="save_message"></div>
+    <br><br>
+    <label>Do You Wnat To Reset Data :- </label>
+    <br>
+    <button class="yes_userInput">Yes</button><button  class="no_userInput">No</button>
+    <br><br>
+    <div class="message_reset"></div>
+    </div>
+    <script>
+        document.querySelector('.getUserInput').onclick=()=>{
+            let first=document.querySelector('.userInput_name').value
+            let second=document.querySelector('.userInput_age').value
+            let third=document.querySelector('.userInput_gender').value
+            let fourth=document.querySelector('.userInput_phoneNumber').value
+            localStorage.setItem("User_name",first)
+            localStorage.setItem("User_age",second)
+            localStorage.setItem("User_gender",third)
+            localStorage.setItem("User_phoneNumber",fourth)
+            document.querySelector('.save_message').innerText="Data Saved!"
+        }
+        document.querySelector('.yes_userInput').onclick=()=>{
+            localStorage.clear()
+            document.querySelector('.message_reset').innerText="Ok! Data reset!"
+        }
+        document.querySelector('.no_userInput').onclick=()=>{
+            document.querySelector('.message_reset').innerText="Ok! Data not reset!"
+        }
+    </script>
+</body>
+</html>
