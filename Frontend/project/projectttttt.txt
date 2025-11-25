@@ -1,0 +1,2 @@
+Display Good Morning,Good Afternoon,Good Evening and Good night based on current hour.Ask name of user ans show it on the Display
+Creat a button in javascript which shows how many times it has been pressed.It should show red color when the number is odd and show green color when the button is even in the button.The number of times the button clicked should not vanish even after refreshing the browser.

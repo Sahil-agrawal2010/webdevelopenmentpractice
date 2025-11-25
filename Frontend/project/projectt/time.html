@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="userInput_name">Enter your name:- </label><input type="text" class="userInput_name"><button type="submit" class="subbmit_button">Submit</button>
+    <div class="output_display"></div>
+</body>
+<script>
+    document.querySelector('.subbmit_button').onclick=()=>{
+        let name=document.querySelector('.userInput_name').value
+    let date = new Date()
+ let hour=date.getHours()
+ if(hour<12 && hour>5){
+document.querySelector('.output_display').innerText=`Good Morning ${name}!`
+ }
+ if(hour<18 && hour>12){
+    document.querySelector('.output_display').innerText=`Good Afternoon ${name}!`
+ }
+    }
+</script>
+</html>
