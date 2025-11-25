@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="userInput_button">Click Here!</button>
+    <div class="output_display"></div>
+    <br><br><br><br>
+    <button class="reset_data">Reset!</button>
+    <script>
+        let counter=parseInt(localStorage.getItem("userClick"))
+        document.querySelector('.userInput_button').onclick=()=>{
+            counter++
+            document.querySelector('.output_display').innerText=counter
+            if(counter%2==0){
+                document.querySelector('.userInput_button').innerHTML = `
+                <button style="background-color: green; color: red;">Click Here</button>
+                `
+            }
+            if(counter%2!==0){
+                document.querySelector('.userInput_button').innerHTML = `
+                <button style="background-color: red; color: green;">Click Here</button>
+                `
+            }
+            let total_click=localStorage.setItem("userClick",counter)
+            let total=localStorage.getItem("userClick")
+            document.querySelector('.output_display').innerText=total
+        }
+        document.querySelector('.reset_data').onclick=()=>{
+            counter = 0
+        }
+    </script>
+</body>
+</html>
