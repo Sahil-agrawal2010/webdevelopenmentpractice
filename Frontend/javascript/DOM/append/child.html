@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+        height: 600px;
+        width: 600px;
+        margin: 50px;
+        background-color: bisque;
+    }
+</style>
+<body>
+    <div class="main"></div>
+    <script>
+        let newElement=document.createElement("p");
+        newElement.innerText="Sahil Agrawal is a good Boy and he reads in grade ten 10."
+        document.querySelector('.main').appendChild(newElement)
+        let newElement_1=document.createElement("button");
+        newElement_1.innerText="Click me"
+        document.querySelector('.main').appendChild(newElement_1)
+        let newElement_2=document.createElement("h1");
+        newElement_2.innerText="This is the place Where heading goes!"
+        document.querySelector('.main').appendChild(newElement_2)
+    </script>
+</body>
+</html>
