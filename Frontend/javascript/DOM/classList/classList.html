@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mainContainer important_container main_container">
+<button class="our_button button first_button">ClickMe</button>
+    </div>
+    <script>
+        console.log(document.querySelector('.our_button').classList)
+        document.querySelector('.our_button').classList.add("second_button")
+        console.log(document.querySelector('.our_button').classList)
+        document.querySelector('.our_button').classList.remove("button")
+        console.log(document.querySelector('.our_button').classList)
+    </script>
+</body>
+</html>
