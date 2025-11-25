@@ -14,11 +14,18 @@
         let name=document.querySelector('.userInput_name').value
     let date = new Date()
  let hour=date.getHours()
+ console.log(hour)
  if(hour<12 && hour>5){
 document.querySelector('.output_display').innerText=`Good Morning ${name}!`
  }
- if(hour<18 && hour>12){
+else if(hour<16 && hour>12){
     document.querySelector('.output_display').innerText=`Good Afternoon ${name}!`
+ }
+ else if(hour<20 && hour>16){
+    document.querySelector('.output_display').innerText=`Good Evening ${name}!`
+ }
+else{
+    document.querySelector('.output_display').innerText=`Good Night ${name}!`
  }
     }
 </script>
