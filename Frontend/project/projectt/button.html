@@ -5,31 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .even{
+        background-color: green;
+        color: red;
+    }
+    .odd{
+        background-color: red;
+        color: green;
+    }
+</style>
 <body>
     <button class="userInput_button">Click Here!</button>
     <div class="output_display"></div>
     <br><br><br><br>
     <button class="reset_data">Reset!</button>
     <script>
-        let counter=parseInt(localStorage.getItem("userClick"))
+        let counter=parseInt(localStorage.getItem("userClick")) || 0
         document.querySelector('.userInput_button').onclick=()=>{
             counter++
             document.querySelector('.output_display').innerText=counter
             if(counter%2==0){
-                document.querySelector('.userInput_button').innerHTML = `
-                <button style="background-color: green; color: red;">Click Here</button>
-                `
+              document.querySelector('.userInput_button').classList.add("even")
+              document.querySelector('.userInput_button').classList.remove("odd")
             }
             if(counter%2!==0){
-                document.querySelector('.userInput_button').innerHTML = `
-                <button style="background-color: red; color: green;">Click Here</button>
-                `
+                document.querySelector('.userInput_button').classList.remove("even")
+          document.querySelector('.userInput_button').classList.add("odd")
             }
             let total_click=localStorage.setItem("userClick",counter)
+
+            console.log(document.querySelector('.userInput_button').classList)
         }
         document.querySelector('.reset_data').onclick=()=>{
             counter = 0
         }
+        console.log(document.querySelector('.userInput_button').classList)
     </script>
 </body>
 </html>
