@@ -55,6 +55,40 @@ Creat a while loop that exits after counting five prime numbers . Modify the abo
 //     }
 //     number++
 // }
+
 Creat a for loop that prints sum of four digit numbers . 
+
+
+let number=2458
+let empty=Math.floor(number/100)
+let empty2=Math.floor(number/10)
+let first_digit=Number(Math.floor(number/1000))
+let second_digit=Number(Math.floor(empty%10))
+let third_digit=Number(Math.floor(empty2%10))
+let last_digit=Number(Math.floor(number%10))
+let sum=first_digit+second_digit+third_digit+last_digit
+console.log(`The sum of four digit number is ${sum} !`)
+
+
+
 Creat a loop that prints number one to oneHundred in reverse order.Using continue only print The numbers divisible by both three 3 and nine 9.
+
+
+for(let i=100;i>=0;i--){
+    console.log(i)
+    if(i%3==0 && i%9==0){
+        console.log(i)
+    }
+}
+
+
+
 Ask for multiple word from the user , edit inside an array and concatinate all the words in to a single sentence from the array.
+
+let userInput_1=prompt("Enter any word to form a sentence :- ")
+let userInput_2=prompt("Enter any word to form a sentence :- ")
+let userInput_3=prompt("Enter any word to form a sentence :- ")
+let userInput_4=prompt("Enter any word to form a sentence :- ")
+let userInput_5=prompt("Enter any word to form a sentence :- ")
+let array_word=[userInput_1,userInput_2,userInput_3,userInput_4,userInput_5]
+console.log(array_word.join(" "))
