@@ -1,2 +1,60 @@
 Display Good Morning,Good Afternoon,Good Evening and Good night based on current hour.Ask name of user ans show it on the Display
 Creat a button in javascript which shows how many times it has been pressed.It should show red color when the number is odd and show green color when the button is even in the button.The number of times the button clicked should not vanish even after refreshing the browser.
+
+
+
+
+Creat an array of numbers . Add four 4 at the begining and seven 7 at the end of an array .
+
+let numbers = [2,9,5,6,1,8]
+let second=numbers.unshift(4)
+let newNumber = numbers.push(7)
+console.log(numbers)
+
+
+
+Creat a method to return an element at a particular position in an array.
+
+function user(a){
+    let array=["Apple","Mango","Banana","Papaya"]
+    console.log(array[a])
+}
+let userInput=Number(prompt("Enter any number on an index :- "))
+user(userInput)
+
+
+
+
+Creat an array copy using slice method .
+
+
+let fruits_array = ["Apple" , "Mango" , "Banana" , "Papaya"]
+let newArray=fruits_array.slice(0,4)
+console.log(newArray)
+
+
+Creat a while loop that exits after counting five prime numbers . Modify the above loop to finish using break .
+
+
+// let counter = 0
+// let primeNumbers=0
+//     i=0
+//     desire=true
+// while(primeNumbers==5){
+//     i++
+// let number=1
+//     if(number%i==0){
+//         counter++
+//     }
+//     if(counter==1 && i==number){
+//         counter==0
+//     }
+//     if(counter==2){
+//         primeNumbers++
+//         console.log(number)
+//     }
+//     number++
+// }
+Creat a for loop that prints sum of four digit numbers . 
+Creat a loop that prints number one to oneHundred in reverse order.Using continue only print The numbers divisible by both three 3 and nine 9.
+Ask for multiple word from the user , edit inside an array and concatinate all the words in to a single sentence from the array.
