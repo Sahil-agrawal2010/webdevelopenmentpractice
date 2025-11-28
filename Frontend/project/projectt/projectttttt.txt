@@ -39,7 +39,6 @@ Creat a while loop that exits after counting five prime numbers . Modify the abo
 // let counter = 0
 // let primeNumbers=0
 //     i=0
-//     desire=true
 // while(primeNumbers==5){
 //     i++
 // let number=1
