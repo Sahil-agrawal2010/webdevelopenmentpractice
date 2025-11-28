@@ -36,24 +36,42 @@ console.log(newArray)
 Creat a while loop that exits after counting five prime numbers . Modify the above loop to finish using break .
 
 
-// let counter = 0
-// let primeNumbers=0
-//     i=0
-// while(primeNumbers==5){
-//     i++
-// let number=1
-//     if(number%i==0){
+let userInput = 5;
+let number = 2;
+let count=0
+while(count<5){
+for (let i = 0; i < userInput; i++) {
+    let prime_number = true;
+    for (let num = 2; num < number; num++) {
+        if (number % num === 0) {
+            prime_number = false;
+            break;
+        }
+    }
+    if (prime_number) {
+        console.log(number);
+        count++
+    }
+    number++;
+}
+}
+
+
+// let userInput=Number(prompt("Enter any number to check weather it is a prime number or not:- "))
+// let counter=0
+// for(let i=0;i<=userInput;i++){
+//     if(userInput%i==0){
 //         counter++
 //     }
-//     if(counter==1 && i==number){
-//         counter==0
-//     }
-//     if(counter==2){
-//         primeNumbers++
-//         console.log(number)
-//     }
-//     number++
 // }
+// if(counter==2){
+//     console.log(`${userInput} is a prime number!`)
+// }
+// else{
+//     console.log(`${userInput} is not a prime number!`)
+// }
+
+
 
 Creat a for loop that prints sum of four digit numbers . 
 
