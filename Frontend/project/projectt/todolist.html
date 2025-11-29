@@ -14,6 +14,7 @@
         top: 100px;
         left: 400px;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+              border-radius: 8px;
     }
     .userInput_task{
       border: 1px solid transparent;
@@ -25,31 +26,55 @@
       text-align: center;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       font-family: sans-serif;
+      border-radius: 8px;
     }
     .userInput_date{
       border: 1px solid transparent;
       width: 100px;
       height: 25px;
       position: relative;
-      left: 80px;
+      left: 110px;
       top: 30px;
       text-align: center;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border-radius: 8px;
     }
     .getuserInput{
     border: 1px solid transparent;
+    width: 100px;
       height: 25px;
       position: relative;
-      left: 80px;
+      left: 140px;
       top: 30px;
       text-align: center;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border-radius: 8px;
+        background-color: blue;
+        color: white;
+        font-family: sans-serif;
+    }
+    .getuserInput:hover{
+        background-color: white;
+        color: blue;
     }
     .output_container{
         border: 1px solid transparent;
         position: relative;
         top: 40px;
         left: 20px;
+    }
+    .delete_button{
+        border: 1px solid transparent;
+        border-radius: 8px;
+        background-color: blue;
+        color: white;
+        text-align: center;
+        width: 100px;
+        height: 20px;
+    }
+    .delete_button:hover{
+        background-color: white;
+        color: blue; 
     }
 </style>
 <body>
@@ -68,13 +93,13 @@
             let newTask_array=task_array.push(task)
             let newDate_array=date_array.push(date)
             for(let i=0;i<task_array.length;i++){
-            document.querySelector('.output_container').innerHTML+=`<div style="margin: 10px; gap: 20px;"> Task:- ${task_array}  Date:-  ${date_array}    <button class="delete_button">Delete</button></div>`
+            document.querySelector('.output_container').innerHTML+=`<div style="margin: 10px; gap: 20px;"> Task:- ${task_array} <br> Date:-  ${date_array}  <br>  <button class="delete_button">Delete</button></div>`
             }
             document.querySelector('.userInput_task').value=""
             document.querySelector('.userInput_date').value=""
         }
         document.querySelector('.delete_button').onclick=()=>{
-            
+
         }
     </script>
 </body>
