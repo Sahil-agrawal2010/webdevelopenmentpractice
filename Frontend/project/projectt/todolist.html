@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main_container{
+        border: 1px solid transparent;
+        height: 600px;
+        width: 600px;
+        position: relative;
+        top: 100px;
+        left: 400px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    .userInput_task{
+      border: 1px solid transparent;
+      width: 200px;
+      height: 25px;
+      position: relative;
+      left: 80px;
+      top: 30px;
+      text-align: center;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      font-family: sans-serif;
+    }
+    .userInput_date{
+      border: 1px solid transparent;
+      width: 100px;
+      height: 25px;
+      position: relative;
+      left: 80px;
+      top: 30px;
+      text-align: center;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    .getuserInput{
+    border: 1px solid transparent;
+      height: 25px;
+      position: relative;
+      left: 80px;
+      top: 30px;
+      text-align: center;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    .output_container{
+        border: 1px solid transparent;
+        position: relative;
+        top: 40px;
+        left: 20px;
+    }
+</style>
+<body>
+    <div class="main_container">
+    <input type="text" class="userInput_task" placeholder="Enter the task :- ">
+    <input type="date" class="userInput_date">
+    <button class="getuserInput" type="submit">Submit</button>
+    <div class="output_container"></div>
+    </div>
+    <script>
+        document.querySelector('.getuserInput').onclick=()=>{
+            let task = document.querySelector('.userInput_task').value
+            let date = document.querySelector('.userInput_date').value
+            let task_array=[]
+            let date_array=[]
+            let newTask_array=task_array.push(task)
+            let newDate_array=date_array.push(date)
+            for(let i=0;i<task_array.length;i++){
+            document.querySelector('.output_container').innerHTML+=`<div style="margin: 10px; gap: 20px;"> Task:- ${task_array}  Date:-  ${date_array}    <button class="delete_button">Delete</button></div>`
+            }
+            document.querySelector('.userInput_task').value=""
+            document.querySelector('.userInput_date').value=""
+        }
+    </script>
+</body>
+</html>
