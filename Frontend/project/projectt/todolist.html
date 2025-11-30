@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<style>
-    .main_container{
-        border: 1px solid transparent;
-        height: 600px;
-        width: 600px;
-        position: relative;
-        top: 100px;
-        left: 400px;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-              border-radius: 8px;
+  </head>
+  <style>
+    .main_container {
+      border: 1px solid transparent;
+      height: 600px;
+      width: 600px;
+      position: relative;
+      top: 100px;
+      left: 400px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      border-radius: 8px;
     }
-    .userInput_task{
+    .userInput_task {
       border: 1px solid transparent;
       width: 200px;
       height: 25px;
@@ -28,7 +28,7 @@
       font-family: sans-serif;
       border-radius: 8px;
     }
-    .userInput_date{
+    .userInput_date {
       border: 1px solid transparent;
       width: 100px;
       height: 25px;
@@ -37,70 +37,99 @@
       top: 30px;
       text-align: center;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        border-radius: 8px;
+      border-radius: 8px;
     }
-    .getuserInput{
-    border: 1px solid transparent;
-    width: 100px;
+    .getuserInput {
+      border: 1px solid transparent;
+      width: 100px;
       height: 25px;
       position: relative;
       left: 140px;
       top: 30px;
       text-align: center;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        border-radius: 8px;
-        background-color: blue;
-        color: white;
-        font-family: sans-serif;
+      border-radius: 8px;
+      background-color: blue;
+      color: white;
+      font-family: sans-serif;
     }
-    .getuserInput:hover{
-        background-color: white;
-        color: blue;
+    .getuserInput:hover {
+      background-color: white;
+      color: blue;
     }
-    .output_container{
-        border: 1px solid transparent;
-        position: relative;
-        top: 40px;
-        left: 20px;
+    .output_container {
+      border: 1px solid transparent;
+      position: relative;
+      top: 40px;
+      left: 20px;
     }
-    .delete_button{
-        border: 1px solid transparent;
-        border-radius: 8px;
-        background-color: blue;
-        color: white;
+    .delete_button {
+      border: 1px solid transparent;
+      border-radius: 8px;
+      background-color: blue;
+      color: white;
+      text-align: center;
+      width: 100px;
+      height: 20px;
+        margin: 10px;
+        display: flex;
+        gap: 40px;
         text-align: center;
-        width: 100px;
-        height: 20px;
     }
-    .delete_button:hover{
-        background-color: white;
-        color: blue; 
+    .delete_button:hover {
+      background-color: white;
+      color: blue;
     }
-</style>
-<body>
+    .main_display{
+        margin: 10px;
+        display: flex;
+        gap: 40px;
+    }
+    p{
+        display: inline;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 14px;
+    }
+  </style>
+  <body>
     <div class="main_container">
-    <input type="text" class="userInput_task" placeholder="Enter the task :- ">
-    <input type="date" class="userInput_date">
-    <button class="getuserInput" type="submit">Submit</button>
-    <div class="output_container"></div>
+      <input
+        type="text"
+        class="userInput_task"
+        placeholder="Enter the task :- "
+      />
+      <input type="date" class="userInput_date" />
+      <button class="getuserInput" type="submit">Submit</button>
+      <div class="output_container"></div>
     </div>
     <script>
-        document.querySelector('.getuserInput').onclick=()=>{
-            let task = document.querySelector('.userInput_task').value
-            let date = document.querySelector('.userInput_date').value
-            let task_array=[]
-            let date_array=[]
-            let newTask_array=task_array.push(task)
-            let newDate_array=date_array.push(date)
-            for(let i=0;i<task_array.length;i++){
-            document.querySelector('.output_container').innerHTML+=`<div style="margin: 10px; gap: 20px;"> Task:- ${task_array} <br> Date:-  ${date_array}  <br>  <button class="delete_button">Delete</button></div>`
-            }
-            document.querySelector('.userInput_task').value=""
-            document.querySelector('.userInput_date').value=""
+      let date_array = [];
+      let task_array = [];
+      document.querySelector(".getuserInput").onclick = () => {
+        let task = document.querySelector(".userInput_task").value;
+        let date = document.querySelector(".userInput_date").value;
+        task_array.push(task);
+        date_array.push(date);
+        document.querySelector(".userInput_task").value = "";
+        document.querySelector(".userInput_date").value = "";
+        todo();
+      };
+      function todo() {
+        let my_container = document.querySelector(".output_container");
+        let myCode = "";
+        for (let i = 0; i < task_array.length; i++) {
+          myCode +=`<div class="main_display"> 
+                    <p>Task:- ${task_array[i]}</p>       
+                    <p>Date:-  ${date_array[i]}</p>        
+                    <button class="delete_button" onclick='
+                    task_array.splice(${i},1)
+                    date_array.splice(${i},1)
+                    todo()
+                    '>Delete</button>
+                    </div>`;
         }
-        document.querySelector('.delete_button').onclick=()=>{
-
-        }
+        my_container.innerHTML = myCode;
+      }
     </script>
-</body>
+  </body>
 </html>
