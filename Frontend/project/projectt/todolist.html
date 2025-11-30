@@ -68,27 +68,25 @@
       border-radius: 8px;
       background-color: blue;
       color: white;
-      text-align: center;
       width: 100px;
-      height: 20px;
-        margin: 10px;
-        display: flex;
-        gap: 40px;
-        text-align: center;
+      height: 25px;
+      margin: 10px;
+      text-align: center;
+      gap: 40px;
     }
     .delete_button:hover {
       background-color: white;
       color: blue;
     }
-    .main_display{
-        margin: 10px;
-        display: flex;
-        gap: 40px;
+    .main_display {
+      margin: 10px;
+      display: flex;
+      gap: 40px;
     }
-    p{
-        display: inline;
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 14px;
+    p {
+      display: inline;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 14px;
     }
   </style>
   <body>
@@ -118,7 +116,7 @@
         let my_container = document.querySelector(".output_container");
         let myCode = "";
         for (let i = 0; i < task_array.length; i++) {
-          myCode +=`<div class="main_display"> 
+          myCode += `<div class="main_display"> 
                     <p>Task:- ${task_array[i]}</p>       
                     <p>Date:-  ${date_array[i]}</p>        
                     <button class="delete_button" onclick='
