@@ -11,11 +11,57 @@
      position: relative;
      top: 400px;
     }
+    .main_logo_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid transparent;
+        width: 250px;
+        height: 100px;
+        gap: 80px;
+        background-color: white;
+        position: relative;
+        left: 600px;
+        bottom: 400px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    .mainLogo_flight_image,.mainLogo_hotel_image{
+        position: relative;
+        bottom: 18px;
+        cursor: pointer;
+    }
+    .mainLogo_flight_text{
+        position: relative;
+        bottom: 465px;
+        left: 643px;
+        font-family: sans-serif;
+        text-decoration: underline;
+        text-underline-offset: 30px;
+        color: #008cff;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .mainLogo_hotel_text{
+              position: relative;
+        bottom: 495px;
+        left: 765px;
+        font-family: sans-serif;
+        text-decoration: underline;
+        text-underline-offset: 26px;
+        color: #008cff;
+        font-weight: 600;
+        cursor: pointer;
+    }
 </style>
 <body>
     <div class="mian_container">
         <img src="https://promos.makemytrip.com/Growth/Images/B2C/GCC/Worldwide.png" alt="trip" class="background" width=100%">
-        <div class="main_container"></div>
+        <div class="main_logo_container">
+        <img class="mainLogo_flight_image" src="/project/projectt/airplane.png" alt="" width="40px" height="40px">
+        <img class="mainLogo_hotel_image" src="/project/projectt/hotels.png" alt="" width="40px" height="40px">
+    </div>
+    <p class="mainLogo_flight_text">Flights</p>
+    <p class="mainLogo_hotel_text">Hotel</p>
     </div>
 </body>
 </html>
