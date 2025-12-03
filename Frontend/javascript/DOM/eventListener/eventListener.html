@@ -23,11 +23,9 @@
 
 
         let element = document.querySelector('.head2')
-
-        element.addEventListener('copy', event => {
-            // let selection = element.getSelection()[]
-            event.clipboardData.setData('text/plain', 'I told you to not copy me')
-            event.preventDefault()
+        element.addEventListener('copy',event=>{
+            event.clipboardData.setData('text/plane','I am a haker!')
+            element.preventDefault()
         })
 
 
