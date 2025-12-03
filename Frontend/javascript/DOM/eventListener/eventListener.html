@@ -6,15 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    <button class="clickMe">Click me</button>
+    <button class="user_button">Click Me</button>
     <script>
-        let element = document.querySelector('.clickMe')
-        element.addEventListener('click', (event) => {
-            console.log(name+ 'Nayan Pathak')
-        })
-        element.addEventListener('click',(event) => {
-            element.innerHTML=`<div><p style="background-color :red;">Learning event listner today!</p></div>`
-        })
+        let button=document.querySelector('.user_button')
+
+        let remove = event => console.log('Mouse over event is running')
+
+
+        let second = event => console.log("MouseOut is being executed!")
+
+        button.addEventListener('mouseover', remove)
+        button.addEventListener('mouseout',second)
+        button.removeEventListener('mouseout', second )
     </script>
 </body>
 </html>
