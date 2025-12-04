@@ -16,7 +16,7 @@
         justify-content: center;
         align-items: center;
         border: 1px solid transparent;
-        width: 250px;
+        width: 350px;
         height: 100px;
         gap: 80px;
         background-color: white;
@@ -24,6 +24,8 @@
         left: 600px;
         bottom: 400px;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 10px;
+        z-index: 1;
     }
     .mainLogo_flight_image,.mainLogo_hotel_image{
         position: relative;
@@ -33,24 +35,35 @@
     .mainLogo_flight_text{
         position: relative;
         bottom: 465px;
-        left: 643px;
+        left: 690px;
         font-family: sans-serif;
         text-decoration: underline;
         text-underline-offset: 30px;
         color: #008cff;
         font-weight: 600;
         cursor: pointer;
+        z-index: 1;
     }
     .mainLogo_hotel_text{
               position: relative;
         bottom: 495px;
-        left: 765px;
+        left: 815px;
         font-family: sans-serif;
         text-decoration: underline;
         text-underline-offset: 26px;
         color: #008cff;
         font-weight: 600;
         cursor: pointer;
+        z-index: 1;
+    }
+    .second_container{
+        border: 1px solid black;
+        height: 250px;
+        width: 1200px;
+        background-color: white;
+        position: relative;
+        bottom: 550px;
+        left: 150px;
     }
 </style>
 <body>
@@ -62,6 +75,7 @@
     </div>
     <p class="mainLogo_flight_text">Flights</p>
     <p class="mainLogo_hotel_text">Hotel</p>
+    <div class="second_container"></div>
     </div>
 </body>
 </html>
