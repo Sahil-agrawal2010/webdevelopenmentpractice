@@ -4,16 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .button_container{
+            border: 1px solid transparent;
+            width: 150px;
+            height: 150px;
+            background-color: beige;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 20px;
+            left: 20px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, .12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+    </style>
 </head>
 <body>
-    <button class="user_button">Click Me!</button>
+    <!-- <button class="user_button">Click Me!</button> -->
+    <div class="button_container">
+     <button class="user_button">Click Here!</button>
+    </div>
     <script>
-        let element=document.querySelector('.user_button')
-        element.addEventListener('click',event=>{
-            console.log(event.type)
+        // let element=document.querySelector('.user_button')
+        // element.addEventListener('click',event=>{
+        //     console.log(event.type)
+        // })
+        // element.addEventListener('click',event=>{
+        //     console.log(event.target)
+        // })
+        let secondelement=document.querySelector('.button_container')
+        let user_button=document.querySelector('.user_button')
+        secondelement.addEventListener('click',event=>{
+            console.log(event.currentTarget)
         })
-        element.addEventListener('click',event=>{
-            console.log(event.target)
+        user_button.addEventListener('click',event=>{
+            console.log(event.currentTarget)
         })
     </script>
 </body>
