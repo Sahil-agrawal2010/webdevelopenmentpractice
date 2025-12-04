@@ -7,8 +7,9 @@
 </head>
 <body>
     <button class="user_button">Click Me</button>
-    <h2 class="head2" >Do not try to copy me.</h2>
-    <div contenteditable="true" class="container">My name is Nayan Pathak</div>
+    <h2 class="main_head" >Do not try to copy me.</h2>
+    <input class="userInput" type="text">
+    <p class="paragraph"></p>
     <script>
         // let button=document.querySelector('.user_button')
 
@@ -22,13 +23,20 @@
         // button.removeEventListener('mouseout', second )
 
 
-        let element = document.querySelector('.head2')
-        element.addEventListener('copy',event=>{
-            event.clipboardData.setData('text/plane','I am a haker!')
-            element.preventDefault()
+        // let element = document.querySelector('.main_head')
+        // element.addEventListener('copy',event=>{
+        //     event.clipboardData.setData('text/plain','I am a haker!')
+        //     event.preventDefault()
+        // })
+
+
+
+
+        let element=document.querySelector('.userInput')
+        let second_element=document.querySelector('.paragraph')
+        element.addEventListener('keydown',event=>{
+second_element.textContent=element.value
         })
-
-
     </script>
 </body>
 </html>
