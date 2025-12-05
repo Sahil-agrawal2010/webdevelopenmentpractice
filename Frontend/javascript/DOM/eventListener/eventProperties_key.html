@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .user_div{
+        border: 1px solid black;
+        height: 200px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: beige;
+    }
+</style>
 <body>
     <input class="userInput" type="text">
     <a  class="link_user" href="https://www.google.com" target="_blank">Click Here to open Google!</a>
@@ -13,6 +24,8 @@
     <input type="text" required>
     <button type="submit">Submit</button>
     </form>
+    <br><br>
+    <div class="user_div"><button class="user_button">Click Here!</button></div>
     <script>
         // let element = document.querySelector('.userInput')
         // element.addEventListener('keydown',event=>{
@@ -41,6 +54,18 @@
 //     event.preventDefault()
 //     console.log("Form submition stopped!")
 // })
+
+
+
+let element=document.querySelector('.user_button')
+element.addEventListener('click',event=>{
+    console.log("Clicked!")
+    event.stopPropagation()
+})
+let element1=document.querySelector('.user_div')
+element1.addEventListener('click',event=>{
+    console.log("Div clicked!")
+})
     </script>
 </body>
 </html>
