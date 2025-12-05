@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<style>
+  </head>
+  <!-- <style>
     .user_div{
         border: 1px solid black;
         height: 200px;
@@ -15,57 +15,62 @@
         align-items: center;
         background-color: beige;
     }
-</style>
-<body>
-    <input class="userInput" type="text">
+</style> -->
+  <body>
+    <!-- <input class="userInput" type="text">
     <a  class="link_user" href="https://www.google.com" target="_blank">Click Here to open Google!</a>
     <br><br>
     <form class="user_form">
     <input type="text" required>
     <button type="submit">Submit</button>
     </form>
-    <br><br>
-    <div class="user_div"><button class="user_button">Click Here!</button></div>
+    <br><br> -->
+    <!-- <div class="user_div"><button class="user_button">Click Here!</button></div> -->
+    <button class="user_button">Click Here!</button>
     <script>
-        // let element = document.querySelector('.userInput')
-        // element.addEventListener('keydown',event=>{
-            // console.log(event.key)
-            // console.log(event.code)
-            // console.log(event.shiftKey)
-            // console.log(event.altKey)
-            // console.log(event.ctrlKey)
-            // console.log(event.timeStamp)
-        // })
+      // let element = document.querySelector('.userInput')
+      // element.addEventListener('keydown',event=>{
+      // console.log(event.key)
+      // console.log(event.code)
+      // console.log(event.shiftKey)
+      // console.log(event.altKey)
+      // console.log(event.ctrlKey)
+      // console.log(event.timeStamp)
+      // })
 
+      // let element=document.querySelector('.link_user')
+      // element.addEventListener('click',event=>{
+      //     event.preventDefault()
+      //     console.log("Stop")
+      // })
 
+      // let element=document.querySelector('.user_form')
+      // element.addEventListener('click',event=>{
+      //     event.preventDefault()
+      //     console.log("Form submition stopped!")
+      // })
 
+      // let element=document.querySelector('.user_button')
+      // element.addEventListener('click',event=>{
+      //     console.log("Clicked!")
+      //     event.stopPropagation()
+      // })
+      // let element1=document.querySelector('.user_div')
+      // element1.addEventListener('click',event=>{
+      //     console.log("Div clicked!")
+      // })
 
-// let element=document.querySelector('.link_user')
-// element.addEventListener('click',event=>{
-//     event.preventDefault()
-//     console.log("Stop")
-// })
-
-
-
-
-// let element=document.querySelector('.user_form')
-// element.addEventListener('click',event=>{
-//     event.preventDefault()
-//     console.log("Form submition stopped!")
-// })
-
-
-
-let element=document.querySelector('.user_button')
-element.addEventListener('click',event=>{
-    console.log("Clicked!")
-    event.stopPropagation()
-})
-let element1=document.querySelector('.user_div')
-element1.addEventListener('click',event=>{
-    console.log("Div clicked!")
-})
+      let element = document.querySelector(".user_button");
+      element.addEventListener("click", (event) => {
+        console.log("Event Number 1");
+        event.stopImmediatePropagation()
+      });
+      element.addEventListener("click", (event) => {
+        console.log("Event Number 2");
+      });
+      element.addEventListener("click", (event) => {
+        console.log("Event Number 3");
+      });
     </script>
-</body>
+  </body>
 </html>
