@@ -8,12 +8,13 @@
   <style>
     .user_div{
         border: 1px solid black;
-        height: 200px;
-        width: 200px;
+        height: 400px;
+        width: 400px;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: beige;
+        gap: 20px;
     }
 </style>
   <body>
@@ -25,8 +26,13 @@
     <button type="submit">Submit</button>
     </form>
     <br><br> -->
-    <div class="user_div"><button class="user_button">Click Here!</button></div>
+    <!-- <div class="user_div"><button class="user_button">Click Here!</button></div> -->
     <!-- <button class="user_button">Click Here!</button> -->
+     <div class="user_div">
+        <button class="user_button1">Click Me! 1</button>
+        <button class="user_button2">Click Me! 2</button>
+        <button class="user_button3">Click Me! 3</button>
+     </div>
     <script>
       // let element = document.querySelector('.userInput')
       // element.addEventListener('keydown',event=>{
@@ -90,11 +96,22 @@
 
 
 
-    
-    let element = document.querySelector('.user_button')
-    element.addEventListener("blur",event=>{
-        console.log(event.bubbles)
-    })
+
+    // let element = document.querySelector('.user_button')
+    // element.addEventListener("blur",event=>{
+    //     console.log(event.bubbles)
+    // })
+
+
+
+let element=document.querySelector('.user_div')
+element.addEventListener('click',event=>{
+    console.log("Div Clicked!")
+    console.log(event.target)
+})
+
+
+// Event Deligation :- If you put an event listener on a div , all its child elements will also trigger that event. This is event Deligation.
     </script>
   </body>
 </html>
