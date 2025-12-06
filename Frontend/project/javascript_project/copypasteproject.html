@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input class="userInput" type="text">
+    <p class="paste"></p>
+    <p class="copy">Donot Don't try to copy me otehr wise you will be hacked!</p>
+    <script>
+        let element=document.querySelector('.userInput')
+        let second_element=document.querySelector('.copy')
+        element.addEventListener('keyup',event=>{
+            document.querySelector('.paste').innerHTML=element.value
+        })
+second_element.addEventListener('copy',event=>{
+    event.clipboardData.setData('text/plain',"I am A hacker!")
+    event.preventDefault()
+})
+    </script>
+</body>
+</html>
