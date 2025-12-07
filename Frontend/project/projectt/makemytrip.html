@@ -65,6 +65,29 @@
         bottom: 550px;
         left: 150px;
     }
+    .trip_type{
+        display: flex;
+        gap: 20px;
+        position: relative;
+        top: 80px;
+        font-family: sans-serif;
+        left: 20px;
+        font-size: 15px;
+        color: #424242;
+    }
+    #one_way,#round_trip,#multi_way{
+        position: relative;
+        top: 2px;
+    }
+    .first:hover,.second:hover,.third:hover{
+        border: 1px solid transparent;
+        color: black;
+        height: 25px;
+        width: 120px;
+        font-weight: 600;
+        background-color: #eaf5ff;
+        border-radius: 20px;
+    }
 </style>
 <body>
     <div class="mian_container">
@@ -76,9 +99,11 @@
     <p class="mainLogo_flight_text">Flights</p>
     <p class="mainLogo_hotel_text">Hotel</p>
     <div class="second_container">
-        <label for="one_way">One Way</label><input id="one_way" type="radio" name="trip">
-        <label for="round_trip">Round Trip</label><input id="round_trip" type="radio" name="trip">
-        <label for="multi_way">Multi Way</label><input id="multi_way" type="radio" name="trip">
+        <div class="trip_type">
+            <div class="first"><input id="one_way" type="radio" name="trip"><label class="label_oneWay" for="one_way">One Way</label></div>
+            <div class="second"><input id="round_trip" type="radio" name="trip"><label class="label_roundTrip" for="round_trip">Round Trip</label></div>
+            <div class="third"><input id="multi_way" type="radio" name="trip"><label class="label_multiWay" for="multi_way">Multi Way</label></div>
+        </div>
         <div class="div_goCome"></div>
     </div>
     </div>
