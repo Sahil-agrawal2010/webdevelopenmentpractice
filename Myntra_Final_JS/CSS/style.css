@@ -67,8 +67,8 @@
 }
 .catagories a:hover {
   text-decoration: underline;
-  text-underline-offset: 34px;
-  text-decoration-thickness: 3px;
+  text-underline-offset: 25px;
+  text-decoration-thickness: 4px;
   text-decoration-color: #f74e77;
   cursor: pointer;
 }
@@ -79,6 +79,7 @@
   border-radius: 8px 0px 0px 8px;
   margin-left: 85px;
   margin-top: 10px;
+  position: relative;
 }
 .userInput {
   width: 300px;
@@ -114,6 +115,13 @@
 
 .items-container {
   width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px;
+  margin-left: 110px;
 }
 
 .product_div_one {
