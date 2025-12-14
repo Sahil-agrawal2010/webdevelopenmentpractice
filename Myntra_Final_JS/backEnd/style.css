@@ -102,7 +102,7 @@
   gap: 300px;
   background-color: #f9fbfb;
   font-family: sans-serif;
-  margin-top: 20px;
+  margin-top: 200px;
   margin-left: 200px;
   cursor: pointer;
 }
@@ -111,4 +111,118 @@
   display: flex;
   margin-left: 1200px;
   cursor: pointer;
+}
+.item_contaoiner{
+  border: 1px solid grey;
+  width: 700px;
+  height: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 100px;
+}
+.image_1{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.product_name{
+display: flex;
+margin-left: 150px;
+margin-top: -150px;
+font-family: sans-serif;
+}
+.product_company{
+  margin-left: 150px;
+  color: grey;
+  font-family: sans-serif;
+}
+.price_product_one{
+  display: flex;
+  gap: 10px;
+  margin-left: 150px;
+}
+.first_price{
+  font-weight: 550;
+}
+.second_price{
+  color: grey;
+  font-weight: 14px;
+}
+.return_plocy{
+  margin-top: 30px;
+  margin-left: 150px;
+}
+.deliver{
+  display: flex;
+  margin-left: 150px;
+  gap: 4px;
+}
+.date{
+  color: #4343d3;
+}
+.aside_div{
+  margin-left: 850px;
+  margin-top: -200px;
+}
+.total_price{
+  display: flex;
+  gap: 400px;
+  margin-top: 20px;
+  font-family: sans-serif;
+}
+.discount_price{
+  display: flex;
+    gap: 340px;
+  margin-top: 20px;
+  font-family: sans-serif;
+}
+.deliver_details{
+  display: flex;
+    gap: 382px;
+  margin-top: 20px;
+  font-family: sans-serif;
+}
+.small_line{
+  width: 75%;
+  margin-top: 10px;
+  color: grey;
+}
+.total{
+  display: flex;
+    gap: 380px;
+  margin-top: 20px;
+  font-family: sans-serif;
+}
+.total_money,.discount_price_text,.deliver_fee{
+  color: grey;
+  font-size: 14px;
+}
+.total_text{
+  color: #363636;
+  font-weight: 550;
+  font-size: 14px;
+}
+.discount_amount{
+  color: #02a197;
+}
+.main_heading_details{
+  color: #363636;
+  font-weight: 550;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+.final_click{
+  border: 1px solid transparent;
+  width: 520px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  margin-top: 20px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  background-color: #f74e77;
+  color: white;
+  border-radius: 8px;
 }
