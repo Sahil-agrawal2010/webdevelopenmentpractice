@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-          <div class="nav">
+    <link rel="stylesheet" href="../CSS/style.css" />
+  </head>
+  <body>
+    <div class="main_container">
+      <div class="nav">
         <div class="logo">
-          <img
+          <a href="#">
+              <img
             class="main_logo"
-            src="/Myntra_Final_JS/images/myntra_logo.webp"
+            src="../images/myntra_logo.webp"
             alt="Myntra logo!"
           />
+          </a>
         </div>
         <div class="catagories">
           <div class="items">
@@ -81,46 +84,16 @@
               d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"
             />
           </svg>
-          <p class="bag_text">Bag</p>
+          <a class="bag_text" href="../backEnd/bag.html">Bag</a>
         </div>
+        <span class="itemCount">0</span>
       </div>
-            <hr class="underline" />
-            <div class="item_contaoiner">
-              <img class="image_1" src="/Myntra_Final_JS/images/1.jpg" alt="" height="150px">
-                <p class="product_name">Carton London</p>
-                <p class="product_company">Rhodium-Plated CZ Floral Studs</p>
-                <div class="price_product_one">
-                  <p class="first_price">Rs 999</p>
-                  <del class="second_price">Rs 999</del>
-                  <p class="discount">(0% OFF)</p>
-                </div>
-                <p class="return_plocy">14 days return available</p>
-                <div class="deliver">
-                <p>Deliver by</p><p class="date">10 Oct 2023</p>
-                </div>
-            </div>
-            <div class="aside_div">
-              <p class="main_heading_details">PRICE DETAILS (1 Items)</p>
-              <div class="total_price">
-                <p class="total_money">Total MRP</p>
-                <p class="total_amount">Rs 0</p>
-              </div>
-              <div class="discount_price">
-                <p class="discount_price_text">Discount on MRP</p>
-                <p class="discount_amount">- Rs 0</p>
-              </div>
-              <div class="deliver_details">
-                <p class="deliver_fee">Delivery Fee</p>
-                <p class="delivery_amount"> Rs 140</p>
-              </div>
-              <hr class="small_line">
-              <div class="total">
-                <p class="total_text">Total Amount</p> 
-                <p class="total_number">Rs 0</p>
-              </div>
-              <button class="final_click">PLACE ORDER</button>
-            </div>
-                  <div class="main_footer">
+      <hr class="underline" />
+
+      <div class="items-container">
+      </div>
+
+      <div class="main_footer">
         <div class="footer">
           <div class="first_row">
             <h4>ONLINE SHOPPING</h4>
@@ -160,6 +133,11 @@
           </div>
         </div>
       </div>
-            <p class="last_line">© 2023 www.myntra.com.All right reversed.</p>
-</body>
+      <hr />
+      <br />
+      <p class="last_line">© 2023 www.myntra.com.All right reversed.</p>
+    </div>
+    <script src="../data/items.js"></script>
+    <script src="../Scripts/index.js"></script>
+  </body>
 </html>

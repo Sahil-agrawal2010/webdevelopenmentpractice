@@ -189,6 +189,7 @@
   background-color: #90EE90;
   font-size: 16px;
   font-family: sans-serif;
+  cursor: pointer;
 }
 
 .itemCount{
@@ -206,6 +207,8 @@
   margin-right: 10px;
 }
 
-
+.bag_text{
+  text-decoration: none;
+}
 
 

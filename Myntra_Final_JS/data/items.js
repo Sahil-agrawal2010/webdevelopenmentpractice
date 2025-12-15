@@ -1,7 +1,7 @@
 const allItems = [
     {
         id: '001',
-        image: '/Myntra_Final_JS/images/1.jpg',
+        image: '../images/1.jpg',
         company_name: 'Carlton London',
         item_name: 'Rhodium-Plated CZ Floral Studs',
         price: {
@@ -18,7 +18,7 @@ const allItems = [
     },
     {
         id: '002',
-        image: '/Myntra_Final_JS/images/2.jpg',
+        image: '../images/2.jpg',
         company_name: 'CUKOO',
         item_name: 'Women Padded Halter Neck Swimming Dress',
         price: {
@@ -35,7 +35,7 @@ const allItems = [
     },
     {
         id: '003',
-        image: '/Myntra_Final_JS/images/3.jpg',
+        image: '../images/3.jpg',
         company_name: 'NUEVOSDAMAS',
         item_name: 'Women Red & White Printed A-Line Knee-Length Skirts',
         price: {
@@ -52,7 +52,7 @@ const allItems = [
     },
     {
         id: '004',
-        image: '/Myntra_Final_JS/images/4.jpg',
+        image: '../images/4.jpg',
         company_name: 'ADIDAS',
         item_name: 'Indian Cricket ODI Jersey',
         price: {
@@ -69,7 +69,7 @@ const allItems = [
     },
     {
         id: '005',
-        image: '/Myntra_Final_JS/images/5.jpg',
+        image: '../images/5.jpg',
         company_name: 'Roadster',
         item_name: 'Pure Cotton T-shirt',
         price: {
@@ -86,7 +86,7 @@ const allItems = [
     },
     {
         id: '006',
-        image: '/Myntra_Final_JS/images/6.jpg',
+        image: '../images/6.jpg',
         company_name: 'Nike',
         item_name: 'Men ReactX Running Shoes',
         price: {
@@ -103,7 +103,7 @@ const allItems = [
     },
     {
         id: '007',
-        image: '/Myntra_Final_JS/images/7.jpg',
+        image: '../images/7.jpg',
         company_name: 'The Indian Garage Co',
         item_name: 'Men Slim Fit Regular Shorts',
         price: {
@@ -118,7 +118,7 @@ const allItems = [
     },
     {
         id: '008',
-        image: '/Myntra_Final_JS/images/8.jpg',
+        image: '../images/8.jpg',
         company_name: 'Nivea',
         item_name: 'Men Fresh Deodrant 150ml',
         price: {

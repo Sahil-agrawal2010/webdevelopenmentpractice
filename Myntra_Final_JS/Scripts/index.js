@@ -10,6 +10,9 @@ window.addEventListener("load", (event) => {
 function showData() {
   let output_container = document.querySelector(".items-container");
   let itemContainer = "";
+  if(!output_container){
+    return
+  }
   allItems.forEach((item) => {
     itemContainer += `
         <div class="product_div_one">
@@ -28,7 +31,7 @@ function showData() {
             <div class="marked_price_one"><del>Rs ${item.price.original_price}</del></div>
             <div class="discount_percentage_one">(%${item.price.discount} OFF)</div>
           </div>
-          <button class="getProduct_one" onclick="addToBag(${item.id})">Add TO Cart</button>
+          <button class="getProduct_one" onclick="addToBag('${item.id}')">Add TO Cart</button>
         </div>
 `;
   });
