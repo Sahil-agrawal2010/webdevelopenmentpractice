@@ -128,8 +128,8 @@
   background-color: #f9fbfb;
   font-family: sans-serif;
   margin-top: 200px;
-  cursor: pointer;
   margin-left: 200px;
+  cursor: pointer;
 }
 .last_line {
   color: grey;
@@ -144,6 +144,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 100px;
+  margin-right: 20px;
 }
 .image_1{
   margin-top: 20px;
@@ -185,8 +186,19 @@ font-family: sans-serif;
   color: #4343d3;
 }
 .aside_div{
+  border: 1px solid transparent;
+  height: 250px;
+  width: 600px;
   margin-left: 850px;
   margin-top: -200px;
+  /* position: fixed; */
+  display: top;
+}
+.main_item_product_container{
+  border: 1px solid transparent;
+  width: 800px;
+  margin-left: 40px;
+  height: 100%;
 }
 .total_price{
   display: flex;
