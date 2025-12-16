@@ -1,4 +1,4 @@
-let bagItems = [];
+let bagItems;
 
 window.addEventListener("load", (event) => {
   showData();
