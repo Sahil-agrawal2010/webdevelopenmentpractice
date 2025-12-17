@@ -1,12 +1,11 @@
 let bagItemObjects;
-
 window.addEventListener("load", (event) => {
   loadBagItemObjects();
   showDataInfo();
 });
 
 function loadBagItemObjects() {
-  bagItemObjects = bagItems.map(itemId => {
+  bagItemObjects = bagItems.map((itemId) => {
     for (let i = 0; i < allItems.length; i++) {
       if (itemId === allItems[i].id) {
         return allItems[i];
@@ -38,5 +37,6 @@ function generateItemCode(item) {
                 <div class="deliver">
                 <p>Deliver by</p><p class="date">10 Oct 2023</p>
                 </div>
- </div>`
+                <a href="#" class="remove_item">X</a>
+ </div>`;
 }
