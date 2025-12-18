@@ -37,6 +37,15 @@ function generateItemCode(item) {
                 <div class="deliver">
                 <p>Deliver by</p><p class="date">10 Oct 2023</p>
                 </div>
-                <a href="#" class="remove_item">X</a>
+                <a href="#" class="remove_item" onclick='removeFromBag(${item.id})'>X</a>
  </div>`;
+}
+
+
+function removeFromBag(itemId){
+  bagItems=bagItems.filter(bagId=> bagId!=itemId)
+  localStorage.setItem('bagItems',JSON.stringify(bagItems))
+  loadBagItemObjects()
+  showDataInfo()
+  displayBagCount()
 }
