@@ -60,7 +60,7 @@ function showTotalPrice(){
   let finalPrice=0
   bagItemObjects.forEach(bagItem=>{
     console.log(bagItemObjects)
-    TotalDiscount+=bagItem.price.original_price-bagItem.pricecurrent_price
+    TotalDiscount+=bagItem.price.original_price-bagItem.price.current_price
     finalPrice+=(bagItem.price.original_price-TotalDiscount)+140
     DELIVERY_FEES=bagItems.length==0?0:140
 
@@ -72,7 +72,7 @@ function showTotalPrice(){
         </div>
         <div class="discount_price">
           <p class="discount_price_text">Discount on MRP</p>
-          <p class="discount_amount">- Rs ${bagItem.TotalDiscount}</p>
+          <p class="discount_amount">- Rs ${bagItem.price.TotalDiscount}</p>
         </div>
         <div class="deliver_details">
           <p class="deliver_fee">Delivery Fee</p>
