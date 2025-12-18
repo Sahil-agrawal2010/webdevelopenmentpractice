@@ -1,7 +1,9 @@
 let bagItemObjects;
+let DELIVERY_FEES=140
 window.addEventListener("load", (event) => {
   loadBagItemObjects();
   showDataInfo();
+  showTotalPrice();
 });
 
 function loadBagItemObjects() {
@@ -48,4 +50,40 @@ function removeFromBag(itemId){
   loadBagItemObjects()
   showDataInfo()
   displayBagCount()
+}
+
+
+function showTotalPrice(){
+  let bag_summary=document.querySelector('.aside_div')
+  let ToalItems=bagItems.length
+  let TotalDiscount=0
+  let finalPrice=0
+  bagItemObjects.forEach(bagItem=>{
+    console.log(bagItemObjects)
+    TotalDiscount+=bagItem.price.original_price-bagItem.pricecurrent_price
+    finalPrice+=(bagItem.price.original_price-TotalDiscount)+140
+    DELIVERY_FEES=bagItems.length==0?0:140
+
+    bag_summary.innerHTML=`
+            <p class="main_heading_details">PRICE DETAILS (${ToalItems} Items)</p>
+        <div class="total_price">
+          <p class="total_money">Total MRP</p>
+          <p class="total_amount">Rs ${bagItem.price.current_price}</p>
+        </div>
+        <div class="discount_price">
+          <p class="discount_price_text">Discount on MRP</p>
+          <p class="discount_amount">- Rs ${bagItem.TotalDiscount}</p>
+        </div>
+        <div class="deliver_details">
+          <p class="deliver_fee">Delivery Fee</p>
+          <p class="delivery_amount">Rs ${DELIVERY_FEES}</p>
+        </div>
+        <hr class="small_line" />
+        <div class="total">
+          <p class="total_text">Total Amount</p>
+          <p class="total_number">Rs ${finalPrice}</p>
+        </div>
+        <button class="final_click">PLACE ORDER</button>
+    `
+  })
 }
