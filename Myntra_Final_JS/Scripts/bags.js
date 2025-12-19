@@ -77,6 +77,7 @@ function showTotalPrice(){
         <div class="deliver_details">
           <p class="deliver_fee">Delivery Fee</p>
           <p class="delivery_amount">Rs ${DELIVERY_FEES}</p>
+          
         </div>
         <hr class="small_line" />
         <div class="total">
