@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+    .total_text{
+        color: white;
+        font-size: 20px;
+    }
+    .text_container{
+        color: #6fd3a6;
+        font-size: 20px;
+    }
+    .total_text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<body>
+    <div class="main_container">
+        <div class="total_text">        
+            <p>I am a </p><div class="text_container"></div>
+    </div>
+    <script>
+        let element=document.querySelector('.text_container')
+        let name_array=[" boy"," good boy"," polite boy"," intelligent boy"," student"," beginner coder"," good person"," teenager"]
+        let i=0
+       setInterval(()=>{
+            element.innerHTML=`<p>${name_array[i]}</p>`
+            i++
+            if(i==name_array.length){
+                i=0
+            }
+        },1000)
+    </script>
+</body>
+</html>
