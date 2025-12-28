@@ -1,0 +1,20 @@
+What is React?
+React is a javascript library that is used to build dynamic and interactive user interfaces.
+It was developed by Facebook in 2011/2012.
+It is currently the most widely used javascript library for frontend developement.
+React works on single page application (SPA) format.
+
+Problems with javascript:-
+i) Javascript is complex.
+ii) Javascript is heavy.
+iii) Javascript is error prone.
+iv) Javascript is hard to maintain.
+
+Working of react:-
+i) Don't worry about querring and updating DOM.
+ii) React creats with small and reusable components.
+iii) Saves lots od time more easier than Javascript.
+
+Javascript Vs React:-
+i)Javascript is imperative :- We need to define each steps to reach a particular state.
+  React is declarative :- We need to define UI tehn the react will figure out how to rach that state.
