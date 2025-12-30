@@ -7,23 +7,141 @@
     <title>Document</title>
 </head>
 <style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
     body{
         background-color: #fa8072;
     }
     .main_container{
-        margin-top: 200px;
-        margin-left: 500px;
+        margin-top: 120px;
+        margin-left: 550px;
         height: 500px;
-        width: 500px;
+        width: 450px;
         border-radius: 10px;
+    }
+    .heading_div{
+        width: 505px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #20b2aa;
+        color: #d3d3d3;
+        font-family: sans-serif;
+        font-size: 20px;
+        border-radius: 10px;
+        position: relative;
+        top: 2px;
+        right: 2px;
+    }
+    .main_month{
+        font-size: 35px;
+    }
+    .calender_div{
+        width: 500px;
+        height: 440px;
+        background-color: black;
+        border-radius: 10px;    
+    }
+    .days{
+        display: flex;
+        font-weight: 550;
+        color: #d3d3d3;
+        /* gap: 15px; */
+        font-family: sans-serif;
+    }
+    .days p{
+        margin-top: 20px;
+        margin-left: 25px;
+        border: 1px solid transparent;
+        height: 35px;
+        width: 40px;
+    }
+    .first_line_dates,.second_line_dates,.third_line_dates,.fourth_line_dates,.fifth_line_div{
+        display: flex;
+        font-family: sans-serif;
+        font-size: 14px;
+        color: #d3d3d3;
+        margin-top: 10px;
+    }
+    .first_line_dates p,.second_line_dates p,.third_line_dates p,.fourth_line_dates p,.fifth_line_div p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-left: 20px;
+        border: 1px solid transparent;
+        height: 45px;
+        width: 45px;
+    }
+    .first_line_dates p:hover,.second_line_dates p:hover,.third_line_dates p:hover,.fourth_line_dates p:hover,.fifth_line_div p:hover{
+        border: 1px solid #d3d3d3;
+    }
+    .thirty_date{
+        background-color: #20b2aa;
+        color: white;
     }
 </style>
 <body>
     <div class="main_container">
         <div class="heading_div">
-            <p>December</p>
+            <p class="main_month">DECEMBER</p>
             <p>Mon Dec 29 2025</p>
-            <p>ok </p>
+        </div>
+        <div class="calender_div">
+            <div class="days">
+                <p>Mon</p>
+                <p>Tue</p>
+                <p>Wed</p>
+                <p>Thu</p>
+                <p>Fri</p>
+                <p>Sat</p>
+                <p>Sun</p>
+            </div>
+            <div class="first_line_dates">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+            </div>
+            <div class="second_line_dates">
+                <p>8</p>
+                <p>9</p>
+                <p>10</p>
+                <p>11</p>
+                <p>12</p>
+                <p>13</p>
+                <p>14</p>
+            </div>
+            <div class="third_line_dates">
+                <p>15</p>
+                <p>16</p>
+                <p>17</p>
+                <p>18</p>
+                <p>19</p>
+                <p>20</p>
+                <p>21</p>
+            </div>
+            <div class="fourth_line_dates">
+                <p>22</p>
+                <p>23</p>
+                <p>24</p>
+                <p>25</p>
+                <p>26</p>
+                <p>27</p>
+                <p>28</p>
+            </div>
+            <div class="fifth_line_div">
+                <p>29</p>
+                <p class="thirty_date">30</p>
+                <p>31</p>
+            </div>
         </div>
     </div>
 </body>
