@@ -1,13 +1,111 @@
+<!-- https://demo.100jsprojects.com/random-password-generator -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 </head>
+<style>
+    .main_container{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid transparent;
+        width: 600px;
+        margin-left: 450px;
+        margin-top: 200px;
+        background-color: #ffc0cb;
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    h1{
+        font-family: Atkinson Hyperlegible Mono;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    .userInput{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 28px;
+        font-size: 12px;
+        margin-left: 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+        border: 2px solid black;
+        background-color: #ffc0cb;
+    }
+    .getUserInput{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 30px;
+        background-color: black;
+        color: white;
+        margin-left: 20px;
+        margin-top: 10px;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+    .getUserInput:hover{
+        background-color: green;
+    }
+    .password{
+           display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 38px;
+        font-size: 18px;
+        margin-left: 20px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 2px solid black;
+        font-family: Atkinson Hyperlegible Mono;
+        letter-spacing: 5px;
+        background-color: #ffc0cb;
+    }
+    .copy_icon{
+        position: relative;
+        bottom: 35px;
+        left: 480px;
+        color: grey;
+    }
+</style>
 <body>
     <div class="main_container">
+        <h1>Random Password Generator</h1>
         <input class="userInput" type="text" placeholder="Enter how many digits pass word do You want :- ">
+        <button class="getUserInput">Generate</button>
+        <input class="password" type="text" placeholder="Create Password" readonly><svg class="copy_icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/>
+</svg>
     </div>
+    <script>
+        let element=document.querySelector('.getUserInput')
+        element.addEventListener('click',event=>{
+       let user_input=Number(document.querySelector('.userInput').value)
+        let password_array=""
+        let random_array=[
+  "Q", "7", "%", "x", "}", "A", "=", "?", "m", "!", "4", "Z", "&", "r",")", ":", "k", "e", "9", "T", "b", "~", "P", "w", "o", "F", "J", "H","l", "1", "S", ">", "U", "8", "(", "D", "*", "g", "R", "c", "/", "N","@", "i", "-", "0", "V", "Y", ";", "M", "E", "a", "2", "K", "B", "L","+", "s", "6", "X", "q", "_", "n", "p", "5", "C", "$", "d", "f", "I","t", "W", "h", "O", "u", "3", "j", "[", "]", "<", "|","g","7","Q","m","A","4","z","T","1","k","R","9","b","E","0","L","X","Y","f","2","U","n","W","C","J","8","s","H","a","D","6","P","V","e","M","r","5","N","B","c","I","o","t","Z","S","l","F","u","x","K","O","d","3","q","w","y","p","h","G","j","v"
+]
+for(let i=0;i<user_input;i++){
+    let random_numbers=Math.floor(Math.random()*140)
+password_array+=random_array[random_numbers]
+}
+console.log(password_array)
+document.querySelector('.password').value=password_array
+        })
+        let pass=document.querySelector('.password').value
+        let element2=document.querySelector('.copy_icon')
+        element2.addEventListener('click',event=>{
+            event.clipboardData('text/plain',pass)
+            event.preventDefault()
+        })
+    </script>
 </body>
 </html>
