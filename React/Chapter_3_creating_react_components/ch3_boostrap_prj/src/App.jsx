@@ -133,7 +133,7 @@ export default function App() {
 
 
 
-<div className="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+{/* <div className="toast show" role="alert" aria-live="assertive" aria-atomic="true">
   <div className="toast-header">
     <img src="..." className="rounded me-2" alt="..."/>
     <strong className="me-auto">Bootstrap</strong>
@@ -143,6 +143,21 @@ export default function App() {
   <div className="toast-body">
     Hello, xworld! This is a toast message.
   </div>
+</div> */}
+
+
+
+
+<h4>To do List</h4>
+<div className="main_add_list">
+  <input type="text" placeholder="Enter TODO Here" />
+  <input type="date" />
+  <button type="button" class="btn btn-success">Add</button>
+</div>
+<div className="First_task">
+  <p>Bring son from school</p>
+  <p>12/31/2025</p>
+  <button type="button" class="btn btn-danger">Delete</button>
 </div>
     </div>
   );

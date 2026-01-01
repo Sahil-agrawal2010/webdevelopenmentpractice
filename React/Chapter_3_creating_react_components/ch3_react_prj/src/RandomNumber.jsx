@@ -7,5 +7,5 @@
 
 
 export function OTP(){
-    return <p>The OTP is :- {Math.floor(Math.random()*10)}  {Math.floor(Math.random()*10)}  {Math.floor(Math.random()*10)}  {Math.floor(Math.random()*10)} {Math.floor(Math.random()*10)}  {Math.floor(Math.random()*10)}</p>
+    return <p>The OTP is :- {Math.floor(Math.random()*10)}&nbsp;{Math.floor(Math.random()*10)}&nbsp;{Math.floor(Math.random()*10)}&nbsp;{Math.floor(Math.random()*10)}&nbsp;{Math.floor(Math.random()*10)}&nbsp;{Math.floor(Math.random()*10)}</p>
 }

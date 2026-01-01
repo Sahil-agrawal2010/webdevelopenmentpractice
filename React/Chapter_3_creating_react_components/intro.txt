@@ -1,0 +1,7 @@
+Component :- Component are just a function that holds reusable elements. There are two types of components :-
+    i)Class Components :- They are stateful in nature.They have certain life cyle methods. They are not preferd any more.
+    ii)Functional Components :- They initially are stateless they can use hooks for states and effects.
+
+File extension :- 
+i) js
+ii) jsx :- It stands for js plus + XML. Combines javascript with html like structure. It's not html though it resembles html , it's acctually javascript with XML.
