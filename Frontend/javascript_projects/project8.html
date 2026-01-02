@@ -1,3 +1,4 @@
+<!-- https://demo.100jsprojects.com/currency-converter -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +8,35 @@
 </head>
 <body>
     <div class="main_container">
-        <select name="" id="">
-            <option value="">Nep`</option>
+        <select name="" id="from_exchange">
+            <option value="arabia">AUD</option>
+            <option value="cannada">CAD</option>
+            <option value="europe">EUR</option>
+            <option value="pappuanewgeniuea">GBP</option>
+            <option value="india">INR</option>
+            <option value="japan">JPY</option>
+            <option value="unitedstates">USD</option>
         </select>
+        <input class="user_input" type="number">
+        <select name="" id="to_exchange">
+            <option value="arabia">AUD</option>
+            <option value="cannada">CAD</option>
+            <option value="europe">EUR</option>
+            <option value="pappuanewgeniuea">GBP</option>
+            <option value="india">INR</option>
+            <option value="japan">JPY</option>
+            <option value="unitedstates">USD</option>
+        </select>
+        <input class="exchanged_amount" type="text" readonly>
     </div>
+    <script>
+        let all_country_from_exchanged=document.getElementById('from_exchange')
+        let all_country_to_exchanged=document.getElementById('to_exchange')
+        all_country_from_exchanged.addEventListener('click',event=>{    
+            if(all_country_from_exchanged=="unitedstates")
+            console.log("Clicked United States.")
+        })
+        // let element = document.querySelector('.user_input').value
+    </script>
 </body>
 </html>
