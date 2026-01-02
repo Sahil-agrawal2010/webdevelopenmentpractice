@@ -1,0 +1,48 @@
+.Heading{
+    margin-left: 750px;
+    margin-top: 100px;
+    font-size: 40px;
+}
+.container{
+    border: 2px solid black;
+    width: 1000px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 200px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+.user_Input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: grey;
+    width: 180px;
+    height: 30px;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+}
+.task{
+    width: 200px;
+}
+.task_div{
+    gap: 220px;
+}
+#ToDo{
+    position: relative;
+    top: 22px;
+}
