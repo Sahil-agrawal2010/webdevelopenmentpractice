@@ -34,15 +34,7 @@
         let button=document.querySelector('.submit_button')
         button.addEventListener('click',event=>{
         let all_country_from_exchanged=document.getElementById('from_exchange')
-        let all_country_to_exchanged=document.getElementById('to_exchange')
-        let exchange_rate_AUD=0
-        let exchange_rate_CAD=0
-        let exchange_rate_EUR=0
-        let exchange_rate_GBP=0
-        let exchange_rate_INR=0
-        let exchange_rate_JPY=0
-        let exchange_rate_USD=0
-        // all_country_from_exchanged.addEventListener('click',event=>{    
+        let all_country_to_exchanged=document.getElementById('to_exchange')   
             if(all_country_from_exchanged.value=="unitedstates" && all_country_to_exchanged.value=="arabia"){
                 document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*3.75
             }
@@ -85,16 +77,112 @@
             if(all_country_from_exchanged.value=="japan" && all_country_to_exchanged.value=="japan"){
                 document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1
             }
+                        if(all_country_from_exchanged.value=="india" && all_country_to_exchanged.value=="arabia"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.042
+            }
+              if(all_country_from_exchanged.value=="india" && all_country_to_exchanged.value=="cannada"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.015
+            }
+              if(all_country_from_exchanged.value=="india" && all_country_to_exchanged.value=="europe"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.0095
+            }
+              if(all_country_from_exchanged.value=="india" && all_country_to_exchanged.value=="pappuanewgeniuea"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.0083
+            }
+              if(all_country_from_exchanged.value=="india" && all_country_to_exchanged.value=="japan"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1.74
+            }
+              if(all_country_from_exchanged.value=="india" && all_country_to_exchanged.value=="unitedstates"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.011
+            }
+            if(all_country_from_exchanged.value=="india" && all_country_to_exchanged.value=="india"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1
+            }
+                        if(all_country_from_exchanged.value=="pappuanewgeniuea" && all_country_to_exchanged.value=="arabia"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*5.06
+            }
+              if(all_country_from_exchanged.value=="pappuanewgeniuea" && all_country_to_exchanged.value=="cannada"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1.85
+            }
+              if(all_country_from_exchanged.value=="pappuanewgeniuea" && all_country_to_exchanged.value=="europe"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1.15
+            }
+              if(all_country_from_exchanged.value=="pappuanewgeniuea" && all_country_to_exchanged.value=="india"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*121.17
+            }
+              if(all_country_from_exchanged.value=="pappuanewgeniuea" && all_country_to_exchanged.value=="japan"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*211.14
+            }
+              if(all_country_from_exchanged.value=="pappuanewgeniuea" && all_country_to_exchanged.value=="unitedstates"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1.35
+            }
+            if(all_country_from_exchanged.value=="pappuanewgeniuea" && all_country_to_exchanged.value=="pappuanewgeniuea"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1
+            }
+                        if(all_country_from_exchanged.value=="europe" && all_country_to_exchanged.value=="arabia"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*4.40
+            }
+              if(all_country_from_exchanged.value=="europe" && all_country_to_exchanged.value=="cannada"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1.61
+            }
+              if(all_country_from_exchanged.value=="europe" && all_country_to_exchanged.value=="pappuanewgeniuea"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.87
+            }
+              if(all_country_from_exchanged.value=="europe" && all_country_to_exchanged.value=="india"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*105.50
+            }
+              if(all_country_from_exchanged.value=="europe" && all_country_to_exchanged.value=="japan"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*183.92
+            }
+              if(all_country_from_exchanged.value=="europe" && all_country_to_exchanged.value=="unitedstates"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1.17
+            }
+            if(all_country_from_exchanged.value=="europe" && all_country_to_exchanged.value=="europe"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1
+            } 
+                        if(all_country_from_exchanged.value=="cannada" && all_country_to_exchanged.value=="arabia"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*2.74
+            }
+              if(all_country_from_exchanged.value=="cannada" && all_country_to_exchanged.value=="europe"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.62
+            }
+              if(all_country_from_exchanged.value=="cannada" && all_country_to_exchanged.value=="pappuanewgeniuea"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.54
+            }
+              if(all_country_from_exchanged.value=="cannada" && all_country_to_exchanged.value=="india"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*65.56
+            }
+              if(all_country_from_exchanged.value=="cannada" && all_country_to_exchanged.value=="japan"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*114.12
+            }
+              if(all_country_from_exchanged.value=="cannada" && all_country_to_exchanged.value=="unitedstates"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.73
+            }
+            if(all_country_from_exchanged.value=="cannada" && all_country_to_exchanged.value=="cannada"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1
+            }
+                        if(all_country_from_exchanged.value=="arabia" && all_country_to_exchanged.value=="cannada"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.365 
+            }
+              if(all_country_from_exchanged.value=="arabia" && all_country_to_exchanged.value=="europe"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.23
+            }
+              if(all_country_from_exchanged.value=="arabia" && all_country_to_exchanged.value=="pappuanewgeniuea"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.20
+            }
+              if(all_country_from_exchanged.value=="arabia" && all_country_to_exchanged.value=="india"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*24.02
+            }
+              if(all_country_from_exchanged.value=="arabia" && all_country_to_exchanged.value=="japan"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*41.72
+            }
+              if(all_country_from_exchanged.value=="arabia" && all_country_to_exchanged.value=="unitedstates"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.27
+            }
+            if(all_country_from_exchanged.value=="arabia" && all_country_to_exchanged.value=="arabia"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1
+            }
 })
-        // })
-
-// exchange_rate_CAD=1.37
-// exchange_rate_EUR=0.85
-// exchange_rate_GBP=0.74
-// exchange_rate_INR=90.01
-// exchange_rate_JPY=156.80
-// exchange_rate_USD=0
-        // let element = document.querySelector('.user_input').value
     </script>
 </body>
 </html>
