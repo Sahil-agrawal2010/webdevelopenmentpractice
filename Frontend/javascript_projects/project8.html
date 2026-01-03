@@ -28,14 +28,72 @@
             <option value="unitedstates">USD</option>
         </select>
         <input class="exchanged_amount" type="text" readonly>
+        <button class="submit_button">Submit</button>
     </div>
     <script>
+        let button=document.querySelector('.submit_button')
+        button.addEventListener('click',event=>{
         let all_country_from_exchanged=document.getElementById('from_exchange')
         let all_country_to_exchanged=document.getElementById('to_exchange')
-        all_country_from_exchanged.addEventListener('click',event=>{    
-            if(all_country_from_exchanged=="unitedstates")
-            console.log("Clicked United States.")
-        })
+        let exchange_rate_AUD=0
+        let exchange_rate_CAD=0
+        let exchange_rate_EUR=0
+        let exchange_rate_GBP=0
+        let exchange_rate_INR=0
+        let exchange_rate_JPY=0
+        let exchange_rate_USD=0
+        // all_country_from_exchanged.addEventListener('click',event=>{    
+            if(all_country_from_exchanged.value=="unitedstates" && all_country_to_exchanged.value=="arabia"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*3.75
+            }
+              if(all_country_from_exchanged.value=="unitedstates" && all_country_to_exchanged.value=="cannada"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1.37
+            }
+              if(all_country_from_exchanged.value=="unitedstates" && all_country_to_exchanged.value=="europe"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.85
+            }
+              if(all_country_from_exchanged.value=="unitedstates" && all_country_to_exchanged.value=="pappuanewgeniuea"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.74
+            }
+              if(all_country_from_exchanged.value=="unitedstates" && all_country_to_exchanged.value=="india"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*90.01
+            }
+              if(all_country_from_exchanged.value=="unitedstates" && all_country_to_exchanged.value=="japan"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*156.80
+            }
+            if(all_country_from_exchanged.value=="unitedstates" && all_country_to_exchanged.value=="unitedstates"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1
+            }
+                        if(all_country_from_exchanged.value=="japan" && all_country_to_exchanged.value=="arabia"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.024
+            }
+              if(all_country_from_exchanged.value=="japan" && all_country_to_exchanged.value=="cannada"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.0088
+            }
+              if(all_country_from_exchanged.value=="japan" && all_country_to_exchanged.value=="europe"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.0054
+            }
+              if(all_country_from_exchanged.value=="japan" && all_country_to_exchanged.value=="pappuanewgeniuea"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.0047
+            }
+              if(all_country_from_exchanged.value=="japan" && all_country_to_exchanged.value=="india"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.58
+            }
+              if(all_country_from_exchanged.value=="japan" && all_country_to_exchanged.value=="unitedstates"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.0064
+            }
+            if(all_country_from_exchanged.value=="japan" && all_country_to_exchanged.value=="japan"){
+                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1
+            }
+})
+        // })
+
+// exchange_rate_CAD=1.37
+// exchange_rate_EUR=0.85
+// exchange_rate_GBP=0.74
+// exchange_rate_INR=90.01
+// exchange_rate_JPY=156.80
+// exchange_rate_USD=0
         // let element = document.querySelector('.user_input').value
     </script>
 </body>
