@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Currency Converter</title>
 </head>
 <body>
     <div class="main_container">
-        <select name="" id="from_exchange">
+        <select id="from_exchange">
             <option value="arabia">AUD</option>
             <option value="cannada">CAD</option>
             <option value="europe">EUR</option>
@@ -17,8 +17,10 @@
             <option value="japan">JPY</option>
             <option value="unitedstates">USD</option>
         </select>
+
         <input class="user_input" type="number">
-        <select name="" id="to_exchange">
+
+        <select id="to_exchange">
             <option value="arabia">AUD</option>
             <option value="cannada">CAD</option>
             <option value="europe">EUR</option>
@@ -27,212 +29,104 @@
             <option value="japan">JPY</option>
             <option value="unitedstates">USD</option>
         </select>
+
         <input class="exchanged_amount" type="text" readonly>
         <div class="exchange_rate"></div>
         <button class="submit_button">Submit</button>
     </div>
-    <script>
-        let button=document.querySelector('.submit_button')
-        button.addEventListener('click',event=>{
-        let all_country_from_exchanged=document.getElementById('from_exchange')
-        let all_country_to_exchanged=document.getElementById('to_exchange')   
-            if(all_country_from_exchanged.value=="unitedstates" && all_country_to_exchanged.value=="arabia"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*3.75
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 3.75 AUD</p>"
-            }
-              if(all_country_from_exchanged.value=="unitedstates" && all_country_to_exchanged.value=="cannada"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1.37
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 1.37 CAD</p>"
-            }
-              if(all_country_from_exchanged.value=="unitedstates" && all_country_to_exchanged.value=="europe"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.85
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="unitedstates" && all_country_to_exchanged.value=="pappuanewgeniuea"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.74
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.74 GBP</p>"
-            }
-              if(all_country_from_exchanged.value=="unitedstates" && all_country_to_exchanged.value=="india"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*90.01
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 90.01 INR</p>"
-            }
-              if(all_country_from_exchanged.value=="unitedstates" && all_country_to_exchanged.value=="japan"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*156.80
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 156.80 JPY</p>"
-            }
-            if(all_country_from_exchanged.value=="unitedstates" && all_country_to_exchanged.value=="unitedstates"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 1 USD</p>"
-            }
-                        if(all_country_from_exchanged.value=="japan" && all_country_to_exchanged.value=="arabia"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.024
-                document.querySelector('.exchange_rate').innerHTML="<p>1 JPY = </p>"
-            }
-              if(all_country_from_exchanged.value=="japan" && all_country_to_exchanged.value=="cannada"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.0088
-                document.querySelector('.exchange_rate').innerHTML="<p>1 JPY = </p>"
-            }
-              if(all_country_from_exchanged.value=="japan" && all_country_to_exchanged.value=="europe"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.0054
-                document.querySelector('.exchange_rate').innerHTML="<p>1 JPY = </p>"
-            }
-              if(all_country_from_exchanged.value=="japan" && all_country_to_exchanged.value=="pappuanewgeniuea"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.0047
-                document.querySelector('.exchange_rate').innerHTML="<p>1 JPY = </p>"
-            }
-              if(all_country_from_exchanged.value=="japan" && all_country_to_exchanged.value=="india"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.58
-                document.querySelector('.exchange_rate').innerHTML="<p>1 JPY = </p>"
-            }
-              if(all_country_from_exchanged.value=="japan" && all_country_to_exchanged.value=="unitedstates"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.0064
-                document.querySelector('.exchange_rate').innerHTML="<p>1 JPY = </p>"
-            }
-            if(all_country_from_exchanged.value=="japan" && all_country_to_exchanged.value=="japan"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1
-                document.querySelector('.exchange_rate').innerHTML="<p>1 JPY = </p>"
-            }
-                        if(all_country_from_exchanged.value=="india" && all_country_to_exchanged.value=="arabia"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.042
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="india" && all_country_to_exchanged.value=="cannada"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.015
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="india" && all_country_to_exchanged.value=="europe"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.0095
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="india" && all_country_to_exchanged.value=="pappuanewgeniuea"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.0083
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="india" && all_country_to_exchanged.value=="japan"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1.74
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="india" && all_country_to_exchanged.value=="unitedstates"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.011
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-            if(all_country_from_exchanged.value=="india" && all_country_to_exchanged.value=="india"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-                        if(all_country_from_exchanged.value=="pappuanewgeniuea" && all_country_to_exchanged.value=="arabia"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*5.06
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="pappuanewgeniuea" && all_country_to_exchanged.value=="cannada"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1.85
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="pappuanewgeniuea" && all_country_to_exchanged.value=="europe"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1.15
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="pappuanewgeniuea" && all_country_to_exchanged.value=="india"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*121.17
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="pappuanewgeniuea" && all_country_to_exchanged.value=="japan"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*211.14
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="pappuanewgeniuea" && all_country_to_exchanged.value=="unitedstates"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1.35
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-            if(all_country_from_exchanged.value=="pappuanewgeniuea" && all_country_to_exchanged.value=="pappuanewgeniuea"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-                        if(all_country_from_exchanged.value=="europe" && all_country_to_exchanged.value=="arabia"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*4.40
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="europe" && all_country_to_exchanged.value=="cannada"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1.61
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="europe" && all_country_to_exchanged.value=="pappuanewgeniuea"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.87
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="europe" && all_country_to_exchanged.value=="india"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*105.50
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="europe" && all_country_to_exchanged.value=="japan"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*183.92
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="europe" && all_country_to_exchanged.value=="unitedstates"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1.17
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-            if(all_country_from_exchanged.value=="europe" && all_country_to_exchanged.value=="europe"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            } 
-                        if(all_country_from_exchanged.value=="cannada" && all_country_to_exchanged.value=="arabia"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*2.74
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="cannada" && all_country_to_exchanged.value=="europe"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.62
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="cannada" && all_country_to_exchanged.value=="pappuanewgeniuea"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.54
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="cannada" && all_country_to_exchanged.value=="india"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*65.56
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="cannada" && all_country_to_exchanged.value=="japan"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*114.12
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="cannada" && all_country_to_exchanged.value=="unitedstates"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.73
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-            if(all_country_from_exchanged.value=="cannada" && all_country_to_exchanged.value=="cannada"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-                        if(all_country_from_exchanged.value=="arabia" && all_country_to_exchanged.value=="cannada"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.365 
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="arabia" && all_country_to_exchanged.value=="europe"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.23
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="arabia" && all_country_to_exchanged.value=="pappuanewgeniuea"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.20
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="arabia" && all_country_to_exchanged.value=="india"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*24.02
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="arabia" && all_country_to_exchanged.value=="japan"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*41.72
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-              if(all_country_from_exchanged.value=="arabia" && all_country_to_exchanged.value=="unitedstates"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*0.27
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-            if(all_country_from_exchanged.value=="arabia" && all_country_to_exchanged.value=="arabia"){
-                document.querySelector('.exchanged_amount').value=Number(document.querySelector('.user_input').value)*1
-                document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>"
-            }
-})
-    </script>
+
+<script>
+let button = document.querySelector('.submit_button');
+button.addEventListener('click', () => {
+let from = document.getElementById('from_exchange').value;
+let to = document.getElementById('to_exchange').value;
+let amount = Number(document.querySelector('.user_input').value);
+if(from=="unitedstates" && to=="arabia"){
+document.querySelector('.exchanged_amount').value = amount * 3.75;
+document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 3.75 AUD</p>";
+}
+if(from=="unitedstates" && to=="cannada"){
+document.querySelector('.exchanged_amount').value = amount * 1.37;
+document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 1.37 CAD</p>";
+}
+if(from=="unitedstates" && to=="europe"){
+document.querySelector('.exchanged_amount').value = amount * 0.85;
+document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.85 EUR</p>";
+}
+if(from=="unitedstates" && to=="pappuanewgeniuea"){
+document.querySelector('.exchanged_amount').value = amount * 0.74;
+document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 0.74 GBP</p>";
+}
+if(from=="unitedstates" && to=="india"){
+document.querySelector('.exchanged_amount').value = amount * 90.01;
+document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 90.01 INR</p>";
+}
+if(from=="unitedstates" && to=="japan"){
+document.querySelector('.exchanged_amount').value = amount * 156.80;
+document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 156.80 JPY</p>";
+}
+if(from=="unitedstates" && to=="unitedstates"){
+document.querySelector('.exchanged_amount').value = amount;
+document.querySelector('.exchange_rate').innerHTML="<p>1 USD = 1 USD</p>";
+}
+if(from=="japan" && to=="arabia"){
+document.querySelector('.exchanged_amount').value = amount * 0.024;
+document.querySelector('.exchange_rate').innerHTML="<p>1 JPY = 0.024 AUD</p>";
+}
+if(from=="japan" && to=="cannada"){
+document.querySelector('.exchanged_amount').value = amount * 0.0088;
+document.querySelector('.exchange_rate').innerHTML="<p>1 JPY = 0.0088 CAD</p>";
+}
+if(from=="japan" && to=="europe"){
+document.querySelector('.exchanged_amount').value = amount * 0.0054;
+document.querySelector('.exchange_rate').innerHTML="<p>1 JPY = 0.0054 EUR</p>";
+}
+if(from=="japan" && to=="pappuanewgeniuea"){
+document.querySelector('.exchanged_amount').value = amount * 0.0047;
+document.querySelector('.exchange_rate').innerHTML="<p>1 JPY = 0.0047 GBP</p>";
+}
+if(from=="japan" && to=="india"){
+document.querySelector('.exchanged_amount').value = amount * 0.58;
+document.querySelector('.exchange_rate').innerHTML="<p>1 JPY = 0.58 INR</p>";
+}
+if(from=="japan" && to=="unitedstates"){
+document.querySelector('.exchanged_amount').value = amount * 0.0064;
+document.querySelector('.exchange_rate').innerHTML="<p>1 JPY = 0.0064 USD</p>";
+}
+if(from=="japan" && to=="japan"){
+document.querySelector('.exchanged_amount').value = amount;
+document.querySelector('.exchange_rate').innerHTML="<p>1 JPY = 1 JPY</p>";
+}
+if(from=="india" && to=="arabia"){
+document.querySelector('.exchanged_amount').value = amount * 0.042;
+document.querySelector('.exchange_rate').innerHTML="<p>1 INR = 0.042 AUD</p>";
+}
+if(from=="india" && to=="cannada"){
+document.querySelector('.exchanged_amount').value = amount * 0.015;
+document.querySelector('.exchange_rate').innerHTML="<p>1 INR = 0.015 CAD</p>";
+}
+if(from=="india" && to=="europe"){
+document.querySelector('.exchanged_amount').value = amount * 0.0095;
+document.querySelector('.exchange_rate').innerHTML="<p>1 INR = 0.0095 EUR</p>";
+}
+if(from=="india" && to=="pappuanewgeniuea"){
+document.querySelector('.exchanged_amount').value = amount * 0.0083;
+document.querySelector('.exchange_rate').innerHTML="<p>1 INR = 0.0083 GBP</p>";
+}
+if(from=="india" && to=="japan"){
+document.querySelector('.exchanged_amount').value = amount * 1.74;
+document.querySelector('.exchange_rate').innerHTML="<p>1 INR = 1.74 JPY</p>";
+}
+if(from=="india" && to=="unitedstates"){
+document.querySelector('.exchanged_amount').value = amount * 0.011;
+document.querySelector('.exchange_rate').innerHTML="<p>1 INR = 0.011 USD</p>";
+}
+if(from=="india" && to=="india"){
+document.querySelector('.exchanged_amount').value = amount;
+document.querySelector('.exchange_rate').innerHTML="<p>1 INR = 1 INR</p>";
+}
+
+});
+</script>
 </body>
 </html>
