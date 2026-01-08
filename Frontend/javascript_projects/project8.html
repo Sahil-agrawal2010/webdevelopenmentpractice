@@ -6,8 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Converter</title>
 </head>
+<style>
+    body{
+        background-color: yellow;
+    }
+    .main_container{
+        background-color: #008b8b;
+        height: 300px;
+        width: 600px;
+    }
+    .user_input,.exchanged_amount{
+        border: 1px solid transparent;
+        background-color: #008b8b;
+        color: white;
+        font-size: 20px;
+    }
+    .user_input:active{
+        border: 1px solid transparent;
+    }
+</style>
 <body>
     <div class="main_container">
+        <h1>Currency Converter</h1>
         <select id="from_exchange">
             <option value="arabia">AUD</option>
             <option value="cannada">CAD</option>
@@ -31,8 +51,8 @@
         </select>
 
         <input class="exchanged_amount" type="text" readonly>
-        <div class="exchange_rate"></div>
         <button class="submit_button">Submit</button>
+        <div class="exchange_rate"></div>
     </div>
 
 <script>
