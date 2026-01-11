@@ -43,7 +43,7 @@
         /* border: 1px solid black; */
         text-align: end;
         position: relative;
-        left: 150px;
+        left: 140px;
         bottom: 35px;
     }
     h1{
@@ -123,7 +123,7 @@
             <option value="unitedstates">USD</option>
         </select>
 
-        <input class="exchanged_amount" type="text" readonly>
+        <input value="0" class="exchanged_amount" type="text" readonly>
         <button class="submit_button">SUBMIT</button>
         <div class="exchange_rate"></div>
     </div>
@@ -203,10 +203,6 @@ document.querySelector('.exchanged_amount').value = amount * 0.0095;
 document.querySelector('.exchange_rate').innerHTML="<p>1 INR = 0.0095 EUR</p>";
 }
 if(from=="india" && to=="pappuanewgeniuea"){
-
-
-
-
 document.querySelector('.exchanged_amount').value = amount * 0.0083;
 document.querySelector('.exchange_rate').innerHTML="<p>1 INR = 0.0083 GBP</p>";
 }
