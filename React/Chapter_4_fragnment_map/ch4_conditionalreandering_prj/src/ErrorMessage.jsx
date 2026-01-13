@@ -94,24 +94,17 @@ export default function ErrorMessage(props) {
         Favourite Dinner Calories :{" "}
         {props.studentsDetails.preferences.food.dishes.dinner[0].calories}
       </li>
-      {/* <li class="list-group-item"></li>
-      <li class="list-group-item"></li>
-      <li class="list-group-item"></li>
-      <li class="list-group-item"></li>
-      <li class="list-group-item"></li>
-      <li class="list-group-item"></li>
-      <li class="list-group-item"></li>
-      <li class="list-group-item"></li>
-      <li class="list-group-item"></li>
-      <li class="list-group-item"></li>
-      <li class="list-group-item"></li>
-      <li class="list-group-item"></li>
-      <li class="list-group-item"></li>
-      <li class="list-group-item"></li>
-      <li class="list-group-item"></li>
-      <li class="list-group-item"></li>
-      <li class="list-group-item"></li>
-      <li class="list-group-item"></li> */}
+      <li class="list-group-item">Favorite Country : {props.studentsDetails.preferences.travel.favorite_places.countries[0].name}</li>
+      <li class="list-group-item">Favorite City : {props.studentsDetails.preferences.travel.favorite_places.countries[1].cities[0]}</li>
+      <li class="list-group-item">Dream City : {props.studentsDetails.preferences.travel.favorite_places.dream_city.name}</li>
+      <li class="list-group-item"> Reason Of Dream City : {(props.studentsDetails.preferences.travel.favorite_places.dream_city.reasons.nature)  ? 'BeautiFul Nature' : 'Bad Nature'}</li>
+      <li class="list-group-item">Hobby : {props.studentsDetails.activities.hobbies[0]}</li>
+      <li class="list-group-item">Indoor Sport : {props.studentsDetails.activities.sports.indoor[1]}</li>
+      <li class="list-group-item">Outdoor Sport : {props.studentsDetails.activities.sports.outdoor[0].name}</li>
+      <li class="list-group-item">Outdoor Sport Position: {props.studentsDetails.activities.sports.outdoor[0].position}</li>
+      <li class="list-group-item">Created At : {props.studentsDetails.system_meta.created_at}</li>
+      <li class="list-group-item">Last Update : {props.studentsDetails.system_meta.last_updated}</li>
+      <li class="list-group-item"> Active : {(props.studentsDetails.system_meta.is_active) ? 'Yes!' : 'No!'}</li>
     </ul>
   );
 }
