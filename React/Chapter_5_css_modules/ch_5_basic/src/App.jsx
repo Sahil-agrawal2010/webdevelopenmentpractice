@@ -1,6 +1,8 @@
+import "./App.css"
 import Button from "./Components/Button"
 import Myinformation from "./Components/My_information"
 import { List_container } from "./Components/List"
+import Test from "./Components/test"
 export default function App(){
   let My_personalInformation={
      name : 'Sahil Agrawal',
@@ -14,6 +16,7 @@ export default function App(){
     <Myinformation UserDetails = {My_personalInformation}></Myinformation>
     <Button UserDetails = {My_personalInformation}></Button>
     <List_container UserDetails = {My_personalInformation}></List_container>
+    <Test></Test>
     </>
 )
 }

@@ -1,0 +1,21 @@
+.getUserInput{
+    width: 180px;
+    height: 40px;
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin-left: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.First_hobby,.Third_hobby{
+    color: blue;
+}
+.Second_hobby{
+    color: orange;
+}
