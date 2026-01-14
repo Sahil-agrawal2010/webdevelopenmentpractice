@@ -133,7 +133,7 @@ export default function ErrorMessage(props){
     <li class="list-group-item">Course Percentage : {props.studentsDetails.data.academic.enrolled_courses[0].progress.completed_percentage}%</li>
     <li class="list-group-item">Final Grade : {(props.studentsDetails.data.academic.enrolled_courses[0].progress.grades.final_term) ? 'Yes It Has Been Arrived!' : 'No It Has Not Been Arrived Yet!'}</li>
     <li class="list-group-item">Course Name : {props.studentsDetails.data.academic.enrolled_courses[1].title}</li>
-    <li class="list-group-item"></li>
+    <li class="list-group-item">Course Name : {props.studentsDetails.data.academic.enrolled_courses[1].title}</li>
     <li class="list-group-item"></li>
     <li class="list-group-item"></li>
     <li class="list-group-item"></li>
