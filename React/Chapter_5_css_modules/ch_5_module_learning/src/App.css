@@ -1,0 +1,14 @@
+button{
+    width: 200px;
+    height: 40px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: blue;
+    color: orange;
+    font-family: sans-serif;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
