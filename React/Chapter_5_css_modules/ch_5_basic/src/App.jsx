@@ -9,7 +9,8 @@ export default function App(){
      class : 10,
      section : "A",
      address : "Birtamode , Jhapa",
-     hobbies : ["Coding","Playing","Reading"]
+     hobbies : ["Coding","Playing","Reading"],
+     dateofbirth : "2010/05/08"
   }
   return (
     <>
