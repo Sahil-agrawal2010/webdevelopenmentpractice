@@ -5,3 +5,9 @@ FROM Customers Where age>30;
 
 DELETE first_name, age , country
 FROM Customers Where age>30;
+
+
+
+
+SELECT first_name, age , country
+FROM Customers WHERE country="UK";
