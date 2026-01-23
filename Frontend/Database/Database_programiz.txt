@@ -116,3 +116,90 @@ MariaDB [school]> DROP DATABASE school;
 Query OK, 2 rows affected (0.029 sec)
 
 MariaDB [(none)]>
+
+
+
+Microsoft Windows [Version 10.0.26200.7623]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\sahil>cd ..
+
+C:\Users>cd ..
+
+C:\>cd xampp
+
+C:\xampp>cd mysql
+
+C:\xampp\mysql>cd bin
+
+C:\xampp\mysql\bin>mysql -u root -p;
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 148
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]>
+MariaDB [(none)]> CREATE DATABASE school;
+Query OK, 1 row affected (0.002 sec)
+
+MariaDB [(none)]> USE school
+Database changed
+MariaDB [school]> CREATE TABLE library (Harry_Potter INTEGER,Auto_Biography VARCHAR(20),Child_Books INTEGER);
+Query OK, 0 rows affected (0.056 sec)
+
+MariaDB [school]> ALTER TABLE library RENAME TO books_library;
+Query OK, 0 rows affected (0.030 sec)
+
+MariaDB [school]> ALTER TABLE books_library ADD(Biography VARCHAR(20),Movie_Books INTEGER);
+Query OK, 0 rows affected (0.027 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [school]> ALTER TABLE books_library CHANGE Child_Books Adult_Books VARCHAR(20);
+Query OK, 0 rows affected (0.061 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [school]> ALTER TABLE books_library MODIFY Adult_books INTEGER;
+Query OK, 0 rows affected (0.053 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [school]> ALTER TABLE books_library DROP Adult_books;
+Query OK, 0 rows affected (0.017 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [school]> ALTER TABLE books_library DROP Biography;
+Query OK, 0 rows affected (0.016 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [school]> ALTER TABLE books_library ADD New_books INTEGER;
+Query OK, 0 rows affected (0.017 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [school]> ALTER TABLE books_library DROP NEW_books;
+Query OK, 0 rows affected (0.016 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [school]> ALTER TABLE books_library INSERT(1,MY NAME IS SAHIL AGRAWAL.,55);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSERT(1,MY NAME IS SAHIL AGRAWAL.,55)' at line 1
+MariaDB [school]> INSERT(1,MY NAME IS SAHIL AGRAWAL.,55);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(1,MY NAME IS SAHIL AGRAWAL.,55)' at line 1
+MariaDB [school]> ALTER TABLE books_library RENAME TO library;
+Query OK, 0 rows affected (0.017 sec)
+
+MariaDB [school]> DROP TABLE library;
+Query OK, 0 rows affected (0.017 sec)
+
+MariaDB [school]> CREATE TABLE temprory_data(Harry_potter INTEGER,Auto_Biography VARCHAR(20));
+Query OK, 0 rows affected (0.058 sec)
+
+MariaDB [school]> DROP TABLE temprory_data;
+Query OK, 0 rows affected (0.024 sec)
+
+MariaDB [school]> DROP DATABASE school;
+Query OK, 0 rows affected (0.003 sec)
