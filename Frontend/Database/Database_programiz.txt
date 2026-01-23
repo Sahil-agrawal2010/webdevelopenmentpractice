@@ -11,3 +11,108 @@ FROM Customers Where age>30;
 
 SELECT first_name, age , country
 FROM Customers WHERE country="UK";
+
+
+
+
+
+
+Microsoft Windows [Version 10.0.26200.7623]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\sahil>cd ..
+
+C:\Users>cd ..
+
+C:\>cd xampp
+
+C:\xampp>cd mysql
+
+C:\xampp\mysql>cd bin
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]>
+MariaDB [(none)]> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| school             |
+| test               |
++--------------------+
+6 rows in set (0.067 sec)
+
+MariaDB [(none)]> use school
+Database changed
+MariaDB [school]> DROP TABLE staff;
+ERROR 1051 (42S02): Unknown table 'school.staff'
+MariaDB [school]> show tables
+    -> ;
++------------------+
+| Tables_in_school |
++------------------+
+| employees        |
++------------------+
+1 row in set (0.001 sec)
+
+MariaDB [school]> DROP TABLE employees
+    -> ;
+Query OK, 0 rows affected (0.013 sec)
+
+MariaDB [school]> CREATE TABLE product(p_details VARCHAR(20),p_reviev VARCHAR(20));
+Query OK, 0 rows affected (0.025 sec)
+
+MariaDB [school]> ALTER TABLE product ADD p_price INTEGER;
+Query OK, 0 rows affected (0.014 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [school]> ALTER TABLE product MODIFY DATATYPE p_price VARCHAR(20);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'VARCHAR(20)' at line 1
+MariaDB [school]> ALTER TABLE product MODIFY p_price VARCHAR(20);
+Query OK, 0 rows affected (0.068 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [school]> ALTER TABLE product DROP p_price;
+Query OK, 0 rows affected (0.011 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [school]> ALTER TABLE product CHANGE product items VARCHAR(20);
+ERROR 1054 (42S22): Unknown column 'product' in 'product'
+MariaDB [school]> CHANGE product items VARCHAR(20);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'product items VARCHAR(20)' at line 1
+MariaDB [school]> ALTER TABLE product RENAME TO items VARCHAR(20);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'VARCHAR(20)' at line 1
+MariaDB [school]> ALTER TABLE product RENAME TO items;
+Query OK, 0 rows affected (0.018 sec)
+
+MariaDB [school]> CREATE TABLE order(c_oders , c_products);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order(c_oders , c_products)' at line 1
+MariaDB [school]> CREATE TABLE order(c_orders INTEGER, c_product VARCHAR(20));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order(c_orders INTEGER, c_product VARCHAR(20))' at line 1
+MariaDB [school]>  CREATE TABLE oders(c_oders INTEGER,c_reviev VARCHAR(20));
+Query OK, 0 rows affected (0.018 sec)
+
+MariaDB [school]> ALTER TABLE oders CHANGE c_oders customers_oders INTEGER;
+Query OK, 0 rows affected (0.061 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [school]> DROP DATABASE oders
+    -> ;
+ERROR 1008 (HY000): Can't drop database 'oders'; database doesn't exist
+MariaDB [school]> DROP DATABASE school;
+Query OK, 2 rows affected (0.029 sec)
+
+MariaDB [(none)]>
