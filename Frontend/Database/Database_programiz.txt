@@ -203,3 +203,133 @@ Query OK, 0 rows affected (0.024 sec)
 
 MariaDB [school]> DROP DATABASE school;
 Query OK, 0 rows affected (0.003 sec)
+
+
+
+
+
+
+Integer Number datatype : 
+
+INTEGER
+BIG INT
+SMALLINT
+MEDIUMINT
+
+
+point , float, decimal data type:
+
+FLOAT - 
+DECIMAL(10,5) - 
+
+
+Character data type : 
+VARCHAR(20) - 
+TEXT
+CHAR(3) : NP, US, UK
+
+
+Date , time : 
+
+DATE : 2026-01-23
+
+TIME : 18:40:33
+
+DATETIME :
+
+TIMESTAMP - current date time
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Microsoft Windows [Version 10.0.26200.7623]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\sahil>cd ..
+
+C:\Users>cd ..
+
+C:\>cd xampp/mysql/bin
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| datatype           |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+6 rows in set (0.004 sec)
+
+MariaDB [(none)]> DROP DATABASE datatype
+    -> ;
+Query OK, 4 rows affected (0.077 sec)
+
+MariaDB [(none)]> CREATE DATABASE datatype
+    -> ;
+Query OK, 1 row affected (0.003 sec)
+
+MariaDB [(none)]> USE datatype
+Database changed
+MariaDB [datatype]> CREATE TABLE integer_type(Telephone_Number INTEGER,Symbol_Number BIG INTEGER,Roll_Number SMALL INTEGER,House_Number MEDIUM INTEGER);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INTEGER,Roll_Number SMALL INTEGER,House_Number MEDIUM INTEGER)' at line 1
+MariaDB [datatype]> CREATE TABLE integer_type(Telephone_Number INTEGER,Symbol_Number BIGINTEGER,Roll_Number SMALLINTEGER,House_Number MEDIUMINTEGER);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Roll_Number SMALLINTEGER,House_Number MEDIUMINTEGER)' at line 1
+MariaDB [datatype]> CREATE TABLE integer_type(Telephone_Number INTEGER,Symbol_Number BIGINTEGER,Roll_Number SMALLINTEGER,House_Number MEDIUMINTEGER);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Roll_Number SMALLINTEGER,House_Number MEDIUMINTEGER)' at line 1
+MariaDB [datatype]> CREATE TABLE point_type(Big_G FLOAT,Samll_G DECIMAL(10,2));
+Query OK, 0 rows affected (0.026 sec)
+
+MariaDB [datatype]> INSERT INTO point_type(Big_G,Small_G) VALUES(6.67*10^-11,9.8);4
+ERROR 1054 (42S22): Unknown column 'Small_G' in 'field list'
+    -> INSERT INTO point_type(Big_G,Small_G) VALUES(6.67*10^-11,9.8);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '4
+INSERT INTO point_type(Big_G,Small_G) VALUES(6.67*10^-11,9.8)' at line 1
+MariaDB [datatype]> INSERT INTO point_type(Big_G,Small_G) VALUES(6.67*10^-11,9.8);
+ERROR 1054 (42S22): Unknown column 'Small_G' in 'field list'
+MariaDB [datatype]> INSERT INTO point_type(Big_G, Small_G) VALUES(6.67*10^-11,35254249.80);
+ERROR 1054 (42S22): Unknown column 'Small_G' in 'field list'
+MariaDB [datatype]> CREATE TABLE text_type(Occupation_Person VARCHAR(20),Introduction_Person text,Country_Code CHAR(2));
+Query OK, 0 rows affected (0.023 sec)
+
+MariaDB [datatype]> INSERT INTO text_type(Occupation_Person, Introduction_Person, Country_Code) VALUES("Business","Hi Everyone . My name is Sahil Agrawal.","IND");
+Query OK, 1 row affected, 1 warning (0.012 sec)
+
+MariaDB [datatype]> CREATE TABLE datetime_type(Todays_Date DATE , Now_Time TIME , TodaysNow_DateTime DATETIME , Current_Actuall TIMESTAMP);
+Query OK, 0 rows affected (0.020 sec)
+
+MariaDB [datatype]> INSERT INTO datetime_type(Todays_Date,Now_Time,TodaysNow_DateTime) VALUES("2026:01:24","01:00","2026:01:24 01:00");
+Query OK, 1 row affected (0.012 sec)
+
+MariaDB [datatype]>
