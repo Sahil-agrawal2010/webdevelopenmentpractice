@@ -195,11 +195,21 @@
     button{
         border: 0px solid transparent;
     }
+    .numbers_display{
+        border: 1px solid blue;
+        height: 40px;
+        width: 200px;
+        margin-left: 20px;
+        margin-top: 80px;
+        color: Black;
+        flex-wrap: wrap;
+    }
 </style>
 <body>
     <div class="main_container">
         <div class="main_calculator_box_header">
             <div class="main_heading"><p>Calculator</p></div>
+            <input class="numbers_display" type="text" >
         </div>
         <div class="main_calculator_box_footer"><div class="main_numbers_container">
             <div class="first_line">
@@ -235,6 +245,78 @@
         </div></div>
     </div>
     <script>
+        let currentvalue=""
+        document.querySelector('.one_button').onclick=()=>{
+            currentvalue=currentvalue+1
+            document.querySelector('.numbers_display').value=currentvalue
+            console.log("Clicked!")
+        }
+                document.querySelector('.two_button').onclick=()=>{
+            currentvalue=currentvalue+2
+            document.querySelector('.numbers_display').value=currentvalue
+        }
+                document.querySelector('.three_button').onclick=()=>{
+            currentvalue=currentvalue+3
+            document.querySelector('.numbers_display').value=currentvalue
+        }
+                document.querySelector('.four_button').onclick=()=>{
+            currentvalue=currentvalue+4
+            document.querySelector('.numbers_display').value=currentvalue
+        }
+                document.querySelector('.five_button').onclick=()=>{
+            currentvalue=currentvalue+5
+            document.querySelector('.numbers_display').value=currentvalue
+        }
+                document.querySelector('.six_button').onclick=()=>{
+            currentvalue=currentvalue+6
+            document.querySelector('.numbers_display').value=currentvalue
+        }
+                document.querySelector('.seven_button').onclick=()=>{
+            currentvalue=currentvalue+7
+            document.querySelector('.numbers_display').value=currentvalue
+        }
+                document.querySelector('.eight_button').onclick=()=>{
+            currentvalue=currentvalue+8
+            document.querySelector('.numbers_display').value=currentvalue
+        }
+                document.querySelector('.nine_button').onclick=()=>{
+            currentvalue=currentvalue+9
+            document.querySelector('.numbers_display').value=currentvalue
+        }
+                        document.querySelector('.addition_sign').onclick=()=>{
+            currentvalue=currentvalue+ "+"
+            document.querySelector('.numbers_display').value=currentvalue
+        }
+                        document.querySelector('.subtraction_button').onclick=()=>{
+            currentvalue=currentvalue+ "-"
+            document.querySelector('.numbers_display').value=currentvalue
+        }
+                        document.querySelector('.multiply_button').onclick=()=>{
+            currentvalue=currentvalue+ "*"
+            document.querySelector('.numbers_display').value=currentvalue
+        }
+                        document.querySelector('.divide_button').onclick=()=>{
+            currentvalue=currentvalue+ "/"
+            document.querySelector('.numbers_display').value=currentvalue
+        }
+                        document.querySelector('.zero_button').onclick=()=>{
+            currentvalue=currentvalue+0
+            document.querySelector('.numbers_display').value=currentvalue
+        }
+                        document.querySelector('.triplezero_button').onclick=()=>{
+            currentvalue=currentvalue+ "000"
+            document.querySelector('.numbers_display').value=currentvalue
+        }
+                        document.querySelector('.point_button').onclick=()=>{
+            currentvalue=currentvalue+ "."
+            document.querySelector('.numbers_display').value=currentvalue
+        }
+                        document.querySelector('.equalsTwo_button').onclick=()=>{
+                            let result = eval(currentvalue)
+            currentvalue=result
+            document.querySelector('.numbers_display').value=currentvalue
+            currentvalue=""
+        }
     </script>
 </body>
 </html>
