@@ -1,0 +1,13 @@
+let user_input=Number(prompt("Enter nay number to be checked :- "))
+let counter=0
+for( let i = 0 ; i<=user_input ; i++ ){
+    if(user_input%i==0){
+        counter++
+    }
+}
+if(counter==2){
+    console.log("The number is a prime number!")
+}
+else{
+    console.log("The number is not a prime number!")
+}
