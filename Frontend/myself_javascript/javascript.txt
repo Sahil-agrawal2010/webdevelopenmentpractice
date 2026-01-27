@@ -22,8 +22,8 @@ let b = 0
     console.log(b)
     console.log(a)
 for(let i = 2 ; i<=user_input ; i++){
-    a = a + b
-    let c = a
-    let sum = c + sum
-    console.log(sum)
+    let c = a + b
+    b=a
+    a=c
+    console.log(c)
 }
