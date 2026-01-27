@@ -339,3 +339,109 @@ MariaDB [datatype]> INSERT INTO datetime_type(Todays_Date,Now_Time,TodaysNow_Dat
 Query OK, 1 row affected (0.012 sec)
 
 MariaDB [datatype]>
+
+
+
+
+
+Microsoft Windows [Version 10.0.26200.7623]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\sahil>c d..
+'c' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\sahil>cd ..
+
+C:\Users>cd ..
+
+C:\> cd xampp
+
+C:\xampp>cd mysql
+
+C:\xampp\mysql>cd bin
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| datatype           |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+6 rows in set (0.081 sec)
+
+MariaDB [(none)]> use datatype
+Database changed
+MariaDB [datatype]> CREATE TABLE bollen_type;
+ERROR 1113 (42000): A table must have at least 1 column
+MariaDB [datatype]> CREATE TABLE bollen_type(isMarried BOOLEAN);
+Query OK, 0 rows affected (0.024 sec)
+
+MariaDB [datatype]> INSERT INTO bollen_type VALUES('False','True',(1),(0));
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+MariaDB [datatype]> INSERT INTO bollen_type VALUES('False','True',(1),(0);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+MariaDB [datatype]> INSERT INTO bollen_type VALUES('False','True',(1),(0));
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+MariaDB [datatype]> INSERT INTO bollen_type VALUES('False'),('True'),(1),(0);
+Query OK, 4 rows affected, 2 warnings (0.008 sec)
+Records: 4  Duplicates: 0  Warnings: 2
+
+MariaDB [datatype]> INSERT INTO bollen_type VALUES(False),(True),(1),(0);
+Query OK, 4 rows affected (0.008 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+MariaDB [datatype]> CREATE TABLE enum_type(courses ENUM('BBA','BCA','BBS'));
+ERROR 2006 (HY000): MySQL server has gone away
+No connection. Trying to reconnect...
+ERROR 2002 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+ERROR: Can't connect to the server
+
+unknown [datatype]> CREATE TABLE enum_type(courses ENUM('BBA','BCA','BBS'));
+No connection. Trying to reconnect...
+Connection id:    8
+Current database: datatype
+
+Query OK, 0 rows affected (0.018 sec)
+
+MariaDB [datatype]> CREATE TABLE enum_type(courses ENUM('BBA','BCA','BBS'));
+ERROR 1050 (42S01): Table 'enum_type' already exists
+MariaDB [datatype]> INSERT INTO enum_type VALUES('BBA'),('BCA'),('BBS');
+Query OK, 3 rows affected (0.009 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+MariaDB [datatype]> CREATE TABLE json_type(settings JSON);
+Query OK, 0 rows affected (0.052 sec)
+                    INSERT INTO json_type VALUES ('{"name":"SAHIL AGRAWAL","address":"BIRTAMODE"}'),('{"name":"DHAIRYA AGRAWAL","address":"BIRTAMODE"}')
+    -> ;
+Query OK, 2 rows affected (0.012 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+MariaDB [datatype]> INSERT INTO json_type VALUES ('{}')
+    -> INSERT INTO json_type VALUES ('{}');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSERT INTO json_type VALUES ('{}')' at line 2
+MariaDB [datatype]> INSERT INTO json_type VALUES ('{"isMarried":"FALSE"}');
+Query OK, 1 row affected (0.003 sec)
+
+MariaDB [datatype]> DESCRIBE json_type;
++----------+----------+------+-----+---------+-------+
+| Field    | Type     | Null | Key | Default | Extra |
++----------+----------+------+-----+---------+-------+
+| settings | longtext | YES  |     | NULL    |       |
++----------+----------+------+-----+---------+-------+
+1 row in set (0.041 sec)
