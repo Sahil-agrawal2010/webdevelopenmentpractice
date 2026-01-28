@@ -445,3 +445,120 @@ MariaDB [datatype]> DESCRIBE json_type;
 | settings | longtext | YES  |     | NULL    |       |
 +----------+----------+------+-----+---------+-------+
 1 row in set (0.041 sec)
+
+
+
+
+
+Microsoft Windows [Version 10.0.26200.7628]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\sahil>cd ..
+
+C:\Users>cd ..
+
+C:\>cd xampp
+
+C:\xampp>cd mysql
+
+C:\xampp\mysql>cd bin
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]>
+MariaDB [(none)]> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| datatype           |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+6 rows in set (0.090 sec)
+
+MariaDB [(none)]> USE datatype
+Database changed
+MariaDB [datatype]> CREATE TABLE autoincrenement_type(id INGTEGER PRIMARY KEY AUTO_INCRENMENT,name VARCHAT(20),date TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'PRIMARY KEY AUTO_INCRENMENT,name VARCHAT(20),date TIMESTAMP DEFAULT CURRENT_T...' at line 1
+MariaDB [datatype]> CREATE TABLE autoincrenement_type(id INGTEGER PRIMARY KEY AUTO_INCRENMENT,name VARCHAR(20),date TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'PRIMARY KEY AUTO_INCRENMENT,name VARCHAR(20),date TIMESTAMP DEFAULT CURRENT_T...' at line 1
+MariaDB [datatype]> CREATE TABLE autoincrenement_type(id INGTEGER PRIMARY KEY AUTO_INCRENMENT,name VARCHAR(20),date TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'PRIMARY KEY AUTO_INCRENMENT,name VARCHAR(20),date TIMESTAMP DEFAULT CURRENT_T...' at line 1
+MariaDB [datatype]> CREATE TABLE autoincrenement_type(id INTEGER PRIMARY KEY AUTO_INCRENMENT,name VARCHAR(20),date TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'name VARCHAR(20),date TIMESTAMP DEFAULT CURRENT_TIMESTAMP)' at line 1
+MariaDB [datatype]> CREATE TABLE autoincrenement_type(id INTEGER PRIMARY KEY AUTO_INCREMENT,name VARCHAR(20),date TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+Query OK, 0 rows affected (0.023 sec)
+
+MariaDB [datatype]> INSERT INTO autoincrenement_type(id, name)("SHAIL AGRAWAL");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '"SHAIL AGRAWAL")' at line 1
+MariaDB [datatype]> INSERT INTO autoincrenement_type(name)("SAHIL AGRAWAL");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '"SAHIL AGRAWAL")' at line 1
+MariaDB [datatype]> INSERT INTO autoincrenement_type(name)VALUES("SAHIL AGRAWAL");
+Query OK, 1 row affected (0.069 sec)
+
+MariaDB [datatype]> CREATE DATABASE exam;
+Query OK, 1 row affected (0.003 sec)
+
+MariaDB [datatype]> USE exam;
+Database changed
+MariaDB [exam]> CREATE TABLE student(s_id INTEGER PRIMARY KEY AUTO_INCREMENT,s_name VARCHAR(30),s_address VARCHAR(30),admission_date DATE,addmission_time TIME,s_fees FLOAT,s_scholorship DECIMAL(5,3),s_choises ENUM("SCIENCE","COMMERCE","ARTS"),is_Married BOOLEAN,short_name CHAR(2),s_description TEXT,final_data JSON);
+Query OK, 0 rows affected (0.023 sec)
+
+MariaDB [exam]> describe student;
++-----------------+-----------------------------------+------+-----+---------+----------------+
+| Field           | Type                              | Null | Key | Default | Extra          |
++-----------------+-----------------------------------+------+-----+---------+----------------+
+| s_id            | int(11)                           | NO   | PRI | NULL    | auto_increment |
+| s_name          | varchar(30)                       | YES  |     | NULL    |                |
+| s_address       | varchar(30)                       | YES  |     | NULL    |                |
+| admission_date  | date                              | YES  |     | NULL    |                |
+| addmission_time | time                              | YES  |     | NULL    |                |
+| s_fees          | float                             | YES  |     | NULL    |                |
+| s_scholorship   | decimal(5,3)                      | YES  |     | NULL    |                |
+| s_choises       | enum('SCIENCE','COMMERCE','ARTS') | YES  |     | NULL    |                |
+| is_Married      | tinyint(1)                        | YES  |     | NULL    |                |
+| short_name      | char(2)                           | YES  |     | NULL    |                |
+| s_description   | text                              | YES  |     | NULL    |                |
+| final_data      | longtext                          | YES  |     | NULL    |                |
++-----------------+-----------------------------------+------+-----+---------+----------------+
+12 rows in set (0.032 sec)
+
+MariaDB [exam]> INSERT INTO student(s_name,s_address,admission_date,admission_time,s_fees,s_scholorship,s_choises,is_Married,short_name,s_description,final_data) VALUES("SAHIL AGRAWAL","BIRTAMODE-4,JHAPA","2026-01-14","14:44",20000,12323.545,"SCIENCE",0,"SA","HELLO EVERYBODY I AM SAHIL AGRAWAL AND I AM A TEENAGER SO WHAT'S ALL GOOD.LETS GO GEN G.",'{"s_id":"1","s_name":"SAHIL AGRAWAL","s_fees":"20000/MONTH","is_Married":"0","short_name":"SA"}');
+ERROR 1054 (42S22): Unknown column 'admission_time' in 'field list'
+MariaDB [exam]> INSERT INTO student(s_name,s_address,admission_date,addmission_time,s_fees,s_scholorship,s_choises,is_Married,short_name,s_description,final_data) VALUES("SAHIL AGRAWAL","BIRTAMODE-4,JHAPA","2026-01-14","14:44",20000,12323.545,"SCIENCE",0,"SA","HELLO EVERYBODY I AM SAHIL AGRAWAL AND I AM A TEENAGER SO WHAT'S ALL GOOD.LETS GO GEN G.",'{"s_id":"1","s_name":"SAHIL AGRAWAL","s_fees":"20000/MONTH","is_Married":"0","short_name":"SA"}');
+Query OK, 1 row affected, 1 warning (0.008 sec)
+
+MariaDB [exam]> INSERT INTO student(s_scholorship) Values(66666.333)
+    -> ;
+Query OK, 1 row affected, 1 warning (0.008 sec)
+
+MariaDB [exam]> INSERT INTO student(s_scholorship) Values(66666333);
+Query OK, 1 row affected, 1 warning (0.007 sec)
+
+MariaDB [exam]> INSERT INTO student(s_scholorship) Values(267)
+    -> ;
+Query OK, 1 row affected, 1 warning (0.005 sec)
+
+MariaDB [exam]> INSERT INTO student(s_scholorship) Values(26.465);
+Query OK, 1 row affected (0.007 sec)
+
+MariaDB [exam]>
+
+
+
+
+
+
+Can't do today somwthing also today.Error it selfd came in the command pannel sod today nothing done.
