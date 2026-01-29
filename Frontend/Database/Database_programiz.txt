@@ -562,3 +562,5 @@ MariaDB [exam]>
 
 
 Can't do today somwthing also today.Error it selfd came in the command pannel sod today nothing done.
+
+

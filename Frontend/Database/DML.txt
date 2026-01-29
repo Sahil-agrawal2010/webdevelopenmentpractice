@@ -1,0 +1,72 @@
+Microsoft Windows [Version 10.0.26200.7628]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\sahil>cd ..
+
+C:\Users>cd ..
+
+C:\>cd xampp
+
+C:\xampp>cd mysql
+
+C:\xampp\mysql>cd bin
+
+C:\xampp\mysql\bin>mysql -u root -p;
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 9
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> CREATE DATABASE select_type;
+Query OK, 1 row affected (0.008 sec)
+
+MariaDB [(none)]> use select_type
+Database changed
+MariaDB [select_type]> USE select_type
+Database changed
+MariaDB [select_type]> CREATE TABLE employee(id INTEGER,name VARCHAR(20),salary INTEGER,joinDate DATE,address VARCHAR(20));
+Query OK, 0 rows affected (0.060 sec)
+
+MariaDB [select_type]> INSERT INTO employee VALUES(1,"SAHIL AGRAWAL",20000,2026-01-15,"BIRTAMODE"),(2,"DHAIRYA AGRAWAL",358092,2026-01-15,"BIRTAMODE"),(3,"NAYAN PATHAK",37589273,2026-01-15,"BIRTAMODE");
+Query OK, 3 rows affected, 3 warnings (0.103 sec)
+Records: 3  Duplicates: 0  Warnings: 3
+
+MariaDB [select_type]> SELECT name FROM employee WHERE salary>20000;
++-----------------+
+| name            |
++-----------------+
+| DHAIRYA AGRAWAL |
+| NAYAN PATHAK    |
++-----------------+
+2 rows in set (0.001 sec)
+
+MariaDB [select_type]> SELECT id FROM employee WHERE date="2026-01-16";
+ERROR 1054 (42S22): Unknown column 'date' in 'where clause'
+MariaDB [select_type]> SELECT id FROM employee WHERE joinDate="2026-01-16";
+Empty set (0.001 sec)
+
+MariaDB [select_type]> SELECT id FROM employee WHERE joinDate="2026-01-15";
+Empty set (0.001 sec)
+
+MariaDB [select_type]> SELECT id FROM employee WHERE joinDate=2026-01-15;
++------+
+| id   |
++------+
+|    1 |
+|    2 |
+|    3 |
++------+
+3 rows in set, 1 warning (0.001 sec)
+
+MariaDB [select_type]> INSERT INTO employee VALUES(4,"ERIC AGRAWAL",20000,"2026-01-16","BIRTAMODE"),(5,"VINAYAK AGRAWAL",358092,"2026-01-16","BIRTAMODE"),(6,"MAYANK PATHAK",37589273,"2026-01-16","BIRTAMODE");
+Query OK, 3 rows affected (0.008 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+MariaDB [select_type]>USE datatype
