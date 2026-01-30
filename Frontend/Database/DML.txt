@@ -266,3 +266,6 @@ MariaDB [select_type]> SELECT * FROM third_employee WHERE department NOT IN ("DE
 |    9 | RAJ INDIA       | SCIENCE    |   46 |  78593 | KOLKATA    |
 +------+-----------------+------------+------+--------+------------+
 6 rows in set (0.001 sec)
+
+
+maria DB
