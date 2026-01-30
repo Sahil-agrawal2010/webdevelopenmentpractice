@@ -70,3 +70,199 @@ Query OK, 3 rows affected (0.008 sec)
 Records: 3  Duplicates: 0  Warnings: 0
 
 MariaDB [select_type]>USE datatype
+
+
+
+
+
+
+
+
+Microsoft Windows [Version 10.0.26200.7628]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\sahil>cd..
+
+C:\Users>cd ..
+
+C:\>cd xampp
+
+C:\xampp>cd mysql
+
+C:\xampp\mysql>cd bin
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| datatype           |
+| exam               |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| select_type        |
+| test               |
++--------------------+
+8 rows in set (0.084 sec)
+
+MariaDB [(none)]> USE seclect_type
+ERROR 1049 (42000): Unknown database 'seclect_type'
+MariaDB [(none)]> USE select_type
+Database changed
+MariaDB [select_type]> SHOW tables;
++-----------------------+
+| Tables_in_select_type |
++-----------------------+
+| employee              |
++-----------------------+
+1 row in set (0.001 sec)
+
+MariaDB [select_type]> CREATE TABLE second_employee(id INTEGER AUTO_INCREMENT PRIMARY KEY,name VARCHAR(20),address VARCHAR(20),is_active BOOLEAN,salary INTEGER);
+Query OK, 0 rows affected (0.020 sec)
+
+MariaDB [select_type]> INSERT INTO second_employee VALUES (1,"SAHIL AGRAWAL","BIRTAMODE",true,20000),(2,"NAYAN PATHAK","BIRTAMODE",true,14500),(3,"DHAIRYA AGRAWAL","DHULABARI",false,40000),(4,"MAYANK BINDAL","PAKISTAN",false,1769),(5,"SAHIL AGRAWAL","BIRTAMODE",true,20000);
+Query OK, 5 rows affected (0.100 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+MariaDB [select_type]> SELECT DISTINCT name,address from second_employee;
++-----------------+-----------+
+| name            | address   |
++-----------------+-----------+
+| SAHIL AGRAWAL   | BIRTAMODE |
+| NAYAN PATHAK    | BIRTAMODE |
+| DHAIRYA AGRAWAL | DHULABARI |
+| MAYANK BINDAL   | PAKISTAN  |
++-----------------+-----------+
+4 rows in set (0.001 sec)
+
+MariaDB [select_type]> SELECT name,salary from second_employee WHERE salary between 10000 OR 20000;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'OR 20000' at line 1
+MariaDB [select_type]> SELECT name,salary FROM second_employee WHERE salary between 10000 OR 20000;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'OR 20000' at line 1
+MariaDB [select_type]> SELECT name from second_employee where salary between 10000 and 20000;
++---------------+
+| name          |
++---------------+
+| SAHIL AGRAWAL |
+| NAYAN PATHAK  |
+| SAHIL AGRAWAL |
++---------------+
+3 rows in set (0.001 sec)
+
+MariaDB [select_type]> SELECT name from second_employee where salary between 10000 or 20000;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'or 20000' at line 1
+MariaDB [select_type]> SELECT name from second_employee where salary not between 10000 or 20000;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'or 20000' at line 1
+MariaDB [select_type]> SELECT name from second_employee where salary not between 10000 and 20000;
++-----------------+
+| name            |
++-----------------+
+| DHAIRYA AGRAWAL |
+| MAYANK BINDAL   |
++-----------------+
+2 rows in set (0.001 sec)
+
+MariaDB [select_type]> SELECT name from second_employee where address IN ("BIRTAMODE","PAKISTAN");
++---------------+
+| name          |
++---------------+
+| SAHIL AGRAWAL |
+| NAYAN PATHAK  |
+| MAYANK BINDAL |
+| SAHIL AGRAWAL |
++---------------+
+4 rows in set (0.001 sec)
+
+MariaDB [select_type]> SELECT name from second_employee where address NOT IN ("BIRTAMODE","PAKISTAN");
++-----------------+
+| name            |
++-----------------+
+| DHAIRYA AGRAWAL |
++-----------------+
+1 row in set (0.001 sec)
+
+MariaDB [select_type]> ALTER TABLE second_employee ADD department VARCHAR(20);
+Query OK, 0 rows affected (0.015 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [select_type]> INSERT INTO second_employee(department) VALUES("IT");
+Query OK, 1 row affected (0.004 sec)
+
+MariaDB [select_type]> UPDATE second_employee set department="SCIENCE" WHERE id=1;
+Query OK, 1 row affected (0.009 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [select_type]> CREATE TABLE third_employee (e_id INTEGER AUTO_INCREMENT PRIMARY KEY,name VARCHAR(20),department VARCHAR(20),age INTEGER,salary INTEGER, city VARCHAR(20));
+Query OK, 0 rows affected (0.035 sec)
+
+MariaDB [select_type]> DESCRIBE third_employee;
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| e_id       | int(11)     | NO   | PRI | NULL    | auto_increment |
+| name       | varchar(20) | YES  |     | NULL    |                |
+| department | varchar(20) | YES  |     | NULL    |                |
+| age        | int(11)     | YES  |     | NULL    |                |
+| salary     | int(11)     | YES  |     | NULL    |                |
+| city       | varchar(20) | YES  |     | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
+6 rows in set (0.039 sec)
+
+MariaDB [select_type]> INSER INTO third_employee(name,department,age,salary,city) VALUES("SAHIL AGRAWAL","SCIENCE",15,20000,"BIRTAMODE"),("DHAIRYA AGRAWAL","SCIENCE",16,25868,"NEPALGUNJ"),("NAYAN PATHAK","FIANACE",22,73498,"BIRATNAGAR"),("RAM AGRAWAL","TEACHING",57,59730,"SILIGURI"),("SITA PODHAR","DELHI",22,73589,"MUMBAI"),("MAHEK MADESHI","UNEMPLOYED",24,79874,"JANAKPUR"),("HARI RAJBANSHI","FINANCE",36,57845,"INDORE"),("LAXAM NEPAL","SCIENCE",57,89540,"JANAKPUR"),("RAJ INDIA","SCIENCE",46,78593,"KOLKATA"),("HARISH UPRETE","FINANCE",38,89468,"NEPALGUNJ");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSER INTO third_employee(name,department,age,salary,city) VALUES("SAHIL AGRA...' at line 1
+MariaDB [select_type]> DESCRIBE third_employee;
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| e_id       | int(11)     | NO   | PRI | NULL    | auto_increment |
+| name       | varchar(20) | YES  |     | NULL    |                |
+| department | varchar(20) | YES  |     | NULL    |                |
+| age        | int(11)     | YES  |     | NULL    |                |
+| salary     | int(11)     | YES  |     | NULL    |                |
+| city       | varchar(20) | YES  |     | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
+6 rows in set (0.041 sec)
+
+MariaDB [select_type]> INSERT INTO third_employee(name,department,age,salary,city) VALUES("SAHIL AGRAWAL","SCIENCE",15,20000,"BIRTAMODE"),("DHAIRYA AGRAWAL","SCIENCE",16,25868,"NEPALGUNJ"),("NAYAN PATHAK","FIANACE",22,73498,"BIRATNAGAR"),("RAM AGRAWAL","TEACHING",57,59730,"SILIGURI"),("SITA PODHAR","DELHI",22,73589,"MUMBAI"),("MAHEK MADESHI","UNEMPLOYED",24,79874,"JANAKPUR"),("HARI RAJBANSHI","FINANCE",36,57845,"INDORE"),("LAXAM NEPAL","SCIENCE",57,89540,"JANAKPUR"),("RAJ INDIA","SCIENCE",46,78593,"KOLKATA"),("HARISH UPRETE","FINANCE",38,89468,"NEPALGUNJ");
+Query OK, 10 rows affected (0.009 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+MariaDB [select_type]> SELECT name,id,salary,age,city FROM third_employee WHERE salary between 30000 and 60000 and city IN("NEPALJUNJ","JANAKPUR") and department IN("IT","FINANCE");
+ERROR 1054 (42S22): Unknown column 'id' in 'field list'
+MariaDB [select_type]> SELECT name,e_id,salary,age,city FROM third_employee WHERE salary between 30000 and 60000 and city IN("NEPALJUNJ","JANAKPUR") and department IN("IT","FINANCE");
+Empty set (0.001 sec)
+
+MariaDB [select_type]> SELECT name,e_id,salary,age,city FROM third_employee WHERE salary between 30000 and 100000 and city IN("NEPALJUNJ","JANAKPUR") and department IN("IT","FINANCE");
+Empty set (0.001 sec)
+
+MariaDB [select_type]> SELECT name,e_id,salary,age,city FROM third_employee WHERE salary between 30000 and 100000 and city IN("NEPALJUNJ","JANAKPUR") and department IN("SCIENCE","FINANCE");
++-------------+------+--------+------+----------+
+| name        | e_id | salary | age  | city     |
++-------------+------+--------+------+----------+
+| LAXAM NEPAL |    8 |  89540 |   57 | JANAKPUR |
++-------------+------+--------+------+----------+
+1 row in set (0.001 sec)
+
+MariaDB [select_type]> SELECT * FROM third_employee WHERE department NOT IN ("DELHI","FINANCE") AND salary NOT BETWEEN 30000 and 60000;
++------+-----------------+------------+------+--------+------------+
+| e_id | name            | department | age  | salary | city       |
++------+-----------------+------------+------+--------+------------+
+|    1 | SAHIL AGRAWAL   | SCIENCE    |   15 |  20000 | BIRTAMODE  |
+|    2 | DHAIRYA AGRAWAL | SCIENCE    |   16 |  25868 | NEPALGUNJ  |
+|    3 | NAYAN PATHAK    | FIANACE    |   22 |  73498 | BIRATNAGAR |
+|    6 | MAHEK MADESHI   | UNEMPLOYED |   24 |  79874 | JANAKPUR   |
+|    8 | LAXAM NEPAL     | SCIENCE    |   57 |  89540 | JANAKPUR   |
+|    9 | RAJ INDIA       | SCIENCE    |   46 |  78593 | KOLKATA    |
++------+-----------------+------------+------+--------+------------+
+6 rows in set (0.001 sec)
