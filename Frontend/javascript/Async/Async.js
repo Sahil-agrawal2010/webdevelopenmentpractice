@@ -139,115 +139,115 @@
 // })
 
 
-const prompt  = require("prompt-sync")()
-let language=prompt("Enter the language:- ")
-let ids=prompt("Enter which id data you want:- ")
-fetch(`https://meowfacts.herokuapp.com/?lang=${language}&&id=${ids}`)
-.then(data=>{
-return data.json()
-})
-.then(final=>{
-console.log(final)
-})
+// const prompt  = require("prompt-sync")()
+// let language=prompt("Enter the language:- ")
+// let ids=prompt("Enter which id data you want:- ")
+// fetch(`https://meowfacts.herokuapp.com/?lang=${language}&&id=${ids}`)
+// .then(data=>{
+// return data.json()
+// })
+// .then(final=>{
+// console.log(final)
+// })
 
-Rough
-let a=0
-let b=1
-for(let i=0;i<=10;i++){
-    let sum=a+b
-    a=b
-    b=sum
-    console.log(sum)
-}
+// Rough
+// let a=0
+// let b=1
+// for(let i=0;i<=10;i++){
+//     let sum=a+b
+//     a=b
+//     b=sum
+//     console.log(sum)
+// }
 
-let number=Number(prompt("Enter any number:- "))
-let counter=0
-for(let i=0;i<=number;i++){
-    if(number%i==0){
-        counter++
-    }
-}
-if(counter==2){
-    console.log("The entered digit is a prime number.")
-}
-else{
-    console.log("The entered digit is not a prime number")
-}
-
-
-let array=[1,2,3,4,5]
-let array1=[]
-for(let i=(array.length-1);i>=0;i--){
-   array1.push(array[i])
-}
-    console.log(array1)
+// let number=Number(prompt("Enter any number:- "))
+// let counter=0
+// for(let i=0;i<=number;i++){
+//     if(number%i==0){
+//         counter++
+//     }
+// }
+// if(counter==2){
+//     console.log("The entered digit is a prime number.")
+// }
+// else{
+//     console.log("The entered digit is not a prime number")
+// }
 
 
-let userInput=Number(prompt("Enter any Number :- "))
-let first=Math.floor(userInput%10)
-let second=Math.floor(userInput/100)
-let empty=Math.floor(userInput%100)
-let third=Math.floor(empty/10)
-if(first>second && first>third){
-    console.log(`The greatest digit is ${first}.`)
-}
-if(second>first && second>third){
-    console.log(`The greatest digit is ${second}.`)
-}
-else{
-    console.log(`The greatest digit is ${third}.`)
-}
+// let array=[1,2,3,4,5]
+// let array1=[]
+// for(let i=(array.length-1);i>=0;i--){
+//    array1.push(array[i])
+// }
+//     console.log(array1)
 
 
-let numbers = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-  11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-  21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
-  31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
-  41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
-  51, 52, 53, 54, 55, 56, 57, 58, 59, 60,
-  61, 62, 63, 64, 65, 66, 67, 68, 69, 70,
-  71, 72, 73, 74, 75, 76, 77, 78, 79, 80,
-  81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
-  91, 92, 93, 94, 95, 96, 97, 98, 99, 100
-]
-for(let i=0;i<numbers.length;i++){
-    if(numbers[i]%3!==0){
-        console.log(numbers[i])
-    }
-}
+// let userInput=Number(prompt("Enter any Number :- "))
+// let first=Math.floor(userInput%10)
+// let second=Math.floor(userInput/100)
+// let empty=Math.floor(userInput%100)
+// let third=Math.floor(empty/10)
+// if(first>second && first>third){
+//     console.log(`The greatest digit is ${first}.`)
+// }
+// if(second>first && second>third){
+//     console.log(`The greatest digit is ${second}.`)
+// }
+// else{
+//     console.log(`The greatest digit is ${third}.`)
+// }
 
 
-let userInput=Number(prompt("Enter any number:- "))
-let last=Math.floor(userInput%10)
-let first=Math.floor(userInput/1000)
-let empty=Math.floor(userInput/100)
-let mid1=Math.floor(empty%10)
-let empty1=Math.floor(userInput/10)
-let mid2=Math.floor(empty1%10)
-console.log(`${last}${mid1}${mid2}${first}`)
+// let numbers = [
+//   1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+//   11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+//   21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+//   31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+//   41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
+//   51, 52, 53, 54, 55, 56, 57, 58, 59, 60,
+//   61, 62, 63, 64, 65, 66, 67, 68, 69, 70,
+//   71, 72, 73, 74, 75, 76, 77, 78, 79, 80,
+//   81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
+//   91, 92, 93, 94, 95, 96, 97, 98, 99, 100
+// ]
+// for(let i=0;i<numbers.length;i++){
+//     if(numbers[i]%3!==0){
+//         console.log(numbers[i])
+//     }
+// }
 
 
-let userInput=Number(prompt("Enter any number:- "))
-let last=Math.floor(userInput%10)
-let first=Math.floor(userInput/10000)
-let empty=Math.floor(userInput/100)
-let mid3=Math.floor(empty%10)
-let empty1=Math.floor(userInput/10)
-let mid4=Math.floor(empty1%10)
-let empty2=Math.floor(userInput/1000)
-let mid2=Math.floor(empty2%10)
-console.log(`${last}${mid2}${mid3}${mid4}${first}`)
+// let userInput=Number(prompt("Enter any number:- "))
+// let last=Math.floor(userInput%10)
+// let first=Math.floor(userInput/1000)
+// let empty=Math.floor(userInput/100)
+// let mid1=Math.floor(empty%10)
+// let empty1=Math.floor(userInput/10)
+// let mid2=Math.floor(empty1%10)
+// console.log(`${last}${mid1}${mid2}${first}`)
 
 
-let userInput=Number(prompt("Enter any number:- "))
-let last=Math.floor(userInput%10)
-let first=Math.floor(userInput/10000)
-let empty=Math.floor(userInput/100)
-let mid3=Math.floor(empty%10)
-let empty1=Math.floor(userInput/10)
-let mid4=Math.floor(empty1%10)
-let empty2=Math.floor(userInput/1000)
-let mid2=Math.floor(empty2%10)
-let decimal=(((2*2*2*2)*first)+((2*2*2)*mid2)+((2*2)*mid3)+((2)*mid4)+((1)*last))
-console.log(decimal)
+// let userInput=Number(prompt("Enter any number:- "))
+// let last=Math.floor(userInput%10)
+// let first=Math.floor(userInput/10000)
+// let empty=Math.floor(userInput/100)
+// let mid3=Math.floor(empty%10)
+// let empty1=Math.floor(userInput/10)
+// let mid4=Math.floor(empty1%10)
+// let empty2=Math.floor(userInput/1000)
+// let mid2=Math.floor(empty2%10)
+// console.log(`${last}${mid2}${mid3}${mid4}${first}`)
+
+
+// let userInput=Number(prompt("Enter any number:- "))
+// let last=Math.floor(userInput%10)
+// let first=Math.floor(userInput/10000)
+// let empty=Math.floor(userInput/100)
+// let mid3=Math.floor(empty%10)
+// let empty1=Math.floor(userInput/10)
+// let mid4=Math.floor(empty1%10)
+// let empty2=Math.floor(userInput/1000)
+// let mid2=Math.floor(empty2%10)
+// let decimal=(((2*2*2*2)*first)+((2*2*2)*mid2)+((2*2)*mid3)+((2)*mid4)+((1)*last))
+// console.log(decimal)

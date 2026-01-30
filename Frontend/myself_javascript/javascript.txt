@@ -27,3 +27,43 @@ for(let i = 2 ; i<=user_input ; i++){
     a=c
     console.log(c)
 }
+
+
+
+
+
+
+
+
+let user_input=Number(prompt("Do you want the timer in minutes , seconds,hour or all ? Write as i have written:-"))
+let final=0
+let user_input_minute=0
+let user_input_second=0
+let user_input_hour=0
+// let user_input=userInput.toLowerCase
+if(user_input="minutes"){
+    user_input_minute=prompt("Enter how many minutes :-")
+    // final=user_input_minute*60
+}
+if(user_input="seconds"){
+    user_input_second=prompt("Enter how many seconds :-")
+    // final=user_input_second
+}if(user_input="hour"){
+     user_input_hour=prompt("Enter how many hour :-")
+    // final=user_input_hour*3600
+}
+// if(user_input=="all"){
+//     user_input_minute=prompt("Enter how many minutes :-")
+//     user_input_second=prompt("Enter how many seconds :-")
+//     user_input_hour=prompt("Enter how many hours :-")
+// }
+ final=(user_input_minute*60)+(user_input_hour*3600)+(user_input_second)
+
+let counter=0
+let interval=setInterval(()=>{
+    console.log(counter)
+    counter++
+    if(counter==final){
+        clearInterval(interval)
+    }
+},1000)
