@@ -560,3 +560,4 @@ MariaDB [select_type]> SELECT * FROM third_employee WHERE (salary BETWEEN 40000 
 
 MariaDB [select_type]>
 MariaDB
+slecet *
