@@ -269,3 +269,293 @@ MariaDB [select_type]> SELECT * FROM third_employee WHERE department NOT IN ("DE
 
 
 maria DB
+
+
+
+
+
+
+
+
+Microsoft Windows [Version 10.0.26200.7628]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\sahil>cd ..
+
+C:\Users>cd ..
+
+C:\>cd xampp
+
+C:\xampp>cd mysql
+
+C:\xampp\mysql>cd bin
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> DHOW DATABASES:
+    ->
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'DHOW DATABASES:' at line 1
+MariaDB [(none)]> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| datatype           |
+| exam               |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| select_type        |
+| test               |
++--------------------+
+8 rows in set (0.047 sec)
+
+MariaDB [(none)]> USE select_type;
+Database changed
+MariaDB [select_type]> SHOW TABLES;
++-----------------------+
+| Tables_in_select_type |
++-----------------------+
+| employee              |
+| second_employee       |
+| third_employee        |
++-----------------------+
+3 rows in set (0.002 sec)
+
+MariaDB [select_type]> DESCRIBE third_employee;
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| e_id       | int(11)     | NO   | PRI | NULL    | auto_increment |
+| name       | varchar(20) | YES  |     | NULL    |                |
+| department | varchar(20) | YES  |     | NULL    |                |
+| age        | int(11)     | YES  |     | NULL    |                |
+| salary     | int(11)     | YES  |     | NULL    |                |
+| city       | varchar(20) | YES  |     | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
+6 rows in set (0.048 sec)
+
+MariaDB [select_type]> SELECT name,salary,city FROM third_employee WHERE salary BETWEEN 20000 and 100000 and city IN("NEPALJUNG","JANAKPUR" and department IN("SCIENCE","FINANCE"));
++-----------------+--------+------------+
+| name            | salary | city       |
++-----------------+--------+------------+
+| SAHIL AGRAWAL   |  20000 | BIRTAMODE  |
+| DHAIRYA AGRAWAL |  25868 | NEPALGUNJ  |
+| NAYAN PATHAK    |  73498 | BIRATNAGAR |
+| RAM AGRAWAL     |  59730 | SILIGURI   |
+| SITA PODHAR     |  73589 | MUMBAI     |
+| MAHEK MADESHI   |  79874 | JANAKPUR   |
+| HARI RAJBANSHI  |  57845 | INDORE     |
+| LAXAM NEPAL     |  89540 | JANAKPUR   |
+| RAJ INDIA       |  78593 | KOLKATA    |
+| HARISH UPRETE   |  89468 | NEPALGUNJ  |
++-----------------+--------+------------+
+10 rows in set, 24 warnings (0.001 sec)
+
+MariaDB [select_type]>  SELECT name,e_id,salary,age,city FROM third_employee WHERE salary between 30000 and 100000 and city IN("NEPALJUNJ","JANAKPUR") and department IN("SCIENCE","FINANCE");
++-------------+------+--------+------+----------+
+| name        | e_id | salary | age  | city     |
++-------------+------+--------+------+----------+
+| LAXAM NEPAL |    8 |  89540 |   57 | JANAKPUR |
++-------------+------+--------+------+----------+
+1 row in set (0.001 sec)
+
+MariaDB [select_type]>  SELECT name,salary,city FROM third_employee WHERE salary between 10000 and 100000 and city IN("NEPALGUNJ","JANAKPUR") and department IN("SCIENCE","FINANCE");
++-----------------+--------+-----------+
+| name            | salary | city      |
++-----------------+--------+-----------+
+| DHAIRYA AGRAWAL |  25868 | NEPALGUNJ |
+| LAXAM NEPAL     |  89540 | JANAKPUR  |
+| HARISH UPRETE   |  89468 | NEPALGUNJ |
++-----------------+--------+-----------+
+3 rows in set (0.001 sec)
+
+MariaDB [select_type]> SELECT name,salary,city FROM third_employee WHERE department NOT IN(")
+    "> SELECT name,salary,city FROM third_employee WHERE department NOT IN(");
++-----------------+--------+------------+
+| name            | salary | city       |
++-----------------+--------+------------+
+| SAHIL AGRAWAL   |  20000 | BIRTAMODE  |
+| DHAIRYA AGRAWAL |  25868 | NEPALGUNJ  |
+| NAYAN PATHAK    |  73498 | BIRATNAGAR |
+| RAM AGRAWAL     |  59730 | SILIGURI   |
+| SITA PODHAR     |  73589 | MUMBAI     |
+| MAHEK MADESHI   |  79874 | JANAKPUR   |
+| HARI RAJBANSHI  |  57845 | INDORE     |
+| LAXAM NEPAL     |  89540 | JANAKPUR   |
+| RAJ INDIA       |  78593 | KOLKATA    |
+| HARISH UPRETE   |  89468 | NEPALGUNJ  |
++-----------------+--------+------------+
+10 rows in set (0.001 sec)
+
+MariaDB [select_type]> SELECT name,salary,city FROM third_employee WHERE department NOT IN("SCIENCE","FINANCE") AND salary NOT BETWEEN 25000 and 75000;
++---------------+--------+----------+
+| name          | salary | city     |
++---------------+--------+----------+
+| MAHEK MADESHI |  79874 | JANAKPUR |
++---------------+--------+----------+
+1 row in set (0.001 sec)
+
+MariaDB [select_type]> SELECT * FROM third_employee WHERE age BETWEEN 25 and 40 AND salary>30000;
++------+----------------+------------+------+--------+-----------+
+| e_id | name           | department | age  | salary | city      |
++------+----------------+------------+------+--------+-----------+
+|    7 | HARI RAJBANSHI | FINANCE    |   36 |  57845 | INDORE    |
+|   10 | HARISH UPRETE  | FINANCE    |   38 |  89468 | NEPALGUNJ |
++------+----------------+------------+------+--------+-----------+
+2 rows in set (0.006 sec)
+
+MariaDB [select_type]> SELECT * FROM third_employee WHERE city NOT IN("JANAKPUR") AND salary BETWEEN 20000 and 80000 AND department NOT IN("FINANCE");
++------+-----------------+------------+------+--------+------------+
+| e_id | name            | department | age  | salary | city       |
++------+-----------------+------------+------+--------+------------+
+|    1 | SAHIL AGRAWAL   | SCIENCE    |   15 |  20000 | BIRTAMODE  |
+|    2 | DHAIRYA AGRAWAL | SCIENCE    |   16 |  25868 | NEPALGUNJ  |
+|    3 | NAYAN PATHAK    | FIANACE    |   22 |  73498 | BIRATNAGAR |
+|    4 | RAM AGRAWAL     | TEACHING   |   57 |  59730 | SILIGURI   |
+|    5 | SITA PODHAR     | DELHI      |   22 |  73589 | MUMBAI     |
+|    9 | RAJ INDIA       | SCIENCE    |   46 |  78593 | KOLKATA    |
++------+-----------------+------------+------+--------+------------+
+6 rows in set (0.002 sec)
+
+MariaDB [select_type]> SELECT * FROM third_employee WHERE department IN("SCIENCE") AND salary BETWEEN 50000 and 80000 OR age BETWEEN 40 and 80;
++------+-------------+------------+------+--------+----------+
+| e_id | name        | department | age  | salary | city     |
++------+-------------+------------+------+--------+----------+
+|    4 | RAM AGRAWAL | TEACHING   |   57 |  59730 | SILIGURI |
+|    8 | LAXAM NEPAL | SCIENCE    |   57 |  89540 | JANAKPUR |
+|    9 | RAJ INDIA   | SCIENCE    |   46 |  78593 | KOLKATA  |
++------+-------------+------------+------+--------+----------+
+3 rows in set (0.001 sec)
+
+MariaDB [select_type]> SELECT * FROM third_employee WHERE department IN("SCIENCE") AND (salary BETWEEN 50000 and 80000 OR age BETWEEN 40 and 80);
++------+-------------+------------+------+--------+----------+
+| e_id | name        | department | age  | salary | city     |
++------+-------------+------------+------+--------+----------+
+|    8 | LAXAM NEPAL | SCIENCE    |   57 |  89540 | JANAKPUR |
+|    9 | RAJ INDIA   | SCIENCE    |   46 |  78593 | KOLKATA  |
++------+-------------+------------+------+--------+----------+
+2 rows in set (0.001 sec)
+
+MariaDB [select_type]> SELECT * FROM third_employe WHERE salary IN(89540,78593,57847,89468)AND city NOT IN("JANAKPUR","NEPALGUNJ");
+ERROR 1146 (42S02): Table 'select_type.third_employe' doesn't exist
+MariaDB [select_type]> SELECT * FROM third_employee WHERE salary IN(89540,78593,57847,89468)AND city NOT IN("JANAKPUR","NEPALGUNJ");
++------+-----------+------------+------+--------+---------+
+| e_id | name      | department | age  | salary | city    |
++------+-----------+------------+------+--------+---------+
+|    9 | RAJ INDIA | SCIENCE    |   46 |  78593 | KOLKATA |
++------+-----------+------------+------+--------+---------+
+1 row in set (0.001 sec)
+
+MariaDB [select_type]> SELECT * FROM third_employee WHERE department IN("SCIENCE","FINANCE") AND age BETWEEN 40 and 80 AND city IN("JANAKPUR"));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+MariaDB [select_type]> SELECT * FROM third_employee WHERE department IN("SCIENCE","FINANCE") AND age NOT BETWEEN 40 and 80 AND city IN("JANAKPUR"));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+MariaDB [select_type]> SELECT * FROM third_employee WHERE department IN("SCIENCE","FINANCE") AND age NOT BETWEEN 40 and 80 AND city IN("JANAKPUR"));Ctrl-C -- exit!
+Bye
+
+C:\xampp\mysql\bin>
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 37
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> USE select_type;
+Database changed
+MariaDB [select_type]> SELECT * FROM third_employee WHERE department IN("SCIENCE","FINANCE") AND age NOT BETWEEN 40 and 80 AND city IN("JANAKPUR"));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+MariaDB [select_type]> SELECT * FROM third_employee WHERE department IN("SCIENCE","FINANCE") AND age NOT BETWEEN 40 and 80 AND city IN("JANAKPUR");
+Empty set (0.001 sec)
+
+MariaDB [select_type]> SELECT * FROM third_employee WHERE department IN("SCIENCE","FINANCE") AND age NOT BETWEEN 40 and 50 AND city IN("JANAKPUR");
++------+-------------+------------+------+--------+----------+
+| e_id | name        | department | age  | salary | city     |
++------+-------------+------------+------+--------+----------+
+|    8 | LAXAM NEPAL | SCIENCE    |   57 |  89540 | JANAKPUR |
++------+-------------+------------+------+--------+----------+
+1 row in set (0.001 sec)
+
+MariaDB [select_type]> SELECT name,department FROM third_employee WHERE salary BETWEEN 35000 and 70000 AND department NOT IN("SCIENCE")";
+    "> ;
+    ">
+    ">
+    ">  SELECT * FROM third_employee WHERE department IN("SCIENCE","FINANCE") AND age NOT BETWEEN 40 and 80 AND city IN("JANAKPUR"));
+    ">  SELECT * FROM third_employee WHERE department IN("SCIENCE","FINANCE") AND age NOT BETWEEN 40 and 80 AND city IN("JANAKPUR"));\]
+    "> SELECT name,department FROM third_employee WHERE salary BETWEEN 35000 and 70000 AND department NOT IN("SCIENCE")";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '";
+;
+
+
+ SELECT * FROM third_employee WHERE department IN("SCIENCE","FINANCE")...' at line 1
+MariaDB [select_type]> SELECT name,department FROM third_employee WHERE salary BETWEEN 35000 and 70000 AND department NOT IN("SCIENCE")";
+    "> k
+    "> kklokm;
+    "> kklokm;
+    ">  SELECT * FROM third_employee WHERE department IN("SCIENCE","FINANCE") AND age NOT BETWEEN 40 and 80 AND city IN("JANAKPUR"));\]
+    "> ;
+    ">
+    ">
+    ">
+    ">
+    ">
+    ">  SELECT * FROM third_employee WHERE department IN("SCIENCE","FINANCE") AND age NOT BETWEEN 40 and 80 AND city IN("JANAKPUR"));
+    "> SELECT name,department FROM third_employee WHERE salary BETWEEN 35000 and 70000 AND department NOT IN("SCIENCE");
+    "> ;
+    ">
+    "> 4
+    ">
+    ">
+    "> USE select_type;
+    "> SELECT name,salary,city FROM third_employee WHERE department NOT IN(");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '";
+k
+kklokm;
+kklokm;
+ SELECT * FROM third_employee WHERE department IN("SCIEN...' at line 1
+MariaDB [select_type]> SELECT name,department FROM third_employee WHERE salary BETWEEN 35000 and 70000 AND department NOT IN("SCIENCE");
++----------------+------------+
+| name           | department |
++----------------+------------+
+| RAM AGRAWAL    | TEACHING   |
+| HARI RAJBANSHI | FINANCE    |
++----------------+------------+
+2 rows in set (0.001 sec)
+
+MariaDB [select_type]> SELECT * from third_employee WHERE salary BETWEEN 30000 and 80000 AND department IN("SCIENCE") AND city NOT IN("JANAKPUR");
++------+-----------+------------+------+--------+---------+
+| e_id | name      | department | age  | salary | city    |
++------+-----------+------------+------+--------+---------+
+|    9 | RAJ INDIA | SCIENCE    |   46 |  78593 | KOLKATA |
++------+-----------+------------+------+--------+---------+
+1 row in set (0.001 sec)
+
+MariaDB [select_type]> SELECT * FROM third_employee WHERE (salary BETWEEN 40000 and 80000 OR age BETWEEN 40 and 80) AND department NOT IN("SCIENCE","FINANCE") AND CITY IN("NEPLAJUNG","JANKPUR");
+Empty set (0.001 sec)
+
+MariaDB [select_type]> SELECT * FROM third_employee WHERE (salary BETWEEN 40000 and 80000 OR age BETWEEN 40 and 80) AND department NOT IN("UNEMPLOYED","FINANCE") AND CITY IN("NEPLAJUNG","JANKPUR");
+Empty set (0.002 sec)
+
+MariaDB [select_type]> SELECT * FROM third_employee WHERE (salary BETWEEN 40000 and 80000 OR age BETWEEN 40 and 80) AND department NOT IN("UNEMPLOYED","FINANCE") AND CITY IN("NEPLAJUNG","SILIGURI");
++------+-------------+------------+------+--------+----------+
+| e_id | name        | department | age  | salary | city     |
++------+-------------+------------+------+--------+----------+
+|    4 | RAM AGRAWAL | TEACHING   |   57 |  59730 | SILIGURI |
++------+-------------+------------+------+--------+----------+
+1 row in set (0.001 sec)
+
+MariaDB [select_type]>
