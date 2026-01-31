@@ -559,3 +559,4 @@ MariaDB [select_type]> SELECT * FROM third_employee WHERE (salary BETWEEN 40000 
 1 row in set (0.001 sec)
 
 MariaDB [select_type]>
+MariaDB
