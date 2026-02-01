@@ -67,3 +67,20 @@ let interval=setInterval(()=>{
         clearInterval(interval)
     }
 },1000)
+
+
+
+
+
+
+
+
+
+
+let user_income=Number(prompt("Enter your income in numbers :- "))
+let expence_user=Number(prompt("Enter your Expense in nUmbers :- "))
+function calculator(a,b){
+    let total=100-((((a-b)/a)*100))
+    console.log("You have used "+total+" % percentage of your income in your expense!")
+}
+calculator(user_income,expence_user)
