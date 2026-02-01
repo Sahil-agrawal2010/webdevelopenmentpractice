@@ -839,3 +839,157 @@ MariaDB [select_type]> SELECT address FROM fourth_select WHERE address LIKE '%P_
 | JANAKPUR |
 +----------+
 1 row in set (0.001 sec)
+
+
+
+
+
+
+
+
+🟠 LEVEL 3 – AGGREGATE FUNCTIONS (ONLY ONE AT A TIME)
+
+Find the maximum age of students.
+
+Find the minimum age of students.
+
+Find the total sum of student ages.
+
+Find the average age of students.
+
+Find the maximum roll number.
+
+Find the minimum roll number.
+
+Find the average roll number.
+
+Find the sum of all roll numbers.
+
+🔵 LEVEL 4 – SIMPLE AGGREGATE WITH NO CONDITIONS
+
+(Still legal for beginners)
+
+Find the maximum age value present in the table.
+
+Find the minimum age value present in the table.
+
+Find the average age value present in the table.
+
+Find the total number of years (sum of age) of all students.
+
+Find the largest student ID.
+
+Find the smallest student ID.
+
+Find the average student ID.
+
+
+
+
+
+
+
+
+Microsoft Windows [Version 10.0.26200.7705]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\sahil>cd ..
+
+C:\Users>cd ..
+
+C:\>cd xampp
+
+C:\xampp>cd mysql
+
+C:\xampp\mysql>cd bin
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> USE select_type
+Database changed
+MariaDB [select_type]> CREATE TABLE taskone_select(name VARCHAR(20),age INTEGER,roll number INTEGER,address VARCHAR(20));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INTEGER,address VARCHAR(20))' at line 1
+MariaDB [select_type]> CREATE TABLE taskone_select(name VARCHAR(20),age INTEGER,roll_number INTEGER,address VARCHAR(20));
+Query OK, 0 rows affected (0.019 sec)
+
+MariaDB [select_type]> INSERT INTO(name, age , roll_number,address) VALUES("SAHIL AGRAWAL",15,20,"BIRTAMODE"),("DHAIRYA AGRAWAL",16,12,"BIRTAMODE"),("NAYAN PATHAK",22,25,"BIRTABAZAR"),("RAJ TAMANG",28,44,"KAKARVITTA");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(name, age , roll_number,address) VALUES("SAHIL AGRAWAL",15,20,"BIRTAMODE"),(...' at line 1
+MariaDB [select_type]> INSERT INTO(name,age,roll_number,address) VALUES("SAHIL AGRAWAL",15,20,"BIRTAMODE"),("DHAIRYA AGRAWAL",16,12,"BIRTAMODE"),("NAYAN PATHAK",22,25,"BIRTABAZAR"),("RAJ TAMANG",28,44,"KAKARVITTA");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(name,age,roll_number,address) VALUES("SAHIL AGRAWAL",15,20,"BIRTAMODE"),("DH...' at line 1
+MariaDB [select_type]> INSERT INTO taskone_select(name,age,roll_number,address) VALUES("SAHIL AGRAWAL",15,20,"BIRTAMODE"),("DHAIRYA AGRAWAL",16,12,"BIRTAMODE"),("NAYAN PATHAK",22,25,"BIRTABAZAR"),("RAJ TAMANG",28,44,"KAKARVITTA");
+Query OK, 4 rows affected (0.061 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+MariaDB [select_type]> SELECT max(age) as "MAXIMUM AGE" from taskone_select;
++-------------+
+| MAXIMUM AGE |
++-------------+
+|          28 |
++-------------+
+1 row in set (0.001 sec)
+
+MariaDB [select_type]> SELECT min(age) as "MINIMUM AGE" from taskone_select;
++-------------+
+| MINIMUM AGE |
++-------------+
+|          15 |
++-------------+
+1 row in set (0.001 sec)
+
+MariaDB [select_type]> SELECT sum(age) as "SUM AGE" from taskone_select;
++---------+
+| SUM AGE |
++---------+
+|      81 |
++---------+
+1 row in set (0.001 sec)
+
+MariaDB [select_type]> SELECT avg(age) as "AVERAGE AGE" from taskone_select;
++-------------+
+| AVERAGE AGE |
++-------------+
+|     20.2500 |
++-------------+
+1 row in set (0.001 sec)
+
+MariaDB [select_type]> SELECT max(roll_number) as "MAXIMUM ROLL NUMBER" from taskone_select;
++---------------------+
+| MAXIMUM ROLL NUMBER |
++---------------------+
+|                  44 |
++---------------------+
+1 row in set (0.001 sec)
+
+MariaDB [select_type]> SELECT min(roll_number) as "MINIMUM ROLL NUMBER" from taskone_select;
++---------------------+
+| MINIMUM ROLL NUMBER |
++---------------------+
+|                  12 |
++---------------------+
+1 row in set (0.000 sec)
+
+MariaDB [select_type]> SELECT avg(roll_number) as "AVERAGE ROLL NUMBER" from taskone_select;
++---------------------+
+| AVERAGE ROLL NUMBER |
++---------------------+
+|             25.2500 |
++---------------------+
+1 row in set (0.001 sec)
+
+MariaDB [select_type]> SELECT sum(roll_number) as "SUM ROLL NUMBER" from taskone_select;
++-----------------+
+| SUM ROLL NUMBER |
++-----------------+
+|             101 |
++-----------------+
+1 row in set (0.001 sec)
+
+MariaDB [select_type]>
