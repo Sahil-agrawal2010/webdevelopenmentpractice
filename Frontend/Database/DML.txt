@@ -993,3 +993,278 @@ MariaDB [select_type]> SELECT sum(roll_number) as "SUM ROLL NUMBER" from taskone
 1 row in set (0.001 sec)
 
 MariaDB [select_type]>
+
+
+
+
+
+
+
+
+
+Microsoft Windows [Version 10.0.26200.7705]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\sahil>c d..
+'c' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\sahil>cd ..
+
+C:\Users>c d.
+'c' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users>c d..
+'c' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users>c d..
+'c' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users>cd ./
+
+C:\Users>cd ..
+
+C:\>cd xampp
+
+C:\xampp>cd mysql
+
+C:\xampp\mysql>cd bin
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> USE fifth_select;
+ERROR 1049 (42000): Unknown database 'fifth_select'
+MariaDB [(none)]> USE select_type;
+Database changed
+MariaDB [select_type]> DESCRIBE fifth_select;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| name        | varchar(20) | YES  |     | NULL    |       |
+| age         | int(11)     | YES  |     | NULL    |       |
+| roll_number | int(11)     | YES  |     | NULL    |       |
+| address     | varchar(20) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+4 rows in set (0.047 sec)
+
+MariaDB [select_type]> INSERT INTO fifht_select(name,age,roll_number,address) VALUES("SAHIL AGRAWAL",15,20,"BIRTAMODE"),("DHAIRYA AGRAWAL",16,12,"BIRTAMODE"),("NAYAN PATHAK",22,25,"BIRTABAZAR"),("RAJ TAMANG",28,44,"KAKARVITTA");
+ERROR 1146 (42S02): Table 'select_type.fifht_select' doesn't exist
+MariaDB [select_type]> INSERT INTO fifth_select(name,age,roll_number,address) VALUES("SAHIL AGRAWAL",15,20,"BIRTAMODE"),("DHAIRYA AGRAWAL",16,12,"BIRTAMODE"),("NAYAN PATHAK",22,25,"BIRTABAZAR"),("RAJ TAMANG",28,44,"KAKARVITTA");
+Query OK, 4 rows affected (0.009 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+MariaDB [select_type]> SELECT * from fifth_select;
++-----------------+------+-------------+------------+
+| name            | age  | roll_number | address    |
++-----------------+------+-------------+------------+
+| SAHIL AGRAWAL   |   15 |          20 | BIRTAMODE  |
+| DHAIRYA AGRAWAL |   16 |          12 | BIRTAMODE  |
+| NAYAN PATHAK    |   22 |          25 | BIRTABAZAR |
+| RAJ TAMANG      |   28 |          44 | KAKARVITTA |
++-----------------+------+-------------+------------+
+4 rows in set (0.000 sec)
+
+MariaDB [select_type]> SELECT count(age) FROM fifth_select;
++------------+
+| count(age) |
++------------+
+|          4 |
++------------+
+1 row in set (0.001 sec)
+
+MariaDB [select_type]> INSERT INTO fifth_select(age) VALUES(22),(67),(47),(48);
+Query OK, 4 rows affected (0.009 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+MariaDB [select_type]> SELECT count(age) FROM fifth_select;
++------------+
+| count(age) |
++------------+
+|          8 |
++------------+
+1 row in set (0.001 sec)
+
+MariaDB [select_type]> SELECT * FROM fifth_select;
++-----------------+------+-------------+------------+
+| name            | age  | roll_number | address    |
++-----------------+------+-------------+------------+
+| SAHIL AGRAWAL   |   15 |          20 | BIRTAMODE  |
+| DHAIRYA AGRAWAL |   16 |          12 | BIRTAMODE  |
+| NAYAN PATHAK    |   22 |          25 | BIRTABAZAR |
+| RAJ TAMANG      |   28 |          44 | KAKARVITTA |
+| NULL            |   22 |        NULL | NULL       |
+| NULL            |   67 |        NULL | NULL       |
+| NULL            |   47 |        NULL | NULL       |
+| NULL            |   48 |        NULL | NULL       |
++-----------------+------+-------------+------------+
+8 rows in set (0.001 sec)
+
+MariaDB [select_type]> SELECT count(age) FROM fifth_select;
++------------+
+| count(age) |
++------------+
+|          8 |
++------------+
+1 row in set (0.001 sec)
+
+MariaDB [select_type]> SELECT count(name) FROM fifth_select;
++-------------+
+| count(name) |
++-------------+
+|           4 |
++-------------+
+1 row in set (0.001 sec)
+
+MariaDB [select_type]> SELECT count(*) FROM fifth_select;
++----------+
+| count(*) |
++----------+
+|        8 |
++----------+
+1 row in set (0.001 sec)
+
+MariaDB [select_type]> select age from fifth_select group by;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+MariaDB [select_type]> select age from fifth_select age group by;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+MariaDB [select_type]> select age from fifth_select group by age;
++------+
+| age  |
++------+
+|   15 |
+|   16 |
+|   22 |
+|   28 |
+|   47 |
+|   48 |
+|   67 |
++------+
+7 rows in set (0.001 sec)
+
+MariaDB [select_type]> select age from fifth_select group by age dec;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'dec' at line 1
+MariaDB [select_type]> select age from fifth_select group by age desc;
++------+
+| age  |
++------+
+|   67 |
+|   48 |
+|   47 |
+|   28 |
+|   22 |
+|   16 |
+|   15 |
++------+
+7 rows in set (0.001 sec)
+
+MariaDB [select_type]> UPDATE fifth_select set name="HIRA AGARWAL" WHERE id=4
+    -> ;
+ERROR 1054 (42S22): Unknown column 'id' in 'where clause'
+MariaDB [select_type]> UPDATE fifth_select set name="HIRA AGARWAL" WHERE age=47;
+Query OK, 1 row affected (0.008 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [select_type]> SELECT * from fifth_select;
++-----------------+------+-------------+------------+
+| name            | age  | roll_number | address    |
++-----------------+------+-------------+------------+
+| SAHIL AGRAWAL   |   15 |          20 | BIRTAMODE  |
+| DHAIRYA AGRAWAL |   16 |          12 | BIRTAMODE  |
+| NAYAN PATHAK    |   22 |          25 | BIRTABAZAR |
+| RAJ TAMANG      |   28 |          44 | KAKARVITTA |
+| NULL            |   22 |        NULL | NULL       |
+| NULL            |   67 |        NULL | NULL       |
+| HIRA AGARWAL    |   47 |        NULL | NULL       |
+| NULL            |   48 |        NULL | NULL       |
++-----------------+------+-------------+------------+
+8 rows in set (0.001 sec)
+
+MariaDB [select_type]> DELETE FROM fifth_select WHERE address="KAKARVITTA";
+Query OK, 1 row affected (0.008 sec)
+
+MariaDB [select_type]> SELECT * from fifth_select;
++-----------------+------+-------------+------------+
+| name            | age  | roll_number | address    |
++-----------------+------+-------------+------------+
+| SAHIL AGRAWAL   |   15 |          20 | BIRTAMODE  |
+| DHAIRYA AGRAWAL |   16 |          12 | BIRTAMODE  |
+| NAYAN PATHAK    |   22 |          25 | BIRTABAZAR |
+| NULL            |   22 |        NULL | NULL       |
+| NULL            |   67 |        NULL | NULL       |
+| HIRA AGARWAL    |   47 |        NULL | NULL       |
+| NULL            |   48 |        NULL | NULL       |
++-----------------+------+-------------+------------+
+7 rows in set (0.001 sec)
+
+MariaDB [select_type]> UPDATE fifth_select set name="RAM AGRAWAL",set roll_number=24,set address="KAKARVITTA" WHERE age=22;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'set roll_number=24,set address="KAKARVITTA" WHERE age=22' at line 1
+MariaDB [select_type]> UPDATE fifth_select set name="RAM AGRAWAL",roll_number=24,address="KAKARVITTA" WHERE age=22;
+Query OK, 2 rows affected (0.007 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+MariaDB [select_type]> SELECT * from fifth_select;
++-----------------+------+-------------+------------+
+| name            | age  | roll_number | address    |
++-----------------+------+-------------+------------+
+| SAHIL AGRAWAL   |   15 |          20 | BIRTAMODE  |
+| DHAIRYA AGRAWAL |   16 |          12 | BIRTAMODE  |
+| RAM AGRAWAL     |   22 |          24 | KAKARVITTA |
+| RAM AGRAWAL     |   22 |          24 | KAKARVITTA |
+| NULL            |   67 |        NULL | NULL       |
+| HIRA AGARWAL    |   47 |        NULL | NULL       |
+| NULL            |   48 |        NULL | NULL       |
++-----------------+------+-------------+------------+
+7 rows in set (0.000 sec)
+
+MariaDB [select_type]> UPDATE fifth_select set name="SITA BASNET",roll_number=14,address="CHARPENE" WHERE age=67;
+Query OK, 1 row affected (0.008 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [select_type]> UPDATE fifth_select set name="HAIR KAKRKI",roll_number=04,address="ITTABHATTA" WHERE age=48;
+Query OK, 1 row affected (0.007 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [select_type]> SELECT * from fifth_select;
++-----------------+------+-------------+------------+
+| name            | age  | roll_number | address    |
++-----------------+------+-------------+------------+
+| SAHIL AGRAWAL   |   15 |          20 | BIRTAMODE  |
+| DHAIRYA AGRAWAL |   16 |          12 | BIRTAMODE  |
+| RAM AGRAWAL     |   22 |          24 | KAKARVITTA |
+| RAM AGRAWAL     |   22 |          24 | KAKARVITTA |
+| SITA BASNET     |   67 |          14 | CHARPENE   |
+| HIRA AGARWAL    |   47 |        NULL | NULL       |
+| HAIR KAKRKI     |   48 |           4 | ITTABHATTA |
++-----------------+------+-------------+------------+
+7 rows in set (0.000 sec)
+
+MariaDB [select_type]> UPDATE fifth_select set roll_number=14,address="SURANGA" WHERE age=47;
+Query OK, 1 row affected (0.008 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [select_type]> SELECT * from fifth_select;
++-----------------+------+-------------+------------+
+| name            | age  | roll_number | address    |
++-----------------+------+-------------+------------+
+| SAHIL AGRAWAL   |   15 |          20 | BIRTAMODE  |
+| DHAIRYA AGRAWAL |   16 |          12 | BIRTAMODE  |
+| RAM AGRAWAL     |   22 |          24 | KAKARVITTA |
+| RAM AGRAWAL     |   22 |          24 | KAKARVITTA |
+| SITA BASNET     |   67 |          14 | CHARPENE   |
+| HIRA AGARWAL    |   47 |          14 | SURANGA    |
+| HAIR KAKRKI     |   48 |           4 | ITTABHATTA |
++-----------------+------+-------------+------------+
+7 rows in set (0.001 sec)
+
+MariaDB [select_type]>
