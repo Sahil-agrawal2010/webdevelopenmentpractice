@@ -1268,3 +1268,4 @@ MariaDB [select_type]> SELECT * from fifth_select;
 7 rows in set (0.001 sec)
 
 MariaDB [select_type]>
+MariaDB [select_type]>
