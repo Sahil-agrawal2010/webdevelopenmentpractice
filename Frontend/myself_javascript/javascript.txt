@@ -84,3 +84,21 @@ function calculator(a,b){
     console.log("You have used "+total+" % percentage of your income in your expense!")
 }
 calculator(user_income,expence_user)
+
+
+
+
+
+
+
+
+let user_input=Number(prompt("Enter any number to git its reversed :-"))
+let reversed=""
+let numb=0
+for(let i=0;i<=user_input;i++){
+    numb=user_input%10
+    let string=numb.toString()
+    reversed=reversed+string
+    user_input=Math.floor(user_input/10)
+}
+console.log(reversed)
