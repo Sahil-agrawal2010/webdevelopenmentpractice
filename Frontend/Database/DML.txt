@@ -1310,4 +1310,3 @@ Database changed
 
 MariaDB
 Database
-Databases of Typr scripts
