@@ -102,3 +102,34 @@ for(let i=0;i<=user_input;i++){
     user_input=Math.floor(user_input/10)
 }
 console.log(reversed)
+
+
+
+
+let userInput=Number(prompt("Enter any number of fibonnaci series:- "))
+let a=0
+let b=1
+console.log(a)
+console.log(b)
+for(let i=0;i<=userInput-2;i++){
+    let c=a+b
+    a=b
+    b=c
+    console.log(c)
+}
+
+
+
+
+
+
+
+
+let user_input=Number(prompt("Enter any number to get its reversed one :- "))
+let final = 0
+while(user_input!=0){
+    let reversed=Math.floor(user_input%10)
+    final = final * 10 + reversed
+    user_input=Math.floor(user_input/10)
+}
+console.log(final)
