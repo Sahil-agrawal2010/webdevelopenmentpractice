@@ -141,3 +141,14 @@ console.log(final)
 
 Databases
 MojaDB
+
+
+
+
+
+
+
+let user_input=Number(prompt("Enter any number please :- "))
+for(let i=0;i<=user_input;i++){
+    console.log(i)
+}
