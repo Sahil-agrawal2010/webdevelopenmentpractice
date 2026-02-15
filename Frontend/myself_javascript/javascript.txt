@@ -152,3 +152,17 @@ let user_input=Number(prompt("Enter any number please :- "))
 for(let i=0;i<=user_input;i++){
     console.log(i)
 }
+
+
+
+
+
+
+let number_array=[2,345,23,434,5342]
+let max = number_array[0]
+for(let i=0;i<number_array.length;i++){
+    if (number_array[i]>max){
+        max=number_array[i]
+    }
+}
+console.log(max)
