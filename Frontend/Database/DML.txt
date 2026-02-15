@@ -1616,3 +1616,7 @@ MariaDB [datatype]> SELECT * FROM students;
 15 rows in set (0.001 sec)
 
 MariaDB [datatype]>
+
+
+
+DataBase
