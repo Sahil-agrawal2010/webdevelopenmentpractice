@@ -1312,3 +1312,307 @@ MariaDB
 Database
 MariaDB
 Database
+
+
+
+
+
+
+
+
+
+Microsoft Windows [Version 10.0.26200.7840]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\sahil>cd ..
+
+C:\Users>cd ..
+
+C:\>cd xampp
+
+C:\xampp>cd mysql
+
+C:\xampp\mysql>cd bin
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| datatype           |
+| exam               |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| select_type        |
+| test               |
++--------------------+
+8 rows in set (0.089 sec)
+
+MariaDB [(none)]> USE datatype;
+Database changed
+MariaDB [datatype]> show coloumns;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'coloumns' at line 1
+MariaDB [datatype]> show tables;
++----------------------+
+| Tables_in_datatype   |
++----------------------+
+| autoincrenement_type |
+| bollen_type          |
+| datetime_type        |
+| enum_type            |
+| json_type            |
+| point_type           |
+| text_type            |
++----------------------+
+7 rows in set (0.001 sec)
+
+MariaDB [datatype]> CREATE TABLE null_values(s_id PRIMARY KEY AUTO_INCREMENT,s_name VARCHAR(20),s_address VARCHAR(20),s_faculty VARCHAR(20));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'PRIMARY KEY AUTO_INCREMENT,s_name VARCHAR(20),s_address VARCHAR(20),s_faculty...' at line 1
+MariaDB [datatype]> CREATE TABLE null_values(s_id PRIMARY KEY AUTO_INCREMENT,s_name VARCHAR(20),s_address VARCHAR(20),s_faculty VARCHAR(20));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'PRIMARY KEY AUTO_INCREMENT,s_name VARCHAR(20),s_address VARCHAR(20),s_faculty...' at line 1
+MariaDB [datatype]> CREATE TABLE null_values(s_id INTEGER PRIMARY KEY AUTO_INCREMENT,s_name VARCHAR(20),s_address VARCHAR(20),s_faculty VARCHAR(20));
+Query OK, 0 rows affected (0.021 sec)
+
+MariaDB [datatype]> INSERT INTO null_values("SHAIL AGRAWAL","BIRTAMODE","SCIENCE"),("NAYAN PATRHAK",null,"BIOLOGY"),("DHAIRYA AGRAWAL","BAHDRAPUR","SCIENCE"),("ROHAN BAJAJ",null,"SOFTWARE"),("MAYANK BINDAL","KAKARVITTA","COMMERCE");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '"SHAIL AGRAWAL","BIRTAMODE","SCIENCE"),("NAYAN PATRHAK",null,"BIOLOGY"),("DHA...' at line 1
+MariaDB [datatype]> INSERT INTO null_values VALUES("SHAIL AGRAWAL","BIRTAMODE","SCIENCE"),("NAYAN PATRHAK",null,"BIOLOGY"),("DHAIRYA AGRAWAL","BAHDRAPUR","SCIENCE"),("ROHAN BAJAJ",null,"SOFTWARE"),("MAYANK BINDAL","KAKARVITTA","COMMERCE");
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+MariaDB [datatype]> INSERT INTO null_values(s_name,s_address,s_faculty) VALUES("SHAIL AGRAWAL","BIRTAMODE","SCIENCE"),("NAYAN PATRHAK",null,"BIOLOGY"),("DHAIRYA AGRAWAL","BAHDRAPUR","SCIENCE"),("ROHAN BAJAJ",null,"SOFTWARE"),("MAYANK BINDAL","KAKARVITTA","COMMERCE");
+Query OK, 5 rows affected (0.009 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+MariaDB [datatype]> SELECT * FROM null_values;
++------+-----------------+------------+-----------+
+| s_id | s_name          | s_address  | s_faculty |
++------+-----------------+------------+-----------+
+|    1 | SHAIL AGRAWAL   | BIRTAMODE  | SCIENCE   |
+|    2 | NAYAN PATRHAK   | NULL       | BIOLOGY   |
+|    3 | DHAIRYA AGRAWAL | BAHDRAPUR  | SCIENCE   |
+|    4 | ROHAN BAJAJ     | NULL       | SOFTWARE  |
+|    5 | MAYANK BINDAL   | KAKARVITTA | COMMERCE  |
++------+-----------------+------------+-----------+
+5 rows in set (0.001 sec)
+
+MariaDB [datatype]> SELECT * FROM null_values WHERE s_address is null;
++------+---------------+-----------+-----------+
+| s_id | s_name        | s_address | s_faculty |
++------+---------------+-----------+-----------+
+|    2 | NAYAN PATRHAK | NULL      | BIOLOGY   |
+|    4 | ROHAN BAJAJ   | NULL      | SOFTWARE  |
++------+---------------+-----------+-----------+
+2 rows in set (0.001 sec)
+
+MariaDB [datatype]> UPDATE null_values SET s_address=null WHERE s_id=3;
+Query OK, 1 row affected (0.010 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [datatype]> SELECT * FROM null_values;
++------+-----------------+------------+-----------+
+| s_id | s_name          | s_address  | s_faculty |
++------+-----------------+------------+-----------+
+|    1 | SHAIL AGRAWAL   | BIRTAMODE  | SCIENCE   |
+|    2 | NAYAN PATRHAK   | NULL       | BIOLOGY   |
+|    3 | DHAIRYA AGRAWAL | NULL       | SCIENCE   |
+|    4 | ROHAN BAJAJ     | NULL       | SOFTWARE  |
+|    5 | MAYANK BINDAL   | KAKARVITTA | COMMERCE  |
++------+-----------------+------------+-----------+
+5 rows in set (0.001 sec)
+
+MariaDB [datatype]> SELECT * FROM null_values WHERE s_address is null;
++------+-----------------+-----------+-----------+
+| s_id | s_name          | s_address | s_faculty |
++------+-----------------+-----------+-----------+
+|    2 | NAYAN PATRHAK   | NULL      | BIOLOGY   |
+|    3 | DHAIRYA AGRAWAL | NULL      | SCIENCE   |
+|    4 | ROHAN BAJAJ     | NULL      | SOFTWARE  |
++------+-----------------+-----------+-----------+
+3 rows in set (0.001 sec)
+
+MariaDB [datatype]> SELECT * FROM null_values WHERE s_address is not null;
++------+---------------+------------+-----------+
+| s_id | s_name        | s_address  | s_faculty |
++------+---------------+------------+-----------+
+|    1 | SHAIL AGRAWAL | BIRTAMODE  | SCIENCE   |
+|    5 | MAYANK BINDAL | KAKARVITTA | COMMERCE  |
++------+---------------+------------+-----------+
+2 rows in set (0.001 sec)
+
+MariaDB [datatype]> CREATE TABLE students (
+    ->     s_id INT PRIMARY KEY,
+    ->     s_name VARCHAR(100),
+    ->     s_address VARCHAR(150),
+    ->     s_roll INT,
+    ->     a_age INT,
+    ->     s_house VARCHAR(20),
+    ->     s_hobby VARCHAR(50),
+    ->     s_scholarship INT
+    -> );
+Query OK, 0 rows affected (0.027 sec)
+
+MariaDB [datatype]> INSERT INTO students
+    -> (s_id, s_name, s_address, s_roll, a_age, s_house, s_hobby, s_scholarship)
+    -> VALUES
+    -> (1, 'Rahul Sharma', 'Delhi', 101, 18, 'Red', 'Cricket', 15000),
+    -> (2, 'Ananya Verma', 'Mumbai', 102, 19, 'Blue', 'Painting', 20000),
+    -> (3, 'Arjun Patel', 'Ahmedabad', 103, 20, 'Green', 'Football', 12000),
+    -> (4, 'Sneha Kapoor', 'Delhi', 104, 18, 'Yellow', 'Dancing', 18000),
+    -> (5, 'Rahul Mehta', 'Pune', 105, 21, 'Red', 'Reading', NULL),
+    -> (6, 'Ishita Roy', 'Kolkata', 106, 19, 'Blue', 'Music', 25000),
+    -> (7, 'Karan Singh', 'Jaipur', 107, 22, 'Green', 'Swimming', 30000),
+    -> (8, 'Priya Nair', 'Chennai', 108, 20, 'Yellow', 'Cooking', 22000),
+    -> (9, 'Aditya Rao', 'Hyderabad', 109, 21, 'Red', 'Photography', 5000),
+    -> (10, 'Neha Joshi', 'Lucknow', 110, 18, 'Blue', 'Writing', NULL),
+    -> (11, 'Vikram Desai', 'Surat', 111, 23, 'Green', 'Cycling', 40000),
+    -> (12, 'Aman Gupta', 'Bhopal', 112, 19, 'Yellow', 'Gaming', 10000),
+    -> (13, 'Ananya Iyer', 'Bengaluru', 113, 20, 'Red', 'Painting', 27000),
+    -> (14, 'Rohan Das', 'Patna', 114, 22, 'Blue', 'Cricket', 35000),
+    -> (15, 'Simran Kaur', 'Chandigarh', 115, 18, 'Green', NULL, 45000);
+Query OK, 15 rows affected (0.017 sec)
+Records: 15  Duplicates: 0  Warnings: 0
+
+MariaDB [datatype]> SELECT * FROM students;
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+| s_id | s_name       | s_address  | s_roll | a_age | s_house | s_hobby     | s_scholarship |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+|    1 | Rahul Sharma | Delhi      |    101 |    18 | Red     | Cricket     |         15000 |
+|    2 | Ananya Verma | Mumbai     |    102 |    19 | Blue    | Painting    |         20000 |
+|    3 | Arjun Patel  | Ahmedabad  |    103 |    20 | Green   | Football    |         12000 |
+|    4 | Sneha Kapoor | Delhi      |    104 |    18 | Yellow  | Dancing     |         18000 |
+|    5 | Rahul Mehta  | Pune       |    105 |    21 | Red     | Reading     |          NULL |
+|    6 | Ishita Roy   | Kolkata    |    106 |    19 | Blue    | Music       |         25000 |
+|    7 | Karan Singh  | Jaipur     |    107 |    22 | Green   | Swimming    |         30000 |
+|    8 | Priya Nair   | Chennai    |    108 |    20 | Yellow  | Cooking     |         22000 |
+|    9 | Aditya Rao   | Hyderabad  |    109 |    21 | Red     | Photography |          5000 |
+|   10 | Neha Joshi   | Lucknow    |    110 |    18 | Blue    | Writing     |          NULL |
+|   11 | Vikram Desai | Surat      |    111 |    23 | Green   | Cycling     |         40000 |
+|   12 | Aman Gupta   | Bhopal     |    112 |    19 | Yellow  | Gaming      |         10000 |
+|   13 | Ananya Iyer  | Bengaluru  |    113 |    20 | Red     | Painting    |         27000 |
+|   14 | Rohan Das    | Patna      |    114 |    22 | Blue    | Cricket     |         35000 |
+|   15 | Simran Kaur  | Chandigarh |    115 |    18 | Green   | NULL        |         45000 |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+15 rows in set (0.001 sec)
+
+MariaDB [datatype]> UPDATE students set WHERE red=raato;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE red=raato' at line 1
+MariaDB [datatype]> UPDATE students set s_house="raato" WHERE s_house="red";
+Query OK, 4 rows affected (0.010 sec)
+Rows matched: 4  Changed: 4  Warnings: 0
+
+MariaDB [datatype]> UPDATE students set WHERE red=raato;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE red=raato' at line 1
+MariaDB [datatype]> SELECT * FROM students;
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+| s_id | s_name       | s_address  | s_roll | a_age | s_house | s_hobby     | s_scholarship |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+|    1 | Rahul Sharma | Delhi      |    101 |    18 | raato   | Cricket     |         15000 |
+|    2 | Ananya Verma | Mumbai     |    102 |    19 | Blue    | Painting    |         20000 |
+|    3 | Arjun Patel  | Ahmedabad  |    103 |    20 | Green   | Football    |         12000 |
+|    4 | Sneha Kapoor | Delhi      |    104 |    18 | Yellow  | Dancing     |         18000 |
+|    5 | Rahul Mehta  | Pune       |    105 |    21 | raato   | Reading     |          NULL |
+|    6 | Ishita Roy   | Kolkata    |    106 |    19 | Blue    | Music       |         25000 |
+|    7 | Karan Singh  | Jaipur     |    107 |    22 | Green   | Swimming    |         30000 |
+|    8 | Priya Nair   | Chennai    |    108 |    20 | Yellow  | Cooking     |         22000 |
+|    9 | Aditya Rao   | Hyderabad  |    109 |    21 | raato   | Photography |          5000 |
+|   10 | Neha Joshi   | Lucknow    |    110 |    18 | Blue    | Writing     |          NULL |
+|   11 | Vikram Desai | Surat      |    111 |    23 | Green   | Cycling     |         40000 |
+|   12 | Aman Gupta   | Bhopal     |    112 |    19 | Yellow  | Gaming      |         10000 |
+|   13 | Ananya Iyer  | Bengaluru  |    113 |    20 | raato   | Painting    |         27000 |
+|   14 | Rohan Das    | Patna      |    114 |    22 | Blue    | Cricket     |         35000 |
+|   15 | Simran Kaur  | Chandigarh |    115 |    18 | Green   | NULL        |         45000 |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+15 rows in set (0.001 sec)
+
+MariaDB [datatype]> UPDATE students set="Silligri" WHERE id=6;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '="Silligri" WHERE id=6' at line 1
+MariaDB [datatype]> UPDATE students set s_address="Silligri" WHERE id=6;
+ERROR 1054 (42S22): Unknown column 'id' in 'where clause'
+MariaDB [datatype]> UPDATE students set s_address="Silligri" WHERE s_id=6;
+Query OK, 1 row affected (0.010 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [datatype]> SELECT * FROM students;
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+| s_id | s_name       | s_address  | s_roll | a_age | s_house | s_hobby     | s_scholarship |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+|    1 | Rahul Sharma | Delhi      |    101 |    18 | raato   | Cricket     |         15000 |
+|    2 | Ananya Verma | Mumbai     |    102 |    19 | Blue    | Painting    |         20000 |
+|    3 | Arjun Patel  | Ahmedabad  |    103 |    20 | Green   | Football    |         12000 |
+|    4 | Sneha Kapoor | Delhi      |    104 |    18 | Yellow  | Dancing     |         18000 |
+|    5 | Rahul Mehta  | Pune       |    105 |    21 | raato   | Reading     |          NULL |
+|    6 | Ishita Roy   | Silligri   |    106 |    19 | Blue    | Music       |         25000 |
+|    7 | Karan Singh  | Jaipur     |    107 |    22 | Green   | Swimming    |         30000 |
+|    8 | Priya Nair   | Chennai    |    108 |    20 | Yellow  | Cooking     |         22000 |
+|    9 | Aditya Rao   | Hyderabad  |    109 |    21 | raato   | Photography |          5000 |
+|   10 | Neha Joshi   | Lucknow    |    110 |    18 | Blue    | Writing     |          NULL |
+|   11 | Vikram Desai | Surat      |    111 |    23 | Green   | Cycling     |         40000 |
+|   12 | Aman Gupta   | Bhopal     |    112 |    19 | Yellow  | Gaming      |         10000 |
+|   13 | Ananya Iyer  | Bengaluru  |    113 |    20 | raato   | Painting    |         27000 |
+|   14 | Rohan Das    | Patna      |    114 |    22 | Blue    | Cricket     |         35000 |
+|   15 | Simran Kaur  | Chandigarh |    115 |    18 | Green   | NULL        |         45000 |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+15 rows in set (0.001 sec)
+
+MariaDB [datatype]> UPDATE students set s_roll=s_roll+4;
+Query OK, 15 rows affected (0.009 sec)
+Rows matched: 15  Changed: 15  Warnings: 0
+
+MariaDB [datatype]> SELECT * FROM students;
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+| s_id | s_name       | s_address  | s_roll | a_age | s_house | s_hobby     | s_scholarship |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+|    1 | Rahul Sharma | Delhi      |    105 |    18 | raato   | Cricket     |         15000 |
+|    2 | Ananya Verma | Mumbai     |    106 |    19 | Blue    | Painting    |         20000 |
+|    3 | Arjun Patel  | Ahmedabad  |    107 |    20 | Green   | Football    |         12000 |
+|    4 | Sneha Kapoor | Delhi      |    108 |    18 | Yellow  | Dancing     |         18000 |
+|    5 | Rahul Mehta  | Pune       |    109 |    21 | raato   | Reading     |          NULL |
+|    6 | Ishita Roy   | Silligri   |    110 |    19 | Blue    | Music       |         25000 |
+|    7 | Karan Singh  | Jaipur     |    111 |    22 | Green   | Swimming    |         30000 |
+|    8 | Priya Nair   | Chennai    |    112 |    20 | Yellow  | Cooking     |         22000 |
+|    9 | Aditya Rao   | Hyderabad  |    113 |    21 | raato   | Photography |          5000 |
+|   10 | Neha Joshi   | Lucknow    |    114 |    18 | Blue    | Writing     |          NULL |
+|   11 | Vikram Desai | Surat      |    115 |    23 | Green   | Cycling     |         40000 |
+|   12 | Aman Gupta   | Bhopal     |    116 |    19 | Yellow  | Gaming      |         10000 |
+|   13 | Ananya Iyer  | Bengaluru  |    117 |    20 | raato   | Painting    |         27000 |
+|   14 | Rohan Das    | Patna      |    118 |    22 | Blue    | Cricket     |         35000 |
+|   15 | Simran Kaur  | Chandigarh |    119 |    18 | Green   | NULL        |         45000 |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+15 rows in set (0.003 sec)
+
+MariaDB [datatype]> UPDATE students set s_scholarship=s_scholarship+((5/100)*s_scholarship) WHERE s_scholarship<20000;
+Query OK, 5 rows affected (0.009 sec)
+Rows matched: 5  Changed: 5  Warnings: 0
+
+MariaDB [datatype]> SELECT * FROM students;
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+| s_id | s_name       | s_address  | s_roll | a_age | s_house | s_hobby     | s_scholarship |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+|    1 | Rahul Sharma | Delhi      |    105 |    18 | raato   | Cricket     |         15750 |
+|    2 | Ananya Verma | Mumbai     |    106 |    19 | Blue    | Painting    |         20000 |
+|    3 | Arjun Patel  | Ahmedabad  |    107 |    20 | Green   | Football    |         12600 |
+|    4 | Sneha Kapoor | Delhi      |    108 |    18 | Yellow  | Dancing     |         18900 |
+|    5 | Rahul Mehta  | Pune       |    109 |    21 | raato   | Reading     |          NULL |
+|    6 | Ishita Roy   | Silligri   |    110 |    19 | Blue    | Music       |         25000 |
+|    7 | Karan Singh  | Jaipur     |    111 |    22 | Green   | Swimming    |         30000 |
+|    8 | Priya Nair   | Chennai    |    112 |    20 | Yellow  | Cooking     |         22000 |
+|    9 | Aditya Rao   | Hyderabad  |    113 |    21 | raato   | Photography |          5250 |
+|   10 | Neha Joshi   | Lucknow    |    114 |    18 | Blue    | Writing     |          NULL |
+|   11 | Vikram Desai | Surat      |    115 |    23 | Green   | Cycling     |         40000 |
+|   12 | Aman Gupta   | Bhopal     |    116 |    19 | Yellow  | Gaming      |         10500 |
+|   13 | Ananya Iyer  | Bengaluru  |    117 |    20 | raato   | Painting    |         27000 |
+|   14 | Rohan Das    | Patna      |    118 |    22 | Blue    | Cricket     |         35000 |
+|   15 | Simran Kaur  | Chandigarh |    119 |    18 | Green   | NULL        |         45000 |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+15 rows in set (0.001 sec)
+
+MariaDB [datatype]>

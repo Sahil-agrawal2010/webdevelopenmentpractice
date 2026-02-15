@@ -166,3 +166,6 @@ for(let i=0;i<number_array.length;i++){
     }
 }
 console.log(max)
+
+
+
