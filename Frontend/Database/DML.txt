@@ -1620,3 +1620,534 @@ MariaDB [datatype]>
 
 
 DataBase
+
+
+
+
+
+Microsoft Windows [Version 10.0.26200.7840]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\sahil>c d..
+'c' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\sahil>cd ..
+
+C:\Users>cd ..
+
+C:\>cd xampp
+
+C:\xampp>cd mysql
+
+C:\xampp\mysql>cd bin
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+ERROR 2002 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+
+C:\xampp\mysql\bin>
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use datatype
+Database changed
+MariaDB [datatype]> SHOW TABLES;
++----------------------+
+| Tables_in_datatype   |
++----------------------+
+| autoincrenement_type |
+| bollen_type          |
+| datetime_type        |
+| enum_type            |
+| json_type            |
+| null_values          |
+| point_type           |
+| students             |
+| text_type            |
++----------------------+
+9 rows in set (0.002 sec)
+
+MariaDB [datatype]> describe null_values;
++-----------+-------------+------+-----+---------+----------------+
+| Field     | Type        | Null | Key | Default | Extra          |
++-----------+-------------+------+-----+---------+----------------+
+| s_id      | int(11)     | NO   | PRI | NULL    | auto_increment |
+| s_name    | varchar(20) | YES  |     | NULL    |                |
+| s_address | varchar(20) | YES  |     | NULL    |                |
+| s_faculty | varchar(20) | YES  |     | NULL    |                |
++-----------+-------------+------+-----+---------+----------------+
+4 rows in set (0.052 sec)
+
+MariaDB [datatype]> SELECT * FROM null_values;
++------+-----------------+------------+-----------+
+| s_id | s_name          | s_address  | s_faculty |
++------+-----------------+------------+-----------+
+|    1 | SHAIL AGRAWAL   | BIRTAMODE  | SCIENCE   |
+|    2 | NAYAN PATRHAK   | NULL       | BIOLOGY   |
+|    3 | DHAIRYA AGRAWAL | NULL       | SCIENCE   |
+|    4 | ROHAN BAJAJ     | NULL       | SOFTWARE  |
+|    5 | MAYANK BINDAL   | KAKARVITTA | COMMERCE  |
++------+-----------------+------------+-----------+
+5 rows in set (0.113 sec)
+
+MariaDB [datatype]> SELECT * FROM students;
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+| s_id | s_name       | s_address  | s_roll | a_age | s_house | s_hobby     | s_scholarship |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+|    1 | Rahul Sharma | Delhi      |    105 |    18 | raato   | Cricket     |         15750 |
+|    2 | Ananya Verma | Mumbai     |    106 |    19 | Blue    | Painting    |         20000 |
+|    3 | Arjun Patel  | Ahmedabad  |    107 |    20 | Green   | Football    |         12600 |
+|    4 | Sneha Kapoor | Delhi      |    108 |    18 | Yellow  | Dancing     |         18900 |
+|    5 | Rahul Mehta  | Pune       |    109 |    21 | raato   | Reading     |          NULL |
+|    6 | Ishita Roy   | Silligri   |    110 |    19 | Blue    | Music       |         25000 |
+|    7 | Karan Singh  | Jaipur     |    111 |    22 | Green   | Swimming    |         30000 |
+|    8 | Priya Nair   | Chennai    |    112 |    20 | Yellow  | Cooking     |         22000 |
+|    9 | Aditya Rao   | Hyderabad  |    113 |    21 | raato   | Photography |          5250 |
+|   10 | Neha Joshi   | Lucknow    |    114 |    18 | Blue    | Writing     |          NULL |
+|   11 | Vikram Desai | Surat      |    115 |    23 | Green   | Cycling     |         40000 |
+|   12 | Aman Gupta   | Bhopal     |    116 |    19 | Yellow  | Gaming      |         10500 |
+|   13 | Ananya Iyer  | Bengaluru  |    117 |    20 | raato   | Painting    |         27000 |
+|   14 | Rohan Das    | Patna      |    118 |    22 | Blue    | Cricket     |         35000 |
+|   15 | Simran Kaur  | Chandigarh |    119 |    18 | Green   | NULL        |         45000 |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+15 rows in set (0.018 sec)
+
+MariaDB [datatype]> UPDATE students SET s_scholorship=20000 WHERE s_scholorship=NULL;
+ERROR 1054 (42S22): Unknown column 's_scholorship' in 'where clause'
+MariaDB [datatype]> UPDATE students SET s_scholarship=20000 WHERE s_scholarship=NULL;
+Query OK, 0 rows affected (0.001 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+MariaDB [datatype]> SELECT * FROM students;
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+| s_id | s_name       | s_address  | s_roll | a_age | s_house | s_hobby     | s_scholarship |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+|    1 | Rahul Sharma | Delhi      |    105 |    18 | raato   | Cricket     |         15750 |
+|    2 | Ananya Verma | Mumbai     |    106 |    19 | Blue    | Painting    |         20000 |
+|    3 | Arjun Patel  | Ahmedabad  |    107 |    20 | Green   | Football    |         12600 |
+|    4 | Sneha Kapoor | Delhi      |    108 |    18 | Yellow  | Dancing     |         18900 |
+|    5 | Rahul Mehta  | Pune       |    109 |    21 | raato   | Reading     |          NULL |
+|    6 | Ishita Roy   | Silligri   |    110 |    19 | Blue    | Music       |         25000 |
+|    7 | Karan Singh  | Jaipur     |    111 |    22 | Green   | Swimming    |         30000 |
+|    8 | Priya Nair   | Chennai    |    112 |    20 | Yellow  | Cooking     |         22000 |
+|    9 | Aditya Rao   | Hyderabad  |    113 |    21 | raato   | Photography |          5250 |
+|   10 | Neha Joshi   | Lucknow    |    114 |    18 | Blue    | Writing     |          NULL |
+|   11 | Vikram Desai | Surat      |    115 |    23 | Green   | Cycling     |         40000 |
+|   12 | Aman Gupta   | Bhopal     |    116 |    19 | Yellow  | Gaming      |         10500 |
+|   13 | Ananya Iyer  | Bengaluru  |    117 |    20 | raato   | Painting    |         27000 |
+|   14 | Rohan Das    | Patna      |    118 |    22 | Blue    | Cricket     |         35000 |
+|   15 | Simran Kaur  | Chandigarh |    119 |    18 | Green   | NULL        |         45000 |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+15 rows in set (0.001 sec)
+
+MariaDB [datatype]> UPDATE students SET s_scholorship=20000 WHERE s_scholorship IS NULL;
+ERROR 1054 (42S22): Unknown column 's_scholorship' in 'where clause'
+MariaDB [datatype]> UPDATE students SET s_scholarship=20000 WHERE s_scholarship IS NULL;
+Query OK, 2 rows affected (0.010 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+MariaDB [datatype]> SELECT * FROM students;
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+| s_id | s_name       | s_address  | s_roll | a_age | s_house | s_hobby     | s_scholarship |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+|    1 | Rahul Sharma | Delhi      |    105 |    18 | raato   | Cricket     |         15750 |
+|    2 | Ananya Verma | Mumbai     |    106 |    19 | Blue    | Painting    |         20000 |
+|    3 | Arjun Patel  | Ahmedabad  |    107 |    20 | Green   | Football    |         12600 |
+|    4 | Sneha Kapoor | Delhi      |    108 |    18 | Yellow  | Dancing     |         18900 |
+|    5 | Rahul Mehta  | Pune       |    109 |    21 | raato   | Reading     |         20000 |
+|    6 | Ishita Roy   | Silligri   |    110 |    19 | Blue    | Music       |         25000 |
+|    7 | Karan Singh  | Jaipur     |    111 |    22 | Green   | Swimming    |         30000 |
+|    8 | Priya Nair   | Chennai    |    112 |    20 | Yellow  | Cooking     |         22000 |
+|    9 | Aditya Rao   | Hyderabad  |    113 |    21 | raato   | Photography |          5250 |
+|   10 | Neha Joshi   | Lucknow    |    114 |    18 | Blue    | Writing     |         20000 |
+|   11 | Vikram Desai | Surat      |    115 |    23 | Green   | Cycling     |         40000 |
+|   12 | Aman Gupta   | Bhopal     |    116 |    19 | Yellow  | Gaming      |         10500 |
+|   13 | Ananya Iyer  | Bengaluru  |    117 |    20 | raato   | Painting    |         27000 |
+|   14 | Rohan Das    | Patna      |    118 |    22 | Blue    | Cricket     |         35000 |
+|   15 | Simran Kaur  | Chandigarh |    119 |    18 | Green   | NULL        |         45000 |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+15 rows in set (0.001 sec)
+
+MariaDB [datatype]> UPDATE students set = CASE WHERE s_scholarship<20000 THEN s_scholarship+s_scholarship*0.05 WHERE s_scholarship>= 200000 THEN s_scholarship+s_scholarship*0.02;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= CASE WHERE s_scholarship<20000 THEN s_scholarship+s_scholarship*0.05 WHERE ...' at line 1
+MariaDB [datatype]> UPDATE students set = CASE WHERE s_scholarship<20000 THEN s_scholarship+s_scholarship*0.05 WHERE s_scholarship>= 200000 THEN s_scholarship+s_scholarship*0.02 END;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= CASE WHERE s_scholarship<20000 THEN s_scholarship+s_scholarship*0.05 WHERE ...' at line 1
+MariaDB [datatype]> UPDATE students set s_scholarship = CASE WHERE s_scholarship<20000 THEN s_scholarship+s_scholarship*0.05 WHERE s_scholarship>= 200000 THEN s_scholarship+s_scholarship*0.02 END;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE s_scholarship<20000 THEN s_scholarship+s_scholarship*0.05 WHERE s_schol...' at line 1
+MariaDB [datatype]> UPDATE students set s_scholarship = CASE WHEN s_scholarship<20000 THEN s_scholarship+s_scholarship*0.05 WHEN s_scholarship>= 200000 THEN s_scholarship+s_scholarship*0.02 END;
+Query OK, 15 rows affected (0.011 sec)
+Rows matched: 15  Changed: 15  Warnings: 0
+
+MariaDB [datatype]> SELECT * FROM students;
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+| s_id | s_name       | s_address  | s_roll | a_age | s_house | s_hobby     | s_scholarship |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+|    1 | Rahul Sharma | Delhi      |    105 |    18 | raato   | Cricket     |         16538 |
+|    2 | Ananya Verma | Mumbai     |    106 |    19 | Blue    | Painting    |          NULL |
+|    3 | Arjun Patel  | Ahmedabad  |    107 |    20 | Green   | Football    |         13230 |
+|    4 | Sneha Kapoor | Delhi      |    108 |    18 | Yellow  | Dancing     |         19845 |
+|    5 | Rahul Mehta  | Pune       |    109 |    21 | raato   | Reading     |          NULL |
+|    6 | Ishita Roy   | Silligri   |    110 |    19 | Blue    | Music       |          NULL |
+|    7 | Karan Singh  | Jaipur     |    111 |    22 | Green   | Swimming    |          NULL |
+|    8 | Priya Nair   | Chennai    |    112 |    20 | Yellow  | Cooking     |          NULL |
+|    9 | Aditya Rao   | Hyderabad  |    113 |    21 | raato   | Photography |          5513 |
+|   10 | Neha Joshi   | Lucknow    |    114 |    18 | Blue    | Writing     |          NULL |
+|   11 | Vikram Desai | Surat      |    115 |    23 | Green   | Cycling     |          NULL |
+|   12 | Aman Gupta   | Bhopal     |    116 |    19 | Yellow  | Gaming      |         11025 |
+|   13 | Ananya Iyer  | Bengaluru  |    117 |    20 | raato   | Painting    |          NULL |
+|   14 | Rohan Das    | Patna      |    118 |    22 | Blue    | Cricket     |          NULL |
+|   15 | Simran Kaur  | Chandigarh |    119 |    18 | Green   | NULL        |          NULL |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+15 rows in set (0.001 sec)
+
+MariaDB [datatype]> ROLLBACK;
+Query OK, 0 rows affected (0.001 sec)
+
+MariaDB [datatype]> ROLLBACK SELECT;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELECT' at line 1
+MariaDB [datatype]> ROLLBACK;
+Query OK, 0 rows affected (0.001 sec)
+
+MariaDB [datatype]> SELECT * FROM students;
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+| s_id | s_name       | s_address  | s_roll | a_age | s_house | s_hobby     | s_scholarship |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+|    1 | Rahul Sharma | Delhi      |    105 |    18 | raato   | Cricket     |         16538 |
+|    2 | Ananya Verma | Mumbai     |    106 |    19 | Blue    | Painting    |          NULL |
+|    3 | Arjun Patel  | Ahmedabad  |    107 |    20 | Green   | Football    |         13230 |
+|    4 | Sneha Kapoor | Delhi      |    108 |    18 | Yellow  | Dancing     |         19845 |
+|    5 | Rahul Mehta  | Pune       |    109 |    21 | raato   | Reading     |          NULL |
+|    6 | Ishita Roy   | Silligri   |    110 |    19 | Blue    | Music       |          NULL |
+|    7 | Karan Singh  | Jaipur     |    111 |    22 | Green   | Swimming    |          NULL |
+|    8 | Priya Nair   | Chennai    |    112 |    20 | Yellow  | Cooking     |          NULL |
+|    9 | Aditya Rao   | Hyderabad  |    113 |    21 | raato   | Photography |          5513 |
+|   10 | Neha Joshi   | Lucknow    |    114 |    18 | Blue    | Writing     |          NULL |
+|   11 | Vikram Desai | Surat      |    115 |    23 | Green   | Cycling     |          NULL |
+|   12 | Aman Gupta   | Bhopal     |    116 |    19 | Yellow  | Gaming      |         11025 |
+|   13 | Ananya Iyer  | Bengaluru  |    117 |    20 | raato   | Painting    |          NULL |
+|   14 | Rohan Das    | Patna      |    118 |    22 | Blue    | Cricket     |          NULL |
+|   15 | Simran Kaur  | Chandigarh |    119 |    18 | Green   | NULL        |          NULL |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+15 rows in set (0.002 sec)
+
+MariaDB [datatype]> SELECT @@autocommit;
++--------------+
+| @@autocommit |
++--------------+
+|            1 |
++--------------+
+1 row in set (0.001 sec)
+
+MariaDB [datatype]> UPDATE students SET s_scholorship= 20000 WHERE id = 2,6,10;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '6,10' at line 1
+MariaDB [datatype]> UPDATE students SET s_scholorship= 20000 WHERE id = 2 OR 6 OR 10;
+ERROR 1054 (42S22): Unknown column 'id' in 'where clause'
+MariaDB [datatype]> UPDATE students SET s_scholorship= 20000 WHERE s_id = 2 OR 6 OR 10;
+ERROR 1054 (42S22): Unknown column 's_scholorship' in 'field list'
+MariaDB [datatype]> UPDATE students SET s_scholarship= 20000 WHERE s_id = 2 OR 6 OR 10;
+Query OK, 15 rows affected (0.044 sec)
+Rows matched: 15  Changed: 15  Warnings: 0
+
+MariaDB [datatype]> SELECT * FROM students;
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+| s_id | s_name       | s_address  | s_roll | a_age | s_house | s_hobby     | s_scholarship |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+|    1 | Rahul Sharma | Delhi      |    105 |    18 | raato   | Cricket     |         20000 |
+|    2 | Ananya Verma | Mumbai     |    106 |    19 | Blue    | Painting    |         20000 |
+|    3 | Arjun Patel  | Ahmedabad  |    107 |    20 | Green   | Football    |         20000 |
+|    4 | Sneha Kapoor | Delhi      |    108 |    18 | Yellow  | Dancing     |         20000 |
+|    5 | Rahul Mehta  | Pune       |    109 |    21 | raato   | Reading     |         20000 |
+|    6 | Ishita Roy   | Silligri   |    110 |    19 | Blue    | Music       |         20000 |
+|    7 | Karan Singh  | Jaipur     |    111 |    22 | Green   | Swimming    |         20000 |
+|    8 | Priya Nair   | Chennai    |    112 |    20 | Yellow  | Cooking     |         20000 |
+|    9 | Aditya Rao   | Hyderabad  |    113 |    21 | raato   | Photography |         20000 |
+|   10 | Neha Joshi   | Lucknow    |    114 |    18 | Blue    | Writing     |         20000 |
+|   11 | Vikram Desai | Surat      |    115 |    23 | Green   | Cycling     |         20000 |
+|   12 | Aman Gupta   | Bhopal     |    116 |    19 | Yellow  | Gaming      |         20000 |
+|   13 | Ananya Iyer  | Bengaluru  |    117 |    20 | raato   | Painting    |         20000 |
+|   14 | Rohan Das    | Patna      |    118 |    22 | Blue    | Cricket     |         20000 |
+|   15 | Simran Kaur  | Chandigarh |    119 |    18 | Green   | NULL        |         20000 |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+15 rows in set (0.001 sec)
+
+MariaDB [datatype]> set autocommit=0;
+Query OK, 0 rows affected (0.001 sec)
+
+MariaDB [datatype]> SELECT @@autocommit;
++--------------+
+| @@autocommit |
++--------------+
+|            0 |
++--------------+
+1 row in set (0.001 sec)
+
+MariaDB [datatype]> SELECT s_name,s_age CASE WHEN s_age>18 then "THE age is greater than 18" WHEN s_age<18 then "THE age is less than 18" WHEN s_age=18 THEN "THE age is equlas to 18" END as "AGE STATUS" FROM students;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CASE WHEN s_age>18 then "THE age is greater than 18" WHEN s_age<18 then "THE ...' at line 1
+MariaDB [datatype]> SELECT s_name,s_age, CASE WHEN s_age>18 THEN "THE age is greater than 18" WHEN s_age<18 THEN "THE age is less than 18" ELSE "THE age is equlas to 18" END as "AGE STATUS" FROM students;
+ERROR 1054 (42S22): Unknown column 's_age' in 'field list'
+MariaDB [datatype]> SELECT s_name,a_age, CASE WHEN a_age>18 THEN "THE age is greater than 18" WHEN a_age<18 THEN "THE age is less than 18" ELSE "THE age is equlas to 18" END as "AGE STATUS" FROM students;
++--------------+-------+----------------------------+
+| s_name       | a_age | AGE STATUS                 |
++--------------+-------+----------------------------+
+| Rahul Sharma |    18 | THE age is equlas to 18    |
+| Ananya Verma |    19 | THE age is greater than 18 |
+| Arjun Patel  |    20 | THE age is greater than 18 |
+| Sneha Kapoor |    18 | THE age is equlas to 18    |
+| Rahul Mehta  |    21 | THE age is greater than 18 |
+| Ishita Roy   |    19 | THE age is greater than 18 |
+| Karan Singh  |    22 | THE age is greater than 18 |
+| Priya Nair   |    20 | THE age is greater than 18 |
+| Aditya Rao   |    21 | THE age is greater than 18 |
+| Neha Joshi   |    18 | THE age is equlas to 18    |
+| Vikram Desai |    23 | THE age is greater than 18 |
+| Aman Gupta   |    19 | THE age is greater than 18 |
+| Ananya Iyer  |    20 | THE age is greater than 18 |
+| Rohan Das    |    22 | THE age is greater than 18 |
+| Simran Kaur  |    18 | THE age is equlas to 18    |
++--------------+-------+----------------------------+
+15 rows in set (0.002 sec)
+
+MariaDB [datatype]> SELECT s_name,a_age, CASE WHEN a_age>18 THEN "THE age is greater than 18" WHEN a_age<18 THEN "THE age is less than 18" ELSE "THE age is equlas to 18" END FROM students;
++--------------+-------+--------------------------------------------------------------------------------------------------------------------------------------+
+| s_name       | a_age | CASE WHEN a_age>18 THEN "THE age is greater than 18" WHEN a_age<18 THEN "THE age is less than 18" ELSE "THE age is equlas to 18" END |
++--------------+-------+--------------------------------------------------------------------------------------------------------------------------------------+
+| Rahul Sharma |    18 | THE age is equlas to 18                                                                                                              |
+| Ananya Verma |    19 | THE age is greater than 18                                                                                                           |
+| Arjun Patel  |    20 | THE age is greater than 18                                                                                                           |
+| Sneha Kapoor |    18 | THE age is equlas to 18                                                                                                              |
+| Rahul Mehta  |    21 | THE age is greater than 18                                                                                                           |
+| Ishita Roy   |    19 | THE age is greater than 18                                                                                                           |
+| Karan Singh  |    22 | THE age is greater than 18                                                                                                           |
+| Priya Nair   |    20 | THE age is greater than 18                                                                                                           |
+| Aditya Rao   |    21 | THE age is greater than 18                                                                                                           |
+| Neha Joshi   |    18 | THE age is equlas to 18                                                                                                              |
+| Vikram Desai |    23 | THE age is greater than 18                                                                                                           |
+| Aman Gupta   |    19 | THE age is greater than 18                                                                                                           |
+| Ananya Iyer  |    20 | THE age is greater than 18                                                                                                           |
+| Rohan Das    |    22 | THE age is greater than 18                                                                                                           |
+| Simran Kaur  |    18 | THE age is equlas to 18                                                                                                              |
++--------------+-------+--------------------------------------------------------------------------------------------------------------------------------------+
+15 rows in set (0.001 sec)
+
+MariaDB [datatype]> SELECT s_name,a_age, CASE WHEN a_age>18 THEN "THE age is greater than 18" WHEN a_age<18 THEN "THE age is less than 18" ELSE "THE age is equlas to 18" END FROM students;
++--------------+-------+--------------------------------------------------------------------------------------------------------------------------------------+
+| s_name       | a_age | CASE WHEN a_age>18 THEN "THE age is greater than 18" WHEN a_age<18 THEN "THE age is less than 18" ELSE "THE age is equlas to 18" END |
++--------------+-------+--------------------------------------------------------------------------------------------------------------------------------------+
+| Rahul Sharma |    18 | THE age is equlas to 18                                                                                                              |
+| Ananya Verma |    19 | THE age is greater than 18                                                                                                           |
+| Arjun Patel  |    20 | THE age is greater than 18                                                                                                           |
+| Sneha Kapoor |    18 | THE age is equlas to 18                                                                                                              |
+| Rahul Mehta  |    21 | THE age is greater than 18                                                                                                           |
+| Ishita Roy   |    19 | THE age is greater than 18                                                                                                           |
+| Karan Singh  |    22 | THE age is greater than 18                                                                                                           |
+| Priya Nair   |    20 | THE age is greater than 18                                                                                                           |
+| Aditya Rao   |    21 | THE age is greater than 18                                                                                                           |
+| Neha Joshi   |    18 | THE age is equlas to 18                                                                                                              |
+| Vikram Desai |    23 | THE age is greater than 18                                                                                                           |
+| Aman Gupta   |    19 | THE age is greater than 18                                                                                                           |
+| Ananya Iyer  |    20 | THE age is greater than 18                                                                                                           |
+| Rohan Das    |    22 | THE age is greater than 18                                                                                                           |
+| Simran Kaur  |    18 | THE age is equlas to 18                                                                                                              |
++--------------+-------+--------------------------------------------------------------------------------------------------------------------------------------+
+15 rows in set (0.001 sec)
+
+MariaDB [datatype]> UPDATE students set a_age=CASE WHEN a_age>18 THEN a_age = a_age + 10 WHEN a_age<10 THEN a_age = a_age = 3 else a_age=a_age + 7;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+MariaDB [datatype]> UPDATE students set a_age=CASE WHEN a_age>18 THEN a_age + 10 WHEN a_age<10 THEN a_age + 3 else a_age + 7 END;
+Query OK, 15 rows affected (0.002 sec)
+Rows matched: 15  Changed: 15  Warnings: 0
+
+MariaDB [datatype]> SELECT * FROM students
+    -> ;
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+| s_id | s_name       | s_address  | s_roll | a_age | s_house | s_hobby     | s_scholarship |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+|    1 | Rahul Sharma | Delhi      |    105 |    25 | raato   | Cricket     |         20000 |
+|    2 | Ananya Verma | Mumbai     |    106 |    29 | Blue    | Painting    |         20000 |
+|    3 | Arjun Patel  | Ahmedabad  |    107 |    30 | Green   | Football    |         20000 |
+|    4 | Sneha Kapoor | Delhi      |    108 |    25 | Yellow  | Dancing     |         20000 |
+|    5 | Rahul Mehta  | Pune       |    109 |    31 | raato   | Reading     |         20000 |
+|    6 | Ishita Roy   | Silligri   |    110 |    29 | Blue    | Music       |         20000 |
+|    7 | Karan Singh  | Jaipur     |    111 |    32 | Green   | Swimming    |         20000 |
+|    8 | Priya Nair   | Chennai    |    112 |    30 | Yellow  | Cooking     |         20000 |
+|    9 | Aditya Rao   | Hyderabad  |    113 |    31 | raato   | Photography |         20000 |
+|   10 | Neha Joshi   | Lucknow    |    114 |    25 | Blue    | Writing     |         20000 |
+|   11 | Vikram Desai | Surat      |    115 |    33 | Green   | Cycling     |         20000 |
+|   12 | Aman Gupta   | Bhopal     |    116 |    29 | Yellow  | Gaming      |         20000 |
+|   13 | Ananya Iyer  | Bengaluru  |    117 |    30 | raato   | Painting    |         20000 |
+|   14 | Rohan Das    | Patna      |    118 |    32 | Blue    | Cricket     |         20000 |
+|   15 | Simran Kaur  | Chandigarh |    119 |    25 | Green   | NULL        |         20000 |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+15 rows in set (0.001 sec)
+
+MariaDB [datatype]> UPDATE students set s_house="red" WHERE s_house="ratto";
+Query OK, 0 rows affected (0.001 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+MariaDB [datatype]> SELECT * FROM students;
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+| s_id | s_name       | s_address  | s_roll | a_age | s_house | s_hobby     | s_scholarship |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+|    1 | Rahul Sharma | Delhi      |    105 |    25 | raato   | Cricket     |         20000 |
+|    2 | Ananya Verma | Mumbai     |    106 |    29 | Blue    | Painting    |         20000 |
+|    3 | Arjun Patel  | Ahmedabad  |    107 |    30 | Green   | Football    |         20000 |
+|    4 | Sneha Kapoor | Delhi      |    108 |    25 | Yellow  | Dancing     |         20000 |
+|    5 | Rahul Mehta  | Pune       |    109 |    31 | raato   | Reading     |         20000 |
+|    6 | Ishita Roy   | Silligri   |    110 |    29 | Blue    | Music       |         20000 |
+|    7 | Karan Singh  | Jaipur     |    111 |    32 | Green   | Swimming    |         20000 |
+|    8 | Priya Nair   | Chennai    |    112 |    30 | Yellow  | Cooking     |         20000 |
+|    9 | Aditya Rao   | Hyderabad  |    113 |    31 | raato   | Photography |         20000 |
+|   10 | Neha Joshi   | Lucknow    |    114 |    25 | Blue    | Writing     |         20000 |
+|   11 | Vikram Desai | Surat      |    115 |    33 | Green   | Cycling     |         20000 |
+|   12 | Aman Gupta   | Bhopal     |    116 |    29 | Yellow  | Gaming      |         20000 |
+|   13 | Ananya Iyer  | Bengaluru  |    117 |    30 | raato   | Painting    |         20000 |
+|   14 | Rohan Das    | Patna      |    118 |    32 | Blue    | Cricket     |         20000 |
+|   15 | Simran Kaur  | Chandigarh |    119 |    25 | Green   | NULL        |         20000 |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+15 rows in set (0.001 sec)
+
+MariaDB [datatype]> UPDATE students set s_house="red" WHERE s_house="raato";
+Query OK, 4 rows affected (0.001 sec)
+Rows matched: 4  Changed: 4  Warnings: 0
+
+MariaDB [datatype]> UPDATE students set s_house="neelo" WHERE s_house="Blue";
+Query OK, 4 rows affected (0.001 sec)
+Rows matched: 4  Changed: 4  Warnings: 0
+
+MariaDB [datatype]> UPDATE students set s_house=CASE WHEN s_house="YELLOW" THEN "NEELO" WHEN s_house="GREEN" THEN "HARAYO" END;
+Query OK, 15 rows affected (0.007 sec)
+Rows matched: 15  Changed: 15  Warnings: 0
+
+MariaDB [datatype]> SELECT * FROM students;
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+| s_id | s_name       | s_address  | s_roll | a_age | s_house | s_hobby     | s_scholarship |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+|    1 | Rahul Sharma | Delhi      |    105 |    25 | NULL    | Cricket     |         20000 |
+|    2 | Ananya Verma | Mumbai     |    106 |    29 | NULL    | Painting    |         20000 |
+|    3 | Arjun Patel  | Ahmedabad  |    107 |    30 | HARAYO  | Football    |         20000 |
+|    4 | Sneha Kapoor | Delhi      |    108 |    25 | NEELO   | Dancing     |         20000 |
+|    5 | Rahul Mehta  | Pune       |    109 |    31 | NULL    | Reading     |         20000 |
+|    6 | Ishita Roy   | Silligri   |    110 |    29 | NULL    | Music       |         20000 |
+|    7 | Karan Singh  | Jaipur     |    111 |    32 | HARAYO  | Swimming    |         20000 |
+|    8 | Priya Nair   | Chennai    |    112 |    30 | NEELO   | Cooking     |         20000 |
+|    9 | Aditya Rao   | Hyderabad  |    113 |    31 | NULL    | Photography |         20000 |
+|   10 | Neha Joshi   | Lucknow    |    114 |    25 | NULL    | Writing     |         20000 |
+|   11 | Vikram Desai | Surat      |    115 |    33 | HARAYO  | Cycling     |         20000 |
+|   12 | Aman Gupta   | Bhopal     |    116 |    29 | NEELO   | Gaming      |         20000 |
+|   13 | Ananya Iyer  | Bengaluru  |    117 |    30 | NULL    | Painting    |         20000 |
+|   14 | Rohan Das    | Patna      |    118 |    32 | NULL    | Cricket     |         20000 |
+|   15 | Simran Kaur  | Chandigarh |    119 |    25 | HARAYO  | NULL        |         20000 |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+15 rows in set (0.001 sec)
+
+MariaDB [datatype]> ROLLBACK;
+Query OK, 0 rows affected (0.014 sec)
+
+MariaDB [datatype]> SELECT * FROM students;
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+| s_id | s_name       | s_address  | s_roll | a_age | s_house | s_hobby     | s_scholarship |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+|    1 | Rahul Sharma | Delhi      |    105 |    18 | raato   | Cricket     |         20000 |
+|    2 | Ananya Verma | Mumbai     |    106 |    19 | Blue    | Painting    |         20000 |
+|    3 | Arjun Patel  | Ahmedabad  |    107 |    20 | Green   | Football    |         20000 |
+|    4 | Sneha Kapoor | Delhi      |    108 |    18 | Yellow  | Dancing     |         20000 |
+|    5 | Rahul Mehta  | Pune       |    109 |    21 | raato   | Reading     |         20000 |
+|    6 | Ishita Roy   | Silligri   |    110 |    19 | Blue    | Music       |         20000 |
+|    7 | Karan Singh  | Jaipur     |    111 |    22 | Green   | Swimming    |         20000 |
+|    8 | Priya Nair   | Chennai    |    112 |    20 | Yellow  | Cooking     |         20000 |
+|    9 | Aditya Rao   | Hyderabad  |    113 |    21 | raato   | Photography |         20000 |
+|   10 | Neha Joshi   | Lucknow    |    114 |    18 | Blue    | Writing     |         20000 |
+|   11 | Vikram Desai | Surat      |    115 |    23 | Green   | Cycling     |         20000 |
+|   12 | Aman Gupta   | Bhopal     |    116 |    19 | Yellow  | Gaming      |         20000 |
+|   13 | Ananya Iyer  | Bengaluru  |    117 |    20 | raato   | Painting    |         20000 |
+|   14 | Rohan Das    | Patna      |    118 |    22 | Blue    | Cricket     |         20000 |
+|   15 | Simran Kaur  | Chandigarh |    119 |    18 | Green   | NULL        |         20000 |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+15 rows in set (0.001 sec)
+
+MariaDB [datatype]> UPDATE students set s_house=CASE WHEN s_house="YELLOW" THEN "NEELO" WHEN s_house="GREEN" THEN "HARAYO" ELSE "NOTHING" END;
+Query OK, 15 rows affected (0.006 sec)
+Rows matched: 15  Changed: 15  Warnings: 0
+
+MariaDB [datatype]> SELECT * FROM students;
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+| s_id | s_name       | s_address  | s_roll | a_age | s_house | s_hobby     | s_scholarship |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+|    1 | Rahul Sharma | Delhi      |    105 |    18 | NOTHING | Cricket     |         20000 |
+|    2 | Ananya Verma | Mumbai     |    106 |    19 | NOTHING | Painting    |         20000 |
+|    3 | Arjun Patel  | Ahmedabad  |    107 |    20 | HARAYO  | Football    |         20000 |
+|    4 | Sneha Kapoor | Delhi      |    108 |    18 | NEELO   | Dancing     |         20000 |
+|    5 | Rahul Mehta  | Pune       |    109 |    21 | NOTHING | Reading     |         20000 |
+|    6 | Ishita Roy   | Silligri   |    110 |    19 | NOTHING | Music       |         20000 |
+|    7 | Karan Singh  | Jaipur     |    111 |    22 | HARAYO  | Swimming    |         20000 |
+|    8 | Priya Nair   | Chennai    |    112 |    20 | NEELO   | Cooking     |         20000 |
+|    9 | Aditya Rao   | Hyderabad  |    113 |    21 | NOTHING | Photography |         20000 |
+|   10 | Neha Joshi   | Lucknow    |    114 |    18 | NOTHING | Writing     |         20000 |
+|   11 | Vikram Desai | Surat      |    115 |    23 | HARAYO  | Cycling     |         20000 |
+|   12 | Aman Gupta   | Bhopal     |    116 |    19 | NEELO   | Gaming      |         20000 |
+|   13 | Ananya Iyer  | Bengaluru  |    117 |    20 | NOTHING | Painting    |         20000 |
+|   14 | Rohan Das    | Patna      |    118 |    22 | NOTHING | Cricket     |         20000 |
+|   15 | Simran Kaur  | Chandigarh |    119 |    18 | HARAYO  | NULL        |         20000 |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+15 rows in set (0.001 sec)
+
+MariaDB [datatype]> ROLLBACK;
+Query OK, 0 rows affected (0.003 sec)
+
+MariaDB [datatype]> SELECT * FROM students;
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+| s_id | s_name       | s_address  | s_roll | a_age | s_house | s_hobby     | s_scholarship |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+|    1 | Rahul Sharma | Delhi      |    105 |    18 | raato   | Cricket     |         20000 |
+|    2 | Ananya Verma | Mumbai     |    106 |    19 | Blue    | Painting    |         20000 |
+|    3 | Arjun Patel  | Ahmedabad  |    107 |    20 | Green   | Football    |         20000 |
+|    4 | Sneha Kapoor | Delhi      |    108 |    18 | Yellow  | Dancing     |         20000 |
+|    5 | Rahul Mehta  | Pune       |    109 |    21 | raato   | Reading     |         20000 |
+|    6 | Ishita Roy   | Silligri   |    110 |    19 | Blue    | Music       |         20000 |
+|    7 | Karan Singh  | Jaipur     |    111 |    22 | Green   | Swimming    |         20000 |
+|    8 | Priya Nair   | Chennai    |    112 |    20 | Yellow  | Cooking     |         20000 |
+|    9 | Aditya Rao   | Hyderabad  |    113 |    21 | raato   | Photography |         20000 |
+|   10 | Neha Joshi   | Lucknow    |    114 |    18 | Blue    | Writing     |         20000 |
+|   11 | Vikram Desai | Surat      |    115 |    23 | Green   | Cycling     |         20000 |
+|   12 | Aman Gupta   | Bhopal     |    116 |    19 | Yellow  | Gaming      |         20000 |
+|   13 | Ananya Iyer  | Bengaluru  |    117 |    20 | raato   | Painting    |         20000 |
+|   14 | Rohan Das    | Patna      |    118 |    22 | Blue    | Cricket     |         20000 |
+|   15 | Simran Kaur  | Chandigarh |    119 |    18 | Green   | NULL        |         20000 |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+15 rows in set (0.006 sec)
+
+MariaDB [datatype]> UPDATE students set s_house=CASE WHEN s_house="YELLOW" THEN "PAHILO" WHEN s_house="GREEN" THEN "HARAYO" WHEN s_house="raato" THEN "RED" WHEN s_house="BLUE" THEN "NEELO" else "ERROR" END;
+Query OK, 15 rows affected (0.007 sec)
+Rows matched: 15  Changed: 15  Warnings: 0
+
+MariaDB [datatype]> SELECT * FROM students;
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+| s_id | s_name       | s_address  | s_roll | a_age | s_house | s_hobby     | s_scholarship |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+|    1 | Rahul Sharma | Delhi      |    105 |    18 | RED     | Cricket     |         20000 |
+|    2 | Ananya Verma | Mumbai     |    106 |    19 | NEELO   | Painting    |         20000 |
+|    3 | Arjun Patel  | Ahmedabad  |    107 |    20 | HARAYO  | Football    |         20000 |
+|    4 | Sneha Kapoor | Delhi      |    108 |    18 | PAHILO  | Dancing     |         20000 |
+|    5 | Rahul Mehta  | Pune       |    109 |    21 | RED     | Reading     |         20000 |
+|    6 | Ishita Roy   | Silligri   |    110 |    19 | NEELO   | Music       |         20000 |
+|    7 | Karan Singh  | Jaipur     |    111 |    22 | HARAYO  | Swimming    |         20000 |
+|    8 | Priya Nair   | Chennai    |    112 |    20 | PAHILO  | Cooking     |         20000 |
+|    9 | Aditya Rao   | Hyderabad  |    113 |    21 | RED     | Photography |         20000 |
+|   10 | Neha Joshi   | Lucknow    |    114 |    18 | NEELO   | Writing     |         20000 |
+|   11 | Vikram Desai | Surat      |    115 |    23 | HARAYO  | Cycling     |         20000 |
+|   12 | Aman Gupta   | Bhopal     |    116 |    19 | PAHILO  | Gaming      |         20000 |
+|   13 | Ananya Iyer  | Bengaluru  |    117 |    20 | RED     | Painting    |         20000 |
+|   14 | Rohan Das    | Patna      |    118 |    22 | NEELO   | Cricket     |         20000 |
+|   15 | Simran Kaur  | Chandigarh |    119 |    18 | HARAYO  | NULL        |         20000 |
++------+--------------+------------+--------+-------+---------+-------------+---------------+
+15 rows in set (0.001 sec)
+
+MariaDB [datatype]>

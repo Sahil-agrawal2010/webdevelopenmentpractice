@@ -143,3 +143,11 @@
 // }
 // let a = Number(prompt("Enter any number to check weather it is a prime number or not :-"))
 //  Cheaker(a)
+
+
+
+
+
+
+
+
