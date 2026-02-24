@@ -18,8 +18,18 @@
 
 
 
-import math
-userInput=int(input("Enter any number to get its aquare and cube :- "))
-s=math.pow(userInput,2)
-c=math.pow(userInput,3)
-print(f"The square of the number is {s}.The cube of the number is {c}.")
+# import math
+# userInput=int(input("Enter any number to get its aquare and cube :- "))
+# s=math.pow(userInput,2)
+# c=math.pow(userInput,3)
+# print(f"The square of the number is {s}.The cube of the number is {c}.")
+
+
+
+
+
+
+
+
+userInput = input("Enter anything you like :- ")
+print(len(userInput))
