@@ -22,19 +22,20 @@ check=True
 
 
 
-check=True
-userInput=input("Enter your hobby :- ")
-while(check):
-    userInput=input("Enter your hobby :- ")
-    print(userInput)
-    ask=input("Press q to quit :-").lower()
-    if ask=="q" :
-        check=False
-        print("You have quitted!")
+# check=True
+# userInput=input("Enter your hobby :- ")
+# while(check):
+#     userInput=input("Enter your hobby :- ")
+#     print(userInput)
+#     ask=input("Press q to quit :-").lower()
+#     if ask=="q" :
+#         check=False
+#         print("You have quitted!")
         
         
         
-        
-        
-
-        
+counter=1 
+userInput=int(input("Enter the number please :-")) 
+while(counter<=10):
+    print(f"{userInput} x {counter} = {userInput*counter} ")
+    counter+=1
