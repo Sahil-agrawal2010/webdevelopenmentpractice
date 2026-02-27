@@ -34,8 +34,24 @@ check=True
         
         
         
-counter=1 
-userInput=int(input("Enter the number please :-")) 
-while(counter<=10):
-    print(f"{userInput} x {counter} = {userInput*counter} ")
-    counter+=1
+# counter=1 
+# userInput=int(input("Enter the number please :-")) 
+# while(counter<=10):
+#     print(f"{userInput} x {counter} = {userInput*counter} ")
+#     counter+=1
+
+
+
+check=True
+userInput=input("Enter any number :- ")
+while(check):
+    if(int(userInput)%2==0):
+        print(f"The number {userInput} is a even number")
+        check=False
+    elif(int(userInput)%2!=0):
+        print(f"The number {userInput} is a odd number")
+        check=False
+    else:
+        check=False
+while(not check):
+    userInput=input("Enter any number :- ")
