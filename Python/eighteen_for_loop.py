@@ -76,14 +76,22 @@
 
 
 
-hash = "*"
-for i in range(5):
-    print(hash)
-    hash+="**"
-    if(i==2):
-        hash="***"
+# hash = "*"
+# for i in range(5):
+#     print(hash)
+#     hash+="**"
+#     if(i==2):
+#         hash="***"
         
         
         
         
         
+userInput=int(input("Enter the number of rows :- "))
+userInput2=int(input("Enter the number of coloumns :- "))
+userInput3=input("Enter the sumbol to use :-")
+for i in range(userInput):
+    star=""
+    for j in range(userInput2):
+        star+=userInput3
+    print(star)
