@@ -54,4 +54,16 @@ while(check):
     else:
         check=False
 while(not check):
-    userInput=input("Enter any number :- ")
+    userAsk=input("Press q to quit :- ").upper()
+    if(userAsk=="Q"):
+        print("Ok!")
+        check=True
+userInput=input("Enter any number :- ")
+if(int(userInput)%2==0):
+    print(f"The number {userInput} is a even number")
+    check=False
+elif(int(userInput)%2!=0):
+    print(f"The number {userInput} is a odd number")
+    check=False
+else:
+    check=False
