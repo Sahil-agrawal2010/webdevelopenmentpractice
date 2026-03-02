@@ -46,14 +46,25 @@ fruits=["Apple","Banana","Carrot","Dragon fruit","Mango","Strauberry","Avacado",
 # print(fruits.count("Apple"))
 
 
-check=True
+
+
+
+userInput=input("Enter the name of fruits [Q/q to quit] :- ")
 user_fruits=[]
-while(check):
-    userInput=input("Enter the name of fruits [Q/q to quit] :- ")
+while (userInput!='q'):
     user_fruits.append(userInput)
-    if userInput=="Q" or userInput=="q":
-        user_fruits.remove(user_fruits[len(user_fruits)-1])
-        check=False
-print(user_fruits)
-if len(user_fruits)==0:
-    print("nothing there")
+    print(user_fruits)
+    user_delete_ask=input("Do you want to delete anything? (Yes/No) :- ").upper()
+    if(user_delete_ask=="YES"):
+        userAsk=input("Enter the name of fruit which you want to delete :-")
+        while userAsk not in user_fruits:
+            print("Pleasse enter the fruit which is alredy added in the array!")
+            print(user_fruits)
+            userAsk=input("Enter the name of fruit which you want to delete :-")
+        user_fruits.remove(userAsk)
+        print(user_fruits)
+        userInput=input("Enter the name of fruits [Q/q to quit] :- ")
+    else:
+        userInput=input("Enter the name of fruits [Q/q to quit] :- ")
+if userInput=="Q" or userInput=="q":
+    print("You quitted")
