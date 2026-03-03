@@ -1,0 +1,42 @@
+# Sets are just the collection of unordered objects/elements.
+# They don't take repatead values and doesn't care about repeataion.
+# Ther are enclosed inside the {}.
+# They are immutable.
+# Why do we useer set :- 
+# 1)To remove duplicate data.
+# 2)Checking for a n element is faster in set.
+# 3)We can perform different set operation union,intercent,differences etc.
+
+# set1={2,5,8,9}
+# print(set1)
+
+
+
+
+
+# set2=set() # set() is used to make a new empty set.
+# print(type(set1))
+# print(type(set2))
+
+
+
+
+
+# for i in set1:
+#     print(i)
+    
+    
+    
+    
+    
+    
+# userInput=input("Enter any word :- ")
+# set_word=set(userInput)
+# print(set_word)
+# print(len(set_word))
+
+
+
+
+
+    

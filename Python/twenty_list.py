@@ -98,7 +98,7 @@ while(check):
         for i in range(len(account)):
             total=total+int(account[i])
         if(total<0):
-            print("Sorry ! Your account balance is already zero ( 0 ) so please add money first and only withdraw it or take the loan on your owen expense and risk ! ")
+            print("You dont have enough money!")
         print(account)
     if userInput=="DEPOSITE":
         user_deposite=int(input("Enter how many money do you want to deposite :- "))
@@ -110,9 +110,6 @@ while(check):
         check=False
         for i in range(len(account)):
             total=total+int(account[i])
-        # if(total<0):
-        #     print("Sorry ! Your account balance is already zero ( 0 ) so please add money first and only withdraw it or take the loan on your owen expense and risk ! ")
-        #     check=False
             if account[i]>=0:
                 account_deposite=account_deposite+account[i]
             else:
@@ -120,3 +117,14 @@ while(check):
         print(f"Total account balance :- {total}")
         print(f"Total account withdraw :- {account_withdraw}")
         print(f"Total account deposite :- {account_deposite}")
+        
+        
+        
+        
+userInput=input("Enter any word :-")
+list_word=list(userInput)
+for i in list_word:
+    count_list=list_word.count(i)
+    if(count_list==1):
+        print(i)
+        break
