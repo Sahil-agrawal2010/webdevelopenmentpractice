@@ -44,3 +44,28 @@
 
 set1={20,30,40,50,60,70,80}
 list_set=list(set1)
+
+
+
+
+
+
+
+# fruits = {'Apple', 'Mango', 'Kiwi', 'Guava'}
+
+# print(len(fruits))
+
+# print('Apple'  in fruits)
+
+
+# fruits.add("Grapes")
+# print(fruits)
+
+# fruits.remove('Grapes')
+# print(fruits)
+
+# fruits.pop()
+# print(fruits)
+
+# fruits.clear()
+# print(fruits)
