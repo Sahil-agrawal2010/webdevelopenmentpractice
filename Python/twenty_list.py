@@ -85,46 +85,54 @@ fruits=["Apple","Banana","Carrot","Dragon fruit","Mango","Strauberry","Avacado",
      
      
 
-check=True
-account=[]
-total=0
-account_withdraw=0
-account_deposite=0
-userInput=input("What do you want to do withdraw or deposite the money :- ").upper()
-while(check):
-    if userInput=="WITHDRAW":
-        user_withdraw=int(input("Enter how many money do you want to withdraw :- "))
-        account.append(-user_withdraw)
-        for i in range(len(account)):
-            total=total+int(account[i])
-        if(total<0):
-            print("You dont have enough money!")
-        print(account)
-    if userInput=="DEPOSITE":
-        user_deposite=int(input("Enter how many money do you want to deposite :- "))
-        account.append(user_deposite)
-        print(account)
-    userInput=input("What do you want to do withdraw or deposite the money or press Q/q to quit:- ").upper()
-    if(userInput=="Q" or userInput=="q"):
-        print("Quitted!")
-        check=False
-        for i in range(len(account)):
-            total=total+int(account[i])
-            if account[i]>=0:
-                account_deposite=account_deposite+account[i]
-            else:
-                account_withdraw=account_withdraw+account[i]
-        print(f"Total account balance :- {total}")
-        print(f"Total account withdraw :- {account_withdraw}")
-        print(f"Total account deposite :- {account_deposite}")
+# check=True
+# account=[]
+# total=0
+# account_withdraw=0
+# account_deposite=0
+# userInput=input("What do you want to do withdraw or deposite the money :- ").upper()
+# while(check):
+#     if userInput=="WITHDRAW":
+#         user_withdraw=int(input("Enter how many money do you want to withdraw :- "))
+#         account.append(-user_withdraw)
+#         for i in range(len(account)):
+#             total=total+int(account[i])
+#         if(total<0):
+#             print("You dont have enough money!")
+#         print(account)
+#     if userInput=="DEPOSITE":
+#         user_deposite=int(input("Enter how many money do you want to deposite :- "))
+#         account.append(user_deposite)
+#         print(account)
+#     userInput=input("What do you want to do withdraw or deposite the money or press Q/q to quit:- ").upper()
+#     if(userInput=="Q" or userInput=="q"):
+#         print("Quitted!")
+#         check=False
+#         for i in range(len(account)):
+#             total=total+int(account[i])
+#             if account[i]>=0:
+#                 account_deposite=account_deposite+account[i]
+#             else:
+#                 account_withdraw=account_withdraw+account[i]
+#         print(f"Total account balance :- {total}")
+#         print(f"Total account withdraw :- {account_withdraw}")
+#         print(f"Total account deposite :- {account_deposite}")
         
         
         
         
-userInput=input("Enter any word :-")
-list_word=list(userInput)
-for i in list_word:
-    count_list=list_word.count(i)
-    if(count_list==1):
-        print(i)
-        break
+        
+# userInput=input("Enter any word :-")
+# list_word=list(userInput)
+# for i in list_word:
+#     count_list=list_word.count(i)
+#     if(count_list==1):
+#         print(i)
+#         break
+
+
+
+
+
+numb_list=[10,20,30,40,50,60,70,80]
+print(sum(numb_list))
