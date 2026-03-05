@@ -69,3 +69,9 @@ list_set=list(set1)
 
 # fruits.clear()
 # print(fruits)
+
+
+
+
+
+Python
