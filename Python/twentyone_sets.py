@@ -77,8 +77,8 @@ list_set=list(set1)
 
 
 
-set1={10,20,30,40}
-set2={30,40,20,60}
-for i in set1:
-    if set1[i]==set2[i]:
-        print(set1[i])
+# set1={10,20,30,40}
+# set2={30,40,20,60}
+# for i in set1:
+#     if set1[i]==set2[i]:
+#         print(set1[i])

@@ -57,7 +57,33 @@
 
 
 
-sum=0
-for i in range(1,101):
-    sum+=i
-print(sum)
+# sum=0
+# for i in range(1,101):
+#     sum+=i
+# print(sum)
+
+
+
+
+
+scores = [78, 85, 92, 78, 60, 85, 90, 72, 60, 88,98]
+highest=scores[0]
+lowest=scores[0]
+total=0
+above_average=[]
+for i in scores:
+    total+=i
+    if i>highest:
+        highest=i
+    if i<lowest:
+        lowest=i
+average=total/len(scores)
+print(f"The highest marks is {highest}")
+print(f"The lowest marks is {lowest}")
+print(f"The average marks is {average}")
+set1=set(scores)
+print(f"The unique scores is {set1}")
+for i in scores:
+    if i>average:
+        above_average.append(i)
+print(f"The scores above average is {above_average}")
