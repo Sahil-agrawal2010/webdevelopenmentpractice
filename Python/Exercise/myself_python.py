@@ -100,8 +100,9 @@
 
 
 numb=[10,3,5,20,5839,43258,23498,835,931784,5798,4378,4,5902,583,569,12,10,30,5,5839,835,43258]
-for i in len(numb):
+for i in range(len(numb)):
     if i%2==0:
-        print(numb[i])
+        print("Even")
     else:
-        print(numb[i])
+        print("Odd")
+print(set(numb))
