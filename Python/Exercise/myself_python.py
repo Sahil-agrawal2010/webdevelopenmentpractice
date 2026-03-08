@@ -99,10 +99,27 @@
 
 
 
-numb=[10,3,5,20,5839,43258,23498,835,931784,5798,4378,4,5902,583,569,12,10,30,5,5839,835,43258]
-for i in range(len(numb)):
-    if i%2==0:
-        print("Even")
-    else:
-        print("Odd")
-print(set(numb))
+# numb=[10,3,5,20,5839,43258,23498,835,931784,5798,4378,4,5902,583,569,12,10,30,5,5839,835,43258]
+# for i in range(len(numb)):
+#     if i%2==0:
+#         print("Even")
+#     else:
+#         print("Odd")
+# print(set(numb))
+
+
+
+
+user_fruit=[]
+user_price=[]
+userInput=input("Enter the name of fruitt which you want to add in the cart [press q to quit] :- ")
+while userInput!="q":
+    userAsk=int(input("Enter the price of fruit :- "))
+    user_fruit.append(userInput)
+    user_price.append(userAsk)
+    userInput=input("Enter the name of fruitt which you want to add in the cart [press q to quit] :- ")
+if userInput=="q":
+    print("--------------- Your Cart ---------------")
+    print(user_fruit, sep="    ")
+    print(user_price, sep="   ")
+    print(f"THe total amount is {sum(user_price)}")
