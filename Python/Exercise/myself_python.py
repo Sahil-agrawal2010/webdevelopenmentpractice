@@ -120,6 +120,10 @@ while userInput!="q":
     userInput=input("Enter the name of fruitt which you want to add in the cart [press q to quit] :- ")
 if userInput=="q":
     print("--------------- Your Cart ---------------")
-    print(user_fruit, sep="    ")
-    print(user_price, sep="   ")
+    for i in user_fruit:
+        print(i , end="     ")
+    print()
+    for j in user_price:
+        print(j , end="      ")
+    print()
     print(f"THe total amount is {sum(user_price)}")
