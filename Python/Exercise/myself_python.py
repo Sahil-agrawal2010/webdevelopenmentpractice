@@ -41,17 +41,6 @@
 
 
 
-# userInput = int(input("Enter any number accordint to your want and your requirnment :- "))
-# counter=0
-# for i in range(1,userInput+1):
-#     if userInput%i==0 :
-#         counter=counter+1
-# if counter==2 :
-#     print(f"The number {userInput} is a prime number!")
-# elif counter!=2 : 
-#     print(f"The number {userInput} is not a prime number!")
-# else :
-#     print(f"Error!")
 
 
 
@@ -106,24 +95,3 @@
 #     else:
 #         print("Odd")
 # print(set(numb))
-
-
-
-
-user_fruit=[]
-user_price=[]
-userInput=input("Enter the name of fruitt which you want to add in the cart [press q to quit] :- ")
-while userInput!="q":
-    userAsk=int(input("Enter the price of fruit :- "))
-    user_fruit.append(userInput)
-    user_price.append(userAsk)
-    userInput=input("Enter the name of fruitt which you want to add in the cart [press q to quit] :- ")
-if userInput=="q":
-    print("--------------- Your Cart ---------------")
-    for i in user_fruit:
-        print(i , end="     ")
-    print()
-    for j in user_price:
-        print(j , end="      ")
-    print()
-    print(f"THe total amount is {sum(user_price)}")
