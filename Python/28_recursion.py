@@ -18,7 +18,8 @@ def fibo(u,a,b):
     if u==1:
         return exit()
     else:
+        c=0
         c=a+b
-        fibo(c,u,a=b,b=c)
+        fibo(u=u-1,a=b,b=c)
         return c
 print(fibo(5,0,1))
