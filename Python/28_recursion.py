@@ -20,6 +20,6 @@ def fibo(u,a,b):
     else:
         c=0
         c=a+b
-        fibo(u=u-1,a=b,b=c)
-        return c
-print(fibo(5,0,1))
+        print(c)
+        return fibo(u=u-1,a=b,b=c)
+print(fibo(11,0,1))
