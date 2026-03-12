@@ -24,18 +24,18 @@ def calculator(a,b,operator):
     def subtraction(a,b):
         print(f"THe subraction of data is {a-b}")
     
-def product(a,b):
-    print(f"THe product of the given data is {a*b}")
+    def product(a,b):
+        print(f"THe product of the given data is {a*b}")
     
-def division(a,b):
-    print(f"The division of the given data is {a/b}")
-if(operator=="+"):
-    addition(a,b)
-elif(operator=="-"):
-    subraction(a,b)
-elif(operator=="*"):
-    product(a,b)
-elif(operator=="/"):
-    division(a,b)
-else:
-    print("Error!")
+    def division(a,b):
+        print(f"The division of the given data is {a/b}")
+    if(operator=="+"):
+        addition(a,b)
+    elif(operator=="-"):
+        subtraction(a,b)
+    elif(operator=="*"):
+        product(a,b)
+    elif(operator=="/"):
+        division(a,b)
+    else:
+        print("Error!")
