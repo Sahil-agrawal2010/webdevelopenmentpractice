@@ -37,9 +37,9 @@
 
 
 
-empty=["Apple","","Ball","","Call","","Doctor"]
-remove_empty=[i if len(i)>0 else None for i in empty]
-print(f"{remove_empty}")
+# empty=["Apple","","Ball","","Call","","Doctor"]
+# remove_empty=[i if len(i)>0 else None for i in empty]
+# print(f"{remove_empty}")
 
 
 
@@ -50,9 +50,9 @@ print(f"{remove_empty}")
 
 
 
-words=["Avacado","Ballon","Cat","Dark"]
-first_letter=[i[0] for i in words]
-print(first_letter)
+# words=["Avacado","Ballon","Cat","Dark"]
+# first_letter=[i[0] for i in words]
+# print(first_letter)
 
 
 
@@ -63,9 +63,9 @@ print(first_letter)
 
 
 
-celcius=[100,37,80]
-frahnite=[(i*(9/5)+32) for i in celcius]
-print(frahnite)
+# celcius=[100,37,80]
+# frahnite=[(i*(9/5)+32) for i in celcius]
+# print(frahnite)
 
 
 
@@ -77,8 +77,36 @@ print(frahnite)
 
 
 
-squares=[((i),(i*i)) for i in range(1,6)]
-print(squares)
+# squares=[((i),(i*i)) for i in range(1,6)]
+# print(squares)
 
 
 
+
+# name="Nay3dh7nmo9"
+# mixed_name=list(name)
+# proper_numb=[i for i in mixed_name if i.isdigit()]
+# print(proper_numb)
+
+
+
+
+# list1=[1,2,3,4,5]
+# list2=[3,4,5,6,7]
+# common=[i for i in list1 if i in list2]
+# print(common)
+
+
+
+list2=[]
+for i in range(1,6):
+    for j in range(1,6):
+        list2.append(i*j)
+print(list2)
+
+
+
+
+
+list1=[i*j for i in range(1,6) for j in range(1,6)]
+print(list1)
