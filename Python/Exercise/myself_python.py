@@ -95,3 +95,10 @@
 #     else:
 #         print("Odd")
 # print(set(numb))
+
+
+
+try:
+    userInput=input("Enter anything you like to :- ")
+except ValueError:
+    print("Sorry error")
