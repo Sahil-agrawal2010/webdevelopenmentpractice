@@ -107,15 +107,32 @@
     
     
 
+# import random
+# userInput_user=int(input("Enter any number :- "))
+# userInput=random.randint(1,500)
+# print(userInput)
+# while userInput_user!=userInput:
+#     if userInput_user<userInput:
+#         print("Too low!")
+#     if userInput_user>userInput:
+#         print("Too high!")
+#     userInput_user=int(input("Enter any number :- "))
+# if(userInput_user==userInput):
+#     print("Correct!")
+
+
+
+
+
+
 import random
-userInput_user=int(input("Enter any number :- "))
-userInput=random.randint(1,500)
-print(userInput)
-while userInput_user!=userInput:
-    if userInput_user<userInput:
-        print("Too low!")
-    if userInput_user>userInput:
-        print("Too high!")
-    userInput_user=int(input("Enter any number :- "))
-if(userInput_user==userInput):
-    print("Correct!")
+chars = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9','!','@','#','$','%','^','&','*','(',')','-','_','=','+','[',']','{','}','|','\\',':',';','"',"'",'<','>',',','.','?','/']
+try:
+    userInput=int(input("Enter the length of password :- "))
+except ValueError:
+    print(f"Please enter an integer.")
+final_password=""
+for i in range(0,userInput):
+    password=random.randint(0,90)
+    final_password=final_password+chars[password]
+print(f"The password of length {userInput} equals to = is {final_password}")
