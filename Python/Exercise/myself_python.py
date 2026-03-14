@@ -98,7 +98,24 @@
 
 
 
-try:
-    userInput=input("Enter anything you like to :- ")
-except ValueError:
-    print("Sorry error")
+# try:
+#     userInput=input("Enter anything you like to :- ")
+# except ValueError:
+#     print("Sorry error")
+    
+    
+    
+    
+
+import random
+userInput_user=int(input("Enter any number :- "))
+userInput=random.randint(1,500)
+print(userInput)
+while userInput_user!=userInput:
+    if userInput_user<userInput:
+        print("Too low!")
+    if userInput_user>userInput:
+        print("Too high!")
+    userInput_user=int(input("Enter any number :- "))
+if(userInput_user==userInput):
+    print("Correct!")
