@@ -136,3 +136,9 @@ for i in range(0,userInput):
     password=random.randint(0,90)
     final_password=final_password+chars[password]
 print(f"The password of length {userInput} equals to = is {final_password}")
+
+
+
+
+
+print("Python")
