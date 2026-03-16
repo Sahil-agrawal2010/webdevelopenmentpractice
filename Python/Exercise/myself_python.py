@@ -125,20 +125,41 @@
 
 
 
-import random
-chars = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9','!','@','#','$','%','^','&','*','(',')','-','_','=','+','[',']','{','}','|','\\',':',';','"',"'",'<','>',',','.','?','/']
-try:
-    userInput=int(input("Enter the length of password :- "))
-except ValueError:
-    print(f"Please enter an integer.")
-final_password=""
-for i in range(0,userInput):
-    password=random.randint(0,90)
-    final_password=final_password+chars[password]
-print(f"The password of length {userInput} equals to = is {final_password}")
+# import random
+# chars = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9','!','@','#','$','%','^','&','*','(',')','-','_','=','+','[',']','{','}','|','\\',':',';','"',"'",'<','>',',','.','?','/']
+# try:
+#     userInput=int(input("Enter the length of password :- "))
+# except ValueError:
+#     print(f"Please enter an integer.")
+# final_password=""
+# for i in range(0,userInput):
+#     password=random.randint(0,90)
+#     final_password=final_password+chars[password]
+# print(f"The password of length {userInput} equals to = is {final_password}")
 
 
 
 
 
-print("Python")
+# print("Python")
+
+
+
+
+
+userInput=int(input("Enter how amny prime number you want :- "))
+num=2
+while userInput>0:
+    counter=0
+    for i in range(1,num+1):
+        if num%i==0:
+            counter=counter+1
+    if counter==2:
+        print(num)
+        userInput=userInput-1
+        counter=0
+    num=num+1
+
+
+
+
