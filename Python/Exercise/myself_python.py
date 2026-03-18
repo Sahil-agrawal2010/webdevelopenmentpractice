@@ -147,22 +147,29 @@
 
 
 
-userInput=int(input("Enter how amny prime number you want :- "))
-num=2
-while userInput>0:
-    counter=0
-    for i in range(1,num+1):
-        if num%i==0:
-            counter=counter+1
-    if counter==2:
-        print(num)
-        userInput=userInput-1
-        counter=0
-    num=num+1
+# userInput=int(input("Enter how amny prime number you want :- "))
+# num=2
+# while userInput>0:
+#     counter=0
+#     for i in range(1,num+1):
+#         if num%i==0:
+#             counter=counter+1
+#     if counter==2:
+#         print(num)
+#         userInput=userInput-1
+#         counter=0
+#     num=num+1
 
 
 
 
 
 
-print("Python")
+
+
+word="I am a good boy and a obedient boy".upper()
+counter=0
+for i in word:
+    if(i=="A" or i=="E" or i=="I" or i=="E" or i=="O" or i=="U"):
+        counter=counter+1
+print(f"Total word contained in the word / sentence is {counter}")
