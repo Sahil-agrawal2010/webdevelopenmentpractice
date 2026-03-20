@@ -173,3 +173,6 @@ for i in word:
     if(i=="A" or i=="E" or i=="I" or i=="E" or i=="O" or i=="U"):
         counter=counter+1
 print(f"Total word contained in the word / sentence is {counter}")
+
+
+# Python
