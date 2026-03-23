@@ -81,24 +81,48 @@
 
 
 
+# class Parent():
+#     def __init__(self,name):
+#         self.my_name=name
+        
+        
+        
+#     def displayy(self):
+#         print(f"My name is {self.my_name}")
+        
+        
+        
+# class Child(Parent):
+#     name="Sahil"
+#     def display(self):
+#         print(f"My name is {self.name}")
+        
+        
+        
+# obj=Child("Agrawal")
+# obj.display()
+# obj.displayy()
+
+
+
+
+
 class Parent():
-    def __init__(self,name):
-        self.my_name=name
+    def __init__(self, a, b):
+        self.a=a
+        self.b=b
         
-        
-        
-    def displayy(self):
-        print(f"My name is {self.my_name}")
-        
-        
+    def sum(self):
+        print(f"The sum of {self.a} and {self.b} is {self.a + self.b}")
         
 class Child(Parent):
-    name="Sahil"
-    def display(self):
+    def __init__(self, a, b, name):
+        self.name=name
+        Parent.__init__(self,a,b)
+        
+    def Dispaly(self):
         print(f"My name is {self.name}")
         
-        
-        
-obj=Child("Agrawal")
-obj.display()
-obj.displayy()
+obj=Child(10, 20, "Sahil")
+obj.Dispaly()
+obj.sum()
