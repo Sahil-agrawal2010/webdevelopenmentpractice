@@ -167,13 +167,49 @@
 
 
 
-word="I am a good boy and a obedient boy".upper()
-counter=0
-for i in word:
-    if(i=="A" or i=="E" or i=="I" or i=="E" or i=="O" or i=="U"):
-        counter=counter+1
-print(f"Total word contained in the word / sentence is {counter}")
+# word="I am a good boy and a obedient boy".upper()
+# counter=0
+# for i in word:
+#     if(i=="A" or i=="E" or i=="I" or i=="E" or i=="O" or i=="U"):
+#         counter=counter+1
+# print(f"Total word contained in the word / sentence is {counter}")
 
 
-# Python
-# Python
+
+
+
+import random
+quiz_questions = [
+    {"question": "5 + 7", "answer": 12},
+    {"question": "12 - 4", "answer": 8},
+    {"question": "6 * 3", "answer": 18},
+    {"question": "15 / 3", "answer": 5},
+    {"question": "9 + 8", "answer": 17},
+    {"question": "20 - 9", "answer": 11},
+    {"question": "7 * 6", "answer": 42},
+    {"question": "16 / 4", "answer": 4},
+    {"question": "25 + 13", "answer": 38},
+    {"question": "30 - 12", "answer": 18},
+    {"question": "8 * 9", "answer": 72},
+    {"question": "49 / 7", "answer": 7},
+    {"question": "11 + 19", "answer": 30},
+    {"question": "50 - 25", "answer": 25},
+    {"question": "4 * 12", "answer": 48},
+    {"question": "81 / 9", "answer": 9},
+    {"question": "14 + 6", "answer": 20},
+    {"question": "100 - 45", "answer": 55},
+    {"question": "3 * 15", "answer": 45},
+    {"question": "64 / 8", "answer": 8}
+]
+userInput=input("Do you wnat to play quiz question :- ").upper()
+while userInput=="YES" :
+    random_number=random.randint(0,len(quiz_questions)-1)
+    print(f"{quiz_questions[random_number]["question"]}")
+    userInput_answer=input("Answer :- ")
+    if userInput_answer==quiz_questions[random_number]["answer"]:
+        print(f"Correct")
+    else:
+        print(f"Wrong")
+    userInput=input("Do you wnat to play quiz question :- ").upper()
+if userInput=="NO":
+    print("Ok!quitted")
