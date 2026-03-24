@@ -205,7 +205,7 @@ userInput=input("Do you wnat to play quiz question :- ").upper()
 while userInput=="YES" :
     random_number=random.randint(0,len(quiz_questions)-1)
     print(f"{quiz_questions[random_number]["question"]}")
-    userInput_answer=input("Answer :- ")
+    userInput_answer=int(input("Answer :- "))
     if userInput_answer==quiz_questions[random_number]["answer"]:
         print(f"Correct")
     else:
