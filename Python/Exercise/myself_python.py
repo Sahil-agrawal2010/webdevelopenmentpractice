@@ -213,3 +213,8 @@ while userInput=="YES" :
     userInput=input("Do you wnat to play quiz question :- ").upper()
 if userInput=="NO":
     print("Ok!quitted")
+    
+    
+    
+    
+# Python
